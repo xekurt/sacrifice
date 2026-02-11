@@ -62,7 +62,7 @@ const SettingsMenu: React.FC<SettingsMenuProps> = ({ difficulty, onDifficultyCha
                         <button
                             onClick={toggleMute}
                             className={`w-full py-2 text-xs font-bold uppercase tracking-widest border transition-all ${isMuted
-                                ? 'bg-red-900/20 border-red-900 text-red-500'
+                                ? 'btn-danger-active'
                                 : 'bg-zinc-800 border-zinc-700 text-zinc-300 hover:bg-zinc-750'
                                 }`}
                         >

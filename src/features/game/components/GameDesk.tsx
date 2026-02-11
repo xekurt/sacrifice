@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useGameEngine } from '../hooks/useGameEngine';
+import ConfirmationModal from '../../../shared/components/ConfirmationModal';
 
 const MetricBar = ({ label, value, color }: { label: string; value: number; color: string }) => (
     <div className="metric-container">
@@ -17,16 +18,21 @@ const MetricBar = ({ label, value, color }: { label: string; value: number; colo
     </div>
 );
 
-const GameDesk: React.FC = () => {
+interface GameDeskProps {
+    onExit: () => void;
+}
+
+const GameDesk: React.FC<GameDeskProps> = ({ onExit }) => {
     const { t } = useTranslation();
     const { state, processChoice, restartGame, getCurrentCard } = useGameEngine();
+    const [isExitModalOpen, setIsExitModalOpen] = useState(false);
 
     const currentCard = getCurrentCard(state);
 
     const QUARTER_METADATA = {
         1: { name: t('ministries.m1'), color: '#8b5cf6' },
-        2: { name: t('ministries.m2'), color: '#ef4444' },
-        3: { name: t('ministries.m3'), color: '#f59e0b' },
+        2: { name: t('ministries.m2'), color: 'var(--color-bad)' },
+        3: { name: t('ministries.m3'), color: 'var(--color-warning)' },
         4: { name: t('ministries.m4'), color: '#3b82f6' },
     };
 
@@ -44,7 +50,15 @@ const GameDesk: React.FC = () => {
                             ? t('game.win_message', { years: state.currentYear })
                             : t('game.loss_message', { year: state.currentYear, quarter: state.currentQuarter })}
                     </p>
-                    <button className="restart-btn" onClick={restartGame}>{t('game.restart')}</button>
+                    <div className="flex flex-col gap-3 mt-8">
+                        <button className="restart-btn !mt-0" onClick={restartGame}>{t('game.restart')}</button>
+                        <button
+                            onClick={onExit}
+                            className="py-3 px-8 bg-zinc-900 border border-zinc-800 text-zinc-500 font-bold uppercase tracking-widest text-xs hover:border-zinc-100 hover:text-zinc-100 transition-all duration-300 rounded-sm"
+                        >
+                            {t('menu.back')}
+                        </button>
+                    </div>
                 </div>
             </div>
         );
@@ -53,19 +67,30 @@ const GameDesk: React.FC = () => {
     return (
         <div className="game-layout">
             <header className="game-header">
-                <div className="year-display">
-                    {t('game.year')} {state.currentYear} <span className="quarter-text">| {t('game.quarter')}{state.currentQuarter}</span>
+                <div className="flex items-center gap-6">
+                    <button
+                        onClick={() => setIsExitModalOpen(true)}
+                        className="group flex items-center gap-2 px-3 py-1.5 border border-zinc-800 hover:border-red-900 text-zinc-600 hover:text-red-500 transition-all duration-300 rounded-sm"
+                        title={t('game.exit')}
+                    >
+                        <span className="text-[10px] font-bold uppercase tracking-widest">{t('game.exit')}</span>
+                    </button>
+                    <div className="year-display">
+                        {t('game.year')} {state.currentYear} <span className="quarter-text">| {t('game.quarter')}{state.currentQuarter}</span>
+                    </div>
                 </div>
-                <div className="target-display">{t('game.goal', { years: state.targetYears })}</div>
-                {state.lifelineUsed && <div className="lifeline-badge">{t('game.lifeline_spent')}</div>}
+                <div className="flex items-center gap-4">
+                    <div className="target-display">{t('game.goal', { years: state.targetYears })}</div>
+                    {state.lifelineUsed && <div className="lifeline-badge">{t('game.lifeline_spent')}</div>}
+                </div>
             </header>
 
             <section className="dashboard">
                 <MetricBar label={t('metrics.piety')} value={state.piety} color="#8b5cf6" />
-                <MetricBar label={t('metrics.sepah')} value={state.sepah} color="#ef4444" />
-                <MetricBar label={t('metrics.bazaar')} value={state.bazaar} color="#f59e0b" />
+                <MetricBar label={t('metrics.sepah')} value={state.sepah} color="var(--color-bad)" />
+                <MetricBar label={t('metrics.bazaar')} value={state.bazaar} color="var(--color-warning)" />
                 <MetricBar label={t('metrics.isolation')} value={state.isolation} color="#3b82f6" />
-                <MetricBar label={t('metrics.legitimacy')} value={state.legitimacy} color="#10b981" />
+                <MetricBar label={t('metrics.legitimacy')} value={state.legitimacy} color="var(--color-good)" />
             </section>
 
             <main className="card-area">
@@ -85,6 +110,16 @@ const GameDesk: React.FC = () => {
                     </div>
                 </div>
             </main>
+
+            <ConfirmationModal
+                isOpen={isExitModalOpen}
+                title={t('game.exit_confirm_title')}
+                description={t('game.exit_confirm_desc')}
+                confirmLabel={t('game.confirm')}
+                cancelLabel={t('game.cancel')}
+                onConfirm={onExit}
+                onCancel={() => setIsExitModalOpen(false)}
+            />
         </div>
     );
 };

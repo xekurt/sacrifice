@@ -17,7 +17,12 @@
         "year": "Année",
         "quarter": "T",
         "goal": "Objectif : {{years}} ans",
-        "lifeline_spent": "Bouée de sauvetage utilisée"
+        "lifeline_spent": "Bouée de sauvetage utilisée",
+        "exit": "Quitter vers le menu",
+        "exit_confirm_title": "Abandonner le système ?",
+        "exit_confirm_desc": "Êtes-vous sûr de vouloir retourner au hub ? Votre progression actuelle sera perdue.",
+        "confirm": "Confirmer",
+        "cancel": "Rester"
     },
     "settings": {
         "title": "Paramètres",

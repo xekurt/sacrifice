@@ -17,7 +17,12 @@
         "year": "Anno",
         "quarter": "T",
         "goal": "Obiettivo: {{years}} anni",
-        "lifeline_spent": "Ancora di salvataggio utilizzata"
+        "lifeline_spent": "Ancora di salvataggio utilizzata",
+        "exit": "Esci al menu",
+        "exit_confirm_title": "Abbandonare il sistema?",
+        "exit_confirm_desc": "Sei sicuro di voler tornare all'hub? Il progresso attuale andrà perduto.",
+        "confirm": "Conferma",
+        "cancel": "Rimani"
     },
     "settings": {
         "title": "Impostazioni",

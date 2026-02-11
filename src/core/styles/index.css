@@ -1,27 +1,40 @@
 :root {
   /* Game Metrics */
-  --color-good: #22c55e;    /* green-500 */
-  --color-bad: #ef4444;     /* red-500 */
-  --color-warning: #f59e0b; /* amber-500 */
-  
-  --color-bg: #09090b;      /* zinc-950 */
-  --color-surface: #18181b; /* zinc-900 */
-  --color-text: #f4f4f5;    /* zinc-100 */
-  --color-muted: #71717a;   /* zinc-500 */
+  --color-good: #22c55e;
+  /* green-500 */
+  --color-bad: #ef4444;
+  /* red-500 */
+  --color-warning: #f59e0b;
+  /* amber-500 */
+
+  --color-bg: #09090b;
+  /* zinc-950 */
+  --color-surface: #18181b;
+  /* zinc-900 */
+  --color-text: #f4f4f5;
+  /* zinc-100 */
+  --color-muted: #71717a;
+  /* zinc-500 */
 }
 
 /* Colorblind Overrides */
 [data-colorblind-theme="protanopia"],
 [data-colorblind-theme="deuteranopia"] {
-  --color-good: #3b82f6;    /* blue-500 */
-  --color-bad: #f97316;     /* orange-500 */
-  --color-warning: #eab308; /* yellow-500 */
+  --color-good: #3b82f6;
+  /* blue-500 */
+  --color-bad: #f97316;
+  /* orange-500 */
+  --color-warning: #eab308;
+  /* yellow-500 */
 }
 
 [data-colorblind-theme="tritanopia"] {
-  --color-good: #10b981;    /* emerald-500 */
-  --color-bad: #ec4899;     /* pink-500 */
-  --color-warning: #f43f5e; /* rose-500 */
+  --color-good: #10b981;
+  /* emerald-500 */
+  --color-bad: #ec4899;
+  /* pink-500 */
+  --color-warning: #f43f5e;
+  /* rose-500 */
 }
 
 /* 
@@ -242,23 +255,29 @@ body {
 }
 
 .yes-btn {
-  background: rgba(16, 185, 129, 0.1);
-  color: #10b981;
+  background: color-mix(in srgb, var(--color-good) 10%, transparent);
+  color: var(--color-good);
 }
 
 .yes-btn:hover {
-  background: #10b981;
+  background: var(--color-good);
   color: white;
 }
 
 .no-btn {
-  background: rgba(239, 68, 68, 0.1);
-  color: #ef4444;
+  background: color-mix(in srgb, var(--color-bad) 10%, transparent);
+  color: var(--color-bad);
 }
 
 .no-btn:hover {
-  background: #ef4444;
+  background: var(--color-bad);
   color: white;
+}
+
+.btn-danger-active {
+  background: color-mix(in srgb, var(--color-bad) 20%, transparent);
+  border-color: var(--color-bad) !important;
+  color: var(--color-bad) !important;
 }
 
 .game-over-container {
@@ -278,12 +297,12 @@ body {
 }
 
 .text-won {
-  color: #10b981;
+  color: var(--color-good);
   font-size: 3rem;
 }
 
 .text-lost {
-  color: #ef4444;
+  color: var(--color-bad);
   font-size: 3rem;
 }
 

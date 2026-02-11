@@ -33,7 +33,7 @@ function AppContent() {
           />
         )
       case 'game':
-        return <GameDesk />
+        return <GameDesk onExit={() => setCurrentScreen('main_menu')} />
       default:
         return <IntroSequence onComplete={() => setCurrentScreen('main_menu')} />
     }

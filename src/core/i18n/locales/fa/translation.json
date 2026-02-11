@@ -17,7 +17,12 @@
         "year": "سال",
         "quarter": "سه ماهه",
         "goal": "هدف: {{years}} سال",
-        "lifeline_spent": "خط حیات مصرف شد"
+        "lifeline_spent": "خط حیات مصرف شد",
+        "exit": "خروج به منو",
+        "exit_confirm_title": "سیستم را رها می‌کنید؟",
+        "exit_confirm_desc": "آیا مطمئن هستید که می‌خواهید به مرکز بازگردید؟ پیشرفت فعلی پاک خواهد شد.",
+        "confirm": "تایید",
+        "cancel": "ماندن"
     },
     "settings": {
         "title": "تنظیمات",

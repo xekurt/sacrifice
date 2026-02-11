@@ -17,7 +17,12 @@
         "year": "Year",
         "quarter": "Q",
         "goal": "Goal: {{years}} Years",
-        "lifeline_spent": "Lifeline Spent"
+        "lifeline_spent": "Lifeline Spent",
+        "exit": "Exit to Menu",
+        "exit_confirm_title": "Abandon System?",
+        "exit_confirm_desc": "Are you sure you want to return to the hub? Current progress will be lost.",
+        "confirm": "Confirm",
+        "cancel": "Stay"
     },
     "settings": {
         "title": "Settings",

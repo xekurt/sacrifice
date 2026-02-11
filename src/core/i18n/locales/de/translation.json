@@ -17,7 +17,12 @@
         "year": "Jahr",
         "quarter": "Q",
         "goal": "Ziel: {{years}} Jahre",
-        "lifeline_spent": "Lebenslinie verbraucht"
+        "lifeline_spent": "Lebenslinie verbraucht",
+        "exit": "Zum Menü",
+        "exit_confirm_title": "System verlassen?",
+        "exit_confirm_desc": "Sind Sie sicher, dass Sie zum Hub zurückkehren möchten? Der aktuelle Fortschritt geht verloren.",
+        "confirm": "Bestätigen",
+        "cancel": "Bleiben"
     },
     "settings": {
         "title": "Einstellungen",
