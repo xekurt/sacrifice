@@ -2,6 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useAudio } from '../../../shared/contexts/AudioContext';
 import { useAccessibility } from '../../../shared/contexts/AccessibilityContext';
+import GameButton from '../../../shared/components/GameButton';
 import type { ColorblindMode } from '../../../shared/contexts/AccessibilityContext';
 import type { Difficulty } from '../../../core/types/game';
 
@@ -59,7 +60,7 @@ const SettingsMenu: React.FC<SettingsMenuProps> = ({ difficulty, onDifficultyCha
                             className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-zinc-100"
                         />
 
-                        <button
+                        <GameButton
                             onClick={toggleMute}
                             className={`w-full py-2 text-xs font-bold uppercase tracking-widest border transition-all ${isMuted
                                 ? 'btn-danger-active'
@@ -67,7 +68,7 @@ const SettingsMenu: React.FC<SettingsMenuProps> = ({ difficulty, onDifficultyCha
                                 }`}
                         >
                             {isMuted ? t('settings.mute') : t('settings.unmute')}
-                        </button>
+                        </GameButton>
                     </div>
                 </section>
 
@@ -116,27 +117,27 @@ const SettingsMenu: React.FC<SettingsMenuProps> = ({ difficulty, onDifficultyCha
                             { id: 'normal' as Difficulty, label: t('difficulty.normal'), sub: t('difficulty.normal_sub') },
                             { id: 'hard' as Difficulty, label: t('difficulty.hard'), sub: t('difficulty.hard_sub') }
                         ].map((mode) => (
-                            <button
+                            <GameButton
                                 key={mode.id}
                                 onClick={() => onDifficultyChange(mode.id)}
                                 className={`flex flex-col items-start p-3 border transition-all ${difficulty === mode.id
-                                    ? 'bg-zinc-100 border-zinc-100 text-zinc-950'
-                                    : 'bg-zinc-900 border-zinc-800 text-zinc-500 hover:border-zinc-700'
+                                    ? 'bg-zinc-100 border-zinc-100 text-zinc-950 hover:bg-white'
+                                    : 'bg-zinc-900 border-zinc-800 text-zinc-500 hover:border-zinc-700 hover:bg-zinc-800'
                                     }`}
                             >
                                 <span className="text-sm font-bold uppercase tracking-tight">{mode.label}</span>
                                 <span className="text-[10px] opacity-70 italic">{mode.sub}</span>
-                            </button>
+                            </GameButton>
                         ))}
                     </div>
                 </section>
 
-                <button
+                <GameButton
                     onClick={onBack}
                     className="w-full py-3 bg-zinc-100 text-zinc-950 font-bold uppercase tracking-widest text-sm hover:bg-white transition-colors"
                 >
                     {t('menu.back')}
-                </button>
+                </GameButton>
             </div>
         </div>
     );

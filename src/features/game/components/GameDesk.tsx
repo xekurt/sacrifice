@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useGameEngine } from '../hooks/useGameEngine';
+import GameButton from '../../../shared/components/GameButton';
 import ConfirmationModal from '../../../shared/components/ConfirmationModal';
 
 const MetricBar = ({ label, value, color }: { label: string; value: number; color: string }) => (
@@ -51,13 +52,13 @@ const GameDesk: React.FC<GameDeskProps> = ({ onExit }) => {
                             : t('game.loss_message', { year: state.currentYear, quarter: state.currentQuarter })}
                     </p>
                     <div className="flex flex-col gap-3 mt-8">
-                        <button className="restart-btn !mt-0" onClick={restartGame}>{t('game.restart')}</button>
-                        <button
+                        <GameButton className="restart-btn !mt-0" onClick={restartGame}>{t('game.restart')}</GameButton>
+                        <GameButton
                             onClick={onExit}
                             className="py-3 px-8 bg-zinc-900 border border-zinc-800 text-zinc-500 font-bold uppercase tracking-widest text-xs hover:border-zinc-100 hover:text-zinc-100 transition-all duration-300 rounded-sm"
                         >
                             {t('menu.back')}
-                        </button>
+                        </GameButton>
                     </div>
                 </div>
             </div>
@@ -68,13 +69,13 @@ const GameDesk: React.FC<GameDeskProps> = ({ onExit }) => {
         <div className="game-layout">
             <header className="game-header">
                 <div className="flex items-center gap-6">
-                    <button
+                    <GameButton
                         onClick={() => setIsExitModalOpen(true)}
                         className="group flex items-center gap-2 px-3 py-1.5 border border-zinc-800 hover:border-red-900 text-zinc-600 hover:text-red-500 transition-all duration-300 rounded-sm"
                         title={t('game.exit')}
                     >
                         <span className="text-[10px] font-bold uppercase tracking-widest">{t('game.exit')}</span>
-                    </button>
+                    </GameButton>
                     <div className="year-display">
                         {t('game.year')} {state.currentYear} <span className="quarter-text">| {t('game.quarter')}{state.currentQuarter}</span>
                     </div>
@@ -101,12 +102,12 @@ const GameDesk: React.FC<GameDeskProps> = ({ onExit }) => {
                     <h2 className="card-title">{currentCard.title}</h2>
                     <p className="card-description">{currentCard.description}</p>
                     <div className="card-actions">
-                        <button className="choice-btn yes-btn" onClick={() => processChoice('yes', currentCard)}>
+                        <GameButton className="choice-btn yes-btn" onClick={() => processChoice('yes', currentCard)}>
                             {currentCard.yesText}
-                        </button>
-                        <button className="choice-btn no-btn" onClick={() => processChoice('no', currentCard)}>
+                        </GameButton>
+                        <GameButton className="choice-btn no-btn" onClick={() => processChoice('no', currentCard)}>
                             {currentCard.noText}
-                        </button>
+                        </GameButton>
                     </div>
                 </div>
             </main>

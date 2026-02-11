@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useAudio } from '../../../shared/contexts/AudioContext';
+import GameButton from '../../../shared/components/GameButton';
 
 interface Slide {
     text: string;
@@ -67,12 +68,12 @@ const IntroSequence: React.FC<IntroSequenceProps> = ({ onComplete }) => {
         return (
             <div className="fixed inset-0 flex flex-col items-center justify-center z-[2000] text-center p-4">
                 <h1 className="text-4xl font-bold tracking-tighter text-zinc-100 uppercase mb-8 opacity-50">{t('game.title')}</h1>
-                <button
+                <GameButton
                     onClick={handleStart}
                     className="px-10 py-4 border border-zinc-800 text-zinc-400 hover:border-zinc-100 hover:text-zinc-100 transition-all duration-700 uppercase tracking-[0.3em] text-[10px] font-bold bg-zinc-950/50 backdrop-blur-sm"
                 >
                     {t('intro.init')}
-                </button>
+                </GameButton>
             </div>
         );
     }
@@ -85,12 +86,12 @@ const IntroSequence: React.FC<IntroSequenceProps> = ({ onComplete }) => {
                 </p>
 
                 {SLIDES[currentSlide].duration === 0 && (
-                    <button
+                    <GameButton
                         className="px-8 py-4 bg-zinc-100 text-zinc-950 font-black uppercase tracking-[0.2em] text-xs hover:bg-white hover:scale-105 transition-all duration-500 mt-12 shadow-[0_0_20px_rgba(255,255,255,0.1)]"
                         onClick={handleFinish}
                     >
                         {t('intro.enter')}
-                    </button>
+                    </GameButton>
                 )}
             </div>
         </div>

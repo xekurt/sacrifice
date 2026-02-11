@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import GameButton from '../../../shared/components/GameButton';
 import type { AppScreen } from '../../../core/types/game';
 
 interface MainMenuProps {
@@ -35,26 +36,26 @@ const MainMenu: React.FC<MainMenuProps> = ({ onNavigate }) => {
             </div>
 
             <div className="flex flex-col gap-3 w-full max-w-[280px]">
-                <button
+                <GameButton
                     onClick={() => onNavigate('game')}
                     className="group relative px-6 py-4 bg-zinc-100 text-zinc-950 transition-all duration-300 rounded-sm overflow-hidden"
                 >
                     <span className="relative z-10 font-black tracking-widest uppercase text-xs">{t('menu.start')}</span>
-                </button>
+                </GameButton>
 
-                <button
+                <GameButton
                     onClick={() => onNavigate('settings')}
                     className="group relative px-6 py-3 bg-zinc-900 border border-zinc-800 hover:border-zinc-100 transition-all duration-300 rounded-sm text-zinc-500 hover:text-zinc-100"
                 >
                     <span className="font-bold tracking-widest uppercase text-[10px]">{t('menu.settings')}</span>
-                </button>
+                </GameButton>
 
-                <button
+                <GameButton
                     onClick={handleQuit}
                     className="group relative px-6 py-3 bg-zinc-900 border border-zinc-800 hover:border-red-900 transition-all duration-300 rounded-sm text-zinc-600 hover:text-red-500"
                 >
                     <span className="font-bold tracking-widest uppercase text-[10px]">{t('menu.quit')}</span>
-                </button>
+                </GameButton>
             </div>
 
             <footer className="fixed bottom-8 text-[10px] uppercase tracking-[0.4em] text-zinc-800 font-bold">
