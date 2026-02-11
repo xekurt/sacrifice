@@ -31,6 +31,16 @@ const GameDesk: React.FC<GameDeskProps> = ({ onExit }) => {
 
     const currentCard = getCurrentCard(state);
 
+    // Translation helper for cards based on their ID (e.g., 'p1', 's5')
+    const typeKey = {
+        'p': 'piety',
+        's': 'sepah',
+        'b': 'bazaar',
+        'i': 'isolation'
+    }[currentCard.id.charAt(0)];
+    const index = parseInt(currentCard.id.substring(1)) - 1;
+    const cardBaseKey = `cards.${typeKey}.${index}`;
+
     const QUARTER_METADATA = {
         1: { name: t('ministries.m1'), color: '#8b5cf6' },
         2: { name: t('ministries.m2'), color: 'var(--color-bad)' },
@@ -140,14 +150,14 @@ const GameDesk: React.FC<GameDeskProps> = ({ onExit }) => {
                         <div className="ministry-header" style={{ color: ministryInfo.color }}>
                             {ministryInfo.name}
                         </div>
-                        <h2 className="card-title">{currentCard.title}</h2>
-                        <p className="card-description">{currentCard.description}</p>
+                        <h2 className="card-title">{t(`${cardBaseKey}.title`)}</h2>
+                        <p className="card-description">{t(`${cardBaseKey}.description`)}</p>
                         <div className="card-actions">
                             <GameButton className="choice-btn yes-btn" onClick={() => processChoice('yes', currentCard)}>
-                                {currentCard.yesText}
+                                {t(`${cardBaseKey}.yesText`)}
                             </GameButton>
                             <GameButton className="choice-btn no-btn" onClick={() => processChoice('no', currentCard)}>
-                                {currentCard.noText}
+                                {t(`${cardBaseKey}.noText`)}
                             </GameButton>
                         </div>
                     </div>

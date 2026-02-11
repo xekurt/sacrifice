@@ -22,10 +22,10 @@ export type CardEffect = Partial<Pick<GameState, 'piety' | 'sepah' | 'bazaar' | 
 
 export interface DilemmaCard {
     id: string;
-    title: string;
-    description: string;
-    yesText: string;
-    noText: string;
+    title?: string;
+    description?: string;
+    yesText?: string;
+    noText?: string;
     yesEffects: CardEffect;
     noEffects: CardEffect;
 }

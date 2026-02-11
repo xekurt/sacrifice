@@ -70,5 +70,447 @@
         "m2": "Supreme National Security Council",
         "m3": "The Bonyads & Bazaar",
         "m4": "Ministry of Foreign Affairs"
+    },
+    "cards": {
+        "piety": [
+            {
+                "title": "The Great Cathedral",
+                "description": "The Ministry of Guidance proposes a grand construction project to solidify the faith of the people.",
+                "yesText": "Fund Cathedral",
+                "noText": "Build Schools"
+            },
+            {
+                "title": "Religious Census",
+                "description": "Should we force all citizens to register their faith, or allow private worship?",
+                "yesText": "Require Registration",
+                "noText": "Allow Privacy"
+            },
+            {
+                "title": "The Morality Patrols",
+                "description": "Hardliners demand increased funding for street-level morality patrols to enforce the public dress code.",
+                "yesText": "Expand Patrols",
+                "noText": "Defund Them"
+            },
+            {
+                "title": "University Purge",
+                "description": "Student groups are organizing unauthorized political debates. The clerics want the ringleaders expelled.",
+                "yesText": "Expel Students",
+                "noText": "Allow Debates"
+            },
+            {
+                "title": "State Media Monopoly",
+                "description": "Underground satellite dishes are spreading foreign culture. Do we jam the signals?",
+                "yesText": "Jam Signals",
+                "noText": "Ignore Them"
+            },
+            {
+                "title": "The Friday Imams",
+                "description": "Local prayer leaders are demanding the state ban all western music from public cafes.",
+                "yesText": "Ban Western Music",
+                "noText": "Permit Instrumentals"
+            },
+            {
+                "title": "Shrine Restoration",
+                "description": "A massive budget is proposed to gild the domes of the holy shrines, draining public infrastructure funds.",
+                "yesText": "Gild the Domes",
+                "noText": "Fix the Roads"
+            },
+            {
+                "title": "Textbook Revision",
+                "description": "The Ministry of Education wants to rewrite history books to emphasize martyrdom over scientific achievement.",
+                "yesText": "Rewrite History",
+                "noText": "Keep Science First"
+            },
+            {
+                "title": "Strict Hijab Enforcement",
+                "description": "Reports of widespread non-compliance with hijab laws spark outrage among clerics who demand expanded enforcement units.",
+                "yesText": "Expand Enforcement",
+                "noText": "Ease Requirements"
+            },
+            {
+                "title": "Mandatory Religious Programming",
+                "description": "State television airs secular entertainment. Clerics demand a minimum quota of religious content.",
+                "yesText": "Impose Quota",
+                "noText": "Keep Variety"
+            },
+            {
+                "title": "Cleric Legislative Veto",
+                "description": "Hardline clerics propose granting the Guardian Council absolute veto power over all laws.",
+                "yesText": "Grant Veto",
+                "noText": "Limit Their Role"
+            },
+            {
+                "title": "National Anti-Vice Campaign",
+                "description": "Mixed-gender parties and alcohol consumption are rising. Launch a nationwide campaign?",
+                "yesText": "Launch Campaign",
+                "noText": "Focus on Privacy"
+            },
+            {
+                "title": "Madrasa Expansion",
+                "description": "Divert university budgets to expand religious seminaries across the country.",
+                "yesText": "Prioritize Madrasas",
+                "noText": "Invest in Universities"
+            },
+            {
+                "title": "Ban Valentine\\'s Celebrations",
+                "description": "Shops openly sell Valentine\\'s gifts, seen as Western corruption.",
+                "yesText": "Ban the Holiday",
+                "noText": "Permit Sales"
+            },
+            {
+                "title": "Extended Holy Defense Week",
+                "description": "Veterans and clerics want a full month of mandatory commemoration events.",
+                "yesText": "Extend Events",
+                "noText": "Keep One Week"
+            },
+            {
+                "title": "National Censorship Board",
+                "description": "Establish a permanent board to review all publications for religious compliance.",
+                "yesText": "Create the Board",
+                "noText": "Allow Free Press"
+            },
+            {
+                "title": "Redirect Charity Funds",
+                "description": "Divert public charity funds primarily to support clergy families.",
+                "yesText": "Redirect Funds",
+                "noText": "General Welfare"
+            },
+            {
+                "title": "Workplace Prayer Mandate",
+                "description": "Require all workplaces to provide prayer rooms and enforced prayer breaks.",
+                "yesText": "Enforce Mandate",
+                "noText": "Make Optional"
+            }
+        ],
+        "sepah": [
+            {
+                "title": "Border Skirmish",
+                "description": "The Supreme National Security Council reports minor incursions. A show of force is requested.",
+                "yesText": "Deploy the Sepah",
+                "noText": "Diplomatic Protest"
+            },
+            {
+                "title": "New Armored Division",
+                "description": "The generals request funds for a new mechanized unit to \"ensure peace through strength.\"",
+                "yesText": "Grant Funds",
+                "noText": "Deny Funding"
+            },
+            {
+                "title": "Port Smuggling",
+                "description": "Intelligence reports the Sepah is bypassing customs at the southern ports to fund black-ops.",
+                "yesText": "Look the Other Way",
+                "noText": "Enforce Customs"
+            },
+            {
+                "title": "Regional Proxies",
+                "description": "Our allied militias in neighboring countries need advanced missile shipments to maintain influence.",
+                "yesText": "Send Missiles",
+                "noText": "Cut Funding"
+            },
+            {
+                "title": "Cyber Command",
+                "description": "The generals want to build a domestic intranet to completely isolate citizens from the global web.",
+                "yesText": "Build the Firewall",
+                "noText": "Keep Global Access"
+            },
+            {
+                "title": "Quell the Strike",
+                "description": "Oil refinery workers are striking for unpaid wages. The Sepah offers to break the strike by force.",
+                "yesText": "Send the Guards",
+                "noText": "Pay the Wages"
+            },
+            {
+                "title": "Consolidate Bonyads",
+                "description": "The military wants to absorb three major charitable foundations into their corporate conglomerate.",
+                "yesText": "Transfer Assets",
+                "noText": "Protect Charities"
+            },
+            {
+                "title": "Drone Manufacturing",
+                "description": "Foreign buyers are offering hard currency for our combat drones, but it will provoke sanctions.",
+                "yesText": "Export Weapons",
+                "noText": "Keep for Defense"
+            },
+            {
+                "title": "Basij Mobilization",
+                "description": "Basij volunteers request full mobilization for internal security duties.",
+                "yesText": "Full Mobilization",
+                "noText": "Limit to Reserves"
+            },
+            {
+                "title": "Satellite Launch Program",
+                "description": "Military proposes launching new reconnaissance satellites despite sanction threats.",
+                "yesText": "Approve Launch",
+                "noText": "Delay Indefinitely"
+            },
+            {
+                "title": "Mass Dissident Arrests",
+                "description": "Intelligence has compiled lists of opposition figures for preventive detention.",
+                "yesText": "Authorize Arrests",
+                "noText": "Reject Lists"
+            },
+            {
+                "title": "Military Factory Expansion",
+                "description": "Sepah proposes taking over additional civilian factories for defense production.",
+                "yesText": "Transfer Factories",
+                "noText": "Keep Civilian"
+            },
+            {
+                "title": "Increased Proxy Funding",
+                "description": "Regional allies request significantly higher funding and arms shipments.",
+                "yesText": "Increase Support",
+                "noText": "Scale Back"
+            },
+            {
+                "title": "Martial Law in Provinces",
+                "description": "Ethnic unrest in border provinces. Sepah offers to impose martial law.",
+                "yesText": "Declare Martial Law",
+                "noText": "Negotiate Locally"
+            },
+            {
+                "title": "Veterans Pension Increase",
+                "description": "War veterans demand higher pensions and benefits.",
+                "yesText": "Grant Increases",
+                "noText": "Budget Limits"
+            },
+            {
+                "title": "Naval Build-Up",
+                "description": "Expand the navy with new destroyers and submarines.",
+                "yesText": "Begin Construction",
+                "noText": "Focus on Land"
+            },
+            {
+                "title": "Foreign Intelligence Budget",
+                "description": "Double funding for overseas intelligence operations.",
+                "yesText": "Double Budget",
+                "noText": "Maintain Level"
+            },
+            {
+                "title": "Protest Suppression",
+                "description": "Large protests in major cities. Sepah volunteers to disperse them.",
+                "yesText": "Deploy Forces",
+                "noText": "Allow Peaceful Protest"
+            }
+        ],
+        "bazaar": [
+            {
+                "title": "The Steel Tariff",
+                "description": "The Bonyads demand protection for local industries. The Bazaris are divided.",
+                "yesText": "Impose Tariffs",
+                "noText": "Free Trade"
+            },
+            {
+                "title": "Market Subsidy",
+                "description": "The price of bread is rising. Should we subsidize the merchants to prevent riots?",
+                "yesText": "Provide Subsidies",
+                "noText": "Let the Market Decouple"
+            },
+            {
+                "title": "Currency Collapse",
+                "description": "The Rial is in freefall. Merchants demand we inject foreign reserves to stabilize the market.",
+                "yesText": "Inject Reserves",
+                "noText": "Let it Fall"
+            },
+            {
+                "title": "The Carpet Exporters",
+                "description": "Traditional artisans are going bankrupt due to border closures. They beg for an export corridor.",
+                "yesText": "Open Corridor",
+                "noText": "Focus on Oil"
+            },
+            {
+                "title": "Black Market Crackdown",
+                "description": "The informal economy is thriving while state coffers empty. Should we raid the black market?",
+                "yesText": "Raid the Markets",
+                "noText": "Tax the Shadows"
+            },
+            {
+                "title": "Foreign Investment",
+                "description": "A European conglomerate wants to modernize our telecom infrastructure. The hardliners object.",
+                "yesText": "Sign Contract",
+                "noText": "Block Foreigners"
+            },
+            {
+                "title": "Price Controls",
+                "description": "Inflation is destroying the middle class. Do we mandate strict price ceilings on basic food items?",
+                "yesText": "Mandate Prices",
+                "noText": "Free Floating Prices"
+            },
+            {
+                "title": "Bonyad Tax Evasion",
+                "description": "State-linked religious charities (Bonyads) control 30% of the economy but pay no taxes. Force them to pay?",
+                "yesText": "Audit Bonyads",
+                "noText": "Maintain Exemptions"
+            },
+            {
+                "title": "Partial Oil Privatization",
+                "description": "Merchants push to privatize select oil fields to attract foreign capital.",
+                "yesText": "Allow Privatization",
+                "noText": "Full State Control"
+            },
+            {
+                "title": "Luxury Goods Imports",
+                "description": "Wealthy merchants want to import luxury cars and electronics.",
+                "yesText": "Permit Imports",
+                "noText": "Ban Luxuries"
+            },
+            {
+                "title": "Stock Market Liberalization",
+                "description": "Reform the Tehran Stock Exchange to allow foreign investors.",
+                "yesText": "Open the Market",
+                "noText": "Keep Restrictions"
+            },
+            {
+                "title": "Agricultural Subsidies",
+                "description": "Farmers and food merchants demand subsidies to keep bread prices low.",
+                "yesText": "Grant Subsidies",
+                "noText": "Market Prices"
+            },
+            {
+                "title": "Cryptocurrency Legalization",
+                "description": "Young traders want to legalize cryptocurrency exchanges.",
+                "yesText": "Legalize Crypto",
+                "noText": "Maintain Ban"
+            },
+            {
+                "title": "Tourism Campaign",
+                "description": "Hotel owners and merchants push for a major international tourism drive.",
+                "yesText": "Launch Campaign",
+                "noText": "Limit Tourism"
+            },
+            {
+                "title": "Labor Law Relaxation",
+                "description": "Factory owners want relaxed labor laws to reduce costs.",
+                "yesText": "Relax Laws",
+                "noText": "Protect Workers"
+            },
+            {
+                "title": "Sanctions-Evasion Networks",
+                "description": "Merchants propose expanding unofficial trade networks to bypass sanctions.",
+                "yesText": "Support Networks",
+                "noText": "Crack Down"
+            },
+            {
+                "title": "Infrastructure Bonds",
+                "description": "Issue government bonds to fund ports and highways, favored by construction merchants.",
+                "yesText": "Issue Bonds",
+                "noText": "Direct Taxes"
+            },
+            {
+                "title": "Guild Autonomy",
+                "description": "Traditional bazaar guilds demand greater autonomy from state regulation.",
+                "yesText": "Grant autonomy",
+                "noText": "Increase Oversight"
+            }
+        ],
+        "isolation": [
+            {
+                "title": "The Cultural Exchange",
+                "description": "The Ministry of Foreign Affairs suggests inviting western artists to a local festival.",
+                "yesText": "Open the Gates",
+                "noText": "Preserve Tradition"
+            },
+            {
+                "title": "Global Sanctions",
+                "description": "Foreign powers threaten sanctions unless we halt our independent research.",
+                "yesText": "Halt Research",
+                "noText": "Defy the World"
+            },
+            {
+                "title": "The Nuclear Inspector",
+                "description": "UN inspectors are requesting access to an undisclosed military site. Refusal guarantees heavy sanctions.",
+                "yesText": "Grant Access",
+                "noText": "Expel Inspectors"
+            },
+            {
+                "title": "Diaspora Assets",
+                "description": "Exiled citizens want to invest in the homeland. Should we offer them amnesty to bring in their capital?",
+                "yesText": "Offer Amnesty",
+                "noText": "Seize Remaining Assets"
+            },
+            {
+                "title": "Embassy Siege",
+                "description": "Student radicals have surrounded a Western embassy. They want to breach the gates to prove a point.",
+                "yesText": "Let Them Breach",
+                "noText": "Send Riot Police"
+            },
+            {
+                "title": "Hostage Diplomacy",
+                "description": "We have detained a dual-citizen journalist. Foreign governments are offering unfreezing of assets for their release.",
+                "yesText": "Take the Deal",
+                "noText": "Try for Espionage"
+            },
+            {
+                "title": "The Cyber Attack",
+                "description": "State hackers have crippled a rival nation\\'s power grid. We can claim responsibility or stay quiet.",
+                "yesText": "Claim Glory",
+                "noText": "Deny Involvement"
+            },
+            {
+                "title": "Regional Summit",
+                "description": "A neutral neighbor is hosting a peace summit. Attending means sitting at the same table as our sworn enemies.",
+                "yesText": "Send Delegates",
+                "noText": "Boycott Summit"
+            },
+            {
+                "title": "Major Trade Deal",
+                "description": "A global power offers a comprehensive trade agreement in exchange for policy concessions.",
+                "yesText": "Sign the Deal",
+                "noText": "Reject Concessions"
+            },
+            {
+                "title": "Human Rights Inquiry",
+                "description": "International monitors request access to prisons for a human rights report.",
+                "yesText": "Allow Access",
+                "noText": "Block Monitors"
+            },
+            {
+                "title": "Joint Naval Exercise",
+                "description": "Neighbor invites participation in naval drills with Western observers present.",
+                "yesText": "Participate",
+                "noText": "Decline Invitation"
+            },
+            {
+                "title": "Political Exile Amnesty",
+                "description": "Offer amnesty to political exiles in exchange for their investment capital.",
+                "yesText": "Grant Amnesty",
+                "noText": "Maintain Exile"
+            },
+            {
+                "title": "Internet Unfiltering",
+                "description": "Lift most restrictions on global internet access.",
+                "yesText": "Unfilter Internet",
+                "noText": "Tighten Controls"
+            },
+            {
+                "title": "Foreign Humanitarian Aid",
+                "description": "Accept large-scale humanitarian aid packages from international organizations.",
+                "yesText": "Accept Aid",
+                "noText": "Reject as Interference"
+            },
+            {
+                "title": "Restore Diplomatic Ties",
+                "description": "Opportunity to restore full diplomatic relations with a long-time adversary.",
+                "yesText": "Restore Relations",
+                "noText": "Maintain Break"
+            },
+            {
+                "title": "Climate Accord",
+                "description": "Sign an international climate agreement requiring emissions monitoring.",
+                "yesText": "Sign Accord",
+                "noText": "Withdraw"
+            },
+            {
+                "title": "UNESCO Heritage Bid",
+                "description": "Apply for UNESCO World Heritage status for ancient sites, requiring foreign experts.",
+                "yesText": "Submit Application",
+                "noText": "Reject Involvement"
+            },
+            {
+                "title": "Prisoner Swap",
+                "description": "Western country proposes a prisoner exchange involving political detainees.",
+                "yesText": "Accept Swap",
+                "noText": "No Negotiation"
+            }
+        ]
     }
 }

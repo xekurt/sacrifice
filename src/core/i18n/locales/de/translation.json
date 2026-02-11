@@ -1,44 +1,44 @@
 {
     "menu": {
-        "start": "Operation beginnen",
+        "start": "Operation Beginnen",
         "settings": "Systemkonfiguration",
-        "back": "Zurück zum Hub",
+        "back": "Zum Hub Zurückkehren",
         "quit": "Abdanken",
         "quit_message": "Der Anführer ist geflohen.",
-        "quit_submessage": "Das System bricht in Ihrer Abwesenheit zusammen."
+        "quit_submessage": "Das System bricht in deiner Abwesenheit zusammen."
     },
     "game": {
         "title": "SACRIFICE",
-        "reign_endures": "Die Herrschaft dauert an",
-        "crown_falls": "Die Krone fällt",
-        "win_message": "Sie haben die Komplexität Ihres Reiches erfolgreich für {{years}} Jahre gemeistert.",
-        "loss_message": "Ihre Herrschaft endete tragisch im Jahr {{year}}, Quartal {{quarter}}.",
-        "restart": "Erneut herrschen",
+        "reign_endures": "Die Herrschaft Dauert An",
+        "crown_falls": "Die Krone Fällt",
+        "win_message": "Du hast die Komplexität deines Reiches erfolgreich {{years}} Jahre lang gemeistert.",
+        "loss_message": "Deine Herrschaft ist im Jahr {{year}}, Quartal {{quarter}}, tragisch zu Ende gegangen.",
+        "restart": "Erneut Regieren",
         "year": "Jahr",
         "quarter": "Q",
         "goal": "Ziel: {{years}} Jahre",
-        "lifeline_spent": "Lebenslinie verbraucht",
+        "lifeline_spent": "Rettungsanker Verbraucht",
         "exit": "Zum Menü",
-        "exit_confirm_title": "System verlassen?",
-        "exit_confirm_desc": "Sind Sie sicher, dass Sie zum Hub zurückkehren möchten? Der aktuelle Fortschritt geht verloren.",
+        "exit_confirm_title": "System Verlassen?",
+        "exit_confirm_desc": "Bist du sicher, dass du zum Hub zurückkehren möchtest? Der aktuelle Fortschritt geht verloren.",
         "confirm": "Bestätigen",
         "cancel": "Bleiben"
     },
     "settings": {
         "title": "Einstellungen",
-        "audio": "Audiokonfiguration",
-        "volume": "Master-Lautstärke",
+        "audio": "Audio-Konfiguration",
+        "volume": "Gesamtlautstärke",
         "mute": "Stummgeschaltet",
-        "unmute": "Ton an",
+        "unmute": "Ton An",
         "governance": "Regierungsmodus",
-        "language": "Oberflächensprache",
+        "language": "Interface-Sprache",
         "accessibility": "Barrierefreiheit",
-        "colorblind": "Farbenblindheitsmodus",
+        "colorblind": "Farbenblind-Modus",
         "modes": {
             "none": "Standard",
-            "protanopia": "Protanopie (Rotblindheit)",
-            "deuteranopia": "Deuteranopie (Grünblindheit)",
-            "tritanopia": "Tritanopie (Blaublindheit)"
+            "protanopia": "Protanopie (Rotschwäche)",
+            "deuteranopia": "Deuteranopie (Grünschwäche)",
+            "tritanopia": "Tritanopie (Blauschwäche)"
         }
     },
     "difficulty": {
@@ -50,12 +50,12 @@
         "hard_sub": "Schwer"
     },
     "intro": {
-        "init": "Übertragung initialisieren",
-        "enter": "Betreten Sie den Palast",
+        "init": "Übertragung Initialisieren",
+        "enter": "Den Palast Betreten",
         "slides": [
-            "Die Revolution ist vorbei. Das alte Regime ist gefallen. Sie stehen siegreich in der Asche.",
-            "Doch der Sieg ist zerbrechlich. Die Sepah verlangt Kontrolle. Die Bonyads verlangen Reichtum. Die Ideologie verlangt Gehorsam. Sie können es nicht allen recht machen.",
-            "Sie sind der Oberste Führer. Wie lange können Sie das von Ihnen geschaffene System überleben?"
+            "Die Revolution ist vorbei. Das alte Regime ist gefallen. Du stehst siegreich in der Asche.",
+            "Doch der Sieg ist zerbrechlich. Die Sepah fordern Kontrolle. Die Bonyads fordern Reichtum. Die Ideologie fordert Gehorsam. Du kannst es nicht allen recht machen.",
+            "Du bist der Oberste Führer. Wie lange kannst du das System überleben, das du geschaffen hast?"
         ]
     },
     "metrics": {
@@ -66,9 +66,451 @@
         "legitimacy": "Legitimität"
     },
     "ministries": {
-        "m1": "Ministerium für Orientierung",
+        "m1": "Ministerium für Führung",
         "m2": "Oberster Nationaler Sicherheitsrat",
         "m3": "Die Bonyads & der Basar",
         "m4": "Außenministerium"
+    },
+    "cards": {
+        "piety": [
+            {
+                "title": "Die Große Kathedrale",
+                "description": "Das Ministerium für Führung schlägt ein großes Bauprojekt vor, um den Glauben des Volkes zu festigen.",
+                "yesText": "Kathedrale finanzieren",
+                "noText": "Schulen bauen"
+            },
+            {
+                "title": "Religiöse Volkszählung",
+                "description": "Sollen wir alle Bürger verpflichten, ihren Glauben zu registrieren, oder private Religionsausübung erlauben?",
+                "yesText": "Registrierung fordern",
+                "noText": "Privatsphäre erlauben"
+            },
+            {
+                "title": "Die Sittenpolizei",
+                "description": "Hardliner fordern mehr Mittel für Sittenpatrouillen auf der Straße, um die öffentliche Kleiderordnung durchzusetzen.",
+                "yesText": "Patrouillen ausweiten",
+                "noText": "Mittel kürzen"
+            },
+            {
+                "title": "Säuberung der Universitäten",
+                "description": "Studentengruppen organisieren nicht genehmigte politische Debatten. Die Kleriker wollen die Rädelsführer von der Universität verweisen.",
+                "yesText": "Studenten verweisen",
+                "noText": "Debatten zulassen"
+            },
+            {
+                "title": "Staatsmedienmonopol",
+                "description": "Illegale Satellitenschüsseln verbreiten fremde Kultur. Sollen wir die Signale stören?",
+                "yesText": "Signale stören",
+                "noText": "Ignorieren"
+            },
+            {
+                "title": "Die Freitagsimame",
+                "description": "Lokale Gebetsführer fordern den Staat auf, westliche Musik in öffentlichen Cafés zu verbieten.",
+                "yesText": "Musik verbieten",
+                "noText": "Instrumentalmusik erlauben"
+            },
+            {
+                "title": "Restaurierung von Heiligtümern",
+                "description": "Ein massives Budget wird vorgeschlagen, um die Kuppeln der heiligen Schreine zu vergolden, was Mittel für die Infrastruktur abzieht.",
+                "yesText": "Kuppeln vergolden",
+                "noText": "Straßen reparieren"
+            },
+            {
+                "title": "Lehrplanrevision",
+                "description": "Das Bildungsministerium will Geschichtsbücher umschreiben, um das Märtyrertum gegenüber wissenschaftlichen Errungenschaften zu betonen.",
+                "yesText": "Geschichte umschreiben",
+                "noText": "Wissenschaft zuerst"
+            },
+            {
+                "title": "Strenge Hidschab-Durchsetzung",
+                "description": "Berichte über weit verbreitete Missachtung der Hidschab-Gesetze empören Kleriker, die verstärkte Durchsetzungseinheiten fordern.",
+                "yesText": "Durchsetzung ausweiten",
+                "noText": "Anforderungen lockern"
+            },
+            {
+                "title": "Verpflichtende religiöse Programme",
+                "description": "Das Staatsfernsehen strahlt säkulare Unterhaltung aus. Kleriker fordern eine Mindestquote an religiösen Inhalten.",
+                "yesText": "Quote vorschreiben",
+                "noText": "Vielfalt bewahren"
+            },
+            {
+                "title": "Gesetzesveto der Kleriker",
+                "description": "Hardliner-Kleriker schlagen vor, dem Wächterrat ein absolutes Vetorecht über alle Gesetze einzuräumen.",
+                "yesText": "Veto gewähren",
+                "noText": "Rolle einschränken"
+            },
+            {
+                "title": "Nationale Anti-Laster-Kampagne",
+                "description": "Gemischtgeschlechtliche Partys und Alkoholkonsum nehmen zu. Eine landesweite Kampagne starten?",
+                "yesText": "Kampagne starten",
+                "noText": "Privatsphäre wahren"
+            },
+            {
+                "title": "Ausbau der Medresen",
+                "description": "Universitätsbudgets umleiten, um religiöse Seminare im ganzen Land auszubauen.",
+                "yesText": "Medresen priorisieren",
+                "noText": "In Unis investieren"
+            },
+            {
+                "title": "Valentinstagsverbot",
+                "description": "Geschäfte verkaufen offen Valentinstagsgeschenke, was als westliche Korruption angesehen wird.",
+                "yesText": "Feiertag verbieten",
+                "noText": "Verkauf erlauben"
+            },
+            {
+                "title": "Verlängerte Woche der Verteidigung",
+                "description": "Veteranen und Kleriker fordern einen vollen Monat mit obligatorischen Gedenkveranstaltungen.",
+                "yesText": "Events verlängern",
+                "noText": "Eine Woche beibehalten"
+            },
+            {
+                "title": "Nationale Zensurbehörde",
+                "description": "Einrichtung einer ständigen Behörde zur Überprüfung aller Publikationen auf religiöse Konformität.",
+                "yesText": "Behörde einrichten",
+                "noText": "Pressefreiheit lassen"
+            },
+            {
+                "title": "Wohltätigkeitsgelder umleiten",
+                "description": "Öffentliche Wohltätigkeitsgelder primär zur Unterstützung von Klerikerfamilien umleiten.",
+                "yesText": "Gelder umleiten",
+                "noText": "Allgemeinwohl"
+            },
+            {
+                "title": "Gebetspflicht am Arbeitsplatz",
+                "description": "Verpflichtung aller Arbeitsplätze zur Bereitstellung von Gebetsräumen und zur Einhaltung von Gebetspausen.",
+                "yesText": "Pflicht einführen",
+                "noText": "Optional lassen"
+            }
+        ],
+        "sepah": [
+            {
+                "title": "Grenzscharmützel",
+                "description": "Der Oberste Nationale Sicherheitsrat meldet kleinere Übergriffe. Ein Zeichen der Stärke wird gefordert.",
+                "yesText": "Sepah mobilisieren",
+                "noText": "Diplomatischer Protest"
+            },
+            {
+                "title": "Neue Panzerdivision",
+                "description": "Die Generäle fordern Mittel für eine neue mechanisierte Einheit, um \"Frieden durch Stärke\" zu gewährleisten.",
+                "yesText": "Mittel gewähren",
+                "noText": "Finanzierung ablehnen"
+            },
+            {
+                "title": "Hafenschmuggel",
+                "description": "Geheimdienstberichte deuten darauf hin, dass die Sepah den Zoll an den südlichen Häfen umgehen, um Black-Ops zu finanzieren.",
+                "yesText": "Wegsehen",
+                "noText": "Zoll durchsetzen"
+            },
+            {
+                "title": "Regionale Stellvertreter",
+                "description": "Unsere verbündeten Milizen in den Nachbarländern benötigen fortschrittliche Raketenlieferungen, um ihren Einfluss zu wahren.",
+                "yesText": "Raketen senden",
+                "noText": "Mittel streichen"
+            },
+            {
+                "title": "Cyber-Kommando",
+                "description": "Die Generäle wollen ein einheimisches Intranet aufbauen, um die Bürger vollständig vom globalen Netz zu isolieren.",
+                "yesText": "Firewall bauen",
+                "noText": "Zugang lassen"
+            },
+            {
+                "title": "Streik beenden",
+                "description": "Arbeiter einer Ölraffinerie streiken wegen unbezahlter Löhne. Die Sepah bietet an, den Streik mit Gewalt zu brechen.",
+                "yesText": "Wachen senden",
+                "noText": "Löhne zahlen"
+            },
+            {
+                "title": "Bonyads konsolidieren",
+                "description": "Das Militär will drei große Wohltätigkeitsstiftungen in sein Unternehmenskonglomerat eingliedern.",
+                "yesText": "Vermögen übertragen",
+                "noText": "Stiftungen schützen"
+            },
+            {
+                "title": "Drohnenherstellung",
+                "description": "Ausländische Käufer bieten Devisen für unsere Kampfdrohnen an, aber das wird Sanktionen provozieren.",
+                "yesText": "Waffen exportieren",
+                "noText": "Für Verteidigung halten"
+            },
+            {
+                "title": "Basidsch-Mobilisierung",
+                "description": "Basidsch-Freiwillige fordern volle Mobilisierung für Aufgaben der internen Sicherheit.",
+                "yesText": "Volle Mobilisierung",
+                "noText": "Reserven beschränken"
+            },
+            {
+                "title": "Satellitenprogramm",
+                "description": "Das Militär schlägt den Start neuer Aufklärungssatelliten trotz angedrohter Sanktionen vor.",
+                "yesText": "Start genehmigen",
+                "noText": "Unbegrenzt warten"
+            },
+            {
+                "title": "Massenverhaftungen von Dissidenten",
+                "description": "Der Geheimdienst hat Listen von Oppositionsfiguren für eine Präventivhaft zusammengestellt.",
+                "yesText": "Verhaftungen erlauben",
+                "noText": "Listen ablehnen"
+            },
+            {
+                "title": "Ausbau von Militärfabriken",
+                "description": "Die Sepah schlagen vor, weitere zivile Fabriken für die Rüstungsproduktion zu übernehmen.",
+                "yesText": "Fabriken übertragen",
+                "noText": "Zivil belassen"
+            },
+            {
+                "title": "Mehr Mittel für Proxies",
+                "description": "Regionale Verbündete fordern deutlich höhere Finanzmittel und Waffenlieferungen.",
+                "yesText": "Unterstützung erhöhen",
+                "noText": "Reduzieren"
+            },
+            {
+                "title": "Kriegsrecht in Provinzen",
+                "description": "Ethnische Unruhen in Grenzprovinzen. Die Sepah bieten an, das Kriegsrecht zu verhängen.",
+                "yesText": "Kriegsrecht erklären",
+                "noText": "Lokal verhandeln"
+            },
+            {
+                "title": "Rentenerhöhung für Veteranen",
+                "description": "Kriegsveteranen fordern höhere Renten und Sozialleistungen.",
+                "yesText": "Erhöhung gewähren",
+                "noText": "Budgetgrenzen"
+            },
+            {
+                "title": "Marinerüstung",
+                "description": "Ausbau der Marine mit neuen Zerstörern und U-Booten.",
+                "yesText": "Bau beginnen",
+                "noText": "Land stärken"
+            },
+            {
+                "title": "Auslandsgeheimdienst-Budget",
+                "description": "Verdoppelung der Mittel für Geheimdienstoperationen im Ausland.",
+                "yesText": "Budget verdoppeln",
+                "noText": "Niveau halten"
+            },
+            {
+                "title": "Protestunterdrückung",
+                "description": "Große Proteste in Großstädten. Die Sepah bieten an, sie aufzulösen.",
+                "yesText": "Truppen entsenden",
+                "noText": "Proteste zulassen"
+            }
+        ],
+        "bazaar": [
+            {
+                "title": "Stahlzölle",
+                "description": "Die Bonyads fordern Schutz für die lokale Industrie. Die Basaris sind gespalten.",
+                "yesText": "Zölle einführen",
+                "noText": "Freihandel"
+            },
+            {
+                "title": "Marktsubvention",
+                "description": "Der Brotpreis steigt. Sollen wir die Händler subventionieren, um Unruhen zu verhindern?",
+                "yesText": "Subventionen geben",
+                "noText": "Markt wirken lassen"
+            },
+            {
+                "title": "Währungskollaps",
+                "description": "Der Rial befindet sich im freien Fall. Händler fordern die Injektion von Devisenreserven zur Stabilisierung.",
+                "yesText": "Reserven injizieren",
+                "noText": "Fallen lassen"
+            },
+            {
+                "title": "Teppichexporteure",
+                "description": "Traditionelle Handwerker gehen wegen Grenzschließungen bankrott. Sie bitten um einen Exportkorridor.",
+                "yesText": "Korridor öffnen",
+                "noText": "Fokus auf Öl"
+            },
+            {
+                "title": "Razzia am Schwarzmarkt",
+                "description": "Die Schattenwirtschaft blüht, während die Staatskassen leer sind. Sollen wir den Schwarzmarkt stürmen?",
+                "yesText": "Razzien durchführen",
+                "noText": "Schatten besteuern"
+            },
+            {
+                "title": "Ausländische Investitionen",
+                "description": "Ein europäischer Konzern will unsere Telekommunikationsinfrastruktur modernisieren. Hardliner sind dagegen.",
+                "yesText": "Vertrag unterzeichnen",
+                "noText": "Ausländer blockieren"
+            },
+            {
+                "title": "Preiskontrollen",
+                "description": "Die Inflation zerstört die Mittelschicht. Führen wir strenge Preisobergrenzen für Grundnahrungsmittel ein?",
+                "yesText": "Preise vorschreiben",
+                "noText": "Freie Preise"
+            },
+            {
+                "title": "Steuerflucht der Bonyads",
+                "description": "Staatsnahe religiöse Stiftungen (Bonyads) kontrollieren 30 % der Wirtschaft, zahlen aber keine Steuern. Zwingen?",
+                "yesText": "Bonyads prüfen",
+                "noText": "Ausnahmen lassen"
+            },
+            {
+                "title": "Teilweise Öl-Privatisierung",
+                "description": "Händler drängen darauf, ausgewählte Ölfelder zu privatisieren, um ausländisches Kapital anzuziehen.",
+                "yesText": "Privatisierung erlauben",
+                "noText": "Staatliche Kontrolle"
+            },
+            {
+                "title": "Luxusgüter-Importe",
+                "description": "Reiche Händler wollen Luxusautos und Elektronik importieren.",
+                "yesText": "Importe erlauben",
+                "noText": "Luxus verbieten"
+            },
+            {
+                "title": "Börsenliberalisierung",
+                "description": "Reform der Teheraner Börse, um ausländische Investoren zuzulassen.",
+                "yesText": "Markt öffnen",
+                "noText": "Beschränkt lassen"
+            },
+            {
+                "title": "Agrarsubventionen",
+                "description": "Landwirte und Lebensmittelhändler fordern Subventionen, um die Brotpreise niedrig zu halten.",
+                "yesText": "Subventionen gewähren",
+                "noText": "Marktpreise"
+            },
+            {
+                "title": "Krypto-Legalisierung",
+                "description": "Junge Händler wollen Kryptowährungsbörsen legalisieren.",
+                "yesText": "Krypto legalisieren",
+                "noText": "Verbot beibehalten"
+            },
+            {
+                "title": "Tourismuskampagne",
+                "description": "Hoteliers und Händler drängen auf eine große internationale Tourismuskampagne.",
+                "yesText": "Kampagne starten",
+                "noText": "Tourismus begrenzen"
+            },
+            {
+                "title": "Lockerung des Arbeitsrechts",
+                "description": "Fabrikbesitzer wollen gelockerte Arbeitsgesetze, um Kosten zu senken.",
+                "yesText": "Gesetze lockern",
+                "noText": "Arbeiter schützen"
+            },
+            {
+                "title": "Sanktionsumgehungs-Netzwerke",
+                "description": "Händler schlagen den Ausbau inoffizieller Handelsnetze vor, um Sanktionen zu umgehen.",
+                "yesText": "Netzwerke unterstützen",
+                "noText": "Durchgreifen"
+            },
+            {
+                "title": "Infrastrukturanleihen",
+                "description": "Ausgabe von Staatsanleihen zur Finanzierung von Häfen und Autobahnen, bevorzugt von Bauhändlern.",
+                "yesText": "Anleihen ausgeben",
+                "noText": "Direkte Steuern"
+            },
+            {
+                "title": "Gildenautonomie",
+                "description": "Traditionelle Basar-Gilden fordern größere Autonomie von der staatlichen Regulierung.",
+                "yesText": "Autonomie gewähren",
+                "noText": "Aufsicht erhöhen"
+            }
+        ],
+        "isolation": [
+            {
+                "title": "Kulturaustausch",
+                "description": "Das Außenministerium schlägt vor, westliche Künstler zu einem lokalen Festival einzuladen.",
+                "yesText": "Tore öffnen",
+                "noText": "Tradition bewahren"
+            },
+            {
+                "title": "Globale Sanktionen",
+                "description": "Ausländische Mächte drohen mit Sanktionen, sofern wir unsere unabhängige Forschung nicht einstellen.",
+                "yesText": "Forschung stoppen",
+                "noText": "Der Welt trotzen"
+            },
+            {
+                "title": "Atominspektor",
+                "description": "UN-Inspektoren fordern Zugang zu einer geheimgehaltenen Militäranlage. Eine Ablehnung garantiert schwere Sanktionen.",
+                "yesText": "Zugang gewähren",
+                "noText": "Inspektoren ausweisen"
+            },
+            {
+                "title": "Diaspora-Vermögen",
+                "description": "Bürger im Exil wollen in der Heimat investieren. Sollen wir ihnen Amnestie anbieten, um Kapital anzulocken?",
+                "yesText": "Amnestie anbieten",
+                "noText": "Reste beschlagnahmen"
+            },
+            {
+                "title": "Botschaftsbelagerung",
+                "description": "Radikale Studenten haben eine westliche Botschaft umstellt. Sie wollen die Tore stürmen.",
+                "yesText": "Stürmen lassen",
+                "noText": "Polizei senden"
+            },
+            {
+                "title": "Geisel-Diplomatie",
+                "description": "Wir haben einen Journalisten mit doppelter Staatsbürgerschaft inhaftiert. Regierungen bieten Freigabe von Geldern an.",
+                "yesText": "Deal annehmen",
+                "noText": "Wegen Spionage anklagen"
+            },
+            {
+                "title": "Cyberangriff",
+                "description": "Staatliche Hacker haben das Stromnetz einer rivalisierenden Nation lahmgelegt. Sollen wir uns dazu bekennen?",
+                "yesText": "Ruhm beanspruchen",
+                "noText": "Beteiligung leugnen"
+            },
+            {
+                "title": "Regionaler Gipfel",
+                "description": "Ein neutraler Nachbar veranstaltet einen Friedensgipfel. Die Teilnahme bedeutet, mit Feinden am Tisch zu sitzen.",
+                "yesText": "Delegierte senden",
+                "noText": "Gipfel boykottieren"
+            },
+            {
+                "title": "Großes Handelsabkommen",
+                "description": "Eine Weltmacht bietet ein umfassendes Abkommen gegen politische Zugeständnisse an.",
+                "yesText": "Vertrag schließen",
+                "noText": "Zugeständnisse ablehnen"
+            },
+            {
+                "title": "Menschenrechtsuntersuchung",
+                "description": "Internationale Beobachter fordern Zugang zu Gefängnissen für einen Menschenrechtsbericht.",
+                "yesText": "Zugang erlauben",
+                "noText": "Beobachter blocken"
+            },
+            {
+                "title": "Gemeinsame Marineübung",
+                "description": "Nachbar lädt zur Teilnahme an Manövern mit westlichen Beobachtern ein.",
+                "yesText": "Teilnehmen",
+                "noText": "Einladung ablehnen"
+            },
+            {
+                "title": "Amnestie für politische Exilanten",
+                "description": "Bieten Sie politischen Exilanten Amnestie im Austausch für ihr Investitionskapital an.",
+                "yesText": "Amnestie gewähren",
+                "noText": "Exil aufrechterhalten"
+            },
+            {
+                "title": "Internet-Entfilterung",
+                "description": "Heben Sie die meisten Beschränkungen für den globalen Internetzugang auf.",
+                "yesText": "Internet entfiltern",
+                "noText": "Kontrollen verschärfen"
+            },
+            {
+                "title": "Ausländische humanitäre Hilfe",
+                "description": "Akzeptieren Sie groß angelegte humanitäre Hilfspakete von internationalen Organisationen.",
+                "yesText": "Hilfe annehmen",
+                "noText": "Als Einmischung ablehnen"
+            },
+            {
+                "title": "Wiederherstellung dipl. Beziehungen",
+                "description": "Gelegenheit zur Wiederherstellung voller diplomatischer Beziehungen zu einem alten Gegner.",
+                "yesText": "Beziehungen aufnehmen",
+                "noText": "Bruch beibehalten"
+            },
+            {
+                "title": "Klimaabkommen",
+                "description": "Unterzeichnen Sie ein internationales Klimaabkommen, das die Überwachung von Emissionen erfordert.",
+                "yesText": "Abkommen unterzeichnen",
+                "noText": "Austreten"
+            },
+            {
+                "title": "UNESCO-Kulturerbe-Antrag",
+                "description": "UNESCO-Status für antike Stätten beantragen, was ausländische Experten erfordert.",
+                "yesText": "Antrag stellen",
+                "noText": "Einmischung ablehnen"
+            },
+            {
+                "title": "Gefangenenaustausch",
+                "description": "Westliches Land schlägt Gefangenenaustausch unter Einbeziehung politischer Häftlinge vor.",
+                "yesText": "Austausch akzeptieren",
+                "noText": "Keine Verhandlung"
+            }
+        ]
     }
 }
