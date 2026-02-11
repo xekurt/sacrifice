@@ -14,6 +14,8 @@ export interface GameState {
     sepahDeck: DilemmaCard[];
     bazaarDeck: DilemmaCard[];
     isolationDeck: DilemmaCard[];
+    lossReason: string | null;
+    lostThroughMetric: string | null;
 }
 
 export type CardEffect = Partial<Pick<GameState, 'piety' | 'sepah' | 'bazaar' | 'isolation' | 'legitimacy'>>;

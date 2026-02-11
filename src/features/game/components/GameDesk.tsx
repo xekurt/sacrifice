@@ -52,6 +52,41 @@ const GameDesk: React.FC<GameDeskProps> = ({ onExit }) => {
                             ? t('game.win_message', { years: state.currentYear })
                             : t('game.loss_message', { year: state.currentYear, quarter: state.currentQuarter })}
                     </p>
+
+                    <div className="mt-8 grid grid-cols-5 gap-2 border-y border-zinc-800 py-4 mb-4">
+                        <div className={`text-center py-2 rounded-sm transition-all ${state.lostThroughMetric === 'piety' ? 'bg-violet-950/30 ring-1 ring-violet-500/50 scale-105' : ''}`}>
+                            <span className="block text-[8px] uppercase tracking-widest text-zinc-500 mb-1">{t('metrics.piety')}</span>
+                            <span className="text-sm font-bold text-violet-400">{Math.round(state.piety)}%</span>
+                        </div>
+                        <div className={`text-center py-2 rounded-sm transition-all ${state.lostThroughMetric === 'sepah' ? 'bg-orange-950/30 ring-1 ring-orange-500/50 scale-105' : ''}`}>
+                            <span className="block text-[8px] uppercase tracking-widest text-zinc-500 mb-1">{t('metrics.sepah')}</span>
+                            <span className="text-sm font-bold text-orange-400">{Math.round(state.sepah)}%</span>
+                        </div>
+                        <div className={`text-center py-2 rounded-sm transition-all ${state.lostThroughMetric === 'bazaar' ? 'bg-yellow-950/30 ring-1 ring-yellow-500/50 scale-105' : ''}`}>
+                            <span className="block text-[8px] uppercase tracking-widest text-zinc-500 mb-1">{t('metrics.bazaar')}</span>
+                            <span className="text-sm font-bold text-yellow-500">{Math.round(state.bazaar)}%</span>
+                        </div>
+                        <div className={`text-center py-2 rounded-sm transition-all ${state.lostThroughMetric === 'isolation' ? 'bg-blue-950/30 ring-1 ring-blue-500/50 scale-105' : ''}`}>
+                            <span className="block text-[8px] uppercase tracking-widest text-zinc-500 mb-1">{t('metrics.isolation')}</span>
+                            <span className="text-sm font-bold text-blue-400">{Math.round(state.isolation)}%</span>
+                        </div>
+                        <div className="text-center py-2">
+                            <span className="block text-[8px] uppercase tracking-widest text-zinc-500 mb-1">{t('metrics.legitimacy')}</span>
+                            <span className="text-sm font-bold text-emerald-400">{Math.round(state.legitimacy)}%</span>
+                        </div>
+                    </div>
+
+                    {state.gameStateStatus === 'lost' && state.lossReason && (
+                        <div className="mt-6 p-4 border border-red-900/50 bg-red-950/10 rounded-sm text-left">
+                            <span className="block text-[10px] font-bold uppercase tracking-[0.2em] text-red-500/60 mb-2">
+                                Incident Report #{state.currentYear}-{state.currentQuarter}
+                            </span>
+                            <p className="text-red-400 italic font-serif leading-relaxed text-sm">
+                                "{state.lossReason}"
+                            </p>
+                        </div>
+                    )}
+
                     <div className="flex flex-col gap-3 mt-8">
                         <GameButton className="restart-btn !mt-0" onClick={restartGame}>{t('game.restart')}</GameButton>
                         <GameButton

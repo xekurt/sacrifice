@@ -8,6 +8,7 @@ import { AccessibilityProvider } from './shared/contexts/AccessibilityContext'
 import { useDocumentDirection } from './shared/hooks/useDocumentDirection'
 import type { AppScreen, Difficulty } from './core/types/game'
 import introMusic from './assets/audio/intro_music.mp3'
+import gameMusic from './assets/audio/game_music.mp3'
 import './core/i18n'
 import './core/styles/index.css'
 
@@ -17,6 +18,9 @@ function AppContent() {
 
   // Handle document direction (RTL/LTR) based on language
   useDocumentDirection();
+
+  // Determine music source based on screen
+  const musicSrc = currentScreen === 'game' ? gameMusic : introMusic;
 
   const renderScreen = () => {
     switch (currentScreen) {
@@ -40,18 +44,18 @@ function AppContent() {
   }
 
   return (
-    <div className="App min-h-screen overflow-hidden selection:bg-zinc-100 selection:text-zinc-950">
-      {renderScreen()}
-    </div>
+    <AudioProvider src={musicSrc}>
+      <div className="App min-h-screen overflow-hidden selection:bg-zinc-100 selection:text-zinc-950">
+        {renderScreen()}
+      </div>
+    </AudioProvider>
   )
 }
 
 function App() {
   return (
     <AccessibilityProvider>
-      <AudioProvider src={introMusic}>
-        <AppContent />
-      </AudioProvider>
+      <AppContent />
     </AccessibilityProvider>
   )
 }

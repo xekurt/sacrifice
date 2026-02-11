@@ -11,6 +11,17 @@ const shuffle = <T>(array: T[]): T[] => {
     return shuffled;
 };
 
+const DEATH_REASONS: Record<string, string> = {
+    sepah_min: "Without the military to protect the borders, foreign adversaries and internal separatists have fractured the nation.",
+    sepah_max: "The generals have decided they no longer need a civilian government. A military coup has deposed you.",
+    piety_min: "The clerics have declared you an apostate. The streets fill with zealots calling for your head.",
+    piety_max: "The hardliners have completely taken over. You are no longer the leader, merely a figurehead for ideological purity.",
+    bazaar_min: "The economy has completely collapsed. Bread riots have turned into a full-scale revolution.",
+    bazaar_max: "The Bonyads and oligarchs have bought the entire state. You have been quietly replaced by a corporate puppet.",
+    isolation_min: "The borders opened completely. Unrestricted foreign influence has overwhelmed the state, forcing a regime change.",
+    isolation_max: "The country is entirely cut off from the world. Total systemic collapse has occurred due to a lack of basic imports.",
+};
+
 const getInitialState = (): GameState => ({
     piety: 50,
     sepah: 50,
@@ -26,6 +37,8 @@ const getInitialState = (): GameState => ({
     sepahDeck: shuffle(SEPAH_DECK),
     bazaarDeck: shuffle(BAZAAR_DECK),
     isolationDeck: shuffle(ISOLATION_DECK),
+    lossReason: null,
+    lostThroughMetric: null,
 });
 
 export const useGameEngine = () => {
@@ -94,23 +107,31 @@ export const useGameEngine = () => {
                 return nextState;
             }
 
-            const formsOfRuin = ['piety', 'sepah', 'bazaar', 'isolation'] as const;
-            const isImminentGameOver = formsOfRuin.some(
-                (m) => nextState[m] <= 0 || nextState[m] >= 100
-            );
+            // Evaluate failure sequentially to identify the exact cause
+            let failMetric: string | null = null;
+            if (nextState.sepah <= 0) failMetric = 'sepah_min';
+            else if (nextState.sepah >= 100) failMetric = 'sepah_max';
+            else if (nextState.piety <= 0) failMetric = 'piety_min';
+            else if (nextState.piety >= 100) failMetric = 'piety_max';
+            else if (nextState.bazaar <= 0) failMetric = 'bazaar_min';
+            else if (nextState.bazaar >= 100) failMetric = 'bazaar_max';
+            else if (nextState.isolation <= 0) failMetric = 'isolation_min';
+            else if (nextState.isolation >= 100) failMetric = 'isolation_max';
 
-            if (isImminentGameOver) {
+            if (failMetric) {
                 if (!nextState.lifelineUsed && nextState.legitimacy >= 80) {
                     nextState.legitimacy = 0;
                     nextState.lifelineUsed = true;
-                    formsOfRuin.forEach((m) => {
-                        if (nextState[m] <= 0 || nextState[m] >= 100) {
-                            nextState[m] = 50;
-                        }
-                    });
+                    // Reset the specific metric that failed
+                    const baseMetric = failMetric.split('_')[0] as keyof GameState;
+                    if (typeof nextState[baseMetric] === 'number') {
+                        (nextState[baseMetric] as number) = 50;
+                    }
                 } else {
                     nextState.gameStateStatus = 'lost';
-                    return nextState; // Stop here if lost
+                    nextState.lossReason = DEATH_REASONS[failMetric];
+                    nextState.lostThroughMetric = failMetric.split('_')[0];
+                    return nextState;
                 }
             }
 
