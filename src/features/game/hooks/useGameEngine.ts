@@ -12,14 +12,14 @@ const shuffle = <T>(array: T[]): T[] => {
 };
 
 const DEATH_REASONS: Record<string, string> = {
-    sepah_min: "Without the military to protect the borders, foreign adversaries and internal separatists have fractured the nation.",
-    sepah_max: "The generals have decided they no longer need a civilian government. A military coup has deposed you.",
-    piety_min: "The clerics have declared you an apostate. The streets fill with zealots calling for your head.",
-    piety_max: "The hardliners have completely taken over. You are no longer the leader, merely a figurehead for ideological purity.",
-    bazaar_min: "The economy has completely collapsed. Bread riots have turned into a full-scale revolution.",
-    bazaar_max: "The Bonyads and oligarchs have bought the entire state. You have been quietly replaced by a corporate puppet.",
-    isolation_min: "The borders opened completely. Unrestricted foreign influence has overwhelmed the state, forcing a regime change.",
-    isolation_max: "The country is entirely cut off from the world. Total systemic collapse has occurred due to a lack of basic imports.",
+    sepah_min: "death_reasons.sepah_min",
+    sepah_max: "death_reasons.sepah_max",
+    piety_min: "death_reasons.piety_min",
+    piety_max: "death_reasons.piety_max",
+    bazaar_min: "death_reasons.bazaar_min",
+    bazaar_max: "death_reasons.bazaar_max",
+    isolation_min: "death_reasons.isolation_min",
+    isolation_max: "death_reasons.isolation_max",
 };
 
 const getInitialState = (): GameState => ({

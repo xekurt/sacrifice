@@ -71,6 +71,16 @@
         "m3": "Les Bonyads & le Bazar",
         "m4": "Ministère des Affaires Étrangères"
     },
+    "death_reasons": {
+        "sepah_min": "Sans l'armée pour protéger les frontières, les adversaires étrangers et les séparatistes internes ont fracturé la nation.",
+        "sepah_max": "Les généraux ont décidé qu'ils n'avaient plus besoin d'un gouvernement civil. Un coup d'État militaire vous a déposé.",
+        "piety_min": "Les clercs vous ont déclaré apostat. Les rues se remplissent de zélotes réclamant votre tête.",
+        "piety_max": "Les partisans de la ligne dure ont complètement pris le pouvoir. Vous n'êtes plus le chef, mais une simple figure de proue de la pureté idéologique.",
+        "bazaar_min": "L'économie s'est complètement effondrée. Les émeutes de la faim se sont transformées en une révolution à grande échelle.",
+        "bazaar_max": "Les Bonyads et les oligarques ont racheté tout l'État. Vous avez été discrètement remplacé par une marionnette des grandes entreprises.",
+        "isolation_min": "Les frontières se sont totalement ouvertes. L'influence étrangère sans restriction a submergé l'État, forçant un changement de régime.",
+        "isolation_max": "Le pays est entièrement coupé du monde. Un effondrement systémique total s'est produit en raison du manque d'importations de base."
+    },
     "cards": {
         "piety": [
             {

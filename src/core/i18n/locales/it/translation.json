@@ -71,6 +71,16 @@
         "m3": "I Bonyad e il Bazar",
         "m4": "Ministero degli Affari Esteri"
     },
+    "death_reasons": {
+        "sepah_min": "Senza l'esercito a proteggere i confini, gli avversari stranieri e i separatisti interni hanno diviso la nazione.",
+        "sepah_max": "I generali hanno deciso di non aver più bisogno di un governo civile. Un colpo di stato militare ti ha deposto.",
+        "piety_min": "I chierici ti hanno dichiarato apostata. Le strade si riempiono di zeloti che chiedono la tua testa.",
+        "piety_max": "Gli intransigenti hanno preso completamente il potere. Non sei più il leader, ma solo un prestanome per la purezza ideologica.",
+        "bazaar_min": "L'economia è completamente crollata. Le rivolte per il pane si sono trasformate in una vera e propria rivoluzione.",
+        "bazaar_max": "I Bonyad e gli oligarchi hanno comprato l'intero stato. Sei stato silenziosamente sostituito da un fantoccio corporativo.",
+        "isolation_min": "I confini si sono aperti completamente. L'influenza straniera senza restrizioni ha travolto lo stato, forzando un cambio di regime.",
+        "isolation_max": "Il paese è interamente tagliato fuori dal mondo. Si è verificato un collasso sistemico totale a causa della mancanza di importazioni di base."
+    },
     "cards": {
         "piety": [
             {

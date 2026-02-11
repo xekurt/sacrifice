@@ -92,7 +92,7 @@ const GameDesk: React.FC<GameDeskProps> = ({ onExit }) => {
                                 Incident Report #{state.currentYear}-{state.currentQuarter}
                             </span>
                             <p className="text-red-400 italic font-serif leading-relaxed text-sm">
-                                "{state.lossReason}"
+                                "{t(state.lossReason)}"
                             </p>
                         </div>
                     )}

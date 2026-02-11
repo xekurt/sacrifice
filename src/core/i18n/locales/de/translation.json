@@ -71,6 +71,16 @@
         "m3": "Die Bonyads & der Basar",
         "m4": "Außenministerium"
     },
+    "death_reasons": {
+        "sepah_min": "Ohne das Militär zum Schutz der Grenzen haben ausländische Gegner und interne Separatisten die Nation gespalten.",
+        "sepah_max": "Die Generäle haben beschlossen, dass sie keine Zivilregierung mehr benötigen. Ein Militärputsch hat dich abgesetzt.",
+        "piety_min": "Die Kleriker haben dich zum Abtrünnigen erklärt. Die Straßen füllen sich mit Fanatikern, die nach deinem Kopf rufen.",
+        "piety_max": "Die Hardliner haben die Macht vollständig übernommen. Du bist nicht mehr der Anführer, sondern nur noch ein Aushängeschild für ideologische Reinheit.",
+        "bazaar_min": "Die Wirtschaft ist völlig zusammengebrochen. Brotprotetste haben sich in eine ausgewachsene Revolution verwandelt.",
+        "bazaar_max": "Die Bonyads und Oligarchen haben den gesamten Staat aufgekauft. Du wurdest stillschweigend durch eine Marionette der Konzerne ersetzt.",
+        "isolation_min": "Die Grenzen wurden vollständig geöffnet. Ungehinderter ausländischer Einfluss hat den Staat überwältigt und einen Regimewechsel erzwungen.",
+        "isolation_max": "Das Land ist völlig von der Welt abgeschnitten. Ein totaler Systemkollaps ist aufgrund des Mangels an Basisimporten eingetreten."
+    },
     "cards": {
         "piety": [
             {
