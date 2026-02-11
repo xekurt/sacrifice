@@ -5,18 +5,20 @@ export interface GameState {
     isolation: number;
     legitimacy: number;
     currentYear: number;
-    currentQuarter: 1 | 2 | 3 | 4;
+    currentTerm: 1 | 2;
     targetYears: number;
+
     gameStateStatus: 'playing' | 'won' | 'lost';
     lifelineUsed: boolean;
     // Current shuffled decks
-    pietyDeck: DilemmaCard[];
-    sepahDeck: DilemmaCard[];
-    bazaarDeck: DilemmaCard[];
-    isolationDeck: DilemmaCard[];
+    term1Deck: DilemmaCard[];
+    term2Deck: DilemmaCard[];
+
     lossReason: string | null;
     lostThroughMetric: string | null;
+    difficulty: Difficulty;
 }
+
 
 export type CardEffect = Partial<Pick<GameState, 'piety' | 'sepah' | 'bazaar' | 'isolation' | 'legitimacy'>>;
 

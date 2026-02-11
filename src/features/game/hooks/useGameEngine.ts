@@ -1,5 +1,5 @@
 import { useState, useCallback } from 'react';
-import type { GameState, DilemmaCard } from '../../../core/types/game';
+import type { GameState, DilemmaCard, Difficulty } from '../../../core/types/game';
 import { PIETY_DECK, SEPAH_DECK, BAZAAR_DECK, ISOLATION_DECK } from '../data/decks';
 
 const shuffle = <T>(array: T[]): T[] => {
@@ -22,41 +22,44 @@ const DEATH_REASONS: Record<string, string> = {
     isolation_max: "death_reasons.isolation_max",
 };
 
-const getInitialState = (): GameState => ({
+const getInitialState = (difficulty: Difficulty = 'normal'): GameState => ({
     piety: 50,
     sepah: 50,
     bazaar: 50,
     isolation: 50,
     legitimacy: 10,
     currentYear: 1,
-    currentQuarter: 1,
-    targetYears: 20,
+    currentTerm: 1,
+    targetYears: difficulty === 'easy' ? 10 : difficulty === 'normal' ? 20 : 30,
     gameStateStatus: 'playing',
     lifelineUsed: false,
-    pietyDeck: shuffle(PIETY_DECK),
-    sepahDeck: shuffle(SEPAH_DECK),
-    bazaarDeck: shuffle(BAZAAR_DECK),
-    isolationDeck: shuffle(ISOLATION_DECK),
+    term1Deck: shuffle([...PIETY_DECK, ...BAZAAR_DECK]),
+    term2Deck: shuffle([...SEPAH_DECK, ...ISOLATION_DECK]),
     lossReason: null,
     lostThroughMetric: null,
+    difficulty,
 });
 
-export const useGameEngine = () => {
-    const [state, setState] = useState<GameState>(getInitialState);
+export const useGameEngine = (initialDifficulty: Difficulty = 'normal') => {
+    const [state, setState] = useState<GameState>(() => getInitialState(initialDifficulty));
 
     const clamp = (value: number) => Math.min(100, Math.max(0, value));
 
-    const getCurrentCard = (s: GameState): DilemmaCard => {
-        // We use the year as the index to cycle through the shuffled deck
+    const getCurrentCardData = useCallback((s: GameState): { card: DilemmaCard; ministryName: string } => {
         const index = (s.currentYear - 1);
-        switch (s.currentQuarter) {
-            case 1: return s.pietyDeck[index % s.pietyDeck.length];
-            case 2: return s.sepahDeck[index % s.sepahDeck.length];
-            case 3: return s.bazaarDeck[index % s.bazaarDeck.length];
-            case 4: return s.isolationDeck[index % s.isolationDeck.length];
-            default: return s.pietyDeck[0];
-        }
-    };
+        const card = s.currentTerm === 1
+            ? s.term1Deck[index % s.term1Deck.length]
+            : s.term2Deck[index % s.term2Deck.length];
+
+        const char = card.id.charAt(0);
+        let ministryName = 'ministries.m1'; // Default
+        if (char === 'p') ministryName = 'ministries.m1';
+        else if (char === 'b') ministryName = 'ministries.m3';
+        else if (char === 's') ministryName = 'ministries.m2';
+        else if (char === 'i') ministryName = 'ministries.m4';
+
+        return { card, ministryName };
+    }, []);
 
     const processChoice = useCallback((choice: 'yes' | 'no', card: DilemmaCard) => {
         setState((prev) => {
@@ -74,24 +77,23 @@ export const useGameEngine = () => {
                 legitimacy: clamp(prev.legitimacy + (effects.legitimacy || 0)),
             };
 
-            // 2. Quarter Check
-            if (nextState.currentQuarter < 4) {
-                // Increment quarter and exit early
-                nextState.currentQuarter = (nextState.currentQuarter + 1) as 1 | 2 | 3 | 4;
+            // 2. Term Check
+            if (nextState.currentTerm < 2) {
+                // Advance to Term 2
+                nextState.currentTerm = 2;
                 return nextState;
             }
 
-            // If currentQuarter === 4: Apply Systemic Rules, Check Win/Loss, and Advance Year
-
-            // A. Apply Systemic Rules
+            // If currentTerm === 2: Apply Systemic Rules, Check Win/Loss, and Advance Year
+            // A. Apply Systemic Rules (Soften penalties to -3 for faster pacing)
             if (nextState.isolation < 30) {
-                nextState.piety -= 5;
+                nextState.piety -= 3;
             }
             if (nextState.sepah > 70) {
-                nextState.bazaar -= 5;
+                nextState.bazaar -= 3;
             }
             if (nextState.piety < 40) {
-                nextState.sepah += 5;
+                nextState.sepah += 3;
             }
 
             // Clamp again after rules
@@ -125,7 +127,7 @@ export const useGameEngine = () => {
                     // Reset the specific metric that failed
                     const baseMetric = failMetric.split('_')[0] as keyof GameState;
                     if (typeof nextState[baseMetric] === 'number') {
-                        (nextState[baseMetric] as number) = 50;
+                        (nextState[baseMetric] as any) = 50;
                     }
                 } else {
                     nextState.gameStateStatus = 'lost';
@@ -137,20 +139,20 @@ export const useGameEngine = () => {
 
             // C. Advance Year
             nextState.currentYear += 1;
-            nextState.currentQuarter = 1;
+            nextState.currentTerm = 1;
 
             return nextState;
         });
     }, []);
 
     const restartGame = useCallback(() => {
-        setState(getInitialState());
-    }, []);
+        setState(getInitialState(state.difficulty));
+    }, [state.difficulty]);
 
     return {
         state,
         processChoice,
         restartGame,
-        getCurrentCard,
+        getCurrentCardData,
     };
 };

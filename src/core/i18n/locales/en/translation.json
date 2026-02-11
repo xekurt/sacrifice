@@ -12,7 +12,7 @@
         "reign_endures": "The Reign Endures",
         "crown_falls": "The Crown Falls",
         "win_message": "You have successfully navigated the complexities of your kingdom for {{years}} years.",
-        "loss_message": "Your rule has come to a tragic end in year {{year}}, Quarter {{quarter}}.",
+        "loss_message": "Your rule has come to a tragic end in year {{year}}, Term {{term}}.",
         "restart": "Rule Again",
         "year": "Year",
         "quarter": "Q",
@@ -22,7 +22,13 @@
         "exit_confirm_title": "Abandon System?",
         "exit_confirm_desc": "Are you sure you want to return to the hub? Current progress will be lost.",
         "confirm": "Confirm",
-        "cancel": "Stay"
+        "cancel": "Stay",
+        "early_year": "Early Year",
+        "late_year": "Late Year",
+        "hover_instruction": "Hover over an option to view advisor projections...",
+        "outcome_uncertain": "The outcome is uncertain.",
+        "advisor_projection": "Advisor's Projection",
+        "will_impact": "Will impact"
     },
     "settings": {
         "title": "Settings",
