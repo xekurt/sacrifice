@@ -1,12 +1,6 @@
 import React from 'react';
-import { useGameEngine } from './useGameEngine';
-
-const QUARTER_METADATA = {
-    1: { name: 'Ministry of Guidance', color: '#8b5cf6' },
-    2: { name: 'Supreme National Security Council', color: '#ef4444' },
-    3: { name: 'The Bonyads & Bazaar', color: '#f59e0b' },
-    4: { name: 'Ministry of Foreign Affairs', color: '#3b82f6' },
-};
+import { useTranslation } from 'react-i18next';
+import { useGameEngine } from '../hooks/useGameEngine';
 
 const MetricBar = ({ label, value, color }: { label: string; value: number; color: string }) => (
     <div className="metric-container">
@@ -24,9 +18,18 @@ const MetricBar = ({ label, value, color }: { label: string; value: number; colo
 );
 
 const GameDesk: React.FC = () => {
+    const { t } = useTranslation();
     const { state, processChoice, restartGame, getCurrentCard } = useGameEngine();
 
     const currentCard = getCurrentCard(state);
+
+    const QUARTER_METADATA = {
+        1: { name: t('ministries.m1'), color: '#8b5cf6' },
+        2: { name: t('ministries.m2'), color: '#ef4444' },
+        3: { name: t('ministries.m3'), color: '#f59e0b' },
+        4: { name: t('ministries.m4'), color: '#3b82f6' },
+    };
+
     const ministryInfo = QUARTER_METADATA[state.currentQuarter as keyof typeof QUARTER_METADATA];
 
     if (state.gameStateStatus !== 'playing') {
@@ -34,14 +37,14 @@ const GameDesk: React.FC = () => {
             <div className="game-over-container">
                 <div className="game-over-card">
                     <h1 className={state.gameStateStatus === 'won' ? 'text-won' : 'text-lost'}>
-                        {state.gameStateStatus === 'won' ? 'The Reign Endures' : 'The Crown Falls'}
+                        {state.gameStateStatus === 'won' ? t('game.reign_endures') : t('game.crown_falls')}
                     </h1>
                     <p>
                         {state.gameStateStatus === 'won'
-                            ? `You have successfully navigated the complexities of your kingdom for ${state.currentYear} years.`
-                            : `Your rule has come to a tragic end in year ${state.currentYear}, Quarter ${state.currentQuarter}.`}
+                            ? t('game.win_message', { years: state.currentYear })
+                            : t('game.loss_message', { year: state.currentYear, quarter: state.currentQuarter })}
                     </p>
-                    <button className="restart-btn" onClick={restartGame}>Rule Again</button>
+                    <button className="restart-btn" onClick={restartGame}>{t('game.restart')}</button>
                 </div>
             </div>
         );
@@ -51,18 +54,18 @@ const GameDesk: React.FC = () => {
         <div className="game-layout">
             <header className="game-header">
                 <div className="year-display">
-                    Year {state.currentYear} <span className="quarter-text">| Q{state.currentQuarter}</span>
+                    {t('game.year')} {state.currentYear} <span className="quarter-text">| {t('game.quarter')}{state.currentQuarter}</span>
                 </div>
-                <div className="target-display">Goal: {state.targetYears} Years</div>
-                {state.lifelineUsed && <div className="lifeline-badge">Lifeline Spent</div>}
+                <div className="target-display">{t('game.goal', { years: state.targetYears })}</div>
+                {state.lifelineUsed && <div className="lifeline-badge">{t('game.lifeline_spent')}</div>}
             </header>
 
             <section className="dashboard">
-                <MetricBar label="Piety" value={state.piety} color="#8b5cf6" />
-                <MetricBar label="Sepah" value={state.sepah} color="#ef4444" />
-                <MetricBar label="Bazaar" value={state.bazaar} color="#f59e0b" />
-                <MetricBar label="Isolation" value={state.isolation} color="#3b82f6" />
-                <MetricBar label="Legitimacy" value={state.legitimacy} color="#10b981" />
+                <MetricBar label={t('metrics.piety')} value={state.piety} color="#8b5cf6" />
+                <MetricBar label={t('metrics.sepah')} value={state.sepah} color="#ef4444" />
+                <MetricBar label={t('metrics.bazaar')} value={state.bazaar} color="#f59e0b" />
+                <MetricBar label={t('metrics.isolation')} value={state.isolation} color="#3b82f6" />
+                <MetricBar label={t('metrics.legitimacy')} value={state.legitimacy} color="#10b981" />
             </section>
 
             <main className="card-area">

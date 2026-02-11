@@ -1,0 +1,69 @@
+{
+    "menu": {
+        "start": "Inizia operazione",
+        "settings": "Configurazione di sistema",
+        "back": "Torna all'hub",
+        "quit": "Abdicare",
+        "quit_message": "Il leader è fuggito.",
+        "quit_submessage": "Il sistema crolla in tua assenza."
+    },
+    "game": {
+        "title": "SACRIFICIO",
+        "reign_endures": "Il regno perdura",
+        "crown_falls": "La corona cade",
+        "win_message": "Hai navigato con successo le complessità del tuo regno per {{years}} anni.",
+        "loss_message": "Il tuo dominio si è concluso tragicamente nell'anno {{year}}, trimestre {{quarter}}.",
+        "restart": "Regna di nuovo",
+        "year": "Anno",
+        "quarter": "T",
+        "goal": "Obiettivo: {{years}} anni",
+        "lifeline_spent": "Ancora di salvataggio utilizzata"
+    },
+    "settings": {
+        "title": "Impostazioni",
+        "audio": "Configurazione audio",
+        "volume": "Volume master",
+        "mute": "Muto",
+        "unmute": "Audio attivo",
+        "governance": "Modalità di governo",
+        "language": "Lingua interfaccia",
+        "accessibility": "Accessibilità",
+        "colorblind": "Modalità daltonismo",
+        "modes": {
+            "none": "Predefinito",
+            "protanopia": "Protanopia (rosso)",
+            "deuteranopia": "Deuteranopia (verde)",
+            "tritanopia": "Tritanopia (blu)"
+        }
+    },
+    "difficulty": {
+        "easy": "Governo provvisorio",
+        "easy_sub": "Facile",
+        "normal": "Guida Suprema",
+        "normal_sub": "Normale",
+        "hard": "Guardiano Eterno",
+        "hard_sub": "Difficile"
+    },
+    "intro": {
+        "init": "Inizializza trasmissione",
+        "enter": "Entra nel palazzo",
+        "slides": [
+            "La rivoluzione è finita. Il vecchio regime è caduto. Sei vittorioso tra le ceneri.",
+            "Ma la vittoria è fragile. Il Sepah esige controllo. I Bonyad esigono ricchezza. L'ideologia esige obbedienza. Non puoi accontentare tutti.",
+            "Tu sei la Guida Suprema. Quanto tempo riuscirai a sopravvivere al sistema che hai creato?"
+        ]
+    },
+    "metrics": {
+        "piety": "Pietà",
+        "sepah": "Sepah",
+        "bazaar": "Bazaar",
+        "isolation": "Isolamento",
+        "legitimacy": "Legittimità"
+    },
+    "ministries": {
+        "m1": "Ministero della Guida",
+        "m2": "Consiglio Supremo di Sicurezza",
+        "m3": "I Bonyad e il Bazaar",
+        "m4": "Ministero degli Affari Esteri"
+    }
+}

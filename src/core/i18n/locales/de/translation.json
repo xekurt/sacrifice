@@ -1,0 +1,69 @@
+{
+    "menu": {
+        "start": "Operation beginnen",
+        "settings": "Systemkonfiguration",
+        "back": "Zurück zum Hub",
+        "quit": "Abdanken",
+        "quit_message": "Der Anführer ist geflohen.",
+        "quit_submessage": "Das System bricht in Ihrer Abwesenheit zusammen."
+    },
+    "game": {
+        "title": "SACRIFICE",
+        "reign_endures": "Die Herrschaft dauert an",
+        "crown_falls": "Die Krone fällt",
+        "win_message": "Sie haben die Komplexität Ihres Reiches erfolgreich für {{years}} Jahre gemeistert.",
+        "loss_message": "Ihre Herrschaft endete tragisch im Jahr {{year}}, Quartal {{quarter}}.",
+        "restart": "Erneut herrschen",
+        "year": "Jahr",
+        "quarter": "Q",
+        "goal": "Ziel: {{years}} Jahre",
+        "lifeline_spent": "Lebenslinie verbraucht"
+    },
+    "settings": {
+        "title": "Einstellungen",
+        "audio": "Audiokonfiguration",
+        "volume": "Master-Lautstärke",
+        "mute": "Stummgeschaltet",
+        "unmute": "Ton an",
+        "governance": "Regierungsmodus",
+        "language": "Oberflächensprache",
+        "accessibility": "Barrierefreiheit",
+        "colorblind": "Farbenblindheitsmodus",
+        "modes": {
+            "none": "Standard",
+            "protanopia": "Protanopie (Rotblindheit)",
+            "deuteranopia": "Deuteranopie (Grünblindheit)",
+            "tritanopia": "Tritanopie (Blaublindheit)"
+        }
+    },
+    "difficulty": {
+        "easy": "Provisorische Regierung",
+        "easy_sub": "Einfach",
+        "normal": "Oberster Führer",
+        "normal_sub": "Normal",
+        "hard": "Ewiger Wächter",
+        "hard_sub": "Schwer"
+    },
+    "intro": {
+        "init": "Übertragung initialisieren",
+        "enter": "Betreten Sie den Palast",
+        "slides": [
+            "Die Revolution ist vorbei. Das alte Regime ist gefallen. Sie stehen siegreich in der Asche.",
+            "Doch der Sieg ist zerbrechlich. Die Sepah verlangt Kontrolle. Die Bonyads verlangen Reichtum. Die Ideologie verlangt Gehorsam. Sie können es nicht allen recht machen.",
+            "Sie sind der Oberste Führer. Wie lange können Sie das von Ihnen geschaffene System überleben?"
+        ]
+    },
+    "metrics": {
+        "piety": "Frömmigkeit",
+        "sepah": "Sepah",
+        "bazaar": "Basar",
+        "isolation": "Isolation",
+        "legitimacy": "Legitimität"
+    },
+    "ministries": {
+        "m1": "Ministerium für Orientierung",
+        "m2": "Oberster Nationaler Sicherheitsrat",
+        "m3": "Die Bonyads & der Basar",
+        "m4": "Außenministerium"
+    }
+}

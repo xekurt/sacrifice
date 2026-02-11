@@ -1,0 +1,69 @@
+{
+    "menu": {
+        "start": "Commencer l'opération",
+        "settings": "Configuration du système",
+        "back": "Retour au Hub",
+        "quit": "Abdiquer",
+        "quit_message": "Le chef s'est enfui.",
+        "quit_submessage": "Le système s'effondre en votre absence."
+    },
+    "game": {
+        "title": "SACRIFICE",
+        "reign_endures": "Le règne perdure",
+        "crown_falls": "La couronne tombe",
+        "win_message": "Vous avez navigué avec succès dans les complexités de votre royaume pendant {{years}} ans.",
+        "loss_message": "Votre règne a pris fin tragiquement en l'an {{year}}, Trimestre {{quarter}}.",
+        "restart": "Regner à nouveau",
+        "year": "Année",
+        "quarter": "T",
+        "goal": "Objectif : {{years}} ans",
+        "lifeline_spent": "Bouée de sauvetage utilisée"
+    },
+    "settings": {
+        "title": "Paramètres",
+        "audio": "Configuration audio",
+        "volume": "Volume principal",
+        "mute": "Muet",
+        "unmute": "Son activé",
+        "governance": "Mode de gouvernance",
+        "language": "Langue de l'interface",
+        "accessibility": "Options d'accessibilité",
+        "colorblind": "Mode daltonisme",
+        "modes": {
+            "none": "Par défaut",
+            "protanopia": "Protanopie (aveugle au rouge)",
+            "deuteranopia": "Deutéranopie (aveugle au vert)",
+            "tritanopia": "Tritanopie (aveugle au bleu)"
+        }
+    },
+    "difficulty": {
+        "easy": "Gouv. provisoire",
+        "easy_sub": "Facile",
+        "normal": "Guide suprême",
+        "normal_sub": "Normal",
+        "hard": "Gardien éternel",
+        "hard_sub": "Difficile"
+    },
+    "intro": {
+        "init": "Initialiser la transmission",
+        "enter": "Entrez dans le palais",
+        "slides": [
+            "La révolution est terminée. L'ancien régime est tombé. Vous êtes victorieux dans les cendres.",
+            "Mais la victoire est fragile. Le Sepah exige le contrôle. Les Bonyads exigent la richesse. L'idéologie exige l'obéissance. Vous ne pouvez pas satisfaire tout le monde.",
+            "Vous êtes le Guide Suprême. Combien de temps pourrez-vous survivre au système que vous avez créé ?"
+        ]
+    },
+    "metrics": {
+        "piety": "Piété",
+        "sepah": "Sepah",
+        "bazaar": "Bazar",
+        "isolation": "Isolation",
+        "legitimacy": "Légitimité"
+    },
+    "ministries": {
+        "m1": "Ministère de l'Orientation",
+        "m2": "Conseil suprême de sécurité nationale",
+        "m3": "Les Bonyads & le Bazar",
+        "m4": "Ministère des Affaires étrangères"
+    }
+}

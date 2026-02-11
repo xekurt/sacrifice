@@ -1,0 +1,69 @@
+{
+    "menu": {
+        "start": "Begin Operation",
+        "settings": "System Configuration",
+        "back": "Return to Hub",
+        "quit": "Abdicate",
+        "quit_message": "The leader has fled.",
+        "quit_submessage": "The system collapses in your absence."
+    },
+    "game": {
+        "title": "SACRIFICE",
+        "reign_endures": "The Reign Endures",
+        "crown_falls": "The Crown Falls",
+        "win_message": "You have successfully navigated the complexities of your kingdom for {{years}} years.",
+        "loss_message": "Your rule has come to a tragic end in year {{year}}, Quarter {{quarter}}.",
+        "restart": "Rule Again",
+        "year": "Year",
+        "quarter": "Q",
+        "goal": "Goal: {{years}} Years",
+        "lifeline_spent": "Lifeline Spent"
+    },
+    "settings": {
+        "title": "Settings",
+        "audio": "Audio Configuration",
+        "volume": "Master Volume",
+        "mute": "Muted",
+        "unmute": "Sound On",
+        "governance": "Governance Mode",
+        "language": "Interface Language",
+        "accessibility": "Accessibility Options",
+        "colorblind": "Colorblind Mode",
+        "modes": {
+            "none": "Default",
+            "protanopia": "Protanopia (Red-Blind)",
+            "deuteranopia": "Deuteranopia (Green-Blind)",
+            "tritanopia": "Tritanopia (Blue-Blind)"
+        }
+    },
+    "difficulty": {
+        "easy": "Provisional Gov",
+        "easy_sub": "Easy",
+        "normal": "Supreme Leader",
+        "normal_sub": "Normal",
+        "hard": "Eternal Guardian",
+        "hard_sub": "Hard"
+    },
+    "intro": {
+        "init": "Initialize Transmission",
+        "enter": "Enter the Palace",
+        "slides": [
+            "The revolution is over. The old regime has fallen. You stand victorious in the ashes.",
+            "But victory is fragile. The Sepah demands control. The Bonyads demand wealth. The Ideology demands obedience. You cannot satisfy them all.",
+            "You are the Supreme Leader. How long can you survive the system you created?"
+        ]
+    },
+    "metrics": {
+        "piety": "Piety",
+        "sepah": "Sepah",
+        "bazaar": "Bazaar",
+        "isolation": "Isolation",
+        "legitimacy": "Legitimacy"
+    },
+    "ministries": {
+        "m1": "Ministry of Guidance",
+        "m2": "Supreme National Security Council",
+        "m3": "The Bonyads & Bazaar",
+        "m4": "Ministry of Foreign Affairs"
+    }
+}

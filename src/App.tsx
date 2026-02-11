@@ -1,16 +1,22 @@
 import { useState } from 'react'
-import GameDesk from './GameDesk'
-import IntroSequence from './IntroSequence'
-import MainMenu from './MainMenu'
-import SettingsMenu from './SettingsMenu'
-import { AudioProvider } from './AudioContext'
-import type { AppScreen, Difficulty } from './gameTypes'
+import GameDesk from './features/game/components/GameDesk'
+import IntroSequence from './features/intro/components/IntroSequence'
+import MainMenu from './features/menu/components/MainMenu'
+import SettingsMenu from './features/settings/components/SettingsMenu'
+import { AudioProvider } from './shared/contexts/AudioContext'
+import { AccessibilityProvider } from './shared/contexts/AccessibilityContext'
+import { useDocumentDirection } from './shared/hooks/useDocumentDirection'
+import type { AppScreen, Difficulty } from './core/types/game'
 import introMusic from './assets/audio/intro_music.mp3'
-import './index.css'
+import './core/i18n'
+import './core/styles/index.css'
 
 function AppContent() {
   const [currentScreen, setCurrentScreen] = useState<AppScreen>('intro')
   const [difficulty, setDifficulty] = useState<Difficulty>('normal')
+
+  // Handle document direction (RTL/LTR) based on language
+  useDocumentDirection();
 
   const renderScreen = () => {
     switch (currentScreen) {
@@ -34,7 +40,7 @@ function AppContent() {
   }
 
   return (
-    <div className="App min-h-screen bg-black overflow-hidden selection:bg-zinc-100 selection:text-zinc-950">
+    <div className="App min-h-screen overflow-hidden selection:bg-zinc-100 selection:text-zinc-950">
       {renderScreen()}
     </div>
   )
@@ -42,9 +48,11 @@ function AppContent() {
 
 function App() {
   return (
-    <AudioProvider src={introMusic}>
-      <AppContent />
-    </AudioProvider>
+    <AccessibilityProvider>
+      <AudioProvider src={introMusic}>
+        <AppContent />
+      </AudioProvider>
+    </AccessibilityProvider>
   )
 }
 
