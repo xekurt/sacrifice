@@ -2,7 +2,16 @@ import { useState, useCallback } from 'react';
 import type { GameState, DilemmaCard } from '../../../core/types/game';
 import { PIETY_DECK, SEPAH_DECK, BAZAAR_DECK, ISOLATION_DECK } from '../data/decks';
 
-const INITIAL_STATE: GameState = {
+const shuffle = <T>(array: T[]): T[] => {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+};
+
+const getInitialState = (): GameState => ({
     piety: 50,
     sepah: 50,
     bazaar: 50,
@@ -13,22 +22,26 @@ const INITIAL_STATE: GameState = {
     targetYears: 20,
     gameStateStatus: 'playing',
     lifelineUsed: false,
-};
+    pietyDeck: shuffle(PIETY_DECK),
+    sepahDeck: shuffle(SEPAH_DECK),
+    bazaarDeck: shuffle(BAZAAR_DECK),
+    isolationDeck: shuffle(ISOLATION_DECK),
+});
 
 export const useGameEngine = () => {
-    const [state, setState] = useState<GameState>(INITIAL_STATE);
+    const [state, setState] = useState<GameState>(getInitialState);
 
     const clamp = (value: number) => Math.min(100, Math.max(0, value));
 
     const getCurrentCard = (s: GameState): DilemmaCard => {
-        // We use the year and quarter to get a consistent card even if called multiple times
-        const deckIndex = (s.currentYear - 1) % 2; // Simple loop through mock cards
+        // We use the year as the index to cycle through the shuffled deck
+        const index = (s.currentYear - 1);
         switch (s.currentQuarter) {
-            case 1: return PIETY_DECK[deckIndex % PIETY_DECK.length];
-            case 2: return SEPAH_DECK[deckIndex % SEPAH_DECK.length];
-            case 3: return BAZAAR_DECK[deckIndex % BAZAAR_DECK.length];
-            case 4: return ISOLATION_DECK[deckIndex % ISOLATION_DECK.length];
-            default: return PIETY_DECK[0];
+            case 1: return s.pietyDeck[index % s.pietyDeck.length];
+            case 2: return s.sepahDeck[index % s.sepahDeck.length];
+            case 3: return s.bazaarDeck[index % s.bazaarDeck.length];
+            case 4: return s.isolationDeck[index % s.isolationDeck.length];
+            default: return s.pietyDeck[0];
         }
     };
 
@@ -110,7 +123,7 @@ export const useGameEngine = () => {
     }, []);
 
     const restartGame = useCallback(() => {
-        setState(INITIAL_STATE);
+        setState(getInitialState());
     }, []);
 
     return {

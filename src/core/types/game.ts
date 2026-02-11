@@ -9,6 +9,11 @@ export interface GameState {
     targetYears: number;
     gameStateStatus: 'playing' | 'won' | 'lost';
     lifelineUsed: boolean;
+    // Current shuffled decks
+    pietyDeck: DilemmaCard[];
+    sepahDeck: DilemmaCard[];
+    bazaarDeck: DilemmaCard[];
+    isolationDeck: DilemmaCard[];
 }
 
 export type CardEffect = Partial<Pick<GameState, 'piety' | 'sepah' | 'bazaar' | 'isolation' | 'legitimacy'>>;

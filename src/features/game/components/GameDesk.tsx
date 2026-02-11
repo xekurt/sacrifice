@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useGameEngine } from '../hooks/useGameEngine';
 import GameButton from '../../../shared/components/GameButton';
 import ConfirmationModal from '../../../shared/components/ConfirmationModal';
+import ImaginaryMap from './ImaginaryMap';
 
 const MetricBar = ({ label, value, color }: { label: string; value: number; color: string }) => (
     <div className="metric-container">
@@ -94,23 +95,29 @@ const GameDesk: React.FC<GameDeskProps> = ({ onExit }) => {
                 <MetricBar label={t('metrics.legitimacy')} value={state.legitimacy} color="var(--color-good)" />
             </section>
 
-            <main className="card-area">
-                <div className="dilemma-card">
-                    <div className="ministry-header" style={{ color: ministryInfo.color }}>
-                        {ministryInfo.name}
-                    </div>
-                    <h2 className="card-title">{currentCard.title}</h2>
-                    <p className="card-description">{currentCard.description}</p>
-                    <div className="card-actions">
-                        <GameButton className="choice-btn yes-btn" onClick={() => processChoice('yes', currentCard)}>
-                            {currentCard.yesText}
-                        </GameButton>
-                        <GameButton className="choice-btn no-btn" onClick={() => processChoice('no', currentCard)}>
-                            {currentCard.noText}
-                        </GameButton>
+            <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-12 w-full max-w-7xl mx-auto items-center flex-grow p-4">
+                <div className="w-full h-auto flex justify-center items-center drop-shadow-2xl">
+                    <ImaginaryMap gameState={state} />
+                </div>
+
+                <div className="w-full max-w-lg mx-auto">
+                    <div className="dilemma-card !max-w-none">
+                        <div className="ministry-header" style={{ color: ministryInfo.color }}>
+                            {ministryInfo.name}
+                        </div>
+                        <h2 className="card-title">{currentCard.title}</h2>
+                        <p className="card-description">{currentCard.description}</p>
+                        <div className="card-actions">
+                            <GameButton className="choice-btn yes-btn" onClick={() => processChoice('yes', currentCard)}>
+                                {currentCard.yesText}
+                            </GameButton>
+                            <GameButton className="choice-btn no-btn" onClick={() => processChoice('no', currentCard)}>
+                                {currentCard.noText}
+                            </GameButton>
+                        </div>
                     </div>
                 </div>
-            </main>
+            </div>
 
             <ConfirmationModal
                 isOpen={isExitModalOpen}
