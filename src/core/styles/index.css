@@ -503,3 +503,111 @@ body {
 .animate-scanline {
   animation: scanline 3s linear infinite;
 }
+
+/* Advisor System & Perspectives */
+.advisor-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 0.5rem;
+}
+
+.advisor-tab {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-secondary);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.advisor-tab:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.advisor-tab.active {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.advisor-tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: currentColor;
+}
+
+.tab-sepah.active {
+  color: #f97316;
+  background: rgba(249, 115, 22, 0.1);
+}
+
+.tab-bazaar.active {
+  color: #eab308;
+  background: rgba(234, 179, 8, 0.1);
+}
+
+.tab-piety.active {
+  color: #a855f7;
+  background: rgba(168, 85, 247, 0.1);
+}
+
+.perspective-report {
+  position: relative;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-inline-start: 4px solid transparent;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
+  border-radius: 0 0.5rem 0.5rem 0;
+  transition: all 0.5s ease;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.perspective-report::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, currentColor, transparent);
+  opacity: 0.03;
+  pointer-events: none;
+}
+
+.perspective-report p {
+  font-style: italic;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-primary);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.report-sepah {
+  border-color: #f97316;
+  color: rgba(249, 115, 22, 0.1);
+}
+
+.report-bazaar {
+  border-color: #eab308;
+  color: rgba(234, 179, 8, 0.1);
+}
+
+.report-piety {
+  border-color: #a855f7;
+  color: rgba(168, 85, 247, 0.1);
+}

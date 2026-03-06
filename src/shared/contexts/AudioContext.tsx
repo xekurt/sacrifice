@@ -30,7 +30,7 @@ export const AudioProvider: React.FC<AudioProviderProps> = ({ children, src }) =
     const audioRef = useRef<HTMLAudioElement | null>(null);
     const [isPlaying, setIsPlaying] = useState(false);
     const [volume, setVolumeState] = useState(0.5);
-    const [isMuted, setIsMuted] = useState(false);
+    const [isMuted, setIsMuted] = useState(true);
 
     // Track the current playing state in a ref to avoid dependency loop in src useEffect
     const isPlayingRef = useRef(false);

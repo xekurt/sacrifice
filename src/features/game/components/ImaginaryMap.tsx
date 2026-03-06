@@ -1,4 +1,12 @@
-import React from 'react';
+import React, { useMemo } from 'react';
+import * as THREE from 'three';
+import { Canvas } from '@react-three/fiber';
+import {
+    OrthographicCamera,
+    OrbitControls,
+    Float,
+    Edges
+} from '@react-three/drei';
 import type { GameState } from '../../../core/types/game';
 
 interface ImaginaryMapProps {
@@ -6,27 +14,142 @@ interface ImaginaryMapProps {
     gameState?: GameState;
 }
 
+const HEX_COLOR_MAP: Record<string, string> = {
+    'fill-violet-600': '#7c3aed',
+    'fill-orange-600': '#ea580c',
+    'fill-yellow-600': '#ca8a04',
+    'fill-slate-600': '#475569'
+};
+
+const ExtrudedRegion = ({
+    shape,
+    depth = 0.4,
+    color = '#18181b',
+    position = [0, 0, 0],
+    isCapital = false
+}: {
+    shape: THREE.Shape;
+    depth?: number;
+    color?: string;
+    position?: [number, number, number];
+    isCapital?: boolean;
+}) => {
+    const extrudeSettings = useMemo(() => ({
+        depth: depth,
+        bevelEnabled: true,
+        bevelThickness: 0.03,
+        bevelSize: 0.03,
+        bevelSegments: 3,
+        curveSegments: 12
+    }), [depth]);
+
+    return (
+        <mesh position={position} castShadow receiveShadow rotation={[-Math.PI / 2, 0, 0]}>
+            <extrudeGeometry args={[shape, extrudeSettings]} />
+            <meshStandardMaterial
+                color={color}
+                metalness={0.7}
+                roughness={0.3}
+                emissive={color}
+                emissiveIntensity={0.05}
+            />
+            <Edges
+                threshold={15}
+                color={isCapital ? "#ffffff" : color}
+                opacity={0.5}
+                transparent
+            />
+        </mesh>
+    );
+};
+
 const ImaginaryMap: React.FC<ImaginaryMapProps> = ({ className, gameState }) => {
     if (!gameState) return null;
 
-    /**
-     * Normalization Algorithm
-     * Converts independent 0-100 scales into a shared 6-region territorial balance.
-     */
+    const shapes = useMemo(() => {
+        // Define shared vertices for interlocking borders
+        // C = Capital points
+        const c1 = [0.2, 0.9];
+        const c2 = [0.8, 0.4];
+        const c3 = [0.7, -0.6];
+        const c4 = [-0.1, -0.9];
+        const c5 = [-0.8, -0.3];
+        const c6 = [-0.5, 0.7];
+
+        const capital = new THREE.Shape();
+        capital.moveTo(c1[0], c1[1]);
+        capital.lineTo(c2[0], c2[1]);
+        capital.lineTo(c3[0], c3[1]);
+        capital.lineTo(c4[0], c4[1]);
+        capital.lineTo(c5[0], c5[1]);
+        capital.lineTo(c6[0], c6[1]);
+        capital.lineTo(c1[0], c1[1]);
+
+        // Province 1 (North-East) - Interlocks C1-C2
+        const p1 = new THREE.Shape();
+        p1.moveTo(c1[0], c1[1]);
+        p1.lineTo(1.2, 1.8);
+        p1.lineTo(2.4, 0.8);
+        p1.lineTo(2.1, -0.2);
+        p1.lineTo(c2[0], c2[1]);
+        p1.lineTo(c1[0], c1[1]);
+
+        // Province 2 (East) - Interlocks C2-C3
+        const p2 = new THREE.Shape();
+        p2.moveTo(c2[0], c2[1]);
+        p2.lineTo(2.1, -0.2);
+        p2.lineTo(2.5, -1.4);
+        p2.lineTo(1.1, -2.1);
+        p2.lineTo(c3[0], c3[1]);
+        p2.lineTo(c2[0], c2[1]);
+
+        // Province 3 (South-East) - Interlocks C3-C4
+        const p3 = new THREE.Shape();
+        p3.moveTo(c3[0], c3[1]);
+        p3.lineTo(1.1, -2.1);
+        p3.lineTo(-0.2, -2.5);
+        p3.lineTo(-1.3, -1.9);
+        p3.lineTo(c4[0], c4[1]);
+        p3.lineTo(c3[0], c3[1]);
+
+        // Province 4 (South-West) - Interlocks C4-C5
+        const p4 = new THREE.Shape();
+        p4.moveTo(c4[0], c4[1]);
+        p4.lineTo(-1.3, -1.9);
+        p4.lineTo(-2.4, -0.8);
+        p4.lineTo(-2.2, 0.3);
+        p4.lineTo(c5[0], c5[1]);
+        p4.lineTo(c4[0], c4[1]);
+
+        // Province 5 (West) - Interlocks C5-C6
+        const p5 = new THREE.Shape();
+        p5.moveTo(c5[0], c5[1]);
+        p5.lineTo(-2.2, 0.3);
+        p5.lineTo(-1.8, 1.6);
+        p5.lineTo(-0.8, 2.1);
+        p5.lineTo(c6[0], c6[1]);
+        p5.lineTo(c5[0], c5[1]);
+
+        // Province 6 (North-West) - Interlocks C6-C1
+        const p6 = new THREE.Shape();
+        p6.moveTo(c6[0], c6[1]);
+        p6.lineTo(-0.8, 2.1);
+        p6.lineTo(0.5, 2.6);
+        p6.lineTo(1.2, 1.8);
+        p6.lineTo(c1[0], c1[1]);
+        p6.lineTo(c6[0], c6[1]);
+
+        return { capital, provinces: [p1, p2, p3, p4, p5, p6] };
+    }, []);
+
     const calculateTerritory = (state: GameState) => {
         const total = state.piety + state.sepah + state.bazaar;
-
-        // Handle void state
         if (total === 0) return Array(6).fill('fill-slate-600');
 
-        // Proportional distribution
         let pietyRegions = Math.round((state.piety / total) * 6);
         let sepahRegions = Math.round((state.sepah / total) * 6);
-
-        // Remainder calculation to ensure exactly 6 regions
         let bazaarRegions = 6 - pietyRegions - sepahRegions;
 
-        // Integrity check: handle negative remainder or rounding overflows
         if (bazaarRegions < 0) {
             const overflow = Math.abs(bazaarRegions);
             if (pietyRegions >= sepahRegions) {
@@ -35,7 +158,6 @@ const ImaginaryMap: React.FC<ImaginaryMapProps> = ({ className, gameState }) => 
                 sepahRegions = Math.max(0, sepahRegions - overflow);
             }
             bazaarRegions = 0;
-            // Final adjustment
             bazaarRegions = 6 - pietyRegions - sepahRegions;
         }
 
@@ -49,130 +171,80 @@ const ImaginaryMap: React.FC<ImaginaryMapProps> = ({ className, gameState }) => 
 
     const regionColors = calculateTerritory(gameState);
     const isIsolated = gameState.isolation > 75;
-    const strokeClass = isIsolated ? 'stroke-red-500' : 'stroke-zinc-700/50';
 
-    // Region Data with pre-calculated centers for iconography
-    const regions = [
-        { id: 'territory-1', points: "469,260 469,340 640,400 640,200", center: { x: 554, y: 300 } },
-        { id: 'territory-2', points: "469,340 400,380 400,540 640,400", center: { x: 477, y: 415 } },
-        { id: 'territory-3', points: "400,380 331,340 160,400 400,540", center: { x: 323, y: 415 } },
-        { id: 'territory-4', points: "331,340 331,260 160,200 160,400", center: { x: 246, y: 300 } },
-        { id: 'territory-5', points: "331,260 400,220 400,60 160,200", center: { x: 323, y: 185 } },
-        { id: 'territory-6', points: "400,220 469,260 640,200 400,60", center: { x: 477, y: 185 } },
-    ];
-
-    const getIconId = (fillClass: string) => {
-        if (fillClass.includes('violet')) return 'icon-piety';
-        if (fillClass.includes('orange')) return 'icon-sepah';
-        if (fillClass.includes('yellow')) return 'icon-bazaar';
-        return null;
-    };
+    const themeColor = isIsolated ? '#ef4444' : '#ffffff';
+    const fogColor = isIsolated ? '#450a0a' : '#09090b';
 
     return (
-        <svg
-            viewBox="0 0 800 600"
-            xmlns="http://www.w3.org/2000/svg"
-            className={`w-full h-auto shadow-2xl rounded-sm border border-zinc-800 bg-black ${className || ''}`}
-        >
-            <defs>
-                {/* Visual Polish: Background Gradient */}
-                <radialGradient id="oceanGradient" cx="50%" cy="50%" r="50%">
-                    <stop offset="0%" stopColor="#18181b" />
-                    <stop offset="100%" stopColor="#000000" />
-                </radialGradient>
-
-                {/* Filters */}
-                <filter id="floatShadow" x="-20%" y="-20%" width="140%" height="140%">
-                    <feGaussianBlur in="SourceAlpha" stdDeviation="8" />
-                    <feOffset dx="0" dy="12" result="offsetblur" />
-                    <feFlood floodColor="black" floodOpacity="0.6" />
-                    <feComposite in2="offsetblur" operator="in" />
-                    <feMerge>
-                        <feMergeNode />
-                        <feMergeNode in="SourceGraphic" />
-                    </feMerge>
-                </filter>
-
-                <filter id="innerGlow">
-                    <feFlood floodColor="white" floodOpacity="0.2" result="glowColor" />
-                    <feComposite in="glowColor" in2="SourceAlpha" operator="out" result="glowMask" />
-                    <feGaussianBlur stdDeviation="2" in="glowMask" result="glowBlur" />
-                    <feComposite in="glowBlur" in2="SourceAlpha" operator="in" result="glowFinal" />
-                    <feMerge>
-                        <feMergeNode in="SourceGraphic" />
-                        <feMergeNode in="glowFinal" />
-                    </feMerge>
-                </filter>
-
-                {/* Scanline Pattern */}
-                <pattern id="scanlines" width="100%" height="4" patternUnits="userSpaceOnUse">
-                    <rect width="100%" height="1" fill="white" fillOpacity="0.05" />
-                </pattern>
-
-                {/* Faction Icons (Mini-SVG Paths) */}
-                {/* Sepah: Sword */}
-                <symbol id="icon-sepah" viewBox="-10 -10 20 20">
-                    <path d="M -1,-8 L 1,-8 L 1,4 L 4,4 L 4,6 L 1,6 L 1,9 L -1,9 L -1,6 L -4,6 L -4,4 L -1,4 Z" fill="currentColor" />
-                </symbol>
-
-                {/* Bazaar: Coin */}
-                <symbol id="icon-bazaar" viewBox="-10 -10 20 20">
-                    <circle cx="0" cy="0" r="8" stroke="currentColor" strokeWidth="2" fill="none" />
-                    <circle cx="0" cy="0" r="3" fill="currentColor" />
-                </symbol>
-
-                {/* Piety: Star */}
-                <symbol id="icon-piety" viewBox="-10 -10 20 20">
-                    <path d="M 0,-9 L 2, -2 L 9,0 L 2, 2 L 0,9 L -2, 2 L -9,0 L -2, -2 Z" fill="currentColor" />
-                </symbol>
-            </defs>
-
-            {/* Surrounding Ocean/Void with Radial Gradient */}
-            <rect width="800" height="600" fill="url(#oceanGradient)" />
-
-            {/* Main Map Group with Drop Shadow */}
-            <g filter="url(#floatShadow)">
-                {/* Central Region: The Player's Government (Capital) */}
-                <polygon
-                    id="region-capital"
-                    points="469,340 400,380 331,340 331,260 400,220 469,260"
-                    className="fill-zinc-900 stroke-zinc-700 transition-all duration-700 animate-pulse-slow"
-                    strokeWidth="2"
-                    filter="url(#innerGlow)"
+        <div className={`w-full aspect-[4/3] relative rounded-sm overflow-hidden border border-zinc-800 bg-black shadow-2xl ${className || ''}`}>
+            <Canvas shadows gl={{ antialias: true }}>
+                <color attach="background" args={['#09090b']} />
+                <OrthographicCamera makeDefault position={[10, 10, 10]} zoom={45} />
+                <OrbitControls
+                    enableZoom={false}
+                    enablePan={false}
+                    maxPolarAngle={Math.PI / 2.2}
                 />
 
-                {/* Outer Regions: Procedurally weighted by faction power */}
-                {regions.map((region, i) => (
-                    <g key={region.id}>
-                        <polygon
-                            id={region.id}
-                            points={region.points}
-                            className={`${regionColors[i]} ${strokeClass} transition-all duration-700 ease-in-out opacity-90 hover:opacity-100 hover:brightness-110`}
-                            strokeWidth="3"
-                            filter="url(#innerGlow)"
+                <fog attach="fog" args={[fogColor, 15, 35]} />
+                <ambientLight intensity={0.2} />
+                <spotLight
+                    position={[0, 10, 0]}
+                    intensity={200}
+                    distance={40}
+                    angle={0.6}
+                    penumbra={0.5}
+                    castShadow
+                    color={themeColor}
+                />
+
+                <Float speed={1.5} rotationIntensity={0.05} floatIntensity={0.4}>
+                    <group>
+                        {/* The Capital (Highter extrusion) */}
+                        <ExtrudedRegion
+                            shape={shapes.capital}
+                            depth={0.7}
+                            color="#18181b"
+                            isCapital={true}
                         />
 
-                        {/* Faction Icon Overlay */}
-                        {getIconId(regionColors[i]) && (
-                            <use
-                                href={`#${getIconId(regionColors[i])}`}
-                                x={region.center.x - 12}
-                                y={region.center.y - 12}
-                                width="24"
-                                height="24"
-                                className="text-white/30 pointer-events-none transition-opacity duration-700"
+                        {/* Surround Provinces (Interlocking coastlines) */}
+                        {shapes.provinces.map((shape, i) => (
+                            <ExtrudedRegion
+                                key={`province-organic-${i}`}
+                                shape={shape}
+                                depth={0.4}
+                                color={HEX_COLOR_MAP[regionColors[i]]}
                             />
-                        )}
-                    </g>
-                ))}
-            </g>
+                        ))}
+                    </group>
+                </Float>
+            </Canvas>
 
-            {/* Retro Scanlines Overlay */}
-            <rect width="800" height="600" fill="url(#scanlines)" className="pointer-events-none" />
+            {/* Tactical UI Overlays */}
+            <div className="absolute top-4 left-4 flex flex-col gap-1 pointer-events-none z-10">
+                <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                    <span className="text-[10px] font-black uppercase tracking-[0.3em] text-zinc-500">Live_Topography_v5.2</span>
+                </div>
+                <div className="h-[1px] w-24 bg-zinc-800 my-1" />
+                <span className={`text-[9px] font-bold uppercase tracking-[0.2em] ${isIsolated ? 'text-red-500' : 'text-zinc-600'}`}>
+                    Region_Interlock: ONLINE
+                </span>
+                {isIsolated && (
+                    <div className="mt-2 px-2 py-1 border border-red-900/50 bg-red-950/20 text-red-500 text-[8px] font-bold tracking-[0.4em] uppercase">
+                        Emergency_Fog_Active
+                    </div>
+                )}
+            </div>
 
-            {/* Glossy Overlay for that Glass Screen look */}
-            <rect width="800" height="600" fill="transparent" className="pointer-events-none" style={{ background: 'linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,0.02) 100%)' }} />
-        </svg>
+            <div className="absolute bottom-4 right-4 text-right pointer-events-none opacity-30">
+                <span className="text-[8px] font-mono text-zinc-600 block">LAT: 35.6892 N</span>
+                <span className="text-[8px] font-mono text-zinc-600 block">LONG: 139.6917 E</span>
+            </div>
+
+            <div className="absolute inset-0 pointer-events-none opacity-10 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] bg-repeat mix-blend-overlay" />
+        </div>
     );
 };
 

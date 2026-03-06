@@ -38,6 +38,7 @@ const getInitialState = (difficulty: Difficulty = 'normal'): GameState => ({
     lossReason: null,
     lostThroughMetric: null,
     difficulty,
+    yearEndReport: [],
 });
 
 export const useGameEngine = (initialDifficulty: Difficulty = 'normal') => {
@@ -85,15 +86,20 @@ export const useGameEngine = (initialDifficulty: Difficulty = 'normal') => {
             }
 
             // If currentTerm === 2: Apply Systemic Rules, Check Win/Loss, and Advance Year
+            let reportMessages: string[] = [];
+
             // A. Apply Systemic Rules (Soften penalties to -3 for faster pacing)
             if (nextState.isolation < 30) {
                 nextState.piety -= 3;
+                reportMessages.push("Open borders have slightly eroded traditional Piety.");
             }
             if (nextState.sepah > 70) {
                 nextState.bazaar -= 3;
+                reportMessages.push("Martial law is choking the local Bazaar.");
             }
             if (nextState.piety < 40) {
                 nextState.sepah += 3;
+                reportMessages.push("Secularism forces the Sepah to exert more control.");
             }
 
             // Clamp again after rules
@@ -129,6 +135,7 @@ export const useGameEngine = (initialDifficulty: Difficulty = 'normal') => {
                     if (typeof nextState[baseMetric] === 'number') {
                         (nextState[baseMetric] as any) = 50;
                     }
+                    reportMessages.push(`Political Legitimacy was spent to stabilize the ${failMetric.split('_')[0]}.`);
                 } else {
                     nextState.gameStateStatus = 'lost';
                     nextState.lossReason = DEATH_REASONS[failMetric];
@@ -138,11 +145,16 @@ export const useGameEngine = (initialDifficulty: Difficulty = 'normal') => {
             }
 
             // C. Advance Year
+            nextState.yearEndReport = reportMessages;
             nextState.currentYear += 1;
             nextState.currentTerm = 1;
 
             return nextState;
         });
+    }, []);
+
+    const clearYearEndReport = useCallback(() => {
+        setState(prev => ({ ...prev, yearEndReport: [] }));
     }, []);
 
     const restartGame = useCallback(() => {
@@ -154,5 +166,6 @@ export const useGameEngine = (initialDifficulty: Difficulty = 'normal') => {
         processChoice,
         restartGame,
         getCurrentCardData,
+        clearYearEndReport
     };
 };

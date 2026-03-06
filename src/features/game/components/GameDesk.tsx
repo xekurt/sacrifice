@@ -7,6 +7,8 @@ import ImaginaryMap from './ImaginaryMap';
 import Stamp from '../../../shared/components/Stamp';
 import EndGameScreen from './EndGameScreen';
 import type { Difficulty, DilemmaCard } from '../../../core/types/game';
+import { playApproveSound, playRejectSound, resumeAudio } from '../../../shared/utils/audioEngine';
+import { useAudio } from '../../../shared/contexts/AudioContext';
 
 const MetricBar = ({ label, value, color }: { label: string; value: number; color: string }) => (
     <div className="metric-container">
@@ -30,9 +32,11 @@ interface GameDeskProps {
 
 const GameDesk: React.FC<GameDeskProps> = ({ onExit, difficulty }) => {
     const { t } = useTranslation();
-    const { state, processChoice, restartGame, getCurrentCardData } = useGameEngine(difficulty);
+    const { isMuted, toggleMute } = useAudio();
+    const { state, processChoice, restartGame, getCurrentCardData, clearYearEndReport } = useGameEngine(difficulty);
     const [isExitModalOpen, setIsExitModalOpen] = useState(false);
     const [hoveredOption, setHoveredOption] = useState<'yes' | 'no' | null>(null);
+    const [activePerspective, setActivePerspective] = useState<'sepah' | 'bazaar' | 'piety'>('sepah');
 
     const [transitionState, setTransitionState] = useState<'idle' | 'stamping' | 'sliding'>('idle');
     const [decision, setDecision] = useState<'yes' | 'no' | null>(null);
@@ -41,18 +45,28 @@ const GameDesk: React.FC<GameDeskProps> = ({ onExit, difficulty }) => {
 
     const { card: currentCard, ministryName } = getCurrentCardData(state);
 
+    // Sync active perspective with the card's ministry
+    React.useEffect(() => {
+        const typeChar = currentCard.id.charAt(0);
+        if (typeChar === 's') setActivePerspective('sepah');
+        else if (typeChar === 'b') setActivePerspective('bazaar');
+        else if (typeChar === 'p') setActivePerspective('piety');
+    }, [currentCard.id]);
+
     const handleDecision = async (choice: 'yes' | 'no', card: DilemmaCard) => {
         if (transitionState !== 'idle' || isGameOver) return;
+
+        // Ensure audio context is active
+        await resumeAudio();
 
         setDecision(choice);
         setTransitionState('stamping');
 
-        try {
-            const audio = new Audio('/audio/click_stamp.mp3');
-            audio.volume = 0.6;
-            audio.play().catch(e => console.warn("Audio play blocked:", e));
-        } catch (e) {
-            console.error("SFX Error:", e);
+        // Trigger procedural synthesized audio
+        if (choice === 'yes') {
+            playApproveSound();
+        } else {
+            playRejectSound();
         }
 
         await new Promise(resolve => setTimeout(resolve, 600));
@@ -84,6 +98,13 @@ const GameDesk: React.FC<GameDeskProps> = ({ onExit, difficulty }) => {
 
     const ministryColor = MINISTRY_COLORS[typeChar] || '#8b5cf6';
 
+    // Bias Filter Configuration: Each faction only sees metrics they care about
+    const FACTION_VISIBILITY: Record<'sepah' | 'bazaar' | 'piety', string[]> = {
+        sepah: ['sepah', 'isolation', 'legitimacy'],      // Military: Security & Control
+        bazaar: ['bazaar', 'isolation'],                   // Economy: Trade & Markets
+        piety: ['piety', 'legitimacy']                     // Religion: Faith & Authority
+    };
+
     const renderForecast = () => {
         if (!hoveredOption || transitionState !== 'idle') {
             return (
@@ -97,6 +118,10 @@ const GameDesk: React.FC<GameDeskProps> = ({ onExit, difficulty }) => {
 
         const effects = hoveredOption === 'yes' ? currentCard.yesEffects : currentCard.noEffects;
 
+        // Filter effects based on active perspective's bias
+        const visibleMetrics = FACTION_VISIBILITY[activePerspective];
+        const filteredEffects = Object.entries(effects).filter(([key]) => visibleMetrics.includes(key));
+
         return (
             <div className="min-h-[60px] flex flex-col items-center justify-center border border-zinc-700/50 bg-zinc-800/40 rounded-sm p-4 mb-6 shadow-inner transition-all duration-300 backdrop-blur-sm relative overflow-hidden text-center">
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-zinc-100/5 to-transparent h-4 w-full animate-scanline pointer-events-none" />
@@ -104,19 +129,31 @@ const GameDesk: React.FC<GameDeskProps> = ({ onExit, difficulty }) => {
                 <span className="text-[8px] font-bold uppercase tracking-[0.3em] text-zinc-500 mb-2">{t('game.advisor_projection')}</span>
                 <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
                     {state.difficulty === 'easy' && (
-                        Object.entries(effects).map(([key, value]) => (
-                            <div key={key} className="flex items-center gap-1.5">
-                                <span className="text-[9px] uppercase font-bold text-zinc-400">{t(`metrics.${key}`)}</span>
-                                <span className={`text-xs font-black ${value && value > 0 ? 'text-emerald-500' : 'text-red-500'}`}>
-                                    {value && value > 0 ? '+' : ''}{value}
-                                </span>
-                            </div>
-                        ))
+                        filteredEffects.length > 0 ? (
+                            filteredEffects.map(([key, value]) => (
+                                <div key={key} className="flex items-center gap-1.5">
+                                    <span className="text-[9px] uppercase font-bold text-zinc-400">{t(`metrics.${key}`)}</span>
+                                    <span className={`text-xs font-black ${value && value > 0 ? 'text-emerald-500' : 'text-red-500'}`}>
+                                        {value && value > 0 ? '+' : ''}{value}
+                                    </span>
+                                </div>
+                            ))
+                        ) : (
+                            <p className="text-[10px] uppercase font-bold text-zinc-500/60 tracking-wider italic">
+                                No relevant impacts detected
+                            </p>
+                        )
                     )}
                     {state.difficulty === 'normal' && (
-                        <p className="text-[10px] uppercase font-bold text-zinc-300 tracking-wider">
-                            {t('game.will_impact')}: {Object.keys(effects).map(key => t(`metrics.${key}`)).join(', ')}
-                        </p>
+                        filteredEffects.length > 0 ? (
+                            <p className="text-[10px] uppercase font-bold text-zinc-300 tracking-wider">
+                                {t('game.will_impact')}: {filteredEffects.map(([key]) => t(`metrics.${key}`)).join(', ')}
+                            </p>
+                        ) : (
+                            <p className="text-[10px] uppercase font-bold text-zinc-500/60 tracking-wider italic">
+                                No relevant impacts detected
+                            </p>
+                        )
                     )}
                     {state.difficulty === 'hard' && (
                         <p className="text-[10px] uppercase font-bold text-red-500/60 tracking-[0.4em] italic animate-pulse">
@@ -140,15 +177,26 @@ const GameDesk: React.FC<GameDeskProps> = ({ onExit, difficulty }) => {
     return (
         <div className="game-layout transition-all duration-1000 relative">
             <div className={`w-full h-full flex flex-col transition-all duration-1000 ${mainFilterClass}`}>
+
                 <header className="game-header">
                     <div className="flex items-center gap-6">
-                        <GameButton
-                            onClick={() => setIsExitModalOpen(true)}
-                            className="group flex items-center gap-2 px-3 py-1.5 border border-zinc-800 hover:border-red-900 text-zinc-600 hover:text-red-500 transition-all duration-300 rounded-sm"
-                            title={t('game.exit')}
-                        >
-                            <span className="text-[10px] font-bold uppercase tracking-widest">{t('game.exit')}</span>
-                        </GameButton>
+                        <div className="flex items-center gap-2">
+                            <GameButton
+                                onClick={() => setIsExitModalOpen(true)}
+                                className="group flex items-center gap-2 px-3 py-1.5 border border-zinc-800 hover:border-red-900 text-zinc-600 hover:text-red-500 transition-all duration-300 rounded-sm"
+                                title={t('game.exit')}
+                            >
+                                <span className="text-[10px] font-bold uppercase tracking-widest">{t('game.exit')}</span>
+                            </GameButton>
+
+                            <GameButton
+                                onClick={toggleMute}
+                                className={`group flex items-center justify-center w-9 h-9 border border-zinc-800 transition-all duration-300 rounded-sm ${isMuted ? 'text-zinc-600 bg-zinc-950/50' : 'text-emerald-500 bg-emerald-500/5 border-emerald-500/20'}`}
+                                title={isMuted ? "Enable Music" : "Disable Music"}
+                            >
+                                <span className="text-sm">{isMuted ? '🔇' : '🔊'}</span>
+                            </GameButton>
+                        </div>
                         <div className="year-display">
                             {t('game.year')} {state.currentYear} <span className="quarter-text">| {state.currentTerm === 1 ? t('game.early_year') : t('game.late_year')}</span>
                         </div>
@@ -184,8 +232,39 @@ const GameDesk: React.FC<GameDeskProps> = ({ onExit, difficulty }) => {
                             <div className="ministry-header" style={{ color: ministryColor }}>
                                 {t(ministryName)}
                             </div>
-                            <h2 className="card-title">{t(`${cardBaseKey}.title`)}</h2>
-                            <p className="card-description mb-6">{t(`${cardBaseKey}.description`)}</p>
+                            <h2 className="card-title">{currentCard.title || t(`${cardBaseKey}.title`)}</h2>
+
+                            <div className="card-description">
+                                <p>
+                                    {currentCard.description}
+                                </p>
+                            </div>
+
+                            {/* Advisor System UI */}
+                            <div className="advisor-tabs">
+                                <button
+                                    onClick={() => setActivePerspective('sepah')}
+                                    className={`advisor-tab tab-sepah ${activePerspective === 'sepah' ? 'active' : ''}`}
+                                >
+                                    <span className="text-sm">⚔️</span>
+                                    <span>{t('metrics.sepah')}</span>
+                                </button>
+                                <button
+                                    onClick={() => setActivePerspective('bazaar')}
+                                    className={`advisor-tab tab-bazaar ${activePerspective === 'bazaar' ? 'active' : ''}`}
+                                >
+                                    <span className="text-sm">💰</span>
+                                    <span>{t('metrics.bazaar')}</span>
+                                </button>
+                                <button
+                                    onClick={() => setActivePerspective('piety')}
+                                    className={`advisor-tab tab-piety ${activePerspective === 'piety' ? 'active' : ''}`}
+                                >
+                                    <span className="text-sm">⭐</span>
+                                    <span>{t('metrics.piety')}</span>
+                                </button>
+                            </div>
+
                             {renderForecast()}
 
                             <div className="card-actions">
@@ -220,6 +299,47 @@ const GameDesk: React.FC<GameDeskProps> = ({ onExit, difficulty }) => {
                     onRestart={restartGame}
                     onExit={onExit}
                 />
+            )}
+
+            {/* Annual Intelligence Briefing Modal */}
+            {state.yearEndReport.length > 0 && !isGameOver && (
+                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md p-4 animate-in fade-in duration-500">
+                    <div className="w-full max-w-lg border border-zinc-800 bg-zinc-950 p-8 shadow-2xl relative overflow-hidden">
+                        {/* Decorative Scanner Line */}
+                        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-emerald-500/5 to-transparent h-20 w-full animate-scanline pointer-events-none" />
+
+                        <div className="relative z-10">
+                            <header className="mb-6 border-b border-zinc-800 pb-4">
+                                <h3 className="text-[10px] font-black uppercase tracking-[0.5em] text-emerald-500 mb-1">Intelligence Division</h3>
+                                <h2 className="text-xl font-bold text-zinc-100 uppercase tracking-tighter">Annual Systemic Briefing</h2>
+                                <p className="text-[9px] text-zinc-500 uppercase tracking-widest mt-1">Year {state.currentYear - 1} Conclusion</p>
+                            </header>
+
+                            <div className="space-y-4 mb-8">
+                                {state.yearEndReport.map((msg, index) => (
+                                    <div key={index} className="flex gap-4 items-start group">
+                                        <span className="text-emerald-500 font-mono text-xs opacity-50">[0{index + 1}]</span>
+                                        <p className="text-sm text-zinc-300 leading-relaxed font-medium group-hover:text-emerald-400 transition-colors">
+                                            {msg}
+                                        </p>
+                                    </div>
+                                ))}
+                            </div>
+
+                            <GameButton
+                                onClick={clearYearEndReport}
+                                className="w-full py-4 bg-emerald-950/20 border border-emerald-500/30 text-emerald-500 hover:bg-emerald-500 hover:text-black transition-all duration-300 uppercase text-xs font-black tracking-[0.3em]"
+                            >
+                                Acknowledge Briefing
+                            </GameButton>
+                        </div>
+
+                        {/* Background Watermark */}
+                        <div className="absolute -bottom-4 -right-4 text-[60px] font-black text-emerald-500/5 select-none pointer-events-none uppercase tracking-tighter">
+                            SECURE
+                        </div>
+                    </div>
+                </div>
             )}
 
             <ConfirmationModal
