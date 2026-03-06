@@ -13,7 +13,7 @@ const GameButton: React.FC<GameButtonProps> = ({
     ...props
 }) => {
     // SFX for the button click
-    const { play } = useSFX('/audio/click_stamp.mp3');
+    const { play } = useSFX('audio/click_stamp.mp3');
 
     const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
         play();

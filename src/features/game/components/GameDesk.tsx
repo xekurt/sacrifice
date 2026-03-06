@@ -244,7 +244,7 @@ const GameDesk: React.FC<GameDeskProps> = ({ onExit, difficulty }) => {
                             {/* Cinematic Portrait */}
                             <div className="absolute inset-0 z-0">
                                 <img
-                                    src={`public/character/${activePerspective}.jpg`}
+                                    src={`character/${activePerspective}.jpg`}
                                     alt="Advisor"
                                     className={`w-full h-full object-cover object-top opacity-60 transition-all duration-1000 ${transitionState !== 'idle' ? 'scale-110 blur-sm' : 'scale-100'}`}
                                     style={{
@@ -265,7 +265,7 @@ const GameDesk: React.FC<GameDeskProps> = ({ onExit, difficulty }) => {
                                         className={`group relative transition-all duration-500 ${activePerspective === faction ? 'scale-110' : 'opacity-30 hover:opacity-100'}`}
                                     >
                                         <div className={`w-12 h-12 border transition-all duration-300 ${activePerspective === faction ? 'border-amber-500 shadow-[0_0_20px_rgba(245,158,11,0.4)]' : 'border-zinc-800 hover:border-zinc-600'}`}>
-                                            <img src={`public/character/${faction}.jpg`} alt={faction} className="w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0" />
+                                            <img src={`character/${faction}.jpg`} alt={faction} className="w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0" />
                                         </div>
                                     </button>
                                 ))}

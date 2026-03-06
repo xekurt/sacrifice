@@ -14,7 +14,7 @@ const EndGameScreen: React.FC<EndGameScreenProps> = ({ gameState, onRestart, onE
     const isWin = gameState.gameStateStatus === 'won';
 
     useEffect(() => {
-        const audioPath = isWin ? '/audio/victory.mp3' : '/audio/defeat.mp3';
+        const audioPath = isWin ? 'audio/victory.mp3' : 'audio/defeat.mp3';
         const audio = new Audio(audioPath);
         audio.volume = 0.5;
         audio.play().catch(e => console.warn("End game audio blocked or missing:", e));
