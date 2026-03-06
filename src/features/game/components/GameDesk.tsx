@@ -10,21 +10,6 @@ import type { Difficulty, DilemmaCard } from '../../../core/types/game';
 import { playApproveSound, playRejectSound, resumeAudio } from '../../../shared/utils/audioEngine';
 import { useAudio } from '../../../shared/contexts/AudioContext';
 
-const MetricBar = ({ label, value, color }: { label: string; value: number; color: string }) => (
-    <div className="metric-container">
-        <div className="metric-header">
-            <span className="metric-label">{label}</span>
-            <span className="metric-value">{Math.round(value)}%</span>
-        </div>
-        <div className="progress-bg">
-            <div
-                className="progress-fill"
-                style={{ width: `${value}%`, backgroundColor: color }}
-            />
-        </div>
-    </div>
-);
-
 interface GameDeskProps {
     onExit: () => void;
     difficulty: Difficulty;
@@ -108,66 +93,47 @@ const GameDesk: React.FC<GameDeskProps> = ({ onExit, difficulty }) => {
     const renderForecast = () => {
         if (!hoveredOption || transitionState !== 'idle') {
             return (
-                <div className="min-h-[60px] flex items-center justify-center border border-zinc-800/30 bg-zinc-900/20 rounded-sm p-4 mb-6 transition-all duration-500">
-                    <p className="text-[10px] uppercase tracking-[0.2em] text-zinc-600/60 animate-pulse text-center">
-                        {transitionState !== 'idle' ? "Processing Decision..." : (state.difficulty === 'hard' ? t('game.outcome_uncertain') : t('game.hover_instruction'))}
+                <div className="flex items-center justify-center h-12">
+                    <p className="text-[10px] uppercase font-bold tracking-[0.4em] text-zinc-600/60 animate-pulse">
+                        {transitionState !== 'idle' ? "Processing Node..." : "Awaiting Operational Choice"}
                     </p>
                 </div>
             );
         }
 
         const effects = hoveredOption === 'yes' ? currentCard.yesEffects : currentCard.noEffects;
-
-        // Filter effects based on active perspective's bias
         const visibleMetrics = FACTION_VISIBILITY[activePerspective];
         const filteredEffects = Object.entries(effects).filter(([key]) => visibleMetrics.includes(key));
 
         return (
-            <div className="min-h-[60px] flex flex-col items-center justify-center border border-zinc-700/50 bg-zinc-800/40 rounded-sm p-4 mb-6 shadow-inner transition-all duration-300 backdrop-blur-sm relative overflow-hidden text-center">
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-zinc-100/5 to-transparent h-4 w-full animate-scanline pointer-events-none" />
-
-                <span className="text-[8px] font-bold uppercase tracking-[0.3em] text-zinc-500 mb-2">{t('game.advisor_projection')}</span>
-                <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
-                    {state.difficulty === 'easy' && (
-                        filteredEffects.length > 0 ? (
-                            filteredEffects.map(([key, value]) => (
-                                <div key={key} className="flex items-center gap-1.5">
-                                    <span className="text-[9px] uppercase font-bold text-zinc-400">{t(`metrics.${key}`)}</span>
-                                    <span className={`text-xs font-black ${value && value > 0 ? 'text-emerald-500' : 'text-red-500'}`}>
-                                        {value && value > 0 ? '+' : ''}{value}
+            <div className="flex flex-col items-center gap-2">
+                <div className="flex items-center gap-8 justify-center py-4 px-8 bg-zinc-950/80 border-y border-white/5 backdrop-blur-md">
+                    {filteredEffects.length > 0 ? (
+                        filteredEffects.map(([key, value]) => (
+                            <div key={key} className="flex flex-col items-center min-w-[80px]">
+                                <span className="text-[8px] uppercase font-black tracking-widest text-zinc-500 mb-1">{t(`metrics.${key}`)}</span>
+                                <div className="flex items-center gap-2">
+                                    <div className={`w-1 h-3 ${value && value > 0 ? 'bg-emerald-500' : 'bg-red-500'}`} />
+                                    <span className={`text-xl font-mono font-bold ${value && value > 0 ? 'text-emerald-500' : 'text-red-500'}`}>
+                                        {value && value > 0 ? '+' : ''}{value}%
                                     </span>
                                 </div>
-                            ))
-                        ) : (
-                            <p className="text-[10px] uppercase font-bold text-zinc-500/60 tracking-wider italic">
-                                No relevant impacts detected
-                            </p>
-                        )
-                    )}
-                    {state.difficulty === 'normal' && (
-                        filteredEffects.length > 0 ? (
-                            <p className="text-[10px] uppercase font-bold text-zinc-300 tracking-wider">
-                                {t('game.will_impact')}: {filteredEffects.map(([key]) => t(`metrics.${key}`)).join(', ')}
-                            </p>
-                        ) : (
-                            <p className="text-[10px] uppercase font-bold text-zinc-500/60 tracking-wider italic">
-                                No relevant impacts detected
-                            </p>
-                        )
-                    )}
-                    {state.difficulty === 'hard' && (
-                        <p className="text-[10px] uppercase font-bold text-red-500/60 tracking-[0.4em] italic animate-pulse">
-                            {t('game.outcome_uncertain')}
+                            </div>
+                        ))
+                    ) : (
+                        <p className="text-[10px] uppercase font-bold text-zinc-600 tracking-widest italic py-2">
+                            No significant systemic impacts detected
                         </p>
                     )}
                 </div>
+                <div className="text-[8px] font-bold uppercase tracking-[0.5em] text-amber-500/50">Advisor Predictive Data // Filter: {activePerspective}</div>
             </div>
         );
     };
 
     const cardContainerClass = transitionState === 'sliding'
-        ? (decision === 'yes' ? 'translate-x-full opacity-0' : '-translate-x-full opacity-0')
-        : (transitionState === 'idle' ? 'card-transition-idle' : 'translate-x-0 opacity-100');
+        ? (decision === 'yes' ? 'translate-x-[50%] opacity-0' : '-translate-x-[50%] opacity-0')
+        : (transitionState === 'idle' ? '' : 'translate-x-0 opacity-100');
 
     // Visual Filter Logic
     const mainFilterClass = isGameOver
@@ -175,148 +141,197 @@ const GameDesk: React.FC<GameDeskProps> = ({ onExit, difficulty }) => {
         : '';
 
     return (
-        <div className="game-layout transition-all duration-1000 relative">
-            <div className={`w-full h-full flex flex-col transition-all duration-1000 ${mainFilterClass}`}>
+        <div className={`game-layout transition-all duration-1000 relative bg-zinc-950 h-screen w-full overflow-hidden ${mainFilterClass}`}>
+            <div className="w-full h-full flex flex-col overflow-x-hidden">
 
-                <header className="game-header">
-                    <div className="flex items-center gap-6">
-                        <div className="flex items-center gap-2">
-                            <GameButton
-                                onClick={() => setIsExitModalOpen(true)}
-                                className="group flex items-center gap-2 px-3 py-1.5 border border-zinc-800 hover:border-red-900 text-zinc-600 hover:text-red-500 transition-all duration-300 rounded-sm"
-                                title={t('game.exit')}
-                            >
-                                <span className="text-[10px] font-bold uppercase tracking-widest">{t('game.exit')}</span>
+                {/* Tactical Header */}
+                <header className="game-header h-14 border-b border-white/5 bg-black/60 backdrop-blur-md flex items-center justify-between px-8 z-30">
+                    <div className="flex items-center gap-12">
+                        <div className="flex items-center gap-4">
+                            <GameButton onClick={() => setIsExitModalOpen(true)} className="!p-2 !bg-transparent border border-zinc-800 hover:border-red-900 transition-all rounded-none">
+                                <span className="text-[9px] font-black uppercase tracking-[0.2em]">{t('game.exit')}</span>
                             </GameButton>
-
-                            <GameButton
-                                onClick={toggleMute}
-                                className={`group flex items-center justify-center w-9 h-9 border border-zinc-800 transition-all duration-300 rounded-sm ${isMuted ? 'text-zinc-600 bg-zinc-950/50' : 'text-emerald-500 bg-emerald-500/5 border-emerald-500/20'}`}
-                                title={isMuted ? "Enable Music" : "Disable Music"}
-                            >
-                                <span className="text-sm">{isMuted ? '🔇' : '🔊'}</span>
-                            </GameButton>
+                            <button onClick={toggleMute} className={`p-2 transition-all ${isMuted ? 'text-zinc-700' : 'text-emerald-500'}`}>
+                                {isMuted ? '🔇' : '🔊'}
+                            </button>
                         </div>
-                        <div className="year-display">
-                            {t('game.year')} {state.currentYear} <span className="quarter-text">| {state.currentTerm === 1 ? t('game.early_year') : t('game.late_year')}</span>
+                        <div className="font-mono text-xs tracking-[0.3em] uppercase text-zinc-400">
+                            {t('game.year')} {state.currentYear} <span className="text-zinc-600 px-2">//</span> {state.currentTerm === 1 ? t('game.early_year') : t('game.late_year')}
                         </div>
                     </div>
-                    <div className="flex items-center gap-4">
-                        <div className="text-[10px] uppercase tracking-widest px-2 py-1 border border-zinc-800 rounded-sm bg-zinc-900/50 text-zinc-500">
-                            {t(`difficulty.${state.difficulty}`)}
+
+                    <div className="hidden xl:flex items-center gap-8 border-x border-white/5 px-12 h-full">
+                        <div className="flex flex-col items-center">
+                            <span className="text-[7px] uppercase font-black tracking-widest text-zinc-500 mb-0.5">Sepah</span>
+                            <span className={`text-xs font-mono font-bold ${state.sepah < 20 || state.sepah > 80 ? 'text-red-500 animate-pulse' : 'text-zinc-300'}`}>{state.sepah}%</span>
                         </div>
-                        <div className="target-display">{t('game.goal', { years: state.targetYears })}</div>
-                        {state.lifelineUsed && <div className="lifeline-badge">{t('game.lifeline_spent')}</div>}
+                        <div className="w-[1px] h-4 bg-white/5" />
+                        <div className="flex flex-col items-center">
+                            <span className="text-[7px] uppercase font-black tracking-widest text-zinc-500 mb-0.5">Bazaar</span>
+                            <span className={`text-xs font-mono font-bold ${state.bazaar < 20 || state.bazaar > 80 ? 'text-red-500 animate-pulse' : 'text-zinc-300'}`}>{state.bazaar}%</span>
+                        </div>
+                        <div className="w-[1px] h-4 bg-white/5" />
+                        <div className="flex flex-col items-center">
+                            <span className="text-[7px] uppercase font-black tracking-widest text-zinc-500 mb-0.5">Isolation</span>
+                            <span className={`text-xs font-mono font-bold ${state.isolation < 20 || state.isolation > 80 ? 'text-red-500 animate-pulse' : 'text-zinc-300'}`}>{state.isolation}%</span>
+                        </div>
+                        <div className="w-[1px] h-4 bg-white/5" />
+                        <div className="flex flex-col items-center">
+                            <span className="text-[7px] uppercase font-black tracking-widest text-zinc-500 mb-0.5">Piety</span>
+                            <span className={`text-xs font-mono font-bold ${state.piety < 20 || state.piety > 80 ? 'text-red-500 animate-pulse' : 'text-zinc-300'}`}>{state.piety}%</span>
+                        </div>
+                    </div>
+
+                    <div className="flex items-center gap-8">
+                        <div className="metrics-group flex gap-8">
+                            <div className="flex flex-col items-end">
+                                <span className="text-[8px] uppercase font-black tracking-widest text-zinc-600">Global Legitimacy</span>
+                                <div className="h-1 w-24 bg-zinc-900 mt-1">
+                                    <div className="h-full bg-emerald-500 transition-all duration-1000" style={{ width: `${state.legitimacy}%` }} />
+                                </div>
+                            </div>
+                            <div className="flex flex-col items-end">
+                                <span className="text-[8px] uppercase font-black tracking-widest text-zinc-600">Goal Progress</span>
+                                <span className="text-[10px] font-mono text-zinc-400">{state.currentYear}/{state.targetYears}</span>
+                            </div>
+                        </div>
+                        <div className="text-[9px] uppercase tracking-[0.4em] font-black px-4 py-1.5 border border-zinc-800 text-zinc-500">
+                            {state.difficulty}
+                        </div>
                     </div>
                 </header>
 
-                <section className="dashboard">
-                    <MetricBar label={t('metrics.piety')} value={state.piety} color="#8b5cf6" />
-                    <MetricBar label={t('metrics.sepah')} value={state.sepah} color="var(--color-bad)" />
-                    <MetricBar label={t('metrics.bazaar')} value={state.bazaar} color="var(--color-warning)" />
-                    <MetricBar label={t('metrics.isolation')} value={state.isolation} color="#3b82f6" />
-                    <MetricBar label={t('metrics.legitimacy')} value={state.legitimacy} color="var(--color-good)" />
-                </section>
+                {/* Cinematic Main Area */}
+                <main className="flex-grow grid grid-cols-12 overflow-hidden relative">
 
-                <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-12 w-full max-w-7xl mx-auto items-center flex-grow p-4">
-                    <div className="w-full h-auto flex justify-center items-center drop-shadow-2xl">
-                        <ImaginaryMap gameState={state} />
+                    {/* LEFT PANE: TACTICAL MAP */}
+                    <div className="col-span-12 lg:col-span-7 relative flex items-center justify-center bg-transparent group overflow-hidden">
+                        {/* Decorative Background Grid */}
+                        <div className="absolute inset-0 opacity-10 pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle, #333 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+
+                        <div className="w-full h-full max-h-[80vh] filter blur-[0.5px] hover:blur-0 transition-all duration-[2000ms] flex items-center justify-center transform group-hover:scale-[1.02] cursor-default">
+                            <ImaginaryMap gameState={state} />
+                        </div>
+
+                        {/* Map Overlay HUD */}
+                        <div className="absolute top-12 left-12 border-l border-t border-white/20 w-16 h-16 pointer-events-none" />
+                        <div className="absolute bottom-12 right-12 border-r border-b border-white/20 w-16 h-16 pointer-events-none" />
+                        <div className="absolute top-1/2 -left-4 -translate-y-1/2 font-mono text-[8px] text-zinc-700 tracking-[0.5em] rotate-90 uppercase">Satellite Feed // Active</div>
                     </div>
 
-                    <div className="w-full max-w-lg mx-auto overflow-hidden">
-                        <div className={`dilemma-card !max-w-none transition-all duration-300 ease-in-out relative ${cardContainerClass}`}>
-                            {(transitionState === 'stamping' || transitionState === 'sliding') && (
-                                <Stamp type={decision === 'yes' ? 'approved' : 'denied'} />
-                            )}
+                    {/* RIGHT PANE: COMMAND DASHBOARD */}
+                    <div className="col-span-12 lg:col-span-5 bg-zinc-950 border-l border-white/5 flex flex-col relative z-20 shadow-[-50px_0_100px_rgba(0,0,0,0.5)]">
 
-                            <div className="ministry-header" style={{ color: ministryColor }}>
-                                {t(ministryName)}
+                        {/* 1. Dossier (Narrative Context) */}
+                        <div className="p-10 lg:p-14 pb-4">
+                            <div className="flex items-center justify-between mb-8">
+                                <h2 className="text-[10px] font-black uppercase tracking-[0.6em] text-zinc-600" style={{ color: ministryColor }}>
+                                    {t(ministryName)} // MISSION BRIEF
+                                </h2>
+                                <div className="h-[2px] w-12 bg-zinc-800" />
                             </div>
-                            <h2 className="card-title font-mono uppercase tracking-tighter border-b border-zinc-800 pb-2 mb-4">
-                                {currentCard.title || t(`${cardBaseKey}.title`)}
-                            </h2>
 
-                            <div className="card-description bg-zinc-950/40 p-6 border-l-2 border-zinc-800 mb-6 italic shadow-inner">
-                                <p className="text-zinc-400 leading-relaxed text-sm">
+                            <div className="relative">
+                                <p className="text-lg lg:text-xl font-serif text-slate-300 leading-relaxed italic drop-shadow-lg">
                                     {currentCard.description}
                                 </p>
+                                <div className="absolute -top-4 -left-4 text-white/5 font-serif text-6xl select-none">"</div>
+                            </div>
+                        </div>
+
+                        {/* 2. Character Command Section */}
+                        <div className="relative w-full h-[50vh] overflow-hidden group">
+                            {/* Cinematic Portrait */}
+                            <div className="absolute inset-0 z-0">
+                                <img
+                                    src={`public/character/${activePerspective}.jpg`}
+                                    alt="Advisor"
+                                    className={`w-full h-full object-cover object-top opacity-60 transition-all duration-1000 ${transitionState !== 'idle' ? 'scale-110 blur-sm' : 'scale-100'}`}
+                                    style={{
+                                        maskImage: 'linear-gradient(to bottom, black 50%, transparent 95%)',
+                                        WebkitMaskImage: 'linear-gradient(to bottom, black 50%, transparent 95%)'
+                                    }}
+                                />
+                                {/* Strong Bottom Gradient Overlay */}
+                                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#09090b] to-transparent z-10" />
                             </div>
 
-                            {/* Advisor Avatar Selection */}
-                            <div className="flex justify-center gap-4 mb-8">
+                            {/* Perspective Nav (Relocated to Top Right) */}
+                            <div className="absolute top-4 right-4 flex flex-col gap-2 z-30">
                                 {(['sepah', 'bazaar', 'isolation'] as const).map(faction => (
                                     <button
                                         key={faction}
                                         onClick={() => setActivePerspective(faction)}
-                                        className={`relative group transition-all duration-300 ${activePerspective === faction ? 'scale-110' : 'opacity-40 grayscale hover:opacity-100'}`}
+                                        className={`group relative transition-all duration-500 ${activePerspective === faction ? 'scale-110' : 'opacity-30 hover:opacity-100'}`}
                                     >
-                                        <div className={`w-14 h-14 rounded-sm border-2 overflow-hidden transition-all duration-300 ${activePerspective === faction ? 'border-amber-500 shadow-[0_0_15px_rgba(245,158,11,0.3)]' : 'border-zinc-800'}`}>
-                                            <img
-                                                src={`public/character/${faction}.jpg`}
-                                                alt={faction}
-                                                className="w-full h-full object-cover"
-                                            />
-                                        </div>
-                                        <div className={`absolute -bottom-1 left-1/2 -translate-x-1/2 px-1 text-[7px] font-black uppercase tracking-tighter ${activePerspective === faction ? 'bg-amber-500 text-black' : 'bg-zinc-800 text-zinc-500'}`}>
-                                            {faction}
+                                        <div className={`w-12 h-12 border transition-all duration-300 ${activePerspective === faction ? 'border-amber-500 shadow-[0_0_20px_rgba(245,158,11,0.4)]' : 'border-zinc-800 hover:border-zinc-600'}`}>
+                                            <img src={`public/character/${faction}.jpg`} alt={faction} className="w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0" />
                                         </div>
                                     </button>
                                 ))}
                             </div>
 
-                            {/* Character Comms Channel */}
-                            <div className={`character-panel border transition-all duration-500 p-4 mb-6 relative overflow-hidden bg-gradient-to-br from-zinc-900/80 to-black/80
-                                ${activePerspective === 'sepah' ? 'border-orange-900/50 shadow-[inset_0_0_20px_rgba(154,52,18,0.1)]' : ''}
-                                ${activePerspective === 'bazaar' ? 'border-yellow-900/50 shadow-[inset_0_0_20px_rgba(133,77,14,0.1)]' : ''}
-                                ${activePerspective === 'isolation' ? 'border-blue-900/50 shadow-[inset_0_0_20px_rgba(30,64,175,0.1)]' : ''}
-                            `}>
-                                <div className="flex gap-4 items-start">
-                                    <div className="w-20 h-20 flex-shrink-0 border border-zinc-800 bg-zinc-950">
-                                        <img
-                                            src={`public/character/${activePerspective}.jpg`}
-                                            alt="Advisor"
-                                            className="w-full h-full object-cover grayscale-[0.5] brightness-75"
-                                        />
+                            {/* 3. Advisor Overlay Content (Anchored to Bottom) */}
+                            <div className={`absolute bottom-8 z-20 w-full px-6 transition-all duration-500 transform ${cardContainerClass}`}>
+                                {transitionState === 'stamping' && (
+                                    <div className="absolute inset-0 z-50 flex items-center justify-center scale-150 pointer-events-none">
+                                        <Stamp type={decision === 'yes' ? 'approved' : 'denied'} />
                                     </div>
-                                    <div className="flex-grow space-y-3">
-                                        <div className="comms-header flex justify-between items-center opacity-50">
-                                            <span className="text-[8px] font-bold uppercase tracking-[0.2em]">{activePerspective} Feed // Secure</span>
-                                            <span className="text-[8px] font-mono">15.00.412</span>
-                                        </div>
-                                        <p className="text-xs italic text-zinc-100 leading-snug animate-in fade-in slide-in-from-left-2 duration-500">
-                                            "{currentCard.advisorQuotes[activePerspective]}"
-                                        </p>
+                                )}
 
-                                        <div className="pt-2 animate-in fade-in duration-700">
-                                            {renderForecast()}
-                                        </div>
+                                <div className="space-y-6">
+                                    {/* Subtitle / Quote */}
+                                    <p className="text-sm lg:text-base font-serif italic text-zinc-500 text-center leading-snug max-w-2xl mx-auto">
+                                        "{currentCard.advisorQuotes[activePerspective]}"
+                                    </p>
+
+                                    {/* Projection / Math */}
+                                    <div className="transition-all duration-700">
+                                        {renderForecast()}
                                     </div>
                                 </div>
                             </div>
+                        </div>
 
-                            <div className="card-actions">
-                                <GameButton
-                                    className={`choice-btn yes-btn ${transitionState !== 'idle' ? 'opacity-50 pointer-events-none' : ''}`}
-                                    onClick={() => handleDecision('yes', currentCard)}
-                                    onMouseEnter={() => setHoveredOption('yes')}
-                                    onMouseLeave={() => setHoveredOption(null)}
-                                    disabled={transitionState !== 'idle'}
-                                >
-                                    {t(`${cardBaseKey}.yesText`)}
-                                </GameButton>
-                                <GameButton
-                                    className={`choice-btn no-btn ${transitionState !== 'idle' ? 'opacity-50 pointer-events-none' : ''}`}
-                                    onClick={() => handleDecision('no', currentCard)}
-                                    onMouseEnter={() => setHoveredOption('no')}
-                                    onMouseLeave={() => setHoveredOption(null)}
-                                    disabled={transitionState !== 'idle'}
-                                >
-                                    {t(`${cardBaseKey}.noText`)}
-                                </GameButton>
-                            </div>
+                        {/* 4. Action Buttons (Tactical Command Blocks) */}
+                        <div className="flex h-32 border-t border-white/5 flex-shrink-0">
+                            <GameButton
+                                className={`flex-1 py-6 bg-slate-900 border-r border-slate-700 hover:bg-slate-800 transition-colors flex flex-col items-center justify-center rounded-none group ${transitionState !== 'idle' ? 'opacity-10 pointer-events-none' : ''}`}
+                                onClick={() => handleDecision('yes', currentCard)}
+                                onMouseEnter={() => setHoveredOption('yes')}
+                                onMouseLeave={() => setHoveredOption(null)}
+                                disabled={transitionState !== 'idle'}
+                            >
+                                <div className="flex flex-col items-center">
+                                    <span className="text-emerald-500 font-black text-2xl uppercase tracking-[0.2em] group-hover:scale-110 transition-transform duration-300">
+                                        {t(`${cardBaseKey}.yesText`) || 'Approve'}
+                                    </span>
+                                    <span className="text-[10px] text-zinc-500 mt-2 font-mono tracking-[0.5em]">AUTHORIZE_EXECUTION</span>
+                                </div>
+                            </GameButton>
+                            <GameButton
+                                className={`flex-1 py-6 bg-slate-900 hover:bg-slate-800 transition-colors flex flex-col items-center justify-center rounded-none group ${transitionState !== 'idle' ? 'opacity-10 pointer-events-none' : ''}`}
+                                onClick={() => handleDecision('no', currentCard)}
+                                onMouseEnter={() => setHoveredOption('no')}
+                                onMouseLeave={() => setHoveredOption(null)}
+                                disabled={transitionState !== 'idle'}
+                            >
+                                <div className="flex flex-col items-center">
+                                    <span className="text-red-500 font-black text-2xl uppercase tracking-[0.2em] group-hover:scale-110 transition-transform duration-300">
+                                        {t(`${cardBaseKey}.noText`) || 'Deny'}
+                                    </span>
+                                    <span className="text-[10px] text-zinc-500 mt-2 font-mono tracking-[0.5em]">REJECT_PROPOSAL</span>
+                                </div>
+                            </GameButton>
                         </div>
                     </div>
-                </div>
+                </main>
+
+                {/* Status Bar / Metrics (Alternative Mobile View or Additional Detail) */}
+                <footer className="h-4 bg-zinc-950 border-t border-white/5 px-8 flex items-center justify-between text-[6px] text-zinc-700 font-mono uppercase tracking-[0.4em]">
+                    <div>System Status: Nominal // High Priority Decision Required</div>
+                    <div>User ID: LEADER_01 // Encryption: AES-256</div>
+                </footer>
             </div>
 
             {/* End Game Overlay */}

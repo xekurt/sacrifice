@@ -87,50 +87,38 @@
 
 body {
   margin: 0;
+  padding: 0;
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  background-color: var(--bg-dark);
-  color: var(--text-primary);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-image: radial-gradient(circle at 50% 50%, #1e293b 0%, #0f172a 100%);
+  background-color: #09090b;
+  color: #f4f4f5;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
 }
 
 #root {
   width: 100%;
-  max-width: 1200px;
-  padding: 2rem;
+  height: 100%;
 }
 
 .game-layout {
-  display: grid;
-  grid-template-rows: auto auto 1fr;
-  gap: 2rem;
-  animation: fadeIn 0.8s ease-out;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0 !important;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+#root {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
-.game-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--accent-gold);
-  border-bottom: 1px solid var(--glass-border);
-  padding-bottom: 1rem;
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #09090b;
 }
 
 .year-display {
