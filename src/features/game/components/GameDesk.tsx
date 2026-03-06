@@ -36,7 +36,7 @@ const GameDesk: React.FC<GameDeskProps> = ({ onExit, difficulty }) => {
     const { state, processChoice, restartGame, getCurrentCardData, clearYearEndReport } = useGameEngine(difficulty);
     const [isExitModalOpen, setIsExitModalOpen] = useState(false);
     const [hoveredOption, setHoveredOption] = useState<'yes' | 'no' | null>(null);
-    const [activePerspective, setActivePerspective] = useState<'sepah' | 'bazaar' | 'piety'>('sepah');
+    const [activePerspective, setActivePerspective] = useState<'sepah' | 'bazaar' | 'isolation'>('sepah');
 
     const [transitionState, setTransitionState] = useState<'idle' | 'stamping' | 'sliding'>('idle');
     const [decision, setDecision] = useState<'yes' | 'no' | null>(null);
@@ -50,7 +50,7 @@ const GameDesk: React.FC<GameDeskProps> = ({ onExit, difficulty }) => {
         const typeChar = currentCard.id.charAt(0);
         if (typeChar === 's') setActivePerspective('sepah');
         else if (typeChar === 'b') setActivePerspective('bazaar');
-        else if (typeChar === 'p') setActivePerspective('piety');
+        else if (typeChar === 'i' || typeChar === 'p') setActivePerspective('isolation');
     }, [currentCard.id]);
 
     const handleDecision = async (choice: 'yes' | 'no', card: DilemmaCard) => {
@@ -99,10 +99,10 @@ const GameDesk: React.FC<GameDeskProps> = ({ onExit, difficulty }) => {
     const ministryColor = MINISTRY_COLORS[typeChar] || '#8b5cf6';
 
     // Bias Filter Configuration: Each faction only sees metrics they care about
-    const FACTION_VISIBILITY: Record<'sepah' | 'bazaar' | 'piety', string[]> = {
+    const FACTION_VISIBILITY: Record<'sepah' | 'bazaar' | 'isolation', string[]> = {
         sepah: ['sepah', 'isolation', 'legitimacy'],      // Military: Security & Control
         bazaar: ['bazaar', 'isolation'],                   // Economy: Trade & Markets
-        piety: ['piety', 'legitimacy']                     // Religion: Faith & Authority
+        isolation: ['isolation', 'legitimacy', 'piety']    // Sovereignty: Independence & Authority
     };
 
     const renderForecast = () => {
@@ -232,40 +232,67 @@ const GameDesk: React.FC<GameDeskProps> = ({ onExit, difficulty }) => {
                             <div className="ministry-header" style={{ color: ministryColor }}>
                                 {t(ministryName)}
                             </div>
-                            <h2 className="card-title">{currentCard.title || t(`${cardBaseKey}.title`)}</h2>
+                            <h2 className="card-title font-mono uppercase tracking-tighter border-b border-zinc-800 pb-2 mb-4">
+                                {currentCard.title || t(`${cardBaseKey}.title`)}
+                            </h2>
 
-                            <div className="card-description">
-                                <p>
+                            <div className="card-description bg-zinc-950/40 p-6 border-l-2 border-zinc-800 mb-6 italic shadow-inner">
+                                <p className="text-zinc-400 leading-relaxed text-sm">
                                     {currentCard.description}
                                 </p>
                             </div>
 
-                            {/* Advisor System UI */}
-                            <div className="advisor-tabs">
-                                <button
-                                    onClick={() => setActivePerspective('sepah')}
-                                    className={`advisor-tab tab-sepah ${activePerspective === 'sepah' ? 'active' : ''}`}
-                                >
-                                    <span className="text-sm">⚔️</span>
-                                    <span>{t('metrics.sepah')}</span>
-                                </button>
-                                <button
-                                    onClick={() => setActivePerspective('bazaar')}
-                                    className={`advisor-tab tab-bazaar ${activePerspective === 'bazaar' ? 'active' : ''}`}
-                                >
-                                    <span className="text-sm">💰</span>
-                                    <span>{t('metrics.bazaar')}</span>
-                                </button>
-                                <button
-                                    onClick={() => setActivePerspective('piety')}
-                                    className={`advisor-tab tab-piety ${activePerspective === 'piety' ? 'active' : ''}`}
-                                >
-                                    <span className="text-sm">⭐</span>
-                                    <span>{t('metrics.piety')}</span>
-                                </button>
+                            {/* Advisor Avatar Selection */}
+                            <div className="flex justify-center gap-4 mb-8">
+                                {(['sepah', 'bazaar', 'isolation'] as const).map(faction => (
+                                    <button
+                                        key={faction}
+                                        onClick={() => setActivePerspective(faction)}
+                                        className={`relative group transition-all duration-300 ${activePerspective === faction ? 'scale-110' : 'opacity-40 grayscale hover:opacity-100'}`}
+                                    >
+                                        <div className={`w-14 h-14 rounded-sm border-2 overflow-hidden transition-all duration-300 ${activePerspective === faction ? 'border-amber-500 shadow-[0_0_15px_rgba(245,158,11,0.3)]' : 'border-zinc-800'}`}>
+                                            <img
+                                                src={`public/character/${faction}.jpg`}
+                                                alt={faction}
+                                                className="w-full h-full object-cover"
+                                            />
+                                        </div>
+                                        <div className={`absolute -bottom-1 left-1/2 -translate-x-1/2 px-1 text-[7px] font-black uppercase tracking-tighter ${activePerspective === faction ? 'bg-amber-500 text-black' : 'bg-zinc-800 text-zinc-500'}`}>
+                                            {faction}
+                                        </div>
+                                    </button>
+                                ))}
                             </div>
 
-                            {renderForecast()}
+                            {/* Character Comms Channel */}
+                            <div className={`character-panel border transition-all duration-500 p-4 mb-6 relative overflow-hidden bg-gradient-to-br from-zinc-900/80 to-black/80
+                                ${activePerspective === 'sepah' ? 'border-orange-900/50 shadow-[inset_0_0_20px_rgba(154,52,18,0.1)]' : ''}
+                                ${activePerspective === 'bazaar' ? 'border-yellow-900/50 shadow-[inset_0_0_20px_rgba(133,77,14,0.1)]' : ''}
+                                ${activePerspective === 'isolation' ? 'border-blue-900/50 shadow-[inset_0_0_20px_rgba(30,64,175,0.1)]' : ''}
+                            `}>
+                                <div className="flex gap-4 items-start">
+                                    <div className="w-20 h-20 flex-shrink-0 border border-zinc-800 bg-zinc-950">
+                                        <img
+                                            src={`public/character/${activePerspective}.jpg`}
+                                            alt="Advisor"
+                                            className="w-full h-full object-cover grayscale-[0.5] brightness-75"
+                                        />
+                                    </div>
+                                    <div className="flex-grow space-y-3">
+                                        <div className="comms-header flex justify-between items-center opacity-50">
+                                            <span className="text-[8px] font-bold uppercase tracking-[0.2em]">{activePerspective} Feed // Secure</span>
+                                            <span className="text-[8px] font-mono">15.00.412</span>
+                                        </div>
+                                        <p className="text-xs italic text-zinc-100 leading-snug animate-in fade-in slide-in-from-left-2 duration-500">
+                                            "{currentCard.advisorQuotes[activePerspective]}"
+                                        </p>
+
+                                        <div className="pt-2 animate-in fade-in duration-700">
+                                            {renderForecast()}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
                             <div className="card-actions">
                                 <GameButton

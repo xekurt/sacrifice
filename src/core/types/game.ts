@@ -27,6 +27,11 @@ export interface DilemmaCard {
     id: string;
     title?: string;
     description: string;
+    advisorQuotes: {
+        sepah: string;
+        bazaar: string;
+        isolation: string;
+    };
     yesText?: string;
     noText?: string;
     yesEffects: CardEffect;
