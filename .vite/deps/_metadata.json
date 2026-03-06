@@ -2,60 +2,60 @@
   "hash": "00035eda",
   "configHash": "ccc6fd8e",
   "lockfileHash": "c83bb539",
-  "browserHash": "9b329b43",
+  "browserHash": "3cbce0d0",
   "optimized": {
     "react/jsx-dev-runtime": {
       "src": "../../node_modules/react/jsx-dev-runtime.js",
       "file": "react_jsx-dev-runtime.js",
-      "fileHash": "3a22baef",
+      "fileHash": "f49be1b2",
       "needsInterop": true
     },
     "react": {
       "src": "../../node_modules/react/index.js",
       "file": "react.js",
-      "fileHash": "78210e2b",
+      "fileHash": "3f18fd47",
       "needsInterop": true
     },
     "react-dom/client": {
       "src": "../../node_modules/react-dom/client.js",
       "file": "react-dom_client.js",
-      "fileHash": "2b717e7a",
+      "fileHash": "69521ed3",
       "needsInterop": true
-    },
-    "react-i18next": {
-      "src": "../../node_modules/react-i18next/dist/es/index.js",
-      "file": "react-i18next.js",
-      "fileHash": "86424a01",
-      "needsInterop": false
     },
     "i18next": {
       "src": "../../node_modules/i18next/dist/esm/i18next.js",
       "file": "i18next.js",
-      "fileHash": "ea0881d0",
+      "fileHash": "027b097b",
+      "needsInterop": false
+    },
+    "react-i18next": {
+      "src": "../../node_modules/react-i18next/dist/es/index.js",
+      "file": "react-i18next.js",
+      "fileHash": "103fd143",
       "needsInterop": false
     },
     "i18next-browser-languagedetector": {
       "src": "../../node_modules/i18next-browser-languagedetector/dist/esm/i18nextBrowserLanguageDetector.js",
       "file": "i18next-browser-languagedetector.js",
-      "fileHash": "add90344",
+      "fileHash": "c4085c34",
       "needsInterop": false
     },
     "three": {
       "src": "../../node_modules/three/build/three.module.js",
       "file": "three.js",
-      "fileHash": "db9a631e",
+      "fileHash": "ece6424f",
       "needsInterop": false
     },
     "@react-three/fiber": {
       "src": "../../node_modules/@react-three/fiber/dist/react-three-fiber.esm.js",
       "file": "@react-three_fiber.js",
-      "fileHash": "638a0890",
+      "fileHash": "131a303d",
       "needsInterop": false
     },
     "@react-three/drei": {
       "src": "../../node_modules/@react-three/drei/index.js",
       "file": "@react-three_drei.js",
-      "fileHash": "e42d19c9",
+      "fileHash": "cdb3f55e",
       "needsInterop": false
     }
   },
