@@ -91,15 +91,15 @@ export const useGameEngine = (initialDifficulty: Difficulty = 'normal') => {
             // A. Apply Systemic Rules (Soften penalties to -3 for faster pacing)
             if (nextState.isolation < 30) {
                 nextState.piety -= 3;
-                reportMessages.push("Open borders have slightly eroded traditional Piety.");
+                reportMessages.push("desk.report.open_borders");
             }
             if (nextState.sepah > 70) {
                 nextState.bazaar -= 3;
-                reportMessages.push("Martial law is choking the local Bazaar.");
+                reportMessages.push("desk.report.martial_law");
             }
             if (nextState.piety < 40) {
                 nextState.sepah += 3;
-                reportMessages.push("Secularism forces the Sepah to exert more control.");
+                reportMessages.push("desk.report.secularism");
             }
 
             // Clamp again after rules
@@ -135,11 +135,11 @@ export const useGameEngine = (initialDifficulty: Difficulty = 'normal') => {
                     if (typeof nextState[baseMetric] === 'number') {
                         (nextState[baseMetric] as any) = 50;
                     }
-                    reportMessages.push(`Political Legitimacy was spent to stabilize the ${failMetric.split('_')[0]}.`);
+                    reportMessages.push(`desk.report.legitimacy_spent`);
                 } else {
                     nextState.gameStateStatus = 'lost';
                     nextState.lossReason = DEATH_REASONS[failMetric];
-                    nextState.lostThroughMetric = failMetric.split('_')[0];
+                    nextState.lostThroughMetric = failMetric; // Keep the full ID to identify fail type
                     return nextState;
                 }
             }

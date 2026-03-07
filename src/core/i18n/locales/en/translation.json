@@ -51,7 +51,31 @@
         "approve": "Approve",
         "deny": "Deny",
         "global_legitimacy": "Global Legitimacy",
-        "goal_progress": "Goal Progress"
+        "goal_progress": "Goal Progress",
+        "report": {
+            "open_borders": "Open borders have slightly eroded traditional Piety.",
+            "martial_law": "Martial law is choking the local Bazaar.",
+            "secularism": "Secularism forces the Sepah to exert more control.",
+            "legitimacy_spent": "Political Legitimacy was spent to stabilize the nation."
+        }
+    },
+    "end_game": {
+        "win_headline": "LEGACY SECURED",
+        "sepah_max_headline": "MILITARY COUP!",
+        "sepah_min_headline": "NATIONAL COLLAPSE!",
+        "piety_max_headline": "THEOCRATIC PURGE!",
+        "piety_min_headline": "RELIGIOUS REVOLT!",
+        "bazaar_max_headline": "CORPORATE TAKEOVER!",
+        "bazaar_min_headline": "ECONOMIC RIOTS!",
+        "isolation_max_headline": "TOTAL EMBARGO!",
+        "isolation_min_headline": "EXTERNAL INTERVENTION!",
+        "reign_over": "REIGN OVER",
+        "bulletin": "Special Bulletin",
+        "years_in_power": "Years in Power",
+        "final_approval": "Final Approval",
+        "restart_button": "Sign New Decree",
+        "exit_button": "Return to Central Command",
+        "default_loss": "The system has reached a terminal state."
     },
     "settings": {
         "title": "Settings",
@@ -111,445 +135,581 @@
         "isolation_max": "The country is entirely cut off from the world. Total systemic collapse has occurred due to a lack of basic imports."
     },
     "cards": {
-        "piety": [
-            {
-                "title": "The Great Cathedral",
-                "description": "The Ministry of Guidance proposes a grand construction project to solidify the faith of the people.",
-                "yesText": "Fund Cathedral",
-                "noText": "Build Schools"
-            },
-            {
-                "title": "Religious Census",
-                "description": "Should we force all citizens to register their faith, or allow private worship?",
-                "yesText": "Require Registration",
-                "noText": "Allow Privacy"
-            },
-            {
-                "title": "The Morality Patrols",
-                "description": "Hardliners demand increased funding for street-level morality patrols to enforce the public dress code.",
-                "yesText": "Expand Patrols",
-                "noText": "Defund Them"
-            },
-            {
-                "title": "University Purge",
-                "description": "Student groups are organizing unauthorized political debates. The clerics want the ringleaders expelled.",
-                "yesText": "Expel Students",
-                "noText": "Allow Debates"
-            },
-            {
-                "title": "State Media Monopoly",
-                "description": "Underground satellite dishes are spreading foreign culture. Do we jam the signals?",
-                "yesText": "Jam Signals",
-                "noText": "Ignore Them"
-            },
-            {
-                "title": "The Friday Imams",
-                "description": "Local prayer leaders are demanding the state ban all western music from public cafes.",
-                "yesText": "Ban Western Music",
-                "noText": "Permit Instrumentals"
-            },
-            {
-                "title": "Shrine Restoration",
-                "description": "A massive budget is proposed to gild the domes of the holy shrines, draining public infrastructure funds.",
-                "yesText": "Gild the Domes",
-                "noText": "Fix the Roads"
-            },
-            {
-                "title": "Textbook Revision",
-                "description": "The Ministry of Education wants to rewrite history books to emphasize martyrdom over scientific achievement.",
-                "yesText": "Rewrite History",
-                "noText": "Keep Science First"
-            },
-            {
-                "title": "Strict Hijab Enforcement",
-                "description": "Reports of widespread non-compliance with hijab laws spark outrage among clerics who demand expanded enforcement units.",
-                "yesText": "Expand Enforcement",
-                "noText": "Ease Requirements"
-            },
-            {
-                "title": "Mandatory Religious Programming",
-                "description": "State television airs secular entertainment. Clerics demand a minimum quota of religious content.",
-                "yesText": "Impose Quota",
-                "noText": "Keep Variety"
-            },
-            {
-                "title": "Cleric Legislative Veto",
-                "description": "Hardline clerics propose granting the Guardian Council absolute veto power over all laws.",
-                "yesText": "Grant Veto",
-                "noText": "Limit Their Role"
-            },
-            {
-                "title": "National Anti-Vice Campaign",
-                "description": "Mixed-gender parties and alcohol consumption are rising. Launch a nationwide campaign?",
-                "yesText": "Launch Campaign",
-                "noText": "Focus on Privacy"
-            },
-            {
-                "title": "Madrasa Expansion",
-                "description": "Divert university budgets to expand religious seminaries across the country.",
-                "yesText": "Prioritize Madrasas",
-                "noText": "Invest in Universities"
-            },
-            {
-                "title": "Ban Valentine\\'s Celebrations",
-                "description": "Shops openly sell Valentine\\'s gifts, seen as Western corruption.",
-                "yesText": "Ban the Holiday",
-                "noText": "Permit Sales"
-            },
-            {
-                "title": "Extended Holy Defense Week",
-                "description": "Veterans and clerics want a full month of mandatory commemoration events.",
-                "yesText": "Extend Events",
-                "noText": "Keep One Week"
-            },
-            {
-                "title": "National Censorship Board",
-                "description": "Establish a permanent board to review all publications for religious compliance.",
-                "yesText": "Create the Board",
-                "noText": "Allow Free Press"
-            },
-            {
-                "title": "Redirect Charity Funds",
-                "description": "Divert public charity funds primarily to support clergy families.",
-                "yesText": "Redirect Funds",
-                "noText": "General Welfare"
-            },
-            {
-                "title": "Workplace Prayer Mandate",
-                "description": "Require all workplaces to provide prayer rooms and enforced prayer breaks.",
-                "yesText": "Enforce Mandate",
-                "noText": "Make Optional"
+        "p1": {
+            "description": "The Clerical Council proposes a strict religious mandate. This holy decree will bolster tradition, but it requires military enforcement and adds new taxes that will drain merchant profits.",
+            "advisorQuotes": {
+                "sepah": "My soldiers are ready to enforce your will, but deployment costs are rising.",
+                "bazaar": "The merchants are already struggling with tariffs. This decree will break them.",
+                "isolation": "National tradition is our shield. We must remain pure, even if it hurts the markets."
             }
-        ],
-        "sepah": [
-            {
-                "title": "Border Skirmish",
-                "description": "The Supreme National Security Council reports minor incursions. A show of force is requested.",
-                "yesText": "Deploy the Sepah",
-                "noText": "Diplomatic Protest"
-            },
-            {
-                "title": "New Armored Division",
-                "description": "The generals request funds for a new mechanized unit to \"ensure peace through strength.\"",
-                "yesText": "Grant Funds",
-                "noText": "Deny Funding"
-            },
-            {
-                "title": "Port Smuggling",
-                "description": "Intelligence reports the Sepah is bypassing customs at the southern ports to fund black-ops.",
-                "yesText": "Look the Other Way",
-                "noText": "Enforce Customs"
-            },
-            {
-                "title": "Regional Proxies",
-                "description": "Our allied militias in neighboring countries need advanced missile shipments to maintain influence.",
-                "yesText": "Send Missiles",
-                "noText": "Cut Funding"
-            },
-            {
-                "title": "Cyber Command",
-                "description": "The generals want to build a domestic intranet to completely isolate citizens from the global web.",
-                "yesText": "Build the Firewall",
-                "noText": "Keep Global Access"
-            },
-            {
-                "title": "Quell the Strike",
-                "description": "Oil refinery workers are striking for unpaid wages. The Sepah offers to break the strike by force.",
-                "yesText": "Send the Guards",
-                "noText": "Pay the Wages"
-            },
-            {
-                "title": "Consolidate Bonyads",
-                "description": "The military wants to absorb three major charitable foundations into their corporate conglomerate.",
-                "yesText": "Transfer Assets",
-                "noText": "Protect Charities"
-            },
-            {
-                "title": "Drone Manufacturing",
-                "description": "Foreign buyers are offering hard currency for our combat drones, but it will provoke sanctions.",
-                "yesText": "Export Weapons",
-                "noText": "Keep for Defense"
-            },
-            {
-                "title": "Basij Mobilization",
-                "description": "Basij volunteers request full mobilization for internal security duties.",
-                "yesText": "Full Mobilization",
-                "noText": "Limit to Reserves"
-            },
-            {
-                "title": "Satellite Launch Program",
-                "description": "Military proposes launching new reconnaissance satellites despite sanction threats.",
-                "yesText": "Approve Launch",
-                "noText": "Delay Indefinitely"
-            },
-            {
-                "title": "Mass Dissident Arrests",
-                "description": "Intelligence has compiled lists of opposition figures for preventive detention.",
-                "yesText": "Authorize Arrests",
-                "noText": "Reject Lists"
-            },
-            {
-                "title": "Military Factory Expansion",
-                "description": "Sepah proposes taking over additional civilian factories for defense production.",
-                "yesText": "Transfer Factories",
-                "noText": "Keep Civilian"
-            },
-            {
-                "title": "Increased Proxy Funding",
-                "description": "Regional allies request significantly higher funding and arms shipments.",
-                "yesText": "Increase Support",
-                "noText": "Scale Back"
-            },
-            {
-                "title": "Martial Law in Provinces",
-                "description": "Ethnic unrest in border provinces. Sepah offers to impose martial law.",
-                "yesText": "Declare Martial Law",
-                "noText": "Negotiate Locally"
-            },
-            {
-                "title": "Veterans Pension Increase",
-                "description": "War veterans demand higher pensions and benefits.",
-                "yesText": "Grant Increases",
-                "noText": "Budget Limits"
-            },
-            {
-                "title": "Naval Build-Up",
-                "description": "Expand the navy with new destroyers and submarines.",
-                "yesText": "Begin Construction",
-                "noText": "Focus on Land"
-            },
-            {
-                "title": "Foreign Intelligence Budget",
-                "description": "Double funding for overseas intelligence operations.",
-                "yesText": "Double Budget",
-                "noText": "Maintain Level"
-            },
-            {
-                "title": "Protest Suppression",
-                "description": "Large protests in major cities. Sepah volunteers to disperse them.",
-                "yesText": "Deploy Forces",
-                "noText": "Allow Peaceful Protest"
+        },
+        "p2": {
+            "description": "A purge of ‘internal agitators’ is proposed. This will improve internal security and satisfy the devout, but the international community will judge us harshly, damaging our global legitimacy.",
+            "advisorQuotes": {
+                "sepah": "We've identified the threats. Give the order, and we ensure total stability.",
+                "bazaar": "Foreign investors are already nervous. A purge will send them running.",
+                "isolation": "The world's opinion is irrelevant. We must ensure our house is in order."
             }
-        ],
-        "bazaar": [
-            {
-                "title": "The Steel Tariff",
-                "description": "The Bonyads demand protection for local industries. The Bazaris are divided.",
-                "yesText": "Impose Tariffs",
-                "noText": "Free Trade"
-            },
-            {
-                "title": "Market Subsidy",
-                "description": "The price of bread is rising. Should we subsidize the merchants to prevent riots?",
-                "yesText": "Provide Subsidies",
-                "noText": "Let the Market Decouple"
-            },
-            {
-                "title": "Currency Collapse",
-                "description": "The Rial is in freefall. Merchants demand we inject foreign reserves to stabilize the market.",
-                "yesText": "Inject Reserves",
-                "noText": "Let it Fall"
-            },
-            {
-                "title": "The Carpet Exporters",
-                "description": "Traditional artisans are going bankrupt due to border closures. They beg for an export corridor.",
-                "yesText": "Open Corridor",
-                "noText": "Focus on Oil"
-            },
-            {
-                "title": "Black Market Crackdown",
-                "description": "The informal economy is thriving while state coffers empty. Should we raid the black market?",
-                "yesText": "Raid the Markets",
-                "noText": "Tax the Shadows"
-            },
-            {
-                "title": "Foreign Investment",
-                "description": "A European conglomerate wants to modernize our telecom infrastructure. The hardliners object.",
-                "yesText": "Sign Contract",
-                "noText": "Block Foreigners"
-            },
-            {
-                "title": "Price Controls",
-                "description": "Inflation is destroying the middle class. Do we mandate strict price ceilings on basic food items?",
-                "yesText": "Mandate Prices",
-                "noText": "Free Floating Prices"
-            },
-            {
-                "title": "Bonyad Tax Evasion",
-                "description": "State-linked religious charities (Bonyads) control 30% of the economy but pay no taxes. Force them to pay?",
-                "yesText": "Audit Bonyads",
-                "noText": "Maintain Exemptions"
-            },
-            {
-                "title": "Partial Oil Privatization",
-                "description": "Merchants push to privatize select oil fields to attract foreign capital.",
-                "yesText": "Allow Privatization",
-                "noText": "Full State Control"
-            },
-            {
-                "title": "Luxury Goods Imports",
-                "description": "Wealthy merchants want to import luxury cars and electronics.",
-                "yesText": "Permit Imports",
-                "noText": "Ban Luxuries"
-            },
-            {
-                "title": "Stock Market Liberalization",
-                "description": "Reform the Tehran Stock Exchange to allow foreign investors.",
-                "yesText": "Open the Market",
-                "noText": "Keep Restrictions"
-            },
-            {
-                "title": "Agricultural Subsidies",
-                "description": "Farmers and food merchants demand subsidies to keep bread prices low.",
-                "yesText": "Grant Subsidies",
-                "noText": "Market Prices"
-            },
-            {
-                "title": "Cryptocurrency Legalization",
-                "description": "Young traders want to legalize cryptocurrency exchanges.",
-                "yesText": "Legalize Crypto",
-                "noText": "Maintain Ban"
-            },
-            {
-                "title": "Tourism Campaign",
-                "description": "Hotel owners and merchants push for a major international tourism drive.",
-                "yesText": "Launch Campaign",
-                "noText": "Limit Tourism"
-            },
-            {
-                "title": "Labor Law Relaxation",
-                "description": "Factory owners want relaxed labor laws to reduce costs.",
-                "yesText": "Relax Laws",
-                "noText": "Protect Workers"
-            },
-            {
-                "title": "Sanctions-Evasion Networks",
-                "description": "Merchants propose expanding unofficial trade networks to bypass sanctions.",
-                "yesText": "Support Networks",
-                "noText": "Crack Down"
-            },
-            {
-                "title": "Infrastructure Bonds",
-                "description": "Issue government bonds to fund ports and highways, favored by construction merchants.",
-                "yesText": "Issue Bonds",
-                "noText": "Direct Taxes"
-            },
-            {
-                "title": "Guild Autonomy",
-                "description": "Traditional bazaar guilds demand greater autonomy from state regulation.",
-                "yesText": "Grant autonomy",
-                "noText": "Increase Oversight"
+        },
+        "p3": {
+            "description": "The Ministry proposes a grand temple expansion project. It will please the faithful but requires a significant levy on the merchant class.",
+            "advisorQuotes": {
+                "sepah": "It's a lot of stone and labor that could be used for fortifications.",
+                "bazaar": "The guild is furious. You're bleeding the markets dry for mere monuments.",
+                "isolation": "Let us build monuments to our own strength, not to global trade."
             }
-        ],
-        "isolation": [
-            {
-                "title": "The Cultural Exchange",
-                "description": "The Ministry of Foreign Affairs suggests inviting western artists to a local festival.",
-                "yesText": "Open the Gates",
-                "noText": "Preserve Tradition"
-            },
-            {
-                "title": "Global Sanctions",
-                "description": "Foreign powers threaten sanctions unless we halt our independent research.",
-                "yesText": "Halt Research",
-                "noText": "Defy the World"
-            },
-            {
-                "title": "The Nuclear Inspector",
-                "description": "UN inspectors are requesting access to an undisclosed military site. Refusal guarantees heavy sanctions.",
-                "yesText": "Grant Access",
-                "noText": "Expel Inspectors"
-            },
-            {
-                "title": "Diaspora Assets",
-                "description": "Exiled citizens want to invest in the homeland. Should we offer them amnesty to bring in their capital?",
-                "yesText": "Offer Amnesty",
-                "noText": "Seize Remaining Assets"
-            },
-            {
-                "title": "Embassy Siege",
-                "description": "Student radicals have surrounded a Western embassy. They want to breach the gates to prove a point.",
-                "yesText": "Let Them Breach",
-                "noText": "Send Riot Police"
-            },
-            {
-                "title": "Hostage Diplomacy",
-                "description": "We have detained a dual-citizen journalist. Foreign governments are offering unfreezing of assets for their release.",
-                "yesText": "Take the Deal",
-                "noText": "Try for Espionage"
-            },
-            {
-                "title": "The Cyber Attack",
-                "description": "State hackers have crippled a rival nation\\'s power grid. We can claim responsibility or stay quiet.",
-                "yesText": "Claim Glory",
-                "noText": "Deny Involvement"
-            },
-            {
-                "title": "Regional Summit",
-                "description": "A neutral neighbor is hosting a peace summit. Attending means sitting at the same table as our sworn enemies.",
-                "yesText": "Send Delegates",
-                "noText": "Boycott Summit"
-            },
-            {
-                "title": "Major Trade Deal",
-                "description": "A global power offers a comprehensive trade agreement in exchange for policy concessions.",
-                "yesText": "Sign the Deal",
-                "noText": "Reject Concessions"
-            },
-            {
-                "title": "Human Rights Inquiry",
-                "description": "International monitors request access to prisons for a human rights report.",
-                "yesText": "Allow Access",
-                "noText": "Block Monitors"
-            },
-            {
-                "title": "Joint Naval Exercise",
-                "description": "Neighbor invites participation in naval drills with Western observers present.",
-                "yesText": "Participate",
-                "noText": "Decline Invitation"
-            },
-            {
-                "title": "Political Exile Amnesty",
-                "description": "Offer amnesty to political exiles in exchange for their investment capital.",
-                "yesText": "Grant Amnesty",
-                "noText": "Maintain Exile"
-            },
-            {
-                "title": "Internet Unfiltering",
-                "description": "Lift most restrictions on global internet access.",
-                "yesText": "Unfilter Internet",
-                "noText": "Tighten Controls"
-            },
-            {
-                "title": "Foreign Humanitarian Aid",
-                "description": "Accept large-scale humanitarian aid packages from international organizations.",
-                "yesText": "Accept Aid",
-                "noText": "Reject as Interference"
-            },
-            {
-                "title": "Restore Diplomatic Ties",
-                "description": "Opportunity to restore full diplomatic relations with a long-time adversary.",
-                "yesText": "Restore Relations",
-                "noText": "Maintain Break"
-            },
-            {
-                "title": "Climate Accord",
-                "description": "Sign an international climate agreement requiring emissions monitoring.",
-                "yesText": "Sign Accord",
-                "noText": "Withdraw"
-            },
-            {
-                "title": "UNESCO Heritage Bid",
-                "description": "Apply for UNESCO World Heritage status for ancient sites, requiring foreign experts.",
-                "yesText": "Submit Application",
-                "noText": "Reject Involvement"
-            },
-            {
-                "title": "Prisoner Swap",
-                "description": "Western country proposes a prisoner exchange involving political detainees.",
-                "yesText": "Accept Swap",
-                "noText": "No Negotiation"
+        },
+        "p4": {
+            "description": "A decree to censor secular literature in national schools. This will safeguard tradition but lower our standing among the youth and educators.",
+            "advisorQuotes": {
+                "sepah": "Ignorance is easier to manage than rebellion. I support the ban.",
+                "bazaar": "Education is the foundation of a modern economy. This is a step backward.",
+                "isolation": "Protect our children's minds from foreign contamination at all costs."
             }
-        ]
+        },
+        "p5": {
+            "description": "A proposal to ban all foreign pilgrims. It ensures absolute religious purity but creates a diplomatic vacuum and hurts our external relations.",
+            "advisorQuotes": {
+                "sepah": "Tracking outsiders is a nightmare. Closing the gates simplifies security.",
+                "bazaar": "The pilgrims bring foreign coin and trade. Cutting them off is economic suicide.",
+                "isolation": "Our soil is for our people. Let the foreigners pray in their own lands."
+            }
+        },
+        "p6": {
+            "description": "The Clerics request the authority to oversee all public tribunals. This will centralize faith but potentially alienate the secular bureaucracy.",
+            "advisorQuotes": {
+                "sepah": "Military tribunals are more efficient, but I can work with the clerics.",
+                "bazaar": "This will lead to arbitrary rulings that threaten merchant contracts.",
+                "isolation": "Internal justice must be absolute and free from external influence."
+            }
+        },
+        "p7": {
+            "description": "A mandate to convert merchant warehouses into community kitchens. It feeds the poor but creates a massive rift with the Bazaar guild.",
+            "advisorQuotes": {
+                "sepah": "A full stomach keeps the riots away. Strategically sound.",
+                "bazaar": "This is theft! You are seizing private property and killing commerce.",
+                "isolation": "We must provide for our own. Self-reliance begins with a full granary."
+            }
+        },
+        "p8": {
+            "description": "The High Temple asks for a dedicated security detail from the army. This intermingling of church and state creates a powerful, unified front.",
+            "advisorQuotes": {
+                "sepah": "Distracting my best men for ceremonial guard duty? Acceptable, for now.",
+                "bazaar": "When the army and clergy unite, the merchant has no voice left.",
+                "isolation": "A unified internal front is the only way to resist the encroaching world."
+            }
+        },
+        "p9": {
+            "description": "A holy day is declared as a mandatory national strike. Devotion will skyrocket, but the economy will stall and legitimacy takes a hit from the chaos.",
+            "advisorQuotes": {
+                "sepah": "Empty streets are easy to patrol, but the idle mind is dangerous.",
+                "bazaar": "A day without trade? Across the whole nation? It's madness!",
+                "isolation": "Silence the noise of the world so the nation can refocus on its core."
+            }
+        },
+        "p10": {
+            "description": "New sumptuary laws are proposed to restrict luxury spending. This enforces modesty but enrages the merchants who sell high-end goods.",
+            "advisorQuotes": {
+                "sepah": "Men should be hard, not soft from luxury. I approve.",
+                "bazaar": "Luxury goods are our highest margin exports! This will kill the Bazaar.",
+                "isolation": "Foreign decadence has no place here. We value rugged self-sufficiency."
+            }
+        },
+        "p11": {
+            "description": "A request to replace the local police with religious morality guards. Security will be absolute, though public trust may plummet.",
+            "advisorQuotes": {
+                "sepah": "The Morality Police are fanatical, but effective at maintaining order.",
+                "bazaar": "Bullying merchants over their 'devotion' will stop every sale.",
+                "isolation": "We must police the soul of the nation as strictly as we police the borders."
+            }
+        },
+        "p12": {
+            "description": "The state is asked to officially recognize a controversial religious sect. It expands our reach but triggers massive international pushback.",
+            "advisorQuotes": {
+                "sepah": "If they provide soldiers, I don't care what they believe.",
+                "bazaar": "Sanctions will follow this. The world doesn't like radicals.",
+                "isolation": "Who cares what the world thinks? If they are loyal to the flag, they are ours."
+            }
+        },
+        "p13": {
+            "description": "A proposal to spend the national surplus on monumental holy statues. It’s a bold display of faith that leaves the Bazaar struggling for liquid capital.",
+            "advisorQuotes": {
+                "sepah": "Statues don't win wars, but they do make for imposing landmarks.",
+                "bazaar": "That gold should be in circulation, not cast in bronze for 'spirituality'.",
+                "isolation": "Let the world look at our borders and see only our strength and conviction."
+            }
+        },
+        "p14": {
+            "description": "The Clerics lobby for control over the national archives. This secures our history but makes the secular bureaucrats extremely restless.",
+            "advisorQuotes": {
+                "sepah": "As long as military secrets stay with me, they can have the dusty old books.",
+                "bazaar": "Information is a commodity. Letting the Clerics guard it is a bottleneck.",
+                "isolation": "Control the history, control the future. Guard our secrets fiercely."
+            }
+        },
+        "p15": {
+            "description": "A call for 'The Great Tithe' to fund a new religious garrison. The Sepah will grow stronger, though at the expense of merchant freedom.",
+            "advisorQuotes": {
+                "sepah": "New recruits and fresh gear. I won't turn down extra funding.",
+                "bazaar": "Another levy? You're treating the Bazaar like a bottomless well.",
+                "isolation": "Every coin spent internally is a coin not sent to a foreign bank."
+            }
+        },
+        "p16": {
+            "description": "A ban on foreign technology in temple grounds. It preserves tradition but cuts us off from essential modern maintenance services.",
+            "advisorQuotes": {
+                "sepah": "I prefer reliable local tech anyway. Foreign circuits can be bugged.",
+                "bazaar": "Modern maintenance is a global service. This ban will lead to blackouts.",
+                "isolation": "Our dependency on foreign machines is a weakness. Rip them out."
+            }
+        },
+        "p17": {
+            "description": "The Clerical Council asks to seize unused merchant land for new shrines. It’s a divine land-grab that the Bazaar will never forget.",
+            "advisorQuotes": {
+                "sepah": "Land is land. Better a shrine than a potential rebel hideout.",
+                "bazaar": "Unused? That land is reserved for future expansion! This is theft.",
+                "isolation": "National land for national purposes. The merchants should stop complaining."
+            }
+        },
+        "p18": {
+            "description": "A request to make ancient hymns the only permitted public music. Faith will become the national pulse, though the merchants fear lost sales.",
+            "advisorQuotes": {
+                "sepah": "Better hymns than the rhythmic shouting of the protesters.",
+                "bazaar": "Entertainment is a massive sector. You're killing the cafes and theaters.",
+                "isolation": "Our songs are our own. The noise of global pop culture must be silenced."
+            }
+        },
+        "s1": {
+            "description": "The High Command requests massive funding for an impenetrable border wall. This will ensure order and security, but will drain the Bazaar and heighten our global isolation.",
+            "advisorQuotes": {
+                "sepah": "A wall is not just stone; it's the ultimate statement of our sovereignty.",
+                "bazaar": "Isolating us will only lead to stagnation and high import costs.",
+                "isolation": "Build it twice as thick. No one comes in, no one goes out."
+            }
+        },
+        "s2": {
+            "description": "A decree for mass conscription to strengthen our defenses. Thousands of young men will be moved from factories to frontlines, bolstering the Sepah but potentially paralyzing the economy.",
+            "advisorQuotes": {
+                "sepah": "Soldiers are the true foundation of a nation, not factory workers.",
+                "bazaar": "We're losing our workforce! Productivity will plummet overnight.",
+                "isolation": "A nation in arms is a nation that cannot be bullied by foreigners."
+            }
+        },
+        "s3": {
+            "description": "The military proposes a total curfew in the capital due to 'security concerns'. It crushes dissent but shuts down all Bazaar activity.",
+            "advisorQuotes": {
+                "sepah": "The streets must be clear for our tanks. Order is paramount.",
+                "bazaar": "The night market is our lifeblood! This will bankrupt the vendors.",
+                "isolation": "Lock the doors. Domestic peace is worth a thousand lost sales."
+            }
+        },
+        "s4": {
+            "description": "A plan to seize all chemical factories for the production of armor. It strengthens our defense but cuts us off from international trade norms.",
+            "advisorQuotes": {
+                "sepah": "Steel and composite plating will save our boys. The cost doesn't matter.",
+                "bazaar": "Those chemicals are for fertilizers and exports! You're killing our trade.",
+                "isolation": "We must be self-reliant. If the world shuns us for our defense, so be it."
+            }
+        },
+        "s5": {
+            "description": "The Sepah requests the power to audit all religious sermons for 'subversive' content. This unifies internal power but risks a rift with the Clerics.",
+            "advisorQuotes": {
+                "sepah": "Even a priest can be a spy. No one is above the state's security.",
+                "bazaar": "Religious unrest is bad for business. Stay out of the temples.",
+                "isolation": "One voice, one nation. Dissent, even from the pulpit, is a threat."
+            }
+        },
+        "s6": {
+            "description": "A proposal to build a massive naval port for armored vessels. Merchant traffic will be displaced, though our coastal reach will be absolute.",
+            "advisorQuotes": {
+                "sepah": "Our borders don't end at the shore. We need a fleet of iron.",
+                "bazaar": "The existing port handles all our global trade. Don't block the docks!",
+                "isolation": "The sea is just another border to be closed to the unwanted."
+            }
+        },
+        "s7": {
+            "description": "The military asks to repossess artisan silver for use in heavy plating. Defense will be upgraded, but the Bazaar faces a craft-stock crisis.",
+            "advisorQuotes": {
+                "sepah": "Precious metals are better suited for armor than for trinkets.",
+                "bazaar": "Jewelry and silver-work are our most famous exports! This is madness.",
+                "isolation": "Luxury is a distraction. Silver serves the state better as a shield."
+            }
+        },
+        "s8": {
+            "description": "A mandate to militarize the national rail lines. Logistics for the army will be flawless, though the world will see us as preparing for war.",
+            "advisorQuotes": {
+                "sepah": "Mobility is the key to victory. The state needs total rail control.",
+                "bazaar": "How are we supposed to move grain and textiles? This is a bottleneck.",
+                "isolation": "Control the tracks, control the flow of the nation. Keep foreigners off."
+            }
+        },
+        "s9": {
+            "description": "A request for a 'Security Levy' paid directly to the officer corps. The Sepah will be loyal, but the public sees this as pure corruption.",
+            "advisorQuotes": {
+                "sepah": "My officers need to be well-paid to resist the temptation of bribes.",
+                "bazaar": "Call it what it is: a protection racket. The merchants won't be happy.",
+                "isolation": "Internal stability has a price. Pay it, or the world will walk in."
+            }
+        },
+        "s10": {
+            "description": "The High Command proposes a 'Shield the Nation' drill that lasts a month. Total security readiness, but we are effectively severed from the world.",
+            "advisorQuotes": {
+                "sepah": "The people must be ready for the inevitable. It's a drill for survival.",
+                "bazaar": "A month with no imports? We'll be eating bark by week three!",
+                "isolation": "Excellent. Close the gates, cut the cables. Let us see who we really are."
+            }
+        },
+        "s11": {
+            "description": "A decree to replace all civilian judges with military officers. This ensures swift justice but destroys any remaining public trust.",
+            "advisorQuotes": {
+                "sepah": "The law is simple: OBEY. We don't need lawyers, we need discipline.",
+                "bazaar": "Contract law is too complex for soldiers. This will create chaos.",
+                "isolation": "External values have no place in our courts. Military law is pure."
+            }
+        },
+        "s12": {
+            "description": "The Sepah requests the decommissioning of the national trade fleet for military conversions. Our navy will be peerless, but trade will suffer.",
+            "advisorQuotes": {
+                "sepah": "A merchant ship is just a target. A warship is a deterrent.",
+                "bazaar": "You're cutting our legs off! How can we trade without a fleet?",
+                "isolation": "Our ships should carry cannons, not foreign consumer goods."
+            }
+        },
+        "s13": {
+            "description": "A plan to establish permanent checkpoints on all merchant roads. Smuggling stops, but the flow of goods is severely throttled.",
+            "advisorQuotes": {
+                "sepah": "If it's on the road, it's under our eyes. No more illegal traffic.",
+                "bazaar": "Checkpoints add hours to every journey. It's killing the logistics.",
+                "isolation": "Total knowledge of internal movements is the key to total sovereignty."
+            }
+        },
+        "s14": {
+            "description": "The military asks for the right to 'Emergency Requisition' from any temple. It’s an efficient move that borders on blasphemy.",
+            "advisorQuotes": {
+                "sepah": "Space and resources are needed for the defense of all. No exceptions.",
+                "bazaar": "Taking from temples is a risky move, but efficiently managed.",
+                "isolation": "The state is the ultimate sacred entity. No institution is exempt."
+            }
+        },
+        "s15": {
+            "description": "A proposal to give soldiers full immunity for their duties. Loyalty will be absolute, but legitimacy among the common folk is sacrificed.",
+            "advisorQuotes": {
+                "sepah": "If a soldier fears a lawsuit, he won't pull the trigger. Give them immunity.",
+                "bazaar": "A soldier above the law is a bandit in uniform. Bad for stability.",
+                "isolation": "The defenders of the nation must be unshackled from civilian whims."
+            }
+        },
+        "s16": {
+            "description": "The Sepah requests the construction of a massive underground 'Command Bunker'. It ensures survival but draws suspicious eyes from abroad.",
+            "advisorQuotes": {
+                "sepah": "We must be prepared for the worst. Survival of the state is priority.",
+                "bazaar": "The cost is astronomical. We should be investing in port infrastructure.",
+                "isolation": "Let the world spy; they will find only a fortress hidden in the bedrock."
+            }
+        },
+        "s17": {
+            "description": "A mandate to nationalize all fuel reserves for military use only. Our tanks will never stall, but the foreign supply lines will tighten.",
+            "advisorQuotes": {
+                "sepah": "Without fuel, the army is just a collection of heavy statues.",
+                "bazaar": "Industry needs fuel too! You're grinding the factories to a halt.",
+                "isolation": "Not a drop of our energy should be traded away to foreign competitors."
+            }
+        },
+        "s18": {
+            "description": "The military asks to oversee the printing of the national news. Information control is absolute, though it cost us every shred of public trust.",
+            "advisorQuotes": {
+                "sepah": "The press is a weapon. We must control the narrative of the nation.",
+                "bazaar": "Market confidence relies on transparency. Censor the news, and we fail.",
+                "isolation": "Foreign propaganda must be countered with a single, national truth."
+            }
+        },
+        "b1": {
+            "description": "Foreign corporations offer to privatize and modernize our national ports. This massive infusion of capital will revitalize the Bazaar, but the military warns of a total loss of sovereignty.",
+            "advisorQuotes": {
+                "sepah": "Giving our ports to foreigners? You're letting the enemy in the back door.",
+                "bazaar": "Capital is the lifeblood of our future. We must modernize or die.",
+                "isolation": "Selling our ports is selling our soul. Reject the foreign vultures."
+            }
+        },
+        "b2": {
+            "description": "A proposal to allow the unrestricted import of foreign luxury goods. It will keep the wealth circulating and the people happy, but the Clerics condemn it as a celebration of secular vanity and greed.",
+            "advisorQuotes": {
+                "sepah": "Luxury breeds weakness. I'd rather see that money go to the armories.",
+                "bazaar": "The people want options! Happiness and trade go hand in hand.",
+                "isolation": "Imported decadence poisons the national character. Keep it out."
+            }
+        },
+        "b3": {
+            "description": "A request to deregulate the mining guild. Output will skyrocket, but the Sepah fears illegal smuggling and the loss of state control.",
+            "advisorQuotes": {
+                "sepah": "Smuggling from mines is how rebels get their gold. Keep the regulations.",
+                "bazaar": "Let the markets breathe! We're sitting on a mountain of untapped wealth.",
+                "isolation": "Our minerals are for our factories, not for foreign export markets."
+            }
+        },
+        "b4": {
+            "description": "A plan to open a free-trade zone in the capital. Global capital will flow, but it requires dissolving many traditional religious tariffs.",
+            "advisorQuotes": {
+                "sepah": "A free-trade zone is a spy-zone. I want my men at every corner.",
+                "bazaar": "This will put us on the global map! The capital will be a beacon of wealth.",
+                "isolation": "A zone without borders is a zone without sovereignty. Reject it."
+            }
+        },
+        "b5": {
+            "description": "The Bazaar guild asks for an 'Economic Stimulus' funded by the military budget. It pays off merchant debts but leaves the Sepah with empty storehouses.",
+            "advisorQuotes": {
+                "sepah": "You want to take from the defense of the nation to pay for merchant mistakes?",
+                "bazaar": "The merchants are the engine of this country. If we stall, everything else falls.",
+                "isolation": "Funding internal trade is good, but raiding the armory is risky."
+            }
+        },
+        "b6": {
+            "description": "A proposal to host an international trade expo. It’s a merchant’s dream, but it brings in foreign observers who the Sepah doesn't trust.",
+            "advisorQuotes": {
+                "sepah": "An 'Expo' is just a cover for foreign intelligence agents. Reject it.",
+                "bazaar": "The world's eyes will be on us! The prestige alone will be worth millions.",
+                "isolation": "Inviting the world in is inviting their spying and their corruption."
+            }
+        },
+        "b7": {
+            "description": "The merchants request the abolishment of 'Holy Day' closures. Profits will increase, but the Clerics will view this as an open declaration of war.",
+            "advisorQuotes": {
+                "sepah": "I don't care about the days, as long as the factories produce gear.",
+                "bazaar": "Keeping shops closed for half the week is economic insanity! Open them.",
+                "isolation": "Internal customs are what define us. Efficiency is secondary."
+            }
+        },
+        "b8": {
+            "description": "A mandate to standardize all national weights and measures. It complicates religious traditions but makes our trade exponentially more efficient.",
+            "advisorQuotes": {
+                "sepah": "Everything should be standardized. In the army and in the shop. I agree.",
+                "bazaar": "Efficient trade is honest trade. No more confusion at the docks!",
+                "isolation": "Metric or imperial, it must be OUR system, not a global one."
+            }
+        },
+        "b9": {
+            "description": "A request to lower taxes on all imported silk and spice. It bolsters the Bazaar but leaves the Sepah without the funding they were promised.",
+            "advisorQuotes": {
+                "sepah": "We need that tax revenue for the border wall. Don't cut the military.",
+                "bazaar": "Silk and spice are luxury essentials. Lowering taxes will spur growth.",
+                "isolation": "Tax foreign goods until they are too expensive to be worth the trouble."
+            }
+        },
+        "b10": {
+            "description": "A plan to incentivize local craftsmanship over foreign goods. The Bazaar grows, but our international partners will see this as a hostile act.",
+            "advisorQuotes": {
+                "sepah": "Buy local, build local. It's better for security and independence.",
+                "bazaar": "It protects our artisans, but it will trigger trade wars with our neighbors.",
+                "isolation": "A true nation buys only from itself. Reject the foreign junk."
+            }
+        },
+        "b11": {
+            "description": "A proposal to build an international merchant railway. It connects us to the world but requires a massive surrender of military land.",
+            "advisorQuotes": {
+                "sepah": "A railway as a vulnerability. An enemy could use it to reach our heart.",
+                "bazaar": "This is the superhighway of the future! We must build the tracks.",
+                "isolation": "A railway is a bridge. Bridges let the world's problems walk right in."
+            }
+        },
+        "b12": {
+            "description": "The merchants ask for a 'Market Stability Law' that allows them to self-regulate. Legitimacy rises with their support, but you lose control over them.",
+            "advisorQuotes": {
+                "sepah": "If you lose control of the gold, you lose control of the nation.",
+                "bazaar": "Trust us. We know how to manage the markets better than any bureaucrat.",
+                "isolation": "National markets should serve national interests, not merchant whims."
+            }
+        },
+        "b13": {
+            "description": "A plan to export our national grain for foreign silver. The Bazaar will be rich, but the Clerics fear for the local poor who will go hungry.",
+            "advisorQuotes": {
+                "sepah": "A hungry citizen is a riotous citizen. Be careful with the food supply.",
+                "bazaar": "Silver will buy us the tech we need. It's a strategic export.",
+                "isolation": "Food is a weapon. Keep it here. We don't need their silver."
+            }
+        },
+        "b14": {
+            "description": "A request for a national gold standard. It makes us a global player but removes the flexibility we need for religious funding.",
+            "advisorQuotes": {
+                "sepah": "Gold is solid. Paper is weak. I support the move to the standard.",
+                "bazaar": "It gives our currency international respect. Essential for growth.",
+                "isolation": "Tie the currency to the earth itself. Self-reliance in every coin."
+            }
+        },
+        "b15": {
+            "description": "A proposal to give the Bazaar guild a seat on the National Council. Their loyalty will be bought, but at a huge cost to your authority.",
+            "advisorQuotes": {
+                "sepah": "Adding a merchant to the council will only complicate our security plans.",
+                "bazaar": "We deserve a voice in the leadership of the nation we fund.",
+                "isolation": "Private interests have no place in a unified national council."
+            }
+        },
+        "b16": {
+            "description": "A ban on all street protests to 'protect merchant storefronts'. It creates economic peace but the people will not forget the crackdown.",
+            "advisorQuotes": {
+                "sepah": "Finally! No more riots, no more chaos. Let me clear the asphalt.",
+                "bazaar": "Protests disrupt trade and damage property. We need physical stability.",
+                "isolation": "Public order is the prerequisite for a strong and unified state."
+            }
+        },
+        "b17": {
+            "description": "A request to subsidize national shipbuilders. It creates jobs and wealth, though the Sepah feels their base funding is being diverted.",
+            "advisorQuotes": {
+                "sepah": "If they aren't warships, I don't see why the army budget should pay.",
+                "bazaar": "Maritime power is the key to global commerce. We must build better ships.",
+                "isolation": "Control the waves with our own hulls. No more foreign shipping."
+            }
+        },
+        "b18": {
+            "description": "A plan to establish a central bank overseen by the Bazaar. Legitimacy is spent for their absolute cooperation in the coming years.",
+            "advisorQuotes": {
+                "sepah": "A bank with its own rules is a threat to the state's sovereignty.",
+                "bazaar": "Give us the keys to the treasury, and we will make the nation rich.",
+                "isolation": "One central vault for one central nation. Keep the world's money out."
+            }
+        },
+        "i1": {
+            "description": "Global leaders invite us to open our borders to unrestricted trade. Our exporters will flourish, but the Sepah warns of foreign subversion and the Clerics fear cultural erosion.",
+            "advisorQuotes": {
+                "sepah": "Unrestricted trade is just another word for unrestricted spying.",
+                "bazaar": "The world is waiting for our goods! Open the gates and let the coin flow.",
+                "isolation": "Opening the gates is the beginning of the end for our sovereignty."
+            }
+        },
+        "i2": {
+            "description": "A multi-national aid package is offered in exchange for signing a major foreign trade pact. This will stabilize our currency and strengthen the Bazaar, but it restricts our military budget.",
+            "advisorQuotes": {
+                "sepah": "Aid with strings attached is just a bribe from our enemies. Reject it.",
+                "bazaar": "We need that capital to rebuild our markets. It's a survival necessity.",
+                "isolation": "Begging for foreign crumbs makes our nation look weak and desperate."
+            }
+        },
+        "i3": {
+            "description": "A proposal to host a UN-style human rights summit. It shows our growth to the world but requires a massive sacrifice of internal military control.",
+            "advisorQuotes": {
+                "sepah": "Letting foreign 'observers' in? You might as well give them the keys.",
+                "bazaar": "The global prestige would be enormous. Think of the future investment.",
+                "isolation": "Foreign 'observers' are just spies in suits. Keep the doors locked."
+            }
+        },
+        "i4": {
+            "description": "A plan to link our national communication grid to the global network. The Bazaar will boom, though the Sepah warns of a loss of information control.",
+            "advisorQuotes": {
+                "sepah": "Connecting to their grid lets their viruses directly into our systems.",
+                "bazaar": "Information speed is the new currency. We cannot be left in the dark.",
+                "isolation": "The global network is a pipeline for cultural rot. Stay disconnected."
+            }
+        },
+        "i5": {
+            "description": "A total withdrawal from all international treaties is proposed. We will be absolutely pure and self-reliant, though the rest of the world will turn its back.",
+            "advisorQuotes": {
+                "sepah": "No more treaties, no more compromises. We stand alone and strong.",
+                "bazaar": "This is isolationist suicide. The Bazaar will starve in total solitude.",
+                "isolation": "Tear up the papers. We answer to no one but ourselves."
+            }
+        },
+        "i6": {
+            "description": "A request to sign a 'Global Peace Accord'. It lowers our military readiness but creates a golden age for merchant trade across the borders.",
+            "advisorQuotes": {
+                "sepah": "Peace is just the period between wars. Don't let your guard down.",
+                "bazaar": "Trade flourishes in peace. Sign the accord and let the markets bloom.",
+                "isolation": "Peace is a trap used by the inclusive to disarm the vigilant."
+            }
+        },
+        "i7": {
+            "description": "A decree to deport all foreign diplomats for 'national security'. We are a island of order now, though we stand almost completely alone.",
+            "advisorQuotes": {
+                "sepah": "Diplomats are just spies in fancy suits. Get them out of our hair.",
+                "bazaar": "Who will negotiate our trade deals? You're burning every bridge.",
+                "isolation": "Sweep them out. They are guests who have overstayed their welcome."
+            }
+        },
+        "i8": {
+            "description": "A plan to allow foreign missionaries to build schools. It opens our borders and minds, though it risks the fundamental stability of our faith.",
+            "advisorQuotes": {
+                "sepah": "Missionaries today, subversives tomorrow. Do not let them educate.",
+                "bazaar": "Modern education attracts foreign talent and investment. I approve.",
+                "isolation": "Indoctrination by foreigners is the first step to cultural submission."
+            }
+        },
+        "i9": {
+            "description": "A proposal to join a regional military alliance. We surrender our total independence for a massive boost in external trade and security.",
+            "advisorQuotes": {
+                "sepah": "An alliance means fighting their wars too. We should defend ourselves.",
+                "bazaar": "The regional market access will be worth the loss of autonomy.",
+                "isolation": "We do not need 'allies' who only wish to use our soldiers for their ends."
+            }
+        },
+        "i10": {
+            "description": "A demand for all foreign assets to be seized by the state. We are independent and well-funded, but we are effectively a pariah state now.",
+            "advisorQuotes": {
+                "sepah": "If it's on our soil, it's ours. Seize it and fund the army.",
+                "bazaar": "They will retaliate by seizing OUR assets abroad. This will be ruinous.",
+                "isolation": "Everything within our borders belongs to the state. No exceptions."
+            }
+        },
+        "i11": {
+            "description": "A request to sign a 'Common Market' agreement. It ties our fate to our neighbors, bolstering trade but surrendering national control.",
+            "advisorQuotes": {
+                "sepah": "A common market means common borders. I cannot ensure security.",
+                "bazaar": "This is the path to prosperity! A unified market is a stable market.",
+                "isolation": "Common markets lead to common problems. We prefer our own issues."
+            }
+        },
+        "i12": {
+            "description": "A proposal to host the World Games. It's a massive expense and attracts foreign scrutiny, but the Bazaar will witness a once-in-a-century boom.",
+            "advisorQuotes": {
+                "sepah": "Millions of visitors? It's a security nightmare on a global scale.",
+                "bazaar": "The tourism revenue alone will fund the national debt. Host the games!",
+                "isolation": "The world's circus has no place in our silent and serious nation."
+            }
+        },
+        "i13": {
+            "description": "A plan to allow foreign banks to set up national branches. Our economy will stabilize, though the Clerics fear we are selling our souls for coin.",
+            "advisorQuotes": {
+                "sepah": "Foreign banks are just channels for foreign money to influence our politics.",
+                "bazaar": "We need their capital and expertise. Our local banks are antiquated.",
+                "isolation": "Finance is the chain the world uses to bind independent nations."
+            }
+        },
+        "i14": {
+            "description": "A request to allow foreign tourists unrestricted travel. Profits will flow like water, though the Clerics fear for our traditional public modesty.",
+            "advisorQuotes": {
+                "sepah": "Tourists wander into secure areas. I want them restricted to hotels.",
+                "bazaar": "Tourism is pure profit with no overhead! Open every scenic route.",
+                "isolation": "Tourists are just amateur spies Gawking at our heritage. Keep them out."
+            }
+        },
+        "i15": {
+            "description": "A total 'Open Sky' agreement for foreign airlines. We are a hub of the world, though the Sepah will no longer control our airspace.",
+            "advisorQuotes": {
+                "sepah": "The sky is our first line of defense. Losing control is catastrophic.",
+                "bazaar": "A global hub brings global gold. Open the skies and let them land.",
+                "isolation": "Our air should only carry our planes. The sky is a national boundary."
+            }
+        },
+        "i16": {
+            "description": "A plan to allow foreign-owned mines in our territory. We get a share of the wealth without the risk, though we stand further from the world's norms.",
+            "advisorQuotes": {
+                "sepah": "Foreigners digging in our earth? They will find more than just ore.",
+                "bazaar": "They bring the tech and the labor. We just collect the checks. Smart.",
+                "isolation": "Every ounce of our soil is our birthright. We do not sell the deep earth."
+            }
+        },
+        "i17": {
+            "description": "A proposal to import foreign medical experts and teachers. Our people will stay healthy, though the Clerics warn of indoctrination by the profane.",
+            "advisorQuotes": {
+                "sepah": "Foreign teachers will only preach their 'human rights' nonsense to the kids.",
+                "bazaar": "A healthy workforce is a productive workforce. Bring in the doctors.",
+                "isolation": "We prefer our own sickness to the cure of a foreign master."
+            }
+        },
+        "i18": {
+            "description": "A mandate to dissolve our borders and join a 'Global Federation'. A total loss of independent sovereignty for the sake of survival.",
+            "advisorQuotes": {
+                "sepah": "Dissolving the borders? That is the day the army ceases to exist. I refuse.",
+                "bazaar": "A world without borders is a world with perfect trade. It is the future.",
+                "isolation": "I would rather see the world burn than see our borders erased."
+            }
+        }
     }
 }

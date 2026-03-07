@@ -64,15 +64,8 @@ const GameDesk: React.FC<GameDeskProps> = ({ onExit, difficulty }) => {
     };
 
     const typeChar = currentCard.id.charAt(0);
-    const typeKey = {
-        'p': 'piety',
-        's': 'sepah',
-        'b': 'bazaar',
-        'i': 'isolation'
-    }[typeChar] || 'piety';
 
-    const index = parseInt(currentCard.id.substring(1)) - 1;
-    const cardBaseKey = `cards.${typeKey}.${index}`;
+    const cardBaseKey = `cards.${currentCard.id}`;
 
     const MINISTRY_COLORS: Record<string, string> = {
         'p': '#8b5cf6',
@@ -233,7 +226,7 @@ const GameDesk: React.FC<GameDeskProps> = ({ onExit, difficulty }) => {
 
                             <div className="relative">
                                 <p className="text-lg lg:text-xl font-serif text-slate-300 leading-relaxed italic drop-shadow-lg">
-                                    {currentCard.description}
+                                    {t(`${cardBaseKey}.description`, { defaultValue: currentCard.description })}
                                 </p>
                                 <div className="absolute -top-4 -left-4 text-white/5 font-serif text-6xl select-none">"</div>
                             </div>
@@ -282,7 +275,7 @@ const GameDesk: React.FC<GameDeskProps> = ({ onExit, difficulty }) => {
                                 <div className="space-y-6">
                                     {/* Subtitle / Quote */}
                                     <p className="text-sm lg:text-base font-serif italic text-zinc-500 text-center leading-snug max-w-2xl mx-auto">
-                                        "{currentCard.advisorQuotes[activePerspective]}"
+                                        "{t(`${cardBaseKey}.advisorQuotes.${activePerspective}`, { defaultValue: currentCard.advisorQuotes[activePerspective] })}"
                                     </p>
 
                                     {/* Projection / Math */}

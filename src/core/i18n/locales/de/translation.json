@@ -1,58 +1,82 @@
 {
     "menu": {
-        "start": "Operation Beginnen",
+        "start": "Operation starten",
         "settings": "Systemkonfiguration",
-        "back": "Zum Hub Zurückkehren",
+        "back": "Zurück zum Hub",
         "quit": "Abdanken",
         "quit_message": "Der Anführer ist geflohen.",
-        "quit_submessage": "Das System bricht in deiner Abwesenheit zusammen."
+        "quit_submessage": "Das System bricht ohne dich zusammen."
     },
     "game": {
-        "title": "SACRIFICE",
-        "reign_endures": "Die Herrschaft Dauert An",
-        "crown_falls": "Die Krone Fällt",
-        "win_message": "Du hast die Komplexität deines Reiches erfolgreich {{years}} Jahre lang gemeistert.",
-        "loss_message": "Deine Herrschaft ist im Jahr {{year}}, Quartal {{quarter}}, tragisch zu Ende gegangen.",
-        "restart": "Erneut Regieren",
+        "title": "Sacrifice",
+        "reign_endures": "Die Herrschaft dauert an",
+        "crown_falls": "Die Krone fällt",
+        "win_message": "Du hast die Komplexität deines Reiches {{years}} Jahre lang erfolgreich gemeistert.",
+        "loss_message": "Deine Herrschaft endete tragisch im Jahr {{year}}, Quartal {{quarter}}.",
+        "restart": "Erneut regieren",
         "year": "Jahr",
         "quarter": "Q",
         "goal": "Ziel: {{years}} Jahre",
-        "lifeline_spent": "Rettungsanker Verbraucht",
-        "exit": "Zum Menü",
-        "exit_confirm_title": "System Verlassen?",
-        "exit_confirm_desc": "Bist du sicher, dass du zum Hub zurückkehren möchtest? Der aktuelle Fortschritt geht verloren.",
+        "lifeline_spent": "Lebenslinie verbraucht",
+        "exit": "Zurück zum Hauptmenü",
+        "exit_confirm_title": "Das System verlassen?",
+        "exit_confirm_desc": "Bist du sicher, dass du zum Hub zurückkehren willst? Der aktuelle Fortschritt geht verloren.",
         "confirm": "Bestätigen",
         "cancel": "Bleiben"
     },
     "desk": {
-        "processing": "Knoten wird verarbeitet...",
+        "processing": "Verarbeite Knoten...",
         "awaiting_choice": "Warten auf operative Entscheidung",
-        "no_impact": "Keine signifikanten systemischen Auswirkungen festgestellt",
+        "no_impact": "Keine signifikanten systemischen Auswirkungen erkannt",
         "predictive_data": "Prädiktive Beraterdaten",
         "filter": "Filter",
-        "mission_brief": "MISSION BRIEFING",
-        "authorize": "AUSFÜHRUNG_AUTORISIEREN",
+        "mission_brief": "Missionsauftrag",
+        "authorize": "AUTORISIEREN_AUSFÜHRUNG",
         "reject": "VORSCHLAG_ABLEHNEN",
         "system_status": "Systemstatus: Nominal",
-        "priority_decision": "Entscheidung mit hoher Priorität erforderlich",
+        "priority_decision": "Hochprioritäre Entscheidung erforderlich",
         "user_id": "Benutzer-ID",
         "encryption": "Verschlüsselung",
         "intel_division": "Geheimdienstabteilung",
-        "annual_briefing": "Jährliches systemisches Briefing",
-        "year_conclusion": "Abschluss Jahr {{year}}",
+        "annual_briefing": "Systemisches Jahresbriefing",
+        "year_conclusion": "Abschluss des Jahres {{year}}",
         "acknowledge": "Briefing bestätigen",
-        "secure": "SICHER",
+        "secure": "Sicher",
         "approve": "Genehmigen",
         "deny": "Ablehnen",
         "global_legitimacy": "Globale Legitimität",
-        "goal_progress": "Fortschritt Ziel"
+        "goal_progress": "Fortschritt zum Ziel",
+        "report": {
+            "open_borders": "Offene Grenzen haben die traditionelle Frömmigkeit leicht erodiert.",
+            "martial_law": "Das Kriegsrecht erstickt den lokalen Basar.",
+            "secularism": "Säkularismus zwingt die Garde zu mehr Kontrolle.",
+            "legitimacy_spent": "Politische Legitimität wurde eingesetzt, um die Nation zu stabilisieren."
+        }
+    },
+    "end_game": {
+        "win_headline": "VERMÄCHTNIS GESICHERT",
+        "sepah_max_headline": "MILITÄRPUTSCH!",
+        "sepah_min_headline": "NATIONALER ZUSAMMENBRUCH!",
+        "piety_max_headline": "THEOKRATISCHE SÄUBERUNG!",
+        "piety_min_headline": "RELIGIÖSE REVOLTE!",
+        "bazaar_max_headline": "KONZERNÜBERNAHME!",
+        "bazaar_min_headline": "WIRTSCHAFTSUNRUHEN!",
+        "isolation_max_headline": "TOTALES EMBARGO!",
+        "isolation_min_headline": "EXTERNE INTERVENTION!",
+        "reign_over": "HERRSCHAFT BEENDET",
+        "bulletin": "Sonderbulletin",
+        "years_in_power": "Jahre an der Macht",
+        "final_approval": "Endgültige Zustimmung",
+        "restart_button": "Neues Dekret unterzeichnen",
+        "exit_button": "Zurück zum Kommandozentrum",
+        "default_loss": "Das System hat einen terminalen Zustand erreicht."
     },
     "settings": {
         "title": "Einstellungen",
-        "audio": "Audio-Konfiguration",
+        "audio": "Audiokonfiguration",
         "volume": "Gesamtlautstärke",
-        "mute": "Stummgeschaltet",
-        "unmute": "Ton An",
+        "mute": "Stumm",
+        "unmute": "Ton an",
         "governance": "Regierungsmodus",
         "language": "Interface-Sprache",
         "accessibility": "Barrierefreiheit",
@@ -65,7 +89,7 @@
         }
     },
     "difficulty": {
-        "easy": "Provisorische Regierung",
+        "easy": "Übergangsregierung",
         "easy_sub": "Einfach",
         "normal": "Oberster Führer",
         "normal_sub": "Normal",
@@ -73,17 +97,24 @@
         "hard_sub": "Schwer"
     },
     "intro": {
-        "init": "Übertragung Initialisieren",
-        "enter": "Den Palast Betreten",
+        "init": "Übertragung wird eingeleitet",
+        "enter": "Betritt den Palast",
         "slides": [
-            "Die Revolution ist vorbei. Das alte Regime ist gefallen. Du stehst siegreich in der Asche.",
-            "Doch der Sieg ist zerbrechlich. Die Sepah fordern Kontrolle. Die Bonyads fordern Reichtum. Die Ideologie fordert Gehorsam. Du kannst es nicht allen recht machen.",
-            "Du bist der Oberste Führer. Wie lange kannst du das System überleben, das du geschaffen hast?"
+            "Die Revolution ist beendet. Das alte Regime ist gefallen. Du stehst siegreich in der Asche.",
+            "Doch der Sieg ist zerbrechlich. Die Garde fordert Kontrolle. Die Bonyads fordern Wohlstand. Die Ideologie fordert Gehorsam. Du kannst es nicht jedem recht machen.",
+            "Du bist der Oberste Führer. Wie lange wirst du in dem System überleben, das du erschaffen hast?"
         ]
     },
     "metrics": {
         "piety": "Frömmigkeit",
-        "sepah": "Sepah",
+        "sepah": "Die Garde",
+        "bazaar": "Der Basar",
+        "isolation": "Isolation",
+        "legitimacy": "Legitimität"
+    },
+    "metrics_short": {
+        "piety": "Glaube",
+        "sepah": "Garde",
         "bazaar": "Basar",
         "isolation": "Isolation",
         "legitimacy": "Legitimität"
@@ -91,459 +122,595 @@
     "ministries": {
         "m1": "Ministerium für Führung",
         "m2": "Oberster Nationaler Sicherheitsrat",
-        "m3": "Die Bonyads & der Basar",
-        "m4": "Außenministerium"
+        "m3": "Die Bonyads & Basar",
+        "m4": "Ministerium für auswärtige Angelegenheiten"
     },
     "death_reasons": {
         "sepah_min": "Ohne das Militär zum Schutz der Grenzen haben ausländische Gegner und interne Separatisten die Nation gespalten.",
-        "sepah_max": "Die Generäle haben beschlossen, dass sie keine Zivilregierung mehr benötigen. Ein Militärputsch hat dich abgesetzt.",
-        "piety_min": "Die Kleriker haben dich zum Abtrünnigen erklärt. Die Straßen füllen sich mit Fanatikern, die nach deinem Kopf rufen.",
-        "piety_max": "Die Hardliner haben die Macht vollständig übernommen. Du bist nicht mehr der Anführer, sondern nur noch ein Aushängeschild für ideologische Reinheit.",
-        "bazaar_min": "Die Wirtschaft ist völlig zusammengebrochen. Brotprotetste haben sich in eine ausgewachsene Revolution verwandelt.",
-        "bazaar_max": "Die Bonyads und Oligarchen haben den gesamten Staat aufgekauft. Du wurdest stillschweigend durch eine Marionette der Konzerne ersetzt.",
+        "sepah_max": "Die Generäle haben entschieden, dass sie keine zivile Regierung mehr brauchen. Ein Militärputsch hat dich abgesetzt.",
+        "piety_min": "Die Kleriker haben dich zum Apostaten erklärt. Die Straßen füllen sich mit Zeloten, die deinen Kopf fordern.",
+        "piety_max": "Die Hardliner haben die Macht vollständig übernommen. Du bist nicht mehr der Anführer, sondern nur noch eine Marionette für ideologische Reinheit.",
+        "bazaar_min": "Die Wirtschaft ist völlig zusammengebrochen. Brotunruhen sind in eine ausgewachsene Revolution übergegangen.",
+        "bazaar_max": "Die Bonyads und Oligarchen haben den gesamten Staat gekauft. Du wurdest stillschweigend durch eine Konzernmarionette ersetzt.",
         "isolation_min": "Die Grenzen wurden vollständig geöffnet. Ungehinderter ausländischer Einfluss hat den Staat überwältigt und einen Regimewechsel erzwungen.",
-        "isolation_max": "Das Land ist völlig von der Welt abgeschnitten. Ein totaler Systemkollaps ist aufgrund des Mangels an Basisimporten eingetreten."
+        "isolation_max": "Das Land ist völlig von der Welt abgeschnitten. Ein totaler systemischer Zusammenbruch ist aufgrund fehlender Basisimporte eingetreten."
     },
     "cards": {
-        "piety": [
-            {
-                "title": "Die Große Kathedrale",
-                "description": "Das Ministerium für Führung schlägt ein großes Bauprojekt vor, um den Glauben des Volkes zu festigen.",
-                "yesText": "Kathedrale finanzieren",
-                "noText": "Schulen bauen"
-            },
-            {
-                "title": "Religiöse Volkszählung",
-                "description": "Sollen wir alle Bürger verpflichten, ihren Glauben zu registrieren, oder private Religionsausübung erlauben?",
-                "yesText": "Registrierung fordern",
-                "noText": "Privatsphäre erlauben"
-            },
-            {
-                "title": "Die Sittenpolizei",
-                "description": "Hardliner fordern mehr Mittel für Sittenpatrouillen auf der Straße, um die öffentliche Kleiderordnung durchzusetzen.",
-                "yesText": "Patrouillen ausweiten",
-                "noText": "Mittel kürzen"
-            },
-            {
-                "title": "Säuberung der Universitäten",
-                "description": "Studentengruppen organisieren nicht genehmigte politische Debatten. Die Kleriker wollen die Rädelsführer von der Universität verweisen.",
-                "yesText": "Studenten verweisen",
-                "noText": "Debatten zulassen"
-            },
-            {
-                "title": "Staatsmedienmonopol",
-                "description": "Illegale Satellitenschüsseln verbreiten fremde Kultur. Sollen wir die Signale stören?",
-                "yesText": "Signale stören",
-                "noText": "Ignorieren"
-            },
-            {
-                "title": "Die Freitagsimame",
-                "description": "Lokale Gebetsführer fordern den Staat auf, westliche Musik in öffentlichen Cafés zu verbieten.",
-                "yesText": "Musik verbieten",
-                "noText": "Instrumentalmusik erlauben"
-            },
-            {
-                "title": "Restaurierung von Heiligtümern",
-                "description": "Ein massives Budget wird vorgeschlagen, um die Kuppeln der heiligen Schreine zu vergolden, was Mittel für die Infrastruktur abzieht.",
-                "yesText": "Kuppeln vergolden",
-                "noText": "Straßen reparieren"
-            },
-            {
-                "title": "Lehrplanrevision",
-                "description": "Das Bildungsministerium will Geschichtsbücher umschreiben, um das Märtyrertum gegenüber wissenschaftlichen Errungenschaften zu betonen.",
-                "yesText": "Geschichte umschreiben",
-                "noText": "Wissenschaft zuerst"
-            },
-            {
-                "title": "Strenge Hidschab-Durchsetzung",
-                "description": "Berichte über weit verbreitete Missachtung der Hidschab-Gesetze empören Kleriker, die verstärkte Durchsetzungseinheiten fordern.",
-                "yesText": "Durchsetzung ausweiten",
-                "noText": "Anforderungen lockern"
-            },
-            {
-                "title": "Verpflichtende religiöse Programme",
-                "description": "Das Staatsfernsehen strahlt säkulare Unterhaltung aus. Kleriker fordern eine Mindestquote an religiösen Inhalten.",
-                "yesText": "Quote vorschreiben",
-                "noText": "Vielfalt bewahren"
-            },
-            {
-                "title": "Gesetzesveto der Kleriker",
-                "description": "Hardliner-Kleriker schlagen vor, dem Wächterrat ein absolutes Vetorecht über alle Gesetze einzuräumen.",
-                "yesText": "Veto gewähren",
-                "noText": "Rolle einschränken"
-            },
-            {
-                "title": "Nationale Anti-Laster-Kampagne",
-                "description": "Gemischtgeschlechtliche Partys und Alkoholkonsum nehmen zu. Eine landesweite Kampagne starten?",
-                "yesText": "Kampagne starten",
-                "noText": "Privatsphäre wahren"
-            },
-            {
-                "title": "Ausbau der Medresen",
-                "description": "Universitätsbudgets umleiten, um religiöse Seminare im ganzen Land auszubauen.",
-                "yesText": "Medresen priorisieren",
-                "noText": "In Unis investieren"
-            },
-            {
-                "title": "Valentinstagsverbot",
-                "description": "Geschäfte verkaufen offen Valentinstagsgeschenke, was als westliche Korruption angesehen wird.",
-                "yesText": "Feiertag verbieten",
-                "noText": "Verkauf erlauben"
-            },
-            {
-                "title": "Verlängerte Woche der Verteidigung",
-                "description": "Veteranen und Kleriker fordern einen vollen Monat mit obligatorischen Gedenkveranstaltungen.",
-                "yesText": "Events verlängern",
-                "noText": "Eine Woche beibehalten"
-            },
-            {
-                "title": "Nationale Zensurbehörde",
-                "description": "Einrichtung einer ständigen Behörde zur Überprüfung aller Publikationen auf religiöse Konformität.",
-                "yesText": "Behörde einrichten",
-                "noText": "Pressefreiheit lassen"
-            },
-            {
-                "title": "Wohltätigkeitsgelder umleiten",
-                "description": "Öffentliche Wohltätigkeitsgelder primär zur Unterstützung von Klerikerfamilien umleiten.",
-                "yesText": "Gelder umleiten",
-                "noText": "Allgemeinwohl"
-            },
-            {
-                "title": "Gebetspflicht am Arbeitsplatz",
-                "description": "Verpflichtung aller Arbeitsplätze zur Bereitstellung von Gebetsräumen und zur Einhaltung von Gebetspausen.",
-                "yesText": "Pflicht einführen",
-                "noText": "Optional lassen"
+        "p1": {
+            "description": "Das Ministerium für Führung schlägt ein grandioses Bauprojekt für die Große Kathedrale vor, um den Glauben des Volkes zu festigen. Die Frömmigkeit wird steigen, aber es werden massiv Ressourcen vom Basar benötigt.",
+            "advisorQuotes": {
+                "sepah": "Ein Monument unserer Stärke. Es wird über jedem Gedanken an Rebellion stehen.",
+                "bazaar": "Dieses Gold sollte in Schiffe fließen, nicht in Marmorsäulen. Wir bluten aus.",
+                "isolation": "Lass die Welt sehen, wie hingebungsvoll wir sind. Unser Glaube ist unser Bollwerk."
             }
-        ],
-        "sepah": [
-            {
-                "title": "Grenzscharmützel",
-                "description": "Der Oberste Nationale Sicherheitsrat meldet kleinere Übergriffe. Ein Zeichen der Stärke wird gefordert.",
-                "yesText": "Sepah mobilisieren",
-                "noText": "Diplomatischer Protest"
-            },
-            {
-                "title": "Neue Panzerdivision",
-                "description": "Die Generäle fordern Mittel für eine neue mechanisierte Einheit, um \"Frieden durch Stärke\" zu gewährleisten.",
-                "yesText": "Mittel gewähren",
-                "noText": "Finanzierung ablehnen"
-            },
-            {
-                "title": "Hafenschmuggel",
-                "description": "Geheimdienstberichte deuten darauf hin, dass die Sepah den Zoll an den südlichen Häfen umgehen, um Black-Ops zu finanzieren.",
-                "yesText": "Wegsehen",
-                "noText": "Zoll durchsetzen"
-            },
-            {
-                "title": "Regionale Stellvertreter",
-                "description": "Unsere verbündeten Milizen in den Nachbarländern benötigen fortschrittliche Raketenlieferungen, um ihren Einfluss zu wahren.",
-                "yesText": "Raketen senden",
-                "noText": "Mittel streichen"
-            },
-            {
-                "title": "Cyber-Kommando",
-                "description": "Die Generäle wollen ein einheimisches Intranet aufbauen, um die Bürger vollständig vom globalen Netz zu isolieren.",
-                "yesText": "Firewall bauen",
-                "noText": "Zugang lassen"
-            },
-            {
-                "title": "Streik beenden",
-                "description": "Arbeiter einer Ölraffinerie streiken wegen unbezahlter Löhne. Die Sepah bietet an, den Streik mit Gewalt zu brechen.",
-                "yesText": "Wachen senden",
-                "noText": "Löhne zahlen"
-            },
-            {
-                "title": "Bonyads konsolidieren",
-                "description": "Das Militär will drei große Wohltätigkeitsstiftungen in sein Unternehmenskonglomerat eingliedern.",
-                "yesText": "Vermögen übertragen",
-                "noText": "Stiftungen schützen"
-            },
-            {
-                "title": "Drohnenherstellung",
-                "description": "Ausländische Käufer bieten Devisen für unsere Kampfdrohnen an, aber das wird Sanktionen provozieren.",
-                "yesText": "Waffen exportieren",
-                "noText": "Für Verteidigung halten"
-            },
-            {
-                "title": "Basidsch-Mobilisierung",
-                "description": "Basidsch-Freiwillige fordern volle Mobilisierung für Aufgaben der internen Sicherheit.",
-                "yesText": "Volle Mobilisierung",
-                "noText": "Reserven beschränken"
-            },
-            {
-                "title": "Satellitenprogramm",
-                "description": "Das Militär schlägt den Start neuer Aufklärungssatelliten trotz angedrohter Sanktionen vor.",
-                "yesText": "Start genehmigen",
-                "noText": "Unbegrenzt warten"
-            },
-            {
-                "title": "Massenverhaftungen von Dissidenten",
-                "description": "Der Geheimdienst hat Listen von Oppositionsfiguren für eine Präventivhaft zusammengestellt.",
-                "yesText": "Verhaftungen erlauben",
-                "noText": "Listen ablehnen"
-            },
-            {
-                "title": "Ausbau von Militärfabriken",
-                "description": "Die Sepah schlagen vor, weitere zivile Fabriken für die Rüstungsproduktion zu übernehmen.",
-                "yesText": "Fabriken übertragen",
-                "noText": "Zivil belassen"
-            },
-            {
-                "title": "Mehr Mittel für Proxies",
-                "description": "Regionale Verbündete fordern deutlich höhere Finanzmittel und Waffenlieferungen.",
-                "yesText": "Unterstützung erhöhen",
-                "noText": "Reduzieren"
-            },
-            {
-                "title": "Kriegsrecht in Provinzen",
-                "description": "Ethnische Unruhen in Grenzprovinzen. Die Sepah bieten an, das Kriegsrecht zu verhängen.",
-                "yesText": "Kriegsrecht erklären",
-                "noText": "Lokal verhandeln"
-            },
-            {
-                "title": "Rentenerhöhung für Veteranen",
-                "description": "Kriegsveteranen fordern höhere Renten und Sozialleistungen.",
-                "yesText": "Erhöhung gewähren",
-                "noText": "Budgetgrenzen"
-            },
-            {
-                "title": "Marinerüstung",
-                "description": "Ausbau der Marine mit neuen Zerstörern und U-Booten.",
-                "yesText": "Bau beginnen",
-                "noText": "Land stärken"
-            },
-            {
-                "title": "Auslandsgeheimdienst-Budget",
-                "description": "Verdoppelung der Mittel für Geheimdienstoperationen im Ausland.",
-                "yesText": "Budget verdoppeln",
-                "noText": "Niveau halten"
-            },
-            {
-                "title": "Protestunterdrückung",
-                "description": "Große Proteste in Großstädten. Die Sepah bieten an, sie aufzulösen.",
-                "yesText": "Truppen entsenden",
-                "noText": "Proteste zulassen"
+        },
+        "p2": {
+            "description": "Sollen wir alle Bürger verpflichten, ihren Glauben zu registrieren? Es wird bei der ideologischen Führung helfen, aber das Recht auf Privatsphäre verletzen.",
+            "advisorQuotes": {
+                "sepah": "Zu wissen, wer loyal ist, ist die Basis der nationalen Sicherheit.",
+                "bazaar": "Die Registrierung schreckt Kunden ab. Kapital wird schnell aus dem Land fliehen.",
+                "isolation": "Wir brauchen niemanden, der seine Loyalität im Schatten verbirgt."
             }
-        ],
-        "bazaar": [
-            {
-                "title": "Stahlzölle",
-                "description": "Die Bonyads fordern Schutz für die lokale Industrie. Die Basaris sind gespalten.",
-                "yesText": "Zölle einführen",
-                "noText": "Freihandel"
-            },
-            {
-                "title": "Marktsubvention",
-                "description": "Der Brotpreis steigt. Sollen wir die Händler subventionieren, um Unruhen zu verhindern?",
-                "yesText": "Subventionen geben",
-                "noText": "Markt wirken lassen"
-            },
-            {
-                "title": "Währungskollaps",
-                "description": "Der Rial befindet sich im freien Fall. Händler fordern die Injektion von Devisenreserven zur Stabilisierung.",
-                "yesText": "Reserven injizieren",
-                "noText": "Fallen lassen"
-            },
-            {
-                "title": "Teppichexporteure",
-                "description": "Traditionelle Handwerker gehen wegen Grenzschließungen bankrott. Sie bitten um einen Exportkorridor.",
-                "yesText": "Korridor öffnen",
-                "noText": "Fokus auf Öl"
-            },
-            {
-                "title": "Razzia am Schwarzmarkt",
-                "description": "Die Schattenwirtschaft blüht, während die Staatskassen leer sind. Sollen wir den Schwarzmarkt stürmen?",
-                "yesText": "Razzien durchführen",
-                "noText": "Schatten besteuern"
-            },
-            {
-                "title": "Ausländische Investitionen",
-                "description": "Ein europäischer Konzern will unsere Telekommunikationsinfrastruktur modernisieren. Hardliner sind dagegen.",
-                "yesText": "Vertrag unterzeichnen",
-                "noText": "Ausländer blockieren"
-            },
-            {
-                "title": "Preiskontrollen",
-                "description": "Die Inflation zerstört die Mittelschicht. Führen wir strenge Preisobergrenzen für Grundnahrungsmittel ein?",
-                "yesText": "Preise vorschreiben",
-                "noText": "Freie Preise"
-            },
-            {
-                "title": "Steuerflucht der Bonyads",
-                "description": "Staatsnahe religiöse Stiftungen (Bonyads) kontrollieren 30 % der Wirtschaft, zahlen aber keine Steuern. Zwingen?",
-                "yesText": "Bonyads prüfen",
-                "noText": "Ausnahmen lassen"
-            },
-            {
-                "title": "Teilweise Öl-Privatisierung",
-                "description": "Händler drängen darauf, ausgewählte Ölfelder zu privatisieren, um ausländisches Kapital anzuziehen.",
-                "yesText": "Privatisierung erlauben",
-                "noText": "Staatliche Kontrolle"
-            },
-            {
-                "title": "Luxusgüter-Importe",
-                "description": "Reiche Händler wollen Luxusautos und Elektronik importieren.",
-                "yesText": "Importe erlauben",
-                "noText": "Luxus verbieten"
-            },
-            {
-                "title": "Börsenliberalisierung",
-                "description": "Reform der Teheraner Börse, um ausländische Investoren zuzulassen.",
-                "yesText": "Markt öffnen",
-                "noText": "Beschränkt lassen"
-            },
-            {
-                "title": "Agrarsubventionen",
-                "description": "Landwirte und Lebensmittelhändler fordern Subventionen, um die Brotpreise niedrig zu halten.",
-                "yesText": "Subventionen gewähren",
-                "noText": "Marktpreise"
-            },
-            {
-                "title": "Krypto-Legalisierung",
-                "description": "Junge Händler wollen Kryptowährungsbörsen legalisieren.",
-                "yesText": "Krypto legalisieren",
-                "noText": "Verbot beibehalten"
-            },
-            {
-                "title": "Tourismuskampagne",
-                "description": "Hoteliers und Händler drängen auf eine große internationale Tourismuskampagne.",
-                "yesText": "Kampagne starten",
-                "noText": "Tourismus begrenzen"
-            },
-            {
-                "title": "Lockerung des Arbeitsrechts",
-                "description": "Fabrikbesitzer wollen gelockerte Arbeitsgesetze, um Kosten zu senken.",
-                "yesText": "Gesetze lockern",
-                "noText": "Arbeiter schützen"
-            },
-            {
-                "title": "Sanktionsumgehungs-Netzwerke",
-                "description": "Händler schlagen den Ausbau inoffizieller Handelsnetze vor, um Sanktionen zu umgehen.",
-                "yesText": "Netzwerke unterstützen",
-                "noText": "Durchgreifen"
-            },
-            {
-                "title": "Infrastrukturanleihen",
-                "description": "Ausgabe von Staatsanleihen zur Finanzierung von Häfen und Autobahnen, bevorzugt von Bauhändlern.",
-                "yesText": "Anleihen ausgeben",
-                "noText": "Direkte Steuern"
-            },
-            {
-                "title": "Gildenautonomie",
-                "description": "Traditionelle Basar-Gilden fordern größere Autonomie von der staatlichen Regulierung.",
-                "yesText": "Autonomie gewähren",
-                "noText": "Aufsicht erhöhen"
+        },
+        "p3": {
+            "description": "Hardliner fordern mehr Mittel für Sittenpatrouillen auf der Straße. Ordnung und Tradition werden streng durchgesetzt, auch wenn die Legitimität bei der Jugend sinken könnte.",
+            "advisorQuotes": {
+                "sepah": "Patrouillen halten die Straßen frei von ideologischer Korruption.",
+                "bazaar": "Die ständige Angst der Käufer um ihre Kleidung tötet den Einzelhandel.",
+                "isolation": "Moral ist das Schild, das die Nation vor ausländischem Verfall schützt."
             }
-        ],
-        "isolation": [
-            {
-                "title": "Kulturaustausch",
-                "description": "Das Außenministerium schlägt vor, westliche Künstler zu einem lokalen Festival einzuladen.",
-                "yesText": "Tore öffnen",
-                "noText": "Tradition bewahren"
-            },
-            {
-                "title": "Globale Sanktionen",
-                "description": "Ausländische Mächte drohen mit Sanktionen, sofern wir unsere unabhängige Forschung nicht einstellen.",
-                "yesText": "Forschung stoppen",
-                "noText": "Der Welt trotzen"
-            },
-            {
-                "title": "Atominspektor",
-                "description": "UN-Inspektoren fordern Zugang zu einer geheimgehaltenen Militäranlage. Eine Ablehnung garantiert schwere Sanktionen.",
-                "yesText": "Zugang gewähren",
-                "noText": "Inspektoren ausweisen"
-            },
-            {
-                "title": "Diaspora-Vermögen",
-                "description": "Bürger im Exil wollen in der Heimat investieren. Sollen wir ihnen Amnestie anbieten, um Kapital anzulocken?",
-                "yesText": "Amnestie anbieten",
-                "noText": "Reste beschlagnahmen"
-            },
-            {
-                "title": "Botschaftsbelagerung",
-                "description": "Radikale Studenten haben eine westliche Botschaft umstellt. Sie wollen die Tore stürmen.",
-                "yesText": "Stürmen lassen",
-                "noText": "Polizei senden"
-            },
-            {
-                "title": "Geisel-Diplomatie",
-                "description": "Wir haben einen Journalisten mit doppelter Staatsbürgerschaft inhaftiert. Regierungen bieten Freigabe von Geldern an.",
-                "yesText": "Deal annehmen",
-                "noText": "Wegen Spionage anklagen"
-            },
-            {
-                "title": "Cyberangriff",
-                "description": "Staatliche Hacker haben das Stromnetz einer rivalisierenden Nation lahmgelegt. Sollen wir uns dazu bekennen?",
-                "yesText": "Ruhm beanspruchen",
-                "noText": "Beteiligung leugnen"
-            },
-            {
-                "title": "Regionaler Gipfel",
-                "description": "Ein neutraler Nachbar veranstaltet einen Friedensgipfel. Die Teilnahme bedeutet, mit Feinden am Tisch zu sitzen.",
-                "yesText": "Delegierte senden",
-                "noText": "Gipfel boykottieren"
-            },
-            {
-                "title": "Großes Handelsabkommen",
-                "description": "Eine Weltmacht bietet ein umfassendes Abkommen gegen politische Zugeständnisse an.",
-                "yesText": "Vertrag schließen",
-                "noText": "Zugeständnisse ablehnen"
-            },
-            {
-                "title": "Menschenrechtsuntersuchung",
-                "description": "Internationale Beobachter fordern Zugang zu Gefängnissen für einen Menschenrechtsbericht.",
-                "yesText": "Zugang erlauben",
-                "noText": "Beobachter blocken"
-            },
-            {
-                "title": "Gemeinsame Marineübung",
-                "description": "Nachbar lädt zur Teilnahme an Manövern mit westlichen Beobachtern ein.",
-                "yesText": "Teilnehmen",
-                "noText": "Einladung ablehnen"
-            },
-            {
-                "title": "Amnestie für politische Exilanten",
-                "description": "Bieten Sie politischen Exilanten Amnestie im Austausch für ihr Investitionskapital an.",
-                "yesText": "Amnestie gewähren",
-                "noText": "Exil aufrechterhalten"
-            },
-            {
-                "title": "Internet-Entfilterung",
-                "description": "Heben Sie die meisten Beschränkungen für den globalen Internetzugang auf.",
-                "yesText": "Internet entfiltern",
-                "noText": "Kontrollen verschärfen"
-            },
-            {
-                "title": "Ausländische humanitäre Hilfe",
-                "description": "Akzeptieren Sie groß angelegte humanitäre Hilfspakete von internationalen Organisationen.",
-                "yesText": "Hilfe annehmen",
-                "noText": "Als Einmischung ablehnen"
-            },
-            {
-                "title": "Wiederherstellung dipl. Beziehungen",
-                "description": "Gelegenheit zur Wiederherstellung voller diplomatischer Beziehungen zu einem alten Gegner.",
-                "yesText": "Beziehungen aufnehmen",
-                "noText": "Bruch beibehalten"
-            },
-            {
-                "title": "Klimaabkommen",
-                "description": "Unterzeichnen Sie ein internationales Klimaabkommen, das die Überwachung von Emissionen erfordert.",
-                "yesText": "Abkommen unterzeichnen",
-                "noText": "Austreten"
-            },
-            {
-                "title": "UNESCO-Kulturerbe-Antrag",
-                "description": "UNESCO-Status für antike Stätten beantragen, was ausländische Experten erfordert.",
-                "yesText": "Antrag stellen",
-                "noText": "Einmischung ablehnen"
-            },
-            {
-                "title": "Gefangenenaustausch",
-                "description": "Westliches Land schlägt Gefangenenaustausch unter Einbeziehung politischer Häftlinge vor.",
-                "yesText": "Austausch akzeptieren",
-                "noText": "Keine Verhandlung"
+        },
+        "p4": {
+            "description": "Studentengruppen organisieren nicht genehmigte politische Debatten. Kleriker fordern die Ausweisung der Anstifter, um die spirituelle Reinheit der Universitäten zu bewahren.",
+            "advisorQuotes": {
+                "sepah": "Studentenproteste sind die Saat für künftige Rebellionen. Vernonchte sie jetzt.",
+                "bazaar": "Politisierung an den Unis lenkt von der Ausbildung künftiger Fachkräfte ab.",
+                "isolation": "Die Köpfe der Jugend müssen sich auf die eigene Nation konzentrieren, nicht auf fremde Ideen."
             }
-        ]
+        },
+        "p5": {
+            "description": "Ein Vorschlag zum Verbot aller ausländischen Pilger. Dies sorgt für absolute religiöse Reinheit, schafft aber ein diplomatisches Vakuum.",
+            "advisorQuotes": {
+                "sepah": "Fremde zu überwachen ist ein Albtraum. Geschlossene Tore vereinfachen die Sicherheit.",
+                "bazaar": "Pilger bringen Devisen. Sie abzuschneiden ist wirtschaftlicher Selbstmord.",
+                "isolation": "Unser Boden gehört unserem Volk. Sollen die Fremden in ihrer Heimat beten."
+            }
+        },
+        "p6": {
+            "description": "Die Kleriker bitten um die Vollmacht, alle öffentlichen Tribunale zu beaufsichtigen. Das zentralisiert den Glauben, könnte aber die säkulare Bürokratie entfremden.",
+            "advisorQuotes": {
+                "sepah": "Militärtribunale sind effizienter, aber ich kann mit den Klerikern arbeiten.",
+                "bazaar": "Dies wird zu willkürlichen Urteilen führen, die Handelsverträge bedrohen.",
+                "isolation": "Interne Justiz muss absolut sein und frei von externem Einfluss."
+            }
+        },
+        "p7": {
+            "description": "Ein Mandat zur Umwandlung von Händlerlagern in Gemeinschaftsküchen. Es speist die Armen, schafft aber einen massiven Riss mit der Basar-Gilde.",
+            "advisorQuotes": {
+                "sepah": "Ein voller Bauch hält die Unruhen fern. Strategisch klug.",
+                "bazaar": "Das ist Diebstahl! Sie beschlagnahmen Privateigentum und töten den Handel.",
+                "isolation": "Wir müssen für unsere eigenen Leute sorgen. Selbstversorgung beginnt mit vollen Speichern."
+            }
+        },
+        "p8": {
+            "description": "Der Tempel bittet um eine dedizierte Sicherheitseinheit der Armee zum Schutz der Schreine. Diese Vermischung von Kirche und Staat schafft eine mächtige, einheitliche Front.",
+            "advisorQuotes": {
+                "sepah": "Meine besten Leute für zeremonielle Wachdienste abstellen? Akzeptabel, vorerst.",
+                "bazaar": "Wenn Armee und Klerus sich vereinen, hat der Händler keine Stimme mehr.",
+                "isolation": "Eine geeinte interne Front ist der einzige Weg, der herandringenden Welt zu widerstehen."
+            }
+        },
+        "p9": {
+            "description": "Ein heiliger Tag wird als verbindlicher nationaler Streik erklärt. Die Hingabe wird steigen, aber die Wirtschaft stockt und die Legitimität leidet unter dem Chaos.",
+            "advisorQuotes": {
+                "sepah": "Leere Straßen sind leicht zu patrouillieren, aber der müßige Geist ist gefährlich.",
+                "bazaar": "Ein Tag ohne Handel? Im ganzen Land? Das ist Wahnsinn!",
+                "isolation": "Schalte den Lärm der Welt aus, damit die Nation sich auf ihren Kern besinnen kann."
+            }
+        },
+        "p10": {
+            "description": "Vorgeschlagene Luxusgesetze zur Einschränkung exzessiver Ausgaben. Dies erzwingt Bescheidenheit, erzürnt aber die Händler von Luxusgütern.",
+            "advisorQuotes": {
+                "sepah": "Männer sollten hart sein, nicht weich durch Luxus. Ich stimme zu.",
+                "bazaar": "Luxusgüter sind unsere profitabelsten Exporte! Das wird den Basar töten.",
+                "isolation": "Ausländische Dekadenz hat hier keinen Platz. Wir schätzen robuste Selbstgenügsamkeit."
+            }
+        },
+        "p11": {
+            "description": "Antrag auf Ersetzung der lokalen Polizei durch religiöse Sittenwächter. Die Sicherheit wird absolut sein, auch wenn das öffentliche Vertrauen einbricht.",
+            "advisorQuotes": {
+                "sepah": "Die Sittenpolizei ist fanatisch, aber effektiv bei der Aufrechterhaltung der Ordnung.",
+                "bazaar": "Händler wegen ihrer 'Frömmigkeit' zu schikanieren, stoppt jeden Verkauf.",
+                "isolation": "Wir müssen die Seele der Nation so streng bewachen wie die Grenzen."
+            }
+        },
+        "p12": {
+            "description": "Der Staat wird gebeten, eine umstrittene religiöse Sekte offiziell anzuerkennen. Das erweitert unsere Reichweite, löst aber massiven internationalen Widerstand aus.",
+            "advisorQuotes": {
+                "sepah": "Wenn sie Soldaten stellen, ist mir egal, was sie glauben.",
+                "bazaar": "Sanktionen werden folgen. Die Welt mag keine Radikalen.",
+                "isolation": "Wen kümmert es, was die Welt denkt? Wenn sie der Flagge treu sind, gehören sie zu uns."
+            }
+        },
+        "p13": {
+            "description": "Ein Vorschlag, den nationalen Überschuss für monumentale heilige Statuen auszugeben. Ein kühnes Display des Glaubens, das den Basar nach Liquidität ringen lässt.",
+            "advisorQuotes": {
+                "sepah": "Statuen gewinnen keine Kriege, aber sie sind imposante Wahrzeichen.",
+                "bazaar": "Das Gold sollte im Umlauf sein, nicht in Bronze für 'Spiritualität' gegossen werden.",
+                "isolation": "Lass die Welt auf unsere Grenzen schauen und nur unsere Stärke und Überzeugung sehen."
+            }
+        },
+        "p14": {
+            "description": "Die Kleriker lobbyieren für die Kontrolle über die nationalen Archive. Das sichert unsere Geschichte, macht aber die säkularen Bürokraten extrem unruhig.",
+            "advisorQuotes": {
+                "sepah": "Solange militärische Geheimnisse bei mir bleiben, können sie die verstaubten alten Bücher haben.",
+                "bazaar": "Information ist eine Ware. Die Kleriker darüber wachen zu lassen, ist ein Engpass.",
+                "isolation": "Kontrolliere die Geschichte, kontrolliere die Zukunft. Bewache unsere Geheimnisse eisern."
+            }
+        },
+        "p15": {
+            "description": "Ruf nach dem 'Großen Zehnten' zur Finanzierung einer neuen religiösen Garnison. Die Garde wird stärker werden, wenn auch auf Kosten der Freiheit der Händler.",
+            "advisorQuotes": {
+                "sepah": "Neue Rekruten und frische Ausrüstung. Ich werde keine zusätzliche Finanzierung ablehnen.",
+                "bazaar": "Eine weitere Abgabe? Sie behandeln den Basar wie einen bodenlosen Brunnen.",
+                "isolation": "Jede im Inland ausgegebene Münze ist eine Münze, die nicht an eine ausländische Bank geschickt wird."
+            }
+        },
+        "p16": {
+            "description": "Ein Verbot ausländischer Technologien in Tempelanlagen. Es bewahrt die Tradition, schneidet uns aber von wichtigen modernen Wartungsdiensten ab.",
+            "advisorQuotes": {
+                "sepah": "Ich bevorzuge ohnehin zuverlässige lokale Technik. Ausländische Schaltkreise können verwanzt sein.",
+                "bazaar": "Moderne Wartung ist eine globale Dienstleistung. Dieses Verbot wird zu Stromausfällen führen.",
+                "isolation": "Unsere Abhängigkeit von ausländischen Maschinen ist eine Schwäche. Reiß sie raus."
+            }
+        },
+        "p17": {
+            "description": "Die Kleriker bitten darum, ungenutztes Händlerland für neue Schreine zu beschlagnahmen. Ein göttlicher Landraub, den der Basar nie vergessen wird.",
+            "advisorQuotes": {
+                "sepah": "Land ist Land. Lieber ein Schrein als ein potenzielles Rebellenversteck.",
+                "bazaar": "Ungenutzt? Das Land ist für künftige Expansion reserviert! Das ist Diebstahl.",
+                "isolation": "Nationales Land für nationale Zwecke. Die Händler sollten aufhören zu klagen."
+            }
+        },
+        "p18": {
+            "description": "Anfrage, alte Hymnen zur einzig erlaubten öffentlichen Musik zu machen. Der Glaube wird zum nationalen Puls, doch die Händler fürchten Umsatzeinbußen.",
+            "advisorQuotes": {
+                "sepah": "Besser Hymnen als das rhythmische Schreien der Demonstranten.",
+                "bazaar": "Unterhaltung ist ein massiver Sektor. Sie töten die Cafés und Theater.",
+                "isolation": "Unsere Lieder gehören uns. Der Lärm der globalen Popkultur muss verstummen."
+            }
+        },
+        "s1": {
+            "description": "Das Oberkommando fordert massive Mittel für eine undurchdringliche Grenzmauer. Dies wird Ordnung und Sicherheit gewährleisten, aber den Basar auszehren und unsere Isolation verstärken.",
+            "advisorQuotes": {
+                "sepah": "Eine Mauer ist nicht nur Stein; sie ist das ultimative Statement unserer Souveränität.",
+                "bazaar": "Uns zu isolieren wird nur zu Stagnation und hohen Importkosten führen.",
+                "isolation": "Bau sie doppelt so dick. Niemand kommt rein, niemand geht raus."
+            }
+        },
+        "s2": {
+            "description": "Ein Dekret zur Massenmobilisierung zur Stärkung unserer Verteidigung. Tausende junger Männer werden aus Fabriken an die Front geschickt, was die Garde stärkt, aber die Wirtschaft lähmt.",
+            "advisorQuotes": {
+                "sepah": "Soldaten sind das wahre Fundament einer Nation, nicht Fabrikarbeiter.",
+                "bazaar": "Wir verlieren unsere Arbeitskräfte! Die Produktivität wird über Nacht einbrechen.",
+                "isolation": "Eine Nation unter Waffen ist eine Nation, die nicht von Ausländern schikaniert werden kann."
+            }
+        },
+        "s3": {
+            "description": "Das Militär schlägt eine totale Ausgangssperre in der Hauptstadt wegen 'Sicherheitsbedenken' vor. Dies erstickt den Widerstand, legt aber alle Basar-Aktivitäten lahm.",
+            "advisorQuotes": {
+                "sepah": "Die Straßen müssen frei sein für unsere Panzer. Ordnung ist oberstes Gebot.",
+                "bazaar": "Der Nachtmarkt ist unser Lebensnerv! Das wird die Verkäufer ruinieren.",
+                "isolation": "Schließ die Türen ab. Interner Frieden ist tausend verlorene Verkäufe wert."
+            }
+        },
+        "s4": {
+            "description": "Ein Plan zur Beschlagnahmung aller Chemiefabriken für die Produktion von Panzerungen. Es stärkt unsere Verteidigung, schneidet uns aber von internationalen Handelsnormen ab.",
+            "advisorQuotes": {
+                "sepah": "Stahl und Verbundpanzerung werden unsere Jungs retten. Die Kosten spielen keine Rolle.",
+                "bazaar": "Diese Chemikalien sind für Düngemittel und Exporte! Sie töten unseren Handel.",
+                "isolation": "Wir müssen selbstgenügsam sein. Wenn die Welt uns für unsere Verteidigung meidet, dann sei es so."
+            }
+        },
+        "s5": {
+            "description": "Die Garde fordert die Vollmacht, alle religiösen Predigten auf 'subversive' Inhalte zu prüfen. Dies eint die interne Macht, riskierte aber einen Bruch mit den Klerikern.",
+            "advisorQuotes": {
+                "sepah": "Selbst ein Priester kann ein Spion sein. Niemand steht über der Sicherheit des Staates.",
+                "bazaar": "Religiöse Unruhen sind schlecht fürs Geschäft. Bleibt aus den Tempeln raus.",
+                "isolation": "Eine Stimme, eine Nation. Widerspruch, selbst von der Kanzel, ist eine Bedrohung."
+            }
+        },
+        "s6": {
+            "description": "Ein Vorschlag zum Bau eines massiven Marinehafens für Panzerschiffe. Der Händlerverkehr wird verdrängt, doch unsere Küstenreichweite wird absolut sein.",
+            "advisorQuotes": {
+                "sepah": "Unsere Grenzen enden nicht am Ufer. Wir brauchen eine Flotte aus Eisen.",
+                "bazaar": "Der bestehende Hafen wickelt unseren gesamten Welthandel ab. Blockiert nicht die Docks!",
+                "isolation": "Das Meer ist nur eine weitere Grenze, die für Unwünschte geschlossen werden muss."
+            }
+        },
+        "s7": {
+            "description": "Das Militär bittet darum, silberne Kunstgegenstände für die Verwendung in schwerer Panzerung einzuziehen. Die Verteidigung wird aufgerüstet, aber der Basar steht vor einer Handwerkskrise.",
+            "advisorQuotes": {
+                "sepah": "Edelmetalle eignen sich besser für Rüstungen als für Tand.",
+                "bazaar": "Schmuck und Silberarbeiten sind unsere berühmtesten Exporte! Das ist Wahnsinn.",
+                "isolation": "Luxus ist eine Ablenkung. Silber dient dem Staat besser als Schild."
+            }
+        },
+        "s8": {
+            "description": "Ein Mandat zur Militarisierung der nationalen Eisenbahnlinien. Die Logistik der Armee wird makellos sein, doch die Welt wird uns in Kriegsvorbereitungen sehen.",
+            "advisorQuotes": {
+                "sepah": "Mobilität ist der Schlüssel zum Sieg. Der Staat braucht totale Eisenbahnkontrolle.",
+                "bazaar": "Wie sollen wir Getreide und Textilien bewegen? Das ist ein Engpass.",
+                "isolation": "Kontrolliere die Gleise, kontrolliere den Fluss der Nation. Halte Fremde fern."
+            }
+        },
+        "s9": {
+            "description": "Antrag auf eine 'Sicherheitsabgabe', die direkt an das Offizierskorps gezahlt wird. Die Garde wird loyal sein, aber die Öffentlichkeit sieht dies als reine Korruption.",
+            "advisorQuotes": {
+                "sepah": "Meine Offiziere müssen gut bezahlt werden, um der Versuchung von Bestechungsgeldern zu widerstehen.",
+                "bazaar": "Nennen wir es beim Namen: Schutzgelderpressung. Die Händler werden nicht glücklich sein.",
+                "isolation": "Interne Stabilität hat einen Preis. Zahle ihn, oder die Welt spaziert einfach rein."
+            }
+        },
+        "s10": {
+            "description": "Das Oberkommando schlägt eine Übung 'Schild der Nation' vor, die einen Monat dauert. Totale Sicherheitsbereitschaft, aber wir sind effektiv von der Welt abgeschnitten.",
+            "advisorQuotes": {
+                "sepah": "Das Volk muss bereit sein für das Unvermeidliche. Es ist eine Übung fürs Überleben.",
+                "bazaar": "Ein Monat ohne Importe? Wir werden bis Woche drei Baumrinde essen!",
+                "isolation": "Hervorragend. Schließt die Tore, kappt die Kabel. Lasst uns sehen, wer wir wirklich sind."
+            }
+        },
+        "s11": {
+            "description": "Ein Dekret zur Ersetzung aller zivilen Richter durch Offiziere. Dies gewährleistet schnelle Justiz, zerstört aber jedes verbleibende öffentliche Vertrauen.",
+            "advisorQuotes": {
+                "sepah": "Das Gesetz ist einfach: GEHORCHEN. Wir brauchen keine Anwälte, wir brauchen Disziplin.",
+                "bazaar": "Vertragsrecht ist zu komplex für Soldaten. Dies wird Chaos schaffen.",
+                "isolation": "Externe Werte haben keinen Platz in unseren Gerichten. Militärrecht ist rein."
+            }
+        },
+        "s12": {
+            "description": "Die Garde fordert die Stilllegung der nationalen Handelsflotte für militärische Umbauten. Unsere Marine wird beispiellos sein, aber der Handel wird leiden.",
+            "advisorQuotes": {
+                "sepah": "Ein Handelsschiff ist nur ein Ziel. Ein Kriegsschiff ist eine Abschreckung.",
+                "bazaar": "Sie schneiden uns die Beine ab! Wie können wir ohne Flotte handeln?",
+                "isolation": "Unsere Schiffe sollten Kanonen tragen, keine ausländischen Konsumgüter."
+            }
+        },
+        "s13": {
+            "description": "Ein Plan zur Errichtung permanenter Kontrollpunkte auf allen Händlerstraßen. Der Schmuggel stoppt, aber der Warenfluss wird stark gedrosselt.",
+            "advisorQuotes": {
+                "sepah": "Wenn es auf der Straße ist, ist es unter unseren Augen. Kein illegaler Verkehr mehr.",
+                "bazaar": "Kontrollpunkte kosten Stunden auf jeder Reise. Das tötet die Logistik.",
+                "isolation": "Totale Kenntnis der internen Bewegungen ist der Schlüssel zur totalen Souveränität."
+            }
+        },
+        "s14": {
+            "description": "Das Militär bittet um das Recht auf 'Notreitierung' aus jedem Tempel. Ein effizienter Schritt, der an Blasphemie grenzt.",
+            "advisorQuotes": {
+                "sepah": "Platz und Ressourcen werden für die Verteidigung aller benötigt. Keine Ausnahmen.",
+                "bazaar": "In Tempeln zuzugreifen ist ein riskant, aber effizient verwaltet.",
+                "isolation": "Der Staat ist das ultimative heilige Wesen. Keine Institution ist ausgenommen."
+            }
+        },
+        "s15": {
+            "description": "Ein Vorschlag, Soldaten volle Immunität für ihre Pflichten zu gewähren. Die Loyalität wird absolut sein, aber die Legitimität beim Volk wird geopfert.",
+            "advisorQuotes": {
+                "sepah": "Wenn ein Soldat eine Klage fürchtet, wird er nicht abdrücken. Geben Sie ihnen Immunität.",
+                "bazaar": "Ein Soldat über dem Gesetz ist ein Bandit in Uniform. Schlecht für die Stabilität.",
+                "isolation": "Die Verteidiger der Nation müssen von zivilen Launen entfesselt werden."
+            }
+        },
+        "s16": {
+            "description": "Die Garde fordert den Bau eines massiven unterirdischen 'Kommando-Bunkers'. Er sichert das Überleben, zieht aber misstrauische Blicke aus dem Ausland auf sich.",
+            "advisorQuotes": {
+                "sepah": "Wir müssen für das Schlimmste gerüstet sein. Das Überleben des Staates hat Priorität.",
+                "bazaar": "Die Kosten sind astronomisch. Wir sollten in Hafeninfrastruktur investieren.",
+                "isolation": "Lass die Welt spionieren; sie werden nur eine Festung im Fels finden."
+            }
+        },
+        "s17": {
+            "description": "Ein Mandat zur Nationalisierung aller Treibstoffreserven nur für militärische Zwecke. Unsere Panzer werden nie liegenbleiben, aber die ausländischen Versorgungswege werden enger.",
+            "advisorQuotes": {
+                "sepah": "Ohne Treibstoff ist die Armee nur eine Sammlung schwerer Statuen.",
+                "bazaar": "Die Industrie braucht auch Treibstoff! Sie bringen die Fabriken zum Stillstand.",
+                "isolation": "Kein Tropfen unserer Energie sollte an ausländische Konkurrenten abgegeben werden."
+            }
+        },
+        "s18": {
+            "description": "Das Militär bittet darum, den Druck der nationalen Nachrichten zu überwachen. Die Informationskontrolle wird absolut sein, auch wenn es uns jedes Quäntchen öffentliches Vertrauen kostet.",
+            "advisorQuotes": {
+                "sepah": "Die Presse ist eine Waffe. Wir müssen das Narrativ der Nation kontrollieren.",
+                "bazaar": "Marktvertrauen basiert auf Transparenz. Zensieren Sie die Nachrichten, und wir scheitern.",
+                "isolation": "Ausländische Propaganda muss mit einer einzigen, nationalen Wahrheit gekontert werden."
+            }
+        },
+        "b1": {
+            "description": "Ausländische Konzerne bieten an, unsere nationalen Häfen zu privatisieren und zu modernisieren. Dieser massive Kapitalfluss wird den Basar wiederbeleben, doch das Militär warnt vor einem totalen Souveränitätsverlust.",
+            "advisorQuotes": {
+                "sepah": "Unsere Häfen Ausländern geben? Sie lassen den Feind durch die Hintertür rein.",
+                "bazaar": "Kapital ist das Lebenselixier unserer Zukunft. Wir müssen modernisieren oder sterben.",
+                "isolation": "Unsere Häfen zu verkaufen bedeutet, unsere Seele zu verkaufen. Weist die ausländischen Geier ab."
+            }
+        },
+        "b2": {
+            "description": "Vorschlag, den uneingeschränkten Import ausländischer Luxusgüter zu erlauben. Dies hält den Wohlstand im Umlauf und die Menschen glücklich, doch die Kleriker lehnen es als Feier säkularer Eitelkeit ab.",
+            "advisorQuotes": {
+                "sepah": "Luxus züchtet Schwäche. Das Geld sollte lieber in die Waffenkammern fließen.",
+                "bazaar": "Die Menschen wollen Auswahl! Glück und Handel gehen Hand in Hand.",
+                "isolation": "Importierte Dekadenz vergiftet den nationalen Charakter. Haltet sie draußen."
+            }
+        },
+        "b3": {
+            "description": "Antrag auf Deregulierung der Bergbaugilde. Der Output wird in die Höhe schnellen, doch die Garde fürchtet illegalen Schmuggel und den Verlust der staatlichen Kontrolle.",
+            "advisorQuotes": {
+                "sepah": "Schmuggel aus Bergwerken ist der Weg, wie Rebellen an Gold kommen. Behaltet die Regulierungen bei.",
+                "bazaar": "Lasst die Märkte atmen! Wir sitzen auf einem Berg ungenutzten Wohlstands.",
+                "isolation": "Unsere Mineralien sind für unsere Fabriken, nicht für ausländische Exportmärkte."
+            }
+        },
+        "b4": {
+            "description": "Plan zur Eröffnung einer Freihandelszone in der Hauptstadt. Globales Kapital wird fließen, doch erfordert dies die Auflösung vieler traditioneller religiöser Zölle.",
+            "advisorQuotes": {
+                "sepah": "Eine Freihandelszone ist eine Spionagezone. Ich will meine Leute an jeder Ecke.",
+                "bazaar": "Dies wird uns auf die Weltkarte bringen! Die Hauptstadt wird ein Leuchtfeuer des Wohlstands sein.",
+                "isolation": "Eine Zone ohne Grenzen ist eine Zone ohne Souveränität. Lehn es ab."
+            }
+        },
+        "b5": {
+            "description": "Die Basar-Gilde bittet um einen 'Wirtschaftsstimulus', der aus dem Militärbudget finanziert wird. Es zahlt Händlerschulden ab, lässt die Garde aber mit leeren Lagerräumen zurück.",
+            "advisorQuotes": {
+                "sepah": "Sie wollen von der Verteidigung der Nation nehmen, um für Händlerfehler zu bezahlen?",
+                "bazaar": "Die Händler sind der Motor dieses Landes. Wenn wir stocken, fällt alles andere.",
+                "isolation": "Inlandshandel zu fördern ist gut, aber die Waffenkammer zu plündern ist riskant."
+            }
+        },
+        "b6": {
+            "description": "Vorschlag zur Ausrichtung einer internationalen Handelsmesse. Ein Traum für jeden Händler, lockt aber ausländische Beobachter an, denen die Garde nicht traut.",
+            "advisorQuotes": {
+                "sepah": "Eine 'Messe' ist nur eine Tarnung für ausländische Geheimdienstler. Ablehnen.",
+                "bazaar": "Die Augen der Welt werden auf uns gerichtet sein! Allein das Prestige wird Millionen wert sein.",
+                "isolation": "Die Welt einzuladen bedeutet, ihre Spionage und ihre Korruption einzuladen."
+            }
+        },
+        "b7": {
+            "description": "Händler fordern die Abschaffung der Ladenschlusszeiten an 'heiligen Tagen'. Gewinne werden steigen, doch die Kleriker werden dies als offene Kriegserklärung sehen.",
+            "advisorQuotes": {
+                "sepah": "Mir sind die Tage egal, solange die Fabriken Ausrüstung produzieren.",
+                "bazaar": "Die Läden die halbe Woche geschlossen zu halten, ist wirtschaftlicher Irrsinn! Öffnet sie.",
+                "isolation": "Interne Bräuche sind das, was uns definiert. Effizienz ist zweitrangig."
+            }
+        },
+        "b8": {
+            "description": "Mandat zur Standardisierung aller nationalen Maße und Gewichte. Es verkompliziert religiöse Traditionen, macht unseren Handel aber exponentiell effizienter.",
+            "advisorQuotes": {
+                "sepah": "Alles sollte standardisiert sein. In der Armee und im Laden. Ich stimme zu.",
+                "bazaar": "Effizienter Handel ist ehrlicher Handel. Keine Verwirrung mehr an den Docks!",
+                "isolation": "Metrisch oder imperial, es muss UNSER System sein, nicht ein globales."
+            }
+        },
+        "b9": {
+            "description": "Antrag auf Senkung der Steuern auf importierte Seide und Gewürze. Es stärkt den Basar, lässt die Garde aber ohne die versprochene Finanzierung zurück.",
+            "advisorQuotes": {
+                "sepah": "Wir brauchen diese Steuereinnahmen für die Grenzmauer. Kürzt nicht das Militär.",
+                "bazaar": "Seide und Gewürze sind Luxus-Essentials. Steuersenkungen werden das Wachstum ankurbeln.",
+                "isolation": "Belegt ausländische Waren mit Steuern, bis sie zu teuer sind, um den Aufwand wert zu sein."
+            }
+        },
+        "b10": {
+            "description": "Plan, lokales Handwerk gegenüber ausländischen Waren zu fördern. Der Basar wächst, doch unsere internationalen Partner werden dies als feindseligen Akt sehen.",
+            "advisorQuotes": {
+                "sepah": "Kauf lokal, bau lokal. Es ist besser für Sicherheit und Unabhängigkeit.",
+                "bazaar": "Es schützt unsere Handwerker, wird aber Handelskriege mit unseren Nachbarn auslösen.",
+                "isolation": "Eine wahre Nation kauft nur bei sich selbst. Weist den ausländischen Schrott ab."
+            }
+        },
+        "b11": {
+            "description": "Vorschlag zum Bau einer internationalen Händler-Eisenbahn. Sie verbindet uns mit der Welt, erfordert aber die Abtretung von massivem Militärland.",
+            "advisorQuotes": {
+                "sepah": "Eine Eisenbahn als Schwachstelle. Ein Gegner könnte sie nutzen, um unser Herz zu erreichen.",
+                "bazaar": "Dies ist der Superhighway der Zukunft! Wir müssen die Gleise bauen.",
+                "isolation": "Eine Eisenbahn ist eine Brücke. Brücken lassen die Probleme der Welt direkt reinspazieren."
+            }
+        },
+        "b12": {
+            "description": "Die Händler bitten um ein 'Marktstabilitätsgesetz', das ihnen Selbstregulierung erlaubt. Die Legitimität steigt mit ihrer Unterstützung, aber du verlierst die Kontrolle über sie.",
+            "advisorQuotes": {
+                "sepah": "Wenn man die Kontrolle über das Gold verliert, verliert man die Kontrolle über die Nation.",
+                "bazaar": "Vertraut uns. Wir wissen, wie man Märkte besser managt als jeder Bürokrat.",
+                "isolation": "Nationale Märkte sollten nationalen Interessen dienen, nicht Händlerlaunen."
+            }
+        },
+        "b13": {
+            "description": "Plan, unser nationales Getreide für ausländisches Silber zu exportieren. Der Basar wird reich werden, doch die Kleriker fürchten um die lokalen Armen, die hungern werden.",
+            "advisorQuotes": {
+                "sepah": "Hungrige Bürger sind unruhige Bürger. Vorsicht bei der Lebensmittelversorgung.",
+                "bazaar": "Silber kauft uns die Tech, die wir brauchen. Es ist ein strategischer Export.",
+                "isolation": "Essen ist eine Waffe. Behaltet es hier. Wir brauchen ihr Silber nicht."
+            }
+        },
+        "b14": {
+            "description": "Antrag auf einen nationalen Goldstandard. Er macht uns zu einem Global Player, entfernt aber die Flexibilität für religiöse Finanzierung.",
+            "advisorQuotes": {
+                "sepah": "Gold ist solide. Papier ist schwach. Ich unterstütze den Übergang zum Standard.",
+                "bazaar": "Es gibt unserer Währung internationale Geltung. Essenziell für Wachstum.",
+                "isolation": "Bindet die Währung an die Erde selbst. Selbstversorgung in jeder Münze."
+            }
+        },
+        "b15": {
+            "description": "Vorschlag, der Basar-Gilde einen Sitz im Nationalrat zu geben. Ihre Loyalität wird erkauft, aber um den Preis deiner Autorität.",
+            "advisorQuotes": {
+                "sepah": "Einen Händler in den Rat aufzunehmen, wird unsere Sicherheitspläne nur verkomplizieren.",
+                "bazaar": "Wir verdienen eine Stimme in der Führung der Nation, die wir finanzieren.",
+                "isolation": "Private Interessen haben keinen Platz in einem geeinten Nationalrat."
+            }
+        },
+        "b16": {
+            "description": "Verbot aller Straßenproteste zum 'Schutz der Ladenfronten'. Es schafft wirtschaftlichen Frieden, aber die Menschen werden das Durchgreifen nicht vergessen.",
+            "advisorQuotes": {
+                "sepah": "Endlich! Keine Unruhen mehr, kein Chaos mehr. Lasst mich den Asphalt räumen.",
+                "bazaar": "Proteste stören den Handel und beschädigen Eigentum. Wir brauchen physische Stabilität.",
+                "isolation": "Öffentliche Ordnung ist die Voraussetzung für einen starken und geeinten Staat."
+            }
+        },
+        "b17": {
+            "description": "Anfrage zur Subventionierung nationaler Schiffbauer. Es schafft Arbeitsplätze und Wohlstand, doch die Garde fühlt sich finanziell übergangen.",
+            "advisorQuotes": {
+                "sepah": "Wenn es keine Kriegsschiffe sind, sehe ich nicht, warum das Armeebudget zahlen sollte.",
+                "bazaar": "Maritime Macht ist der Schlüssel zum Welthandel. Wir müssen bessere Schiffe bauen.",
+                "isolation": "Kontrolliere die Wellen mit unseren eigenen Rümpfen. Keine ausländische Schifffahrt mehr."
+            }
+        },
+        "b18": {
+            "description": "Plan zur Einrichtung einer Zentralbank unter Aufsicht des Basars. Legitimität wird für ihre absolute Kooperation in den kommenden Jahren geopfert.",
+            "advisorQuotes": {
+                "sepah": "Eine Bank mit eigenen Regeln ist eine Bedrohung für die Souveränität des Staates.",
+                "bazaar": "Geben Sie uns die Schlüssel zur Schatzkammer, und wir machen die Nation reich.",
+                "isolation": "Ein zentraler Tresor für eine zentrale Nation. Haltet das Geld der Welt fern."
+            }
+        },
+        "i1": {
+            "description": "Weltführer laden uns ein, unsere Grenzen für ungehinderten Handel zu öffnen. Unsere Exporteure werden florieren, aber die Garde warnt vor ausländischer Subversion.",
+            "advisorQuotes": {
+                "sepah": "Uneingeschränkter Handel ist nur ein anderes Wort für uneingeschränkte Spionage.",
+                "bazaar": "Die Welt wartet auf unsere Waren! Öffnet die Tore und lasst das Geld fließen.",
+                "isolation": "Die Tore zu öffnen ist der Anfang vom Ende unserer Souveränität."
+            }
+        },
+        "i2": {
+            "description": "Ein multinationales Hilfspaket wird im Austausch für die Unterzeichnung eines großen Außenhandelspakts angeboten. Dies stabilisiert die Währung, schränkt aber das Militärbudget ein.",
+            "advisorQuotes": {
+                "sepah": "Hilfe mit Bedingungen ist nur ein Bestechungsgeld unserer Feinde. Ablehnen.",
+                "bazaar": "Wir brauchen das Kapital zum Wiederaufbau unserer Märkte. Eine Überlebensnotwendigkeit.",
+                "isolation": "Betteln um ausländische Brosamen lässt unsere Nation schwach und verzweifelt aussehen."
+            }
+        },
+        "i3": {
+            "description": "Vorschlag zur Ausrichtung eines Menschenrechtsgipfels. Es zeigt der Welt unser Wachstum, erfordert aber ein massives Opfer an interner militärischer Kontrolle.",
+            "advisorQuotes": {
+                "sepah": "Ausländische 'Beobachter' reinlassen? Man kann ihnen gleich die Schlüssel geben.",
+                "bazaar": "Das globale Prestige wäre enorm. Denken Sie an künftige Investitionen.",
+                "isolation": "Ausländische 'Beobachter' sind nur Spione im Anzug. Haltet die Türen abgeschlossen."
+            }
+        },
+        "i4": {
+            "description": "Plan, unser Kommunikationsnetz mit dem globalen Netzwerk zu verknüpfen. Der Basar wird boomen, doch die Garde warnt vor Kontrollverlust.",
+            "advisorQuotes": {
+                "sepah": "Anschluss an ihr Netz lässt ihre Viren direkt in unsere Systeme.",
+                "bazaar": "Informationsgeschwindigkeit ist die neue Währung. Wir dürfen nicht im Dunkeln bleiben.",
+                "isolation": "Das globale Netzwerk ist eine Pipeline für kulturelle Fäulnis. Bleibt unverbunden."
+            }
+        },
+        "i5": {
+            "description": "Ein vollständiger Rückzug aus allen internationalen Verträgen wird vorgeschlagen. Wir werden absolut rein und selbstgenügsam sein, doch die Welt wird sich abwenden.",
+            "advisorQuotes": {
+                "sepah": "Keine Verträge mehr, keine Kompromisse mehr. Wir stehen allein und stark.",
+                "bazaar": "Das ist isolationspolitischer Selbstmord. Der Basar wird in totaler Einsamkeit verhungern.",
+                "isolation": "Zerreißt die Papiere. Wir antworten niemandem außer uns selbst."
+            }
+        },
+        "i6": {
+            "description": "Antrag auf Unterzeichnung eines 'Globalen Friedensabkommens'. Es senkt unsere militärische Bereitschaft, schafft aber ein goldenes Zeitalter für den Transithandel.",
+            "advisorQuotes": {
+                "sepah": "Frieden ist nur die Zeit zwischen Kriegen. Lasst die Wachsamkeit nicht sinken.",
+                "bazaar": "Handel blüht im Frieden. Unterzeichnet das Abkommen und lasst die Märkte erblühen.",
+                "isolation": "Frieden ist eine Falle, die genutzt wird, um die Wachsamen zu entwaffnen."
+            }
+        },
+        "i7": {
+            "description": "Dekret zur Ausweisung aller ausländischen Diplomaten für die 'nationale Sicherheit'. Wir sind jetzt eine Insel der Ordnung, doch wir stehen fast völlig allein.",
+            "advisorQuotes": {
+                "sepah": "Diplomaten sind nur Spione in schicken Anzügen. Schafft sie uns vom Hals.",
+                "bazaar": "Wer wird unsere Handelsdeals aushandeln? Sie brennen jede Brücke nieder.",
+                "isolation": "Fegt sie raus. Sie sind Gäste, die ihren Aufenthalt weit überzogen haben."
+            }
+        },
+        "i8": {
+            "description": "Plan, ausländischen Missionaren den Bau von Schulen zu erlauben. Es öffnet unsere Grenzen und Köpfe, gefährdet aber die grundlegende Stabilität unseres Glaubens.",
+            "advisorQuotes": {
+                "sepah": "Missionare heute, Subversive morgen. Lasst sie nicht unterrichten.",
+                "bazaar": "Moderne Bildung zieht ausländische Talente und Investitionen an. Ich stimme zu.",
+                "isolation": "Indoktrination durch Ausländer ist der erste Schritt zur kulturellen Unterwerfung."
+            }
+        },
+        "i9": {
+            "description": "Vorschlag zum Beitritt zu einer regionalen Militärallianz. Wir opfern unsere Unabhängigkeit für einen massiven Schub bei Handel und Sicherheit.",
+            "advisorQuotes": {
+                "sepah": "Eine Allianz bedeutet, auch ihre Kriege zu führen. Wir sollten uns selbst verteidigen.",
+                "bazaar": "Der regionale Marktzugang wird den Verlust an Autonomie wert sein.",
+                "isolation": "Wir brauchen keine 'Verbündeten', die nur unsere Soldaten für ihre Zwecke nutzen wollen."
+            }
+        },
+        "i10": {
+            "description": "Forderung, alle ausländischen Vermögenswerte durch den Staat zu beschlagnahmen. Wir sind unabhängig und gut finanziert, aber wir sind jetzt effektiv ein Paria-Staat.",
+            "advisorQuotes": {
+                "sepah": "Wenn es auf unserem Boden ist, gehört es uns. Beschlagnahmt es und finanziert die Armee.",
+                "bazaar": "Sie werden reagieren, indem sie UNSERE Vermögenswerte im Ausland beschlagnahmen.",
+                "isolation": "Alles innerhalb unserer Grenzen gehört dem Staat. Keine Ausnahmen."
+            }
+        },
+        "i11": {
+            "description": "Antrag auf Unterzeichnung eines 'Gemeinsamen Markt'-Abkommens. Es bindet unser Schicksal an unsere Nachbarn, stärkt den Handel, gibt aber die nationale Kontrolle auf.",
+            "advisorQuotes": {
+                "sepah": "Ein gemeinsamer Markt bedeutet gemeinsame Grenzen. Ich kann keine Sicherheit garantieren.",
+                "bazaar": "Dies ist der Pfad zum Wohlstand! Ein vereinter Markt ist ein stabiler Markt.",
+                "isolation": "Gemeinsame Märkte führen zu gemeinsamen Problemen. Wir bevorzugen unsere eigenen Probleme."
+            }
+        },
+        "i12": {
+            "description": "Vorschlag zur Ausrichtung der Weltspiele. Es ist ein massiver Aufwand, lockt aber den Basar Zeuge eines einmaligen Booms werden.",
+            "advisorQuotes": {
+                "sepah": "Millionen von Besuchern? Es ist ein Sicherheitsalbtraum auf globaler Ebene.",
+                "bazaar": "Die Tourismuseinnahmen allein werden die Staatsschulden decken. Richtet die Spiele aus!",
+                "isolation": "Der Zirkus der Welt hat keinen Platz in unserer schweigsamen und ernsten Nation."
+            }
+        },
+        "i13": {
+            "description": "Plan, ausländischen Banken die Errichtung nationaler Zweigstellen zu erlauben. Unsere Wirtschaft wird sich stabilisieren, doch die Kleriker fürchten um unsere Seele.",
+            "advisorQuotes": {
+                "sepah": "Ausländische Banken sind nur Kanäle für ausländisches Geld, um unsere Politik zu beeinflussen.",
+                "bazaar": "Wir brauchen ihr Kapital und ihre Expertise. Unsere lokalen Banken sind antiquiert.",
+                "isolation": "Finanzen sind die Kette, die die Welt nutzt, um unabhängige Nationen zu binden."
+            }
+        },
+        "i14": {
+            "description": "Antrag, ausländischen Touristen uneingeschränktes Reisen zu erlauben. Gewinne werden fließen, doch die Kleriker fürchten um unsere traditionelle Bescheidenheit.",
+            "advisorQuotes": {
+                "sepah": "Touristen wandern in Sicherheitsbereiche. Ich will sie auf Hotels beschränkt sehen.",
+                "bazaar": "Tourismus ist reiner Gewinn ohne Fixkosten! Öffnet jede schöne Route.",
+                "isolation": "Touristen sind nur Amateurspione, die unser Erbe begaffen. Haltet sie draußen."
+            }
+        },
+        "i15": {
+            "description": "Vollständiges 'Open Sky'-Abkommen für ausländische Fluggesellschaften. Wir werden ein Drehkreuz der Welt, doch die Garde wird den Luftraum nicht mehr kontrollieren.",
+            "advisorQuotes": {
+                "sepah": "Der Himmel ist unsere erste Verteidigungslinie. Der Kontrollverlust ist katastrophal.",
+                "bazaar": "Ein globaler Hub bringt globales Gold. Öffnet den Himmel.",
+                "isolation": "Unser Himmel sollte nur unsere Flugzeuge tragen. Der Himmel ist eine nationale Grenze."
+            }
+        },
+        "i16": {
+            "description": "Plan, ausländische Minen in unserem Territorium zuzulassen. Wir erhalten einen Teil des Wohlstands ohne Risiko, stehen aber ferner von den Weltnormen.",
+            "advisorQuotes": {
+                "sepah": "Ausländer graben in unserer Erde? Sie werden mehr finden als nur Erz.",
+                "bazaar": "Sie bringen die Tech und die Arbeitskraft. Wir kassieren nur die Schecks. Smart.",
+                "isolation": "Jede Unze unseres Bodens ist unser Geburtsrecht. Wir verkaufen die tiefe Erde nicht."
+            }
+        },
+        "i17": {
+            "description": "Vorschlag zum Import ausländischer medizinischer Experten und Lehrer. Unser Volk wird gesund bleiben, doch die Kleriker warnen vor Indoktrination.",
+            "advisorQuotes": {
+                "sepah": "Ausländische Lehrer werden den Kindern nur ihren 'Menschenrechts'-Unsinn predigen.",
+                "bazaar": "Eine gesunde Belegschaft ist eine produktive Belegschaft. Holt die Ärzte.",
+                "isolation": "Wir bevorzugen unsere eigene Krankheit gegenüber der Heilung durch einen fremden Herrn."
+            }
+        },
+        "i18": {
+            "description": "Mandat zur Auflösung unserer Grenzen und zum Beitritt zu einer 'Globalen Föderation'. Ein totaler Verlust der Souveränität um des Überlebens willen.",
+            "advisorQuotes": {
+                "sepah": "Die Grenzen auflösen? An dem Tag hört die Armee auf zu existieren. Ich weigere mich.",
+                "bazaar": "Eine Welt ohne Grenzen ist eine Welt mit perfektem Handel. Es ist die Zukunft.",
+                "isolation": "Ich würde lieber die Welt brennen sehen, als unsere Grenzen ausgelöscht zu sehen."
+            }
+        }
     }
 }
