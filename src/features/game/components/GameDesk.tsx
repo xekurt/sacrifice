@@ -198,7 +198,7 @@ const GameDesk: React.FC<GameDeskProps> = ({ onExit, difficulty }) => {
                 <main className="flex-grow grid grid-cols-12 overflow-hidden relative">
 
                     {/* LEFT PANE: TACTICAL MAP */}
-                    <div className="col-span-12 lg:col-span-8 relative flex items-center justify-center bg-transparent group overflow-hidden">
+                    <div className="col-span-12 lg:col-span-5 relative flex items-center justify-center bg-transparent group overflow-hidden">
                         {/* Decorative Background Grid */}
                         <div className="absolute inset-0 opacity-10 pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle, #333 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
 
@@ -213,7 +213,7 @@ const GameDesk: React.FC<GameDeskProps> = ({ onExit, difficulty }) => {
                     </div>
 
                     {/* RIGHT PANE: COMMAND DASHBOARD */}
-                    <div className="col-span-12 lg:col-span-4 bg-zinc-950 border-l border-white/5 flex flex-col relative z-20 shadow-[-50px_0_100px_rgba(0,0,0,0.5)]">
+                    <div className="col-span-12 lg:col-span-7 bg-zinc-950 border-l border-white/5 flex flex-col relative z-20 shadow-[-50px_0_100px_rgba(0,0,0,0.5)]">
 
                         {/* 1. Dossier (Narrative Context) */}
                         <div className="p-10 lg:p-14 pb-4">
@@ -239,7 +239,7 @@ const GameDesk: React.FC<GameDeskProps> = ({ onExit, difficulty }) => {
                                 <img
                                     src={`character/${activePerspective}.jpg`}
                                     alt="Advisor"
-                                    className={`w-full h-full object-cover object-top opacity-60 transition-all duration-1000 ${transitionState !== 'idle' ? 'scale-110 blur-sm' : 'scale-100'}`}
+                                    className={`w-full h-full object-contain  opacity-60 transition-all duration-1000 ${transitionState !== 'idle' ? 'scale-110 blur-sm' : 'scale-100'}`}
                                     style={{
                                         maskImage: 'linear-gradient(to bottom, black 50%, transparent 95%)',
                                         WebkitMaskImage: 'linear-gradient(to bottom, black 50%, transparent 95%)'

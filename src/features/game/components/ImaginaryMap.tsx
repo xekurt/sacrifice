@@ -179,7 +179,7 @@ const ImaginaryMap: React.FC<ImaginaryMapProps> = ({ className, gameState }) => 
         <div className={`w-full aspect-[4/3] relative rounded-sm overflow-hidden border border-zinc-800 bg-black shadow-2xl ${className || ''}`}>
             <Canvas shadows gl={{ antialias: true }}>
                 <color attach="background" args={['#09090b']} />
-                <OrthographicCamera makeDefault position={[10, 10, 10]} zoom={35} />
+                <OrthographicCamera makeDefault position={[10, 10, 10]} zoom={24} />
                 <OrbitControls
                     enableZoom={false}
                     enablePan={false}
