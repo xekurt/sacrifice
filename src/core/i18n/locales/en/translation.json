@@ -52,6 +52,7 @@
         "deny": "Deny",
         "global_legitimacy": "Global Legitimacy",
         "goal_progress": "Goal Progress",
+        "map": "Tactical Map",
         "report": {
             "open_borders": "Open borders have slightly eroded traditional Piety.",
             "martial_law": "Martial law is choking the local Bazaar.",

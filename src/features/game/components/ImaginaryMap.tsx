@@ -1,6 +1,7 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useState } from 'react';
 import * as THREE from 'three';
 import { Canvas } from '@react-three/fiber';
+import { useTranslation } from 'react-i18next';
 import {
     OrthographicCamera,
     OrbitControls,
@@ -64,6 +65,9 @@ const ExtrudedRegion = ({
 };
 
 const ImaginaryMap: React.FC<ImaginaryMapProps> = ({ className, gameState }) => {
+    const { t } = useTranslation();
+    const [isHovered, setIsHovered] = useState(false);
+
     if (!gameState) return null;
 
     const shapes = useMemo(() => {
@@ -176,7 +180,11 @@ const ImaginaryMap: React.FC<ImaginaryMapProps> = ({ className, gameState }) => 
     const fogColor = isIsolated ? '#450a0a' : '#09090b';
 
     return (
-        <div className={`w-full aspect-[4/3] relative rounded-sm overflow-hidden border border-zinc-800 bg-black shadow-2xl ${className || ''}`}>
+        <div
+            className={`w-full aspect-[4/3] relative rounded-sm overflow-hidden border border-zinc-800 bg-black shadow-2xl ${className || ''}`}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+        >
             <Canvas shadows gl={{ antialias: true }}>
                 <color attach="background" args={['#09090b']} />
                 <OrthographicCamera makeDefault position={[10, 10, 10]} zoom={24} />
@@ -225,7 +233,7 @@ const ImaginaryMap: React.FC<ImaginaryMapProps> = ({ className, gameState }) => 
             <div className="absolute top-4 left-4 flex flex-col gap-1 pointer-events-none z-10">
                 <div className="flex items-center gap-2">
                     <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                    <span className="text-[10px] font-black uppercase tracking-[0.3em] text-zinc-500">Live_Topography_v5.2</span>
+                    <span className="text-[10px] font-black uppercase tracking-[0.3em] text-zinc-500">{t('desk.map')}</span>
                 </div>
                 <div className="h-[1px] w-24 bg-zinc-800 my-1" />
                 <span className={`text-[9px] font-bold uppercase tracking-[0.2em] ${isIsolated ? 'text-red-500' : 'text-zinc-600'}`}>
@@ -236,6 +244,41 @@ const ImaginaryMap: React.FC<ImaginaryMapProps> = ({ className, gameState }) => 
                         Emergency_Fog_Active
                     </div>
                 )}
+            </div>
+
+            {/* Hover Stats Panel */}
+            <div className={`absolute bottom-6 left-6 right-6 bg-black/80 backdrop-blur-xl border border-white/10 p-6 transition-all duration-700 transform ${isHovered ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8 pointer-events-none'}`}>
+                <div className="grid grid-cols-4 gap-6">
+                    {[
+                        { label: 'sepah', val: gameState.sepah, color: 'text-orange-500' },
+                        { label: 'bazaar', val: gameState.bazaar, color: 'text-yellow-500' },
+                        { label: 'piety', val: gameState.piety, color: 'text-violet-500' },
+                        { label: 'isolation', val: gameState.isolation, color: 'text-blue-500' }
+                    ].map(stat => (
+                        <div key={stat.label} className="flex flex-col gap-2">
+                            <span className="text-[10px] uppercase font-black tracking-widest text-zinc-500">{t(`metrics.${stat.label}`)}</span>
+                            <div className="flex items-end gap-3">
+                                <span className={`text-2xl font-mono font-bold leading-none ${stat.color}`}>{stat.val}%</span>
+                                <div className="flex-grow h-[1px] bg-white/10 mb-1" />
+                            </div>
+                        </div>
+                    ))}
+                </div>
+                <div className="mt-6 flex items-center justify-between border-t border-white/5 pt-4">
+                    <div className="flex gap-8">
+                        <div className="flex flex-col">
+                            <span className="text-[10px] uppercase font-black tracking-widest text-zinc-500">{t('desk.global_legitimacy')}</span>
+                            <span className="text-sm font-mono text-emerald-500">{gameState.legitimacy}%</span>
+                        </div>
+                        <div className="flex flex-col">
+                            <span className="text-[10px] uppercase font-black tracking-widest text-zinc-500">{t('game.year')}</span>
+                            <span className="text-sm font-mono text-zinc-300">{gameState.currentYear}</span>
+                        </div>
+                    </div>
+                    <div className="text-[10px] font-mono text-zinc-600 uppercase tracking-widest animate-pulse">
+                        Scanning_Territory_Integrity...
+                    </div>
+                </div>
             </div>
 
             <div className="absolute bottom-4 right-4 text-right pointer-events-none opacity-30">

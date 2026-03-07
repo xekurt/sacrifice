@@ -153,42 +153,42 @@ const GameDesk: React.FC<GameDeskProps> = ({ onExit, difficulty }) => {
                         </div>
                     </div>
 
-                    <div className="hidden xl:flex items-center gap-8 border-x border-white/5 px-12 h-full">
+                    <div className="hidden xl:flex items-center gap-12 border-x border-white/5 px-12 h-full">
                         <div className="flex flex-col items-center">
-                            <span className="text-[7px] uppercase font-black tracking-widest text-zinc-500 mb-0.5">{t('metrics.sepah')}</span>
-                            <span className={`text-xs font-mono font-bold ${state.sepah < 20 || state.sepah > 80 ? 'text-red-500 animate-pulse' : 'text-zinc-300'}`}>{state.sepah}%</span>
+                            <span className="text-[10px] uppercase font-black tracking-widest text-zinc-500 mb-0.5">{t('metrics.sepah')}</span>
+                            <span className={`text-sm font-mono font-bold ${state.sepah < 20 || state.sepah > 80 ? 'text-red-500 animate-pulse' : 'text-zinc-300'}`}>{state.sepah}%</span>
                         </div>
                         <div className="w-[1px] h-4 bg-white/5" />
                         <div className="flex flex-col items-center">
-                            <span className="text-[7px] uppercase font-black tracking-widest text-zinc-500 mb-0.5">{t('metrics.bazaar')}</span>
-                            <span className={`text-xs font-mono font-bold ${state.bazaar < 20 || state.bazaar > 80 ? 'text-red-500 animate-pulse' : 'text-zinc-300'}`}>{state.bazaar}%</span>
+                            <span className="text-[10px] uppercase font-black tracking-widest text-zinc-500 mb-0.5">{t('metrics.bazaar')}</span>
+                            <span className={`text-sm font-mono font-bold ${state.bazaar < 20 || state.bazaar > 80 ? 'text-red-500 animate-pulse' : 'text-zinc-300'}`}>{state.bazaar}%</span>
                         </div>
                         <div className="w-[1px] h-4 bg-white/5" />
                         <div className="flex flex-col items-center">
-                            <span className="text-[7px] uppercase font-black tracking-widest text-zinc-500 mb-0.5">{t('metrics.isolation')}</span>
-                            <span className={`text-xs font-mono font-bold ${state.isolation < 20 || state.isolation > 80 ? 'text-red-500 animate-pulse' : 'text-zinc-300'}`}>{state.isolation}%</span>
+                            <span className="text-[10px] uppercase font-black tracking-widest text-zinc-500 mb-0.5">{t('metrics.isolation')}</span>
+                            <span className={`text-sm font-mono font-bold ${state.isolation < 20 || state.isolation > 80 ? 'text-red-500 animate-pulse' : 'text-zinc-300'}`}>{state.isolation}%</span>
                         </div>
                         <div className="w-[1px] h-4 bg-white/5" />
                         <div className="flex flex-col items-center">
-                            <span className="text-[7px] uppercase font-black tracking-widest text-zinc-500 mb-0.5">{t('metrics.piety')}</span>
-                            <span className={`text-xs font-mono font-bold ${state.piety < 20 || state.piety > 80 ? 'text-red-500 animate-pulse' : 'text-zinc-300'}`}>{state.piety}%</span>
+                            <span className="text-[10px] uppercase font-black tracking-widest text-zinc-500 mb-0.5">{t('metrics.piety')}</span>
+                            <span className={`text-sm font-mono font-bold ${state.piety < 20 || state.piety > 80 ? 'text-red-500 animate-pulse' : 'text-zinc-300'}`}>{state.piety}%</span>
                         </div>
                     </div>
 
-                    <div className="flex items-center gap-8">
-                        <div className="metrics-group flex gap-8">
+                    <div className="flex items-center gap-12">
+                        <div className="metrics-group flex gap-12">
                             <div className="flex flex-col items-end">
-                                <span className="text-[8px] uppercase font-black tracking-widest text-zinc-600">{t('desk.global_legitimacy')}</span>
-                                <div className="h-1 w-24 bg-zinc-900 mt-1">
+                                <span className="text-[10px] uppercase font-black tracking-widest text-zinc-600">{t('desk.global_legitimacy')}</span>
+                                <div className="h-1 w-32 bg-zinc-900 mt-1">
                                     <div className="h-full bg-emerald-500 transition-all duration-1000" style={{ width: `${state.legitimacy}%` }} />
                                 </div>
                             </div>
                             <div className="flex flex-col items-end">
-                                <span className="text-[8px] uppercase font-black tracking-widest text-zinc-600">{t('desk.goal_progress')}</span>
-                                <span className="text-[10px] font-mono text-zinc-400">{state.currentYear}/{state.targetYears}</span>
+                                <span className="text-[10px] uppercase font-black tracking-widest text-zinc-600">{t('desk.goal_progress')}</span>
+                                <span className="text-xs font-mono text-zinc-400">{state.currentYear}/{state.targetYears}</span>
                             </div>
                         </div>
-                        <div className="text-[9px] uppercase tracking-[0.4em] font-black px-4 py-1.5 border border-zinc-800 text-zinc-500">
+                        <div className="text-[10px] uppercase tracking-[0.4em] font-black px-6 py-2 border border-zinc-800 text-zinc-500">
                             {state.difficulty}
                         </div>
                     </div>
@@ -250,15 +250,18 @@ const GameDesk: React.FC<GameDeskProps> = ({ onExit, difficulty }) => {
                             </div>
 
                             {/* Perspective Nav (Relocated to Top Right) */}
-                            <div className="absolute top-4 right-4 flex flex-col gap-2 z-30">
+                            <div className="absolute top-4 right-4 flex flex-col gap-3 z-30 items-end">
                                 {(['sepah', 'bazaar', 'isolation'] as const).map(faction => (
                                     <button
                                         key={faction}
                                         onClick={() => setActivePerspective(faction)}
-                                        className={`group relative transition-all duration-500 ${activePerspective === faction ? 'scale-110' : 'opacity-30 hover:opacity-100'}`}
+                                        className={`group flex items-center gap-3 perspective-nav-item transition-all duration-500 ${activePerspective === faction ? 'scale-110' : 'opacity-60 hover:opacity-100'}`}
                                     >
-                                        <div className={`w-12 h-12 border transition-all duration-300 ${activePerspective === faction ? 'border-amber-500 shadow-[0_0_20px_rgba(245,158,11,0.4)]' : 'border-zinc-800 hover:border-zinc-600'}`}>
-                                            <img src={`character/${faction}.jpg`} alt={faction} className="w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0" />
+                                        <span className={`text-[10px] font-black uppercase tracking-[0.2em] transition-all duration-300 ${activePerspective === faction ? 'text-amber-500' : 'text-zinc-500 opacity-0 group-hover:opacity-100'}`}>
+                                            {t(`metrics.${faction}`)}
+                                        </span>
+                                        <div className={`w-12 h-12 border transition-all duration-300 ${activePerspective === faction ? 'border-amber-500 shadow-[0_0_20px_rgba(245,158,11,0.4)]' : 'border-white-800 hover:border-zinc-600'}`}>
+                                            <img src={`character/${faction}.jpg`} alt={faction} className="w-full h-full object-cover object-top grayscale brightness-75 group-hover:grayscale-0" />
                                         </div>
                                     </button>
                                 ))}
@@ -355,7 +358,7 @@ const GameDesk: React.FC<GameDeskProps> = ({ onExit, difficulty }) => {
                                     <div key={index} className="flex gap-4 items-start group">
                                         <span className="text-emerald-500 font-mono text-xs opacity-50">[0{index + 1}]</span>
                                         <p className="text-sm text-zinc-300 leading-relaxed font-medium group-hover:text-emerald-400 transition-colors">
-                                            {msg}
+                                            {t(msg)}
                                         </p>
                                     </div>
                                 ))}
