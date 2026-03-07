@@ -95,7 +95,7 @@ const GameDesk: React.FC<GameDeskProps> = ({ onExit, difficulty }) => {
             return (
                 <div className="flex items-center justify-center h-12">
                     <p className="text-[10px] uppercase font-bold tracking-[0.4em] text-zinc-600/60 animate-pulse">
-                        {transitionState !== 'idle' ? "Processing Node..." : "Awaiting Operational Choice"}
+                        {transitionState !== 'idle' ? t('desk.processing') : t('desk.awaiting_choice')}
                     </p>
                 </div>
             );
@@ -122,11 +122,11 @@ const GameDesk: React.FC<GameDeskProps> = ({ onExit, difficulty }) => {
                         ))
                     ) : (
                         <p className="text-[10px] uppercase font-bold text-zinc-600 tracking-widest italic py-2">
-                            No significant systemic impacts detected
+                            {t('desk.no_impact')}
                         </p>
                     )}
                 </div>
-                <div className="text-[8px] font-bold uppercase tracking-[0.5em] text-amber-500/50">Advisor Predictive Data // Filter: {activePerspective}</div>
+                <div className="text-[8px] font-bold uppercase tracking-[0.5em] text-amber-500/50">{t('desk.predictive_data')} // {t('desk.filter')}: {activePerspective}</div>
             </div>
         );
     };
@@ -162,22 +162,22 @@ const GameDesk: React.FC<GameDeskProps> = ({ onExit, difficulty }) => {
 
                     <div className="hidden xl:flex items-center gap-8 border-x border-white/5 px-12 h-full">
                         <div className="flex flex-col items-center">
-                            <span className="text-[7px] uppercase font-black tracking-widest text-zinc-500 mb-0.5">Sepah</span>
+                            <span className="text-[7px] uppercase font-black tracking-widest text-zinc-500 mb-0.5">{t('metrics.sepah')}</span>
                             <span className={`text-xs font-mono font-bold ${state.sepah < 20 || state.sepah > 80 ? 'text-red-500 animate-pulse' : 'text-zinc-300'}`}>{state.sepah}%</span>
                         </div>
                         <div className="w-[1px] h-4 bg-white/5" />
                         <div className="flex flex-col items-center">
-                            <span className="text-[7px] uppercase font-black tracking-widest text-zinc-500 mb-0.5">Bazaar</span>
+                            <span className="text-[7px] uppercase font-black tracking-widest text-zinc-500 mb-0.5">{t('metrics.bazaar')}</span>
                             <span className={`text-xs font-mono font-bold ${state.bazaar < 20 || state.bazaar > 80 ? 'text-red-500 animate-pulse' : 'text-zinc-300'}`}>{state.bazaar}%</span>
                         </div>
                         <div className="w-[1px] h-4 bg-white/5" />
                         <div className="flex flex-col items-center">
-                            <span className="text-[7px] uppercase font-black tracking-widest text-zinc-500 mb-0.5">Isolation</span>
+                            <span className="text-[7px] uppercase font-black tracking-widest text-zinc-500 mb-0.5">{t('metrics.isolation')}</span>
                             <span className={`text-xs font-mono font-bold ${state.isolation < 20 || state.isolation > 80 ? 'text-red-500 animate-pulse' : 'text-zinc-300'}`}>{state.isolation}%</span>
                         </div>
                         <div className="w-[1px] h-4 bg-white/5" />
                         <div className="flex flex-col items-center">
-                            <span className="text-[7px] uppercase font-black tracking-widest text-zinc-500 mb-0.5">Piety</span>
+                            <span className="text-[7px] uppercase font-black tracking-widest text-zinc-500 mb-0.5">{t('metrics.piety')}</span>
                             <span className={`text-xs font-mono font-bold ${state.piety < 20 || state.piety > 80 ? 'text-red-500 animate-pulse' : 'text-zinc-300'}`}>{state.piety}%</span>
                         </div>
                     </div>
@@ -185,13 +185,13 @@ const GameDesk: React.FC<GameDeskProps> = ({ onExit, difficulty }) => {
                     <div className="flex items-center gap-8">
                         <div className="metrics-group flex gap-8">
                             <div className="flex flex-col items-end">
-                                <span className="text-[8px] uppercase font-black tracking-widest text-zinc-600">Global Legitimacy</span>
+                                <span className="text-[8px] uppercase font-black tracking-widest text-zinc-600">{t('desk.global_legitimacy')}</span>
                                 <div className="h-1 w-24 bg-zinc-900 mt-1">
                                     <div className="h-full bg-emerald-500 transition-all duration-1000" style={{ width: `${state.legitimacy}%` }} />
                                 </div>
                             </div>
                             <div className="flex flex-col items-end">
-                                <span className="text-[8px] uppercase font-black tracking-widest text-zinc-600">Goal Progress</span>
+                                <span className="text-[8px] uppercase font-black tracking-widest text-zinc-600">{t('desk.goal_progress')}</span>
                                 <span className="text-[10px] font-mono text-zinc-400">{state.currentYear}/{state.targetYears}</span>
                             </div>
                         </div>
@@ -216,7 +216,7 @@ const GameDesk: React.FC<GameDeskProps> = ({ onExit, difficulty }) => {
                         {/* Map Overlay HUD */}
                         <div className="absolute top-12 left-12 border-l border-t border-white/20 w-16 h-16 pointer-events-none" />
                         <div className="absolute bottom-12 right-12 border-r border-b border-white/20 w-16 h-16 pointer-events-none" />
-                        <div className="absolute top-1/2 -left-4 -translate-y-1/2 font-mono text-[8px] text-zinc-700 tracking-[0.5em] rotate-90 uppercase">Satellite Feed // Active</div>
+                        <div className="absolute top-1/2 -left-4 -translate-y-1/2 font-mono text-[8px] text-zinc-700 tracking-[0.5em] rotate-90 uppercase">SATELLITE_FEED // ACTIVE</div>
                     </div>
 
                     {/* RIGHT PANE: COMMAND DASHBOARD */}
@@ -226,7 +226,7 @@ const GameDesk: React.FC<GameDeskProps> = ({ onExit, difficulty }) => {
                         <div className="p-10 lg:p-14 pb-4">
                             <div className="flex items-center justify-between mb-8">
                                 <h2 className="text-[10px] font-black uppercase tracking-[0.6em] text-zinc-600" style={{ color: ministryColor }}>
-                                    {t(ministryName)} // MISSION BRIEF
+                                    {t(ministryName)} // {t('desk.mission_brief', { defaultValue: 'MISSION BRIEF' })}
                                 </h2>
                                 <div className="h-[2px] w-12 bg-zinc-800" />
                             </div>
@@ -304,9 +304,9 @@ const GameDesk: React.FC<GameDeskProps> = ({ onExit, difficulty }) => {
                             >
                                 <div className="flex flex-col items-center">
                                     <span className="text-emerald-500 font-black text-2xl uppercase tracking-[0.2em] group-hover:scale-110 transition-transform duration-300">
-                                        {t(`${cardBaseKey}.yesText`) || 'Approve'}
+                                        {t(`${cardBaseKey}.yesText`, { defaultValue: t('desk.approve') })}
                                     </span>
-                                    <span className="text-[10px] text-zinc-500 mt-2 font-mono tracking-[0.5em]">AUTHORIZE_EXECUTION</span>
+                                    <span className="text-[10px] text-zinc-500 mt-2 font-mono tracking-[0.5em]">{t('desk.authorize')}</span>
                                 </div>
                             </GameButton>
                             <GameButton
@@ -318,9 +318,9 @@ const GameDesk: React.FC<GameDeskProps> = ({ onExit, difficulty }) => {
                             >
                                 <div className="flex flex-col items-center">
                                     <span className="text-red-500 font-black text-2xl uppercase tracking-[0.2em] group-hover:scale-110 transition-transform duration-300">
-                                        {t(`${cardBaseKey}.noText`) || 'Deny'}
+                                        {t(`${cardBaseKey}.noText`, { defaultValue: t('desk.deny') })}
                                     </span>
-                                    <span className="text-[10px] text-zinc-500 mt-2 font-mono tracking-[0.5em]">REJECT_PROPOSAL</span>
+                                    <span className="text-[10px] text-zinc-500 mt-2 font-mono tracking-[0.5em]">{t('desk.reject')}</span>
                                 </div>
                             </GameButton>
                         </div>
@@ -329,8 +329,8 @@ const GameDesk: React.FC<GameDeskProps> = ({ onExit, difficulty }) => {
 
                 {/* Status Bar / Metrics (Alternative Mobile View or Additional Detail) */}
                 <footer className="h-4 bg-zinc-950 border-t border-white/5 px-8 flex items-center justify-between text-[6px] text-zinc-700 font-mono uppercase tracking-[0.4em]">
-                    <div>System Status: Nominal // High Priority Decision Required</div>
-                    <div>User ID: LEADER_01 // Encryption: AES-256</div>
+                    <div>{t('desk.system_status')} // {t('desk.priority_decision')}</div>
+                    <div>{t('desk.user_id')}: LEADER_01 // {t('desk.encryption')}: AES-256</div>
                 </footer>
             </div>
 
@@ -352,9 +352,9 @@ const GameDesk: React.FC<GameDeskProps> = ({ onExit, difficulty }) => {
 
                         <div className="relative z-10">
                             <header className="mb-6 border-b border-zinc-800 pb-4">
-                                <h3 className="text-[10px] font-black uppercase tracking-[0.5em] text-emerald-500 mb-1">Intelligence Division</h3>
-                                <h2 className="text-xl font-bold text-zinc-100 uppercase tracking-tighter">Annual Systemic Briefing</h2>
-                                <p className="text-[9px] text-zinc-500 uppercase tracking-widest mt-1">Year {state.currentYear - 1} Conclusion</p>
+                                <h3 className="text-[10px] font-black uppercase tracking-[0.5em] text-emerald-500 mb-1">{t('desk.intel_division')}</h3>
+                                <h2 className="text-xl font-bold text-zinc-100 uppercase tracking-tighter">{t('desk.annual_briefing')}</h2>
+                                <p className="text-[9px] text-zinc-500 uppercase tracking-widest mt-1">{t('desk.year_conclusion', { year: state.currentYear - 1 })}</p>
                             </header>
 
                             <div className="space-y-4 mb-8">
@@ -372,13 +372,13 @@ const GameDesk: React.FC<GameDeskProps> = ({ onExit, difficulty }) => {
                                 onClick={clearYearEndReport}
                                 className="w-full py-4 bg-emerald-950/20 border border-emerald-500/30 text-emerald-500 hover:bg-emerald-500 hover:text-black transition-all duration-300 uppercase text-xs font-black tracking-[0.3em]"
                             >
-                                Acknowledge Briefing
+                                {t('desk.acknowledge')}
                             </GameButton>
                         </div>
 
                         {/* Background Watermark */}
                         <div className="absolute -bottom-4 -right-4 text-[60px] font-black text-emerald-500/5 select-none pointer-events-none uppercase tracking-tighter">
-                            SECURE
+                            {t('desk.secure')}
                         </div>
                     </div>
                 </div>
