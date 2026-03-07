@@ -51,7 +51,7 @@ const ExtrudedRegion = ({
                 metalness={0.7}
                 roughness={0.3}
                 emissive={color}
-                emissiveIntensity={0.05}
+                emissiveIntensity={0.2}
             />
             <Edges
                 threshold={15}
@@ -179,19 +179,19 @@ const ImaginaryMap: React.FC<ImaginaryMapProps> = ({ className, gameState }) => 
         <div className={`w-full aspect-[4/3] relative rounded-sm overflow-hidden border border-zinc-800 bg-black shadow-2xl ${className || ''}`}>
             <Canvas shadows gl={{ antialias: true }}>
                 <color attach="background" args={['#09090b']} />
-                <OrthographicCamera makeDefault position={[10, 10, 10]} zoom={45} />
+                <OrthographicCamera makeDefault position={[10, 10, 10]} zoom={35} />
                 <OrbitControls
                     enableZoom={false}
                     enablePan={false}
                     maxPolarAngle={Math.PI / 2.2}
                 />
 
-                <fog attach="fog" args={[fogColor, 15, 35]} />
-                <ambientLight intensity={0.2} />
+                <fog attach="fog" args={[fogColor, 20, 45]} />
+                <ambientLight intensity={0.8} />
                 <spotLight
                     position={[0, 10, 0]}
-                    intensity={200}
-                    distance={40}
+                    intensity={800}
+                    distance={50}
                     angle={0.6}
                     penumbra={0.5}
                     castShadow
@@ -199,7 +199,7 @@ const ImaginaryMap: React.FC<ImaginaryMapProps> = ({ className, gameState }) => 
                 />
 
                 <Float speed={1.5} rotationIntensity={0.05} floatIntensity={0.4}>
-                    <group>
+                    <group scale={[3.2, 2, 2]}>
                         {/* The Capital (Highter extrusion) */}
                         <ExtrudedRegion
                             shape={shapes.capital}
