@@ -51,7 +51,10 @@
             "open_borders": "أدت الحدود المفتوحة إلى تآكل التقوى التقليدية قليلاً.",
             "martial_law": "الأحكام العرفية تخنق البازار المحلي.",
             "secularism": "العلمانية تجبر سپاه على ممارسة المزيد من السيطرة.",
-            "legitimacy_spent": "تم صرف الشرعية السياسية لاستقرار الأمة."
+            "legitimacy_spent": "تم صرف الشرعية السياسية لاستقرار الأمة.",
+            "title": "Annual Intelligence Briefing",
+            "classified": "Classified // Level 4 Clearance",
+            "acknowledge": "Acknowledge Intelligence"
         }
     },
     "end_game": {
@@ -70,7 +73,17 @@
         "final_approval": "الموافقة النهائية",
         "restart_button": "توقيع مرسوم جديد",
         "exit_button": "العودة إلى القيادة المركزية",
-        "default_loss": "وصل النظام إلى حالة نهائية."
+        "default_loss": "وصل النظام إلى حالة نهائية.",
+        "final_population": "Final Population",
+        "human_cost": "Internal Census: The Human Cost",
+        "cause_emigrated": "Emigrated refugees",
+        "cause_starvation": "Famine & starvation",
+        "cause_military": "State-sanctioned force",
+        "cause_civil": "Civil unrest victims",
+        "cause_disease": "Preventable disease",
+        "cause_brain_drain": "Brain drain (Exodus)",
+        "cause_executions": "Political executions",
+        "cause_sectarian": "Sectarian casualties"
     },
     "settings": {
         "title": "الإعدادات",

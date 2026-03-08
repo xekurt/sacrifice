@@ -54,6 +54,9 @@
         "goal_progress": "Goal Progress",
         "map": "Tactical Map",
         "report": {
+            "title": "Annual Intelligence Briefing",
+            "classified": "Classified // Level 4 Clearance",
+            "acknowledge": "Acknowledge Intelligence",
             "open_borders": "Open borders have slightly eroded traditional Piety.",
             "martial_law": "Martial law is choking the local Bazaar.",
             "secularism": "Secularism forces the Sepah to exert more control.",
@@ -76,7 +79,17 @@
         "final_approval": "Final Approval",
         "restart_button": "Sign New Decree",
         "exit_button": "Return to Central Command",
-        "default_loss": "The system has reached a terminal state."
+        "default_loss": "The system has reached a terminal state.",
+        "final_population": "Final Population",
+        "human_cost": "Internal Census: The Human Cost",
+        "cause_emigrated": "Emigrated refugees",
+        "cause_starvation": "Famine & starvation",
+        "cause_military": "State-sanctioned force",
+        "cause_civil": "Civil unrest victims",
+        "cause_disease": "Preventable disease",
+        "cause_brain_drain": "Brain drain (Exodus)",
+        "cause_executions": "Political executions",
+        "cause_sectarian": "Sectarian casualties"
     },
     "settings": {
         "title": "Settings",

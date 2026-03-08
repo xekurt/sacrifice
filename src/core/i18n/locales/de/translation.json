@@ -51,7 +51,10 @@
             "open_borders": "Offene Grenzen haben die traditionelle Frömmigkeit leicht erodiert.",
             "martial_law": "Das Kriegsrecht erstickt den lokalen Basar.",
             "secularism": "Säkularismus zwingt die Garde zu mehr Kontrolle.",
-            "legitimacy_spent": "Politische Legitimität wurde eingesetzt, um die Nation zu stabilisieren."
+            "legitimacy_spent": "Politische Legitimität wurde eingesetzt, um die Nation zu stabilisieren.",
+            "title": "Annual Intelligence Briefing",
+            "classified": "Classified // Level 4 Clearance",
+            "acknowledge": "Acknowledge Intelligence"
         }
     },
     "end_game": {
@@ -70,7 +73,17 @@
         "final_approval": "Endgültige Zustimmung",
         "restart_button": "Neues Dekret unterzeichnen",
         "exit_button": "Zurück zum Kommandozentrum",
-        "default_loss": "Das System hat einen terminalen Zustand erreicht."
+        "default_loss": "Das System hat einen terminalen Zustand erreicht.",
+        "final_population": "Final Population",
+        "human_cost": "Internal Census: The Human Cost",
+        "cause_emigrated": "Emigrated refugees",
+        "cause_starvation": "Famine & starvation",
+        "cause_military": "State-sanctioned force",
+        "cause_civil": "Civil unrest victims",
+        "cause_disease": "Preventable disease",
+        "cause_brain_drain": "Brain drain (Exodus)",
+        "cause_executions": "Political executions",
+        "cause_sectarian": "Sectarian casualties"
     },
     "settings": {
         "title": "Einstellungen",

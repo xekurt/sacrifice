@@ -51,7 +51,10 @@
             "open_borders": "L'apertura delle frontiere ha leggermente eroso la pietà tradizionale.",
             "martial_law": "La legge marziale sta soffocando il bazar locale.",
             "secularism": "Il secolarismo costringe il Sepah a esercitare più controllo.",
-            "legitimacy_spent": "La legittimità politica è stata spesa per stabilizzare la nazione."
+            "legitimacy_spent": "La legittimità politica è stata spesa per stabilizzare la nazione.",
+            "title": "Annual Intelligence Briefing",
+            "classified": "Classified // Level 4 Clearance",
+            "acknowledge": "Acknowledge Intelligence"
         }
     },
     "end_game": {
@@ -70,7 +73,17 @@
         "final_approval": "Approvazione finale",
         "restart_button": "Firma nuovo decreto",
         "exit_button": "Torna al comando centrale",
-        "default_loss": "Il sistema ha raggiunto uno stato terminale."
+        "default_loss": "Il sistema ha raggiunto uno stato terminale.",
+        "final_population": "Final Population",
+        "human_cost": "Internal Census: The Human Cost",
+        "cause_emigrated": "Emigrated refugees",
+        "cause_starvation": "Famine & starvation",
+        "cause_military": "State-sanctioned force",
+        "cause_civil": "Civil unrest victims",
+        "cause_disease": "Preventable disease",
+        "cause_brain_drain": "Brain drain (Exodus)",
+        "cause_executions": "Political executions",
+        "cause_sectarian": "Sectarian casualties"
     },
     "settings": {
         "title": "Impostazioni",

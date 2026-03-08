@@ -332,7 +332,7 @@ const GameDesk: React.FC<GameDeskProps> = ({ onExit, difficulty }) => {
             </div>
 
             {/* End Game Overlay */}
-            {isGameOver && (
+            {state.gameStateStatus !== 'playing' && (
                 <EndGameScreen
                     gameState={state}
                     onRestart={restartGame}
@@ -342,39 +342,41 @@ const GameDesk: React.FC<GameDeskProps> = ({ onExit, difficulty }) => {
 
             {/* Annual Intelligence Briefing Modal */}
             {state.yearEndReport.length > 0 && !isGameOver && (
-                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md p-4 animate-in fade-in duration-500">
-                    <div className="w-full max-w-lg border border-zinc-800 bg-zinc-950 p-8 shadow-2xl relative overflow-hidden">
-                        {/* Decorative Scanner Line */}
-                        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-emerald-500/5 to-transparent h-20 w-full animate-scanline pointer-events-none" />
+                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm p-4 animate-in fade-in duration-500">
+                    <div className="w-full max-w-lg bg-[#f4f1ea] p-10 shadow-[0_30px_60px_-12px_rgba(0,0,0,0.5)] border-b-4 border-zinc-300 relative overflow-hidden">
 
-                        <div className="relative z-10">
-                            <header className="mb-6 border-b border-zinc-800 pb-4">
-                                <h3 className="text-[10px] font-black uppercase tracking-[0.5em] text-emerald-500 mb-1">{t('desk.intel_division')}</h3>
-                                <h2 className="text-xl font-bold text-zinc-100 uppercase tracking-tighter">{t('desk.annual_briefing')}</h2>
-                                <p className="text-[9px] text-zinc-500 uppercase tracking-widest mt-1">{t('desk.year_conclusion', { year: state.currentYear - 1 })}</p>
-                            </header>
+                        <div className="relative z-10 text-zinc-900">
+                            <div className="flex justify-between items-center mb-10 border-b-2 border-zinc-900 pb-4">
+                                <div className="flex flex-col">
+                                    <h2 className="text-xs uppercase font-black tracking-[0.4em] text-zinc-500 mb-1">{t('desk.report.title')}</h2>
+                                    <span className="text-[10px] font-mono text-zinc-400 uppercase">{t('desk.report.classified')}</span>
+                                </div>
+                                <div className="text-[10px] font-mono text-zinc-500 text-right">
+                                    <div>{t('desk.id')}: {state.turnCount}</div>
+                                    <div>{t('desk.date')}: {t('game.year')} {state.currentYear}</div>
+                                </div>
+                            </div>
 
-                            <div className="space-y-4 mb-8">
-                                {state.yearEndReport.map((msg, index) => (
-                                    <div key={index} className="flex gap-4 items-start group">
-                                        <span className="text-emerald-500 font-mono text-xs opacity-50">[0{index + 1}]</span>
-                                        <p className="text-sm text-zinc-300 leading-relaxed font-medium group-hover:text-emerald-400 transition-colors">
-                                            {t(msg)}
+                            <div className="space-y-6 mb-10">
+                                {state.yearEndReport.map((msg, i) => (
+                                    <div key={i} className="flex gap-4 items-start border-l-4 border-zinc-300 pl-6 py-2">
+                                        <p className="font-serif text-lg leading-relaxed text-zinc-800 italic">
+                                            "{t(msg)}"
                                         </p>
                                     </div>
                                 ))}
                             </div>
 
                             <GameButton
+                                className="w-full py-4 bg-zinc-900 text-zinc-100 font-black uppercase tracking-[0.3em] hover:bg-emerald-700 transition-colors text-[10px]"
                                 onClick={clearYearEndReport}
-                                className="w-full py-4 bg-emerald-950/20 border border-emerald-500/30 text-emerald-500 hover:bg-emerald-500 hover:text-black transition-all duration-300 uppercase text-xs font-black tracking-[0.3em]"
                             >
-                                {t('desk.acknowledge')}
+                                {t('desk.report.acknowledge')}
                             </GameButton>
                         </div>
 
                         {/* Background Watermark */}
-                        <div className="absolute -bottom-4 -right-4 text-[60px] font-black text-emerald-500/5 select-none pointer-events-none uppercase tracking-tighter">
+                        <div className="absolute -bottom-4 -right-4 text-[60px] font-black text-zinc-900/5 select-none pointer-events-none uppercase tracking-tighter">
                             {t('desk.secure')}
                         </div>
                     </div>
