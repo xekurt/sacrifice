@@ -141,7 +141,8 @@
             "advisorQuotes": {
                 "sepah": "My soldiers are ready to enforce your will, but deployment costs are rising.",
                 "bazaar": "The merchants are already struggling with tariffs. This decree will break them.",
-                "isolation": "National tradition is our shield. We must remain pure, even if it hurts the markets."
+                "isolation": "National tradition is our shield. We must remain pure, even if it hurts the markets.",
+                "piety": "This decree is the will of the heavens. To hesitate is to doubt our very soul."
             }
         },
         "p2": {
@@ -149,7 +150,8 @@
             "advisorQuotes": {
                 "sepah": "We've identified the threats. Give the order, and we ensure total stability.",
                 "bazaar": "Foreign investors are already nervous. A purge will send them running.",
-                "isolation": "The world's opinion is irrelevant. We must ensure our house is in order."
+                "isolation": "The world's opinion is irrelevant. We must ensure our house is in order.",
+                "piety": "This decree is the will of the heavens. To hesitate is to doubt our very soul."
             }
         },
         "p3": {
@@ -157,7 +159,8 @@
             "advisorQuotes": {
                 "sepah": "It's a lot of stone and labor that could be used for fortifications.",
                 "bazaar": "The guild is furious. You're bleeding the markets dry for mere monuments.",
-                "isolation": "Let us build monuments to our own strength, not to global trade."
+                "isolation": "Let us build monuments to our own strength, not to global trade.",
+                "piety": "This decree is the will of the heavens. To hesitate is to doubt our very soul."
             }
         },
         "p4": {
@@ -165,7 +168,8 @@
             "advisorQuotes": {
                 "sepah": "Ignorance is easier to manage than rebellion. I support the ban.",
                 "bazaar": "Education is the foundation of a modern economy. This is a step backward.",
-                "isolation": "Protect our children's minds from foreign contamination at all costs."
+                "isolation": "Protect our children's minds from foreign contamination at all costs.",
+                "piety": "This decree is the will of the heavens. To hesitate is to doubt our very soul."
             }
         },
         "p5": {
@@ -173,7 +177,8 @@
             "advisorQuotes": {
                 "sepah": "Tracking outsiders is a nightmare. Closing the gates simplifies security.",
                 "bazaar": "The pilgrims bring foreign coin and trade. Cutting them off is economic suicide.",
-                "isolation": "Our soil is for our people. Let the foreigners pray in their own lands."
+                "isolation": "Our soil is for our people. Let the foreigners pray in their own lands.",
+                "piety": "This decree is the will of the heavens. To hesitate is to doubt our very soul."
             }
         },
         "p6": {
@@ -181,7 +186,8 @@
             "advisorQuotes": {
                 "sepah": "Military tribunals are more efficient, but I can work with the clerics.",
                 "bazaar": "This will lead to arbitrary rulings that threaten merchant contracts.",
-                "isolation": "Internal justice must be absolute and free from external influence."
+                "isolation": "Internal justice must be absolute and free from external influence.",
+                "piety": "This decree is the will of the heavens. To hesitate is to doubt our very soul."
             }
         },
         "p7": {
@@ -189,7 +195,8 @@
             "advisorQuotes": {
                 "sepah": "A full stomach keeps the riots away. Strategically sound.",
                 "bazaar": "This is theft! You are seizing private property and killing commerce.",
-                "isolation": "We must provide for our own. Self-reliance begins with a full granary."
+                "isolation": "We must provide for our own. Self-reliance begins with a full granary.",
+                "piety": "This decree is the will of the heavens. To hesitate is to doubt our very soul."
             }
         },
         "p8": {
@@ -197,7 +204,8 @@
             "advisorQuotes": {
                 "sepah": "Distracting my best men for ceremonial guard duty? Acceptable, for now.",
                 "bazaar": "When the army and clergy unite, the merchant has no voice left.",
-                "isolation": "A unified internal front is the only way to resist the encroaching world."
+                "isolation": "A unified internal front is the only way to resist the encroaching world.",
+                "piety": "This decree is the will of the heavens. To hesitate is to doubt our very soul."
             }
         },
         "p9": {
@@ -205,7 +213,8 @@
             "advisorQuotes": {
                 "sepah": "Empty streets are easy to patrol, but the idle mind is dangerous.",
                 "bazaar": "A day without trade? Across the whole nation? It's madness!",
-                "isolation": "Silence the noise of the world so the nation can refocus on its core."
+                "isolation": "Silence the noise of the world so the nation can refocus on its core.",
+                "piety": "This decree is the will of the heavens. To hesitate is to doubt our very soul."
             }
         },
         "p10": {
@@ -213,7 +222,8 @@
             "advisorQuotes": {
                 "sepah": "Men should be hard, not soft from luxury. I approve.",
                 "bazaar": "Luxury goods are our highest margin exports! This will kill the Bazaar.",
-                "isolation": "Foreign decadence has no place here. We value rugged self-sufficiency."
+                "isolation": "Foreign decadence has no place here. We value rugged self-sufficiency.",
+                "piety": "This decree is the will of the heavens. To hesitate is to doubt our very soul."
             }
         },
         "p11": {
@@ -221,7 +231,8 @@
             "advisorQuotes": {
                 "sepah": "The Morality Police are fanatical, but effective at maintaining order.",
                 "bazaar": "Bullying merchants over their 'devotion' will stop every sale.",
-                "isolation": "We must police the soul of the nation as strictly as we police the borders."
+                "isolation": "We must police the soul of the nation as strictly as we police the borders.",
+                "piety": "This decree is the will of the heavens. To hesitate is to doubt our very soul."
             }
         },
         "p12": {
@@ -229,7 +240,8 @@
             "advisorQuotes": {
                 "sepah": "If they provide soldiers, I don't care what they believe.",
                 "bazaar": "Sanctions will follow this. The world doesn't like radicals.",
-                "isolation": "Who cares what the world thinks? If they are loyal to the flag, they are ours."
+                "isolation": "Who cares what the world thinks? If they are loyal to the flag, they are ours.",
+                "piety": "This decree is the will of the heavens. To hesitate is to doubt our very soul."
             }
         },
         "p13": {
@@ -237,7 +249,8 @@
             "advisorQuotes": {
                 "sepah": "Statues don't win wars, but they do make for imposing landmarks.",
                 "bazaar": "That gold should be in circulation, not cast in bronze for 'spirituality'.",
-                "isolation": "Let the world look at our borders and see only our strength and conviction."
+                "isolation": "Let the world look at our borders and see only our strength and conviction.",
+                "piety": "This decree is the will of the heavens. To hesitate is to doubt our very soul."
             }
         },
         "p14": {
@@ -245,7 +258,8 @@
             "advisorQuotes": {
                 "sepah": "As long as military secrets stay with me, they can have the dusty old books.",
                 "bazaar": "Information is a commodity. Letting the Clerics guard it is a bottleneck.",
-                "isolation": "Control the history, control the future. Guard our secrets fiercely."
+                "isolation": "Control the history, control the future. Guard our secrets fiercely.",
+                "piety": "This decree is the will of the heavens. To hesitate is to doubt our very soul."
             }
         },
         "p15": {
@@ -253,7 +267,8 @@
             "advisorQuotes": {
                 "sepah": "New recruits and fresh gear. I won't turn down extra funding.",
                 "bazaar": "Another levy? You're treating the Bazaar like a bottomless well.",
-                "isolation": "Every coin spent internally is a coin not sent to a foreign bank."
+                "isolation": "Every coin spent internally is a coin not sent to a foreign bank.",
+                "piety": "This decree is the will of the heavens. To hesitate is to doubt our very soul."
             }
         },
         "p16": {
@@ -261,7 +276,8 @@
             "advisorQuotes": {
                 "sepah": "I prefer reliable local tech anyway. Foreign circuits can be bugged.",
                 "bazaar": "Modern maintenance is a global service. This ban will lead to blackouts.",
-                "isolation": "Our dependency on foreign machines is a weakness. Rip them out."
+                "isolation": "Our dependency on foreign machines is a weakness. Rip them out.",
+                "piety": "This decree is the will of the heavens. To hesitate is to doubt our very soul."
             }
         },
         "p17": {
@@ -269,7 +285,8 @@
             "advisorQuotes": {
                 "sepah": "Land is land. Better a shrine than a potential rebel hideout.",
                 "bazaar": "Unused? That land is reserved for future expansion! This is theft.",
-                "isolation": "National land for national purposes. The merchants should stop complaining."
+                "isolation": "National land for national purposes. The merchants should stop complaining.",
+                "piety": "This decree is the will of the heavens. To hesitate is to doubt our very soul."
             }
         },
         "p18": {
@@ -277,7 +294,8 @@
             "advisorQuotes": {
                 "sepah": "Better hymns than the rhythmic shouting of the protesters.",
                 "bazaar": "Entertainment is a massive sector. You're killing the cafes and theaters.",
-                "isolation": "Our songs are our own. The noise of global pop culture must be silenced."
+                "isolation": "Our songs are our own. The noise of global pop culture must be silenced.",
+                "piety": "This decree is the will of the heavens. To hesitate is to doubt our very soul."
             }
         },
         "s1": {
@@ -285,7 +303,8 @@
             "advisorQuotes": {
                 "sepah": "A wall is not just stone; it's the ultimate statement of our sovereignty.",
                 "bazaar": "Isolating us will only lead to stagnation and high import costs.",
-                "isolation": "Build it twice as thick. No one comes in, no one goes out."
+                "isolation": "Build it twice as thick. No one comes in, no one goes out.",
+                "piety": "Strength is necessary, but it must be guided by faith, not just steel."
             }
         },
         "s2": {
@@ -293,7 +312,8 @@
             "advisorQuotes": {
                 "sepah": "Soldiers are the true foundation of a nation, not factory workers.",
                 "bazaar": "We're losing our workforce! Productivity will plummet overnight.",
-                "isolation": "A nation in arms is a nation that cannot be bullied by foreigners."
+                "isolation": "A nation in arms is a nation that cannot be bullied by foreigners.",
+                "piety": "Strength is necessary, but it must be guided by faith, not just steel."
             }
         },
         "s3": {
@@ -301,7 +321,8 @@
             "advisorQuotes": {
                 "sepah": "The streets must be clear for our tanks. Order is paramount.",
                 "bazaar": "The night market is our lifeblood! This will bankrupt the vendors.",
-                "isolation": "Lock the doors. Domestic peace is worth a thousand lost sales."
+                "isolation": "Lock the doors. Domestic peace is worth a thousand lost sales.",
+                "piety": "Strength is necessary, but it must be guided by faith, not just steel."
             }
         },
         "s4": {
@@ -309,7 +330,8 @@
             "advisorQuotes": {
                 "sepah": "Steel and composite plating will save our boys. The cost doesn't matter.",
                 "bazaar": "Those chemicals are for fertilizers and exports! You're killing our trade.",
-                "isolation": "We must be self-reliant. If the world shuns us for our defense, so be it."
+                "isolation": "We must be self-reliant. If the world shuns us for our defense, so be it.",
+                "piety": "Strength is necessary, but it must be guided by faith, not just steel."
             }
         },
         "s5": {
@@ -317,7 +339,8 @@
             "advisorQuotes": {
                 "sepah": "Even a priest can be a spy. No one is above the state's security.",
                 "bazaar": "Religious unrest is bad for business. Stay out of the temples.",
-                "isolation": "One voice, one nation. Dissent, even from the pulpit, is a threat."
+                "isolation": "One voice, one nation. Dissent, even from the pulpit, is a threat.",
+                "piety": "Strength is necessary, but it must be guided by faith, not just steel."
             }
         },
         "s6": {
@@ -325,7 +348,8 @@
             "advisorQuotes": {
                 "sepah": "Our borders don't end at the shore. We need a fleet of iron.",
                 "bazaar": "The existing port handles all our global trade. Don't block the docks!",
-                "isolation": "The sea is just another border to be closed to the unwanted."
+                "isolation": "The sea is just another border to be closed to the unwanted.",
+                "piety": "Strength is necessary, but it must be guided by faith, not just steel."
             }
         },
         "s7": {
@@ -333,7 +357,8 @@
             "advisorQuotes": {
                 "sepah": "Precious metals are better suited for armor than for trinkets.",
                 "bazaar": "Jewelry and silver-work are our most famous exports! This is madness.",
-                "isolation": "Luxury is a distraction. Silver serves the state better as a shield."
+                "isolation": "Luxury is a distraction. Silver serves the state better as a shield.",
+                "piety": "Strength is necessary, but it must be guided by faith, not just steel."
             }
         },
         "s8": {
@@ -341,7 +366,8 @@
             "advisorQuotes": {
                 "sepah": "Mobility is the key to victory. The state needs total rail control.",
                 "bazaar": "How are we supposed to move grain and textiles? This is a bottleneck.",
-                "isolation": "Control the tracks, control the flow of the nation. Keep foreigners off."
+                "isolation": "Control the tracks, control the flow of the nation. Keep foreigners off.",
+                "piety": "Strength is necessary, but it must be guided by faith, not just steel."
             }
         },
         "s9": {
@@ -349,7 +375,8 @@
             "advisorQuotes": {
                 "sepah": "My officers need to be well-paid to resist the temptation of bribes.",
                 "bazaar": "Call it what it is: a protection racket. The merchants won't be happy.",
-                "isolation": "Internal stability has a price. Pay it, or the world will walk in."
+                "isolation": "Internal stability has a price. Pay it, or the world will walk in.",
+                "piety": "Strength is necessary, but it must be guided by faith, not just steel."
             }
         },
         "s10": {
@@ -357,7 +384,8 @@
             "advisorQuotes": {
                 "sepah": "The people must be ready for the inevitable. It's a drill for survival.",
                 "bazaar": "A month with no imports? We'll be eating bark by week three!",
-                "isolation": "Excellent. Close the gates, cut the cables. Let us see who we really are."
+                "isolation": "Excellent. Close the gates, cut the cables. Let us see who we really are.",
+                "piety": "Strength is necessary, but it must be guided by faith, not just steel."
             }
         },
         "s11": {
@@ -365,7 +393,8 @@
             "advisorQuotes": {
                 "sepah": "The law is simple: OBEY. We don't need lawyers, we need discipline.",
                 "bazaar": "Contract law is too complex for soldiers. This will create chaos.",
-                "isolation": "External values have no place in our courts. Military law is pure."
+                "isolation": "External values have no place in our courts. Military law is pure.",
+                "piety": "Strength is necessary, but it must be guided by faith, not just steel."
             }
         },
         "s12": {
@@ -373,7 +402,8 @@
             "advisorQuotes": {
                 "sepah": "A merchant ship is just a target. A warship is a deterrent.",
                 "bazaar": "You're cutting our legs off! How can we trade without a fleet?",
-                "isolation": "Our ships should carry cannons, not foreign consumer goods."
+                "isolation": "Our ships should carry cannons, not foreign consumer goods.",
+                "piety": "Strength is necessary, but it must be guided by faith, not just steel."
             }
         },
         "s13": {
@@ -381,7 +411,8 @@
             "advisorQuotes": {
                 "sepah": "If it's on the road, it's under our eyes. No more illegal traffic.",
                 "bazaar": "Checkpoints add hours to every journey. It's killing the logistics.",
-                "isolation": "Total knowledge of internal movements is the key to total sovereignty."
+                "isolation": "Total knowledge of internal movements is the key to total sovereignty.",
+                "piety": "Strength is necessary, but it must be guided by faith, not just steel."
             }
         },
         "s14": {
@@ -389,7 +420,8 @@
             "advisorQuotes": {
                 "sepah": "Space and resources are needed for the defense of all. No exceptions.",
                 "bazaar": "Taking from temples is a risky move, but efficiently managed.",
-                "isolation": "The state is the ultimate sacred entity. No institution is exempt."
+                "isolation": "The state is the ultimate sacred entity. No institution is exempt.",
+                "piety": "Strength is necessary, but it must be guided by faith, not just steel."
             }
         },
         "s15": {
@@ -397,7 +429,8 @@
             "advisorQuotes": {
                 "sepah": "If a soldier fears a lawsuit, he won't pull the trigger. Give them immunity.",
                 "bazaar": "A soldier above the law is a bandit in uniform. Bad for stability.",
-                "isolation": "The defenders of the nation must be unshackled from civilian whims."
+                "isolation": "The defenders of the nation must be unshackled from civilian whims.",
+                "piety": "Strength is necessary, but it must be guided by faith, not just steel."
             }
         },
         "s16": {
@@ -405,7 +438,8 @@
             "advisorQuotes": {
                 "sepah": "We must be prepared for the worst. Survival of the state is priority.",
                 "bazaar": "The cost is astronomical. We should be investing in port infrastructure.",
-                "isolation": "Let the world spy; they will find only a fortress hidden in the bedrock."
+                "isolation": "Let the world spy; they will find only a fortress hidden in the bedrock.",
+                "piety": "Strength is necessary, but it must be guided by faith, not just steel."
             }
         },
         "s17": {
@@ -413,7 +447,8 @@
             "advisorQuotes": {
                 "sepah": "Without fuel, the army is just a collection of heavy statues.",
                 "bazaar": "Industry needs fuel too! You're grinding the factories to a halt.",
-                "isolation": "Not a drop of our energy should be traded away to foreign competitors."
+                "isolation": "Not a drop of our energy should be traded away to foreign competitors.",
+                "piety": "Strength is necessary, but it must be guided by faith, not just steel."
             }
         },
         "s18": {
@@ -421,7 +456,8 @@
             "advisorQuotes": {
                 "sepah": "The press is a weapon. We must control the narrative of the nation.",
                 "bazaar": "Market confidence relies on transparency. Censor the news, and we fail.",
-                "isolation": "Foreign propaganda must be countered with a single, national truth."
+                "isolation": "Foreign propaganda must be countered with a single, national truth.",
+                "piety": "Strength is necessary, but it must be guided by faith, not just steel."
             }
         },
         "b1": {
@@ -429,7 +465,8 @@
             "advisorQuotes": {
                 "sepah": "Giving our ports to foreigners? You're letting the enemy in the back door.",
                 "bazaar": "Capital is the lifeblood of our future. We must modernize or die.",
-                "isolation": "Selling our ports is selling our soul. Reject the foreign vultures."
+                "isolation": "Selling our ports is selling our soul. Reject the foreign vultures.",
+                "piety": "Gold is a hollow pursuit if the spirit of the people is left in poverty."
             }
         },
         "b2": {
@@ -437,7 +474,8 @@
             "advisorQuotes": {
                 "sepah": "Luxury breeds weakness. I'd rather see that money go to the armories.",
                 "bazaar": "The people want options! Happiness and trade go hand in hand.",
-                "isolation": "Imported decadence poisons the national character. Keep it out."
+                "isolation": "Imported decadence poisons the national character. Keep it out.",
+                "piety": "Gold is a hollow pursuit if the spirit of the people is left in poverty."
             }
         },
         "b3": {
@@ -445,7 +483,8 @@
             "advisorQuotes": {
                 "sepah": "Smuggling from mines is how rebels get their gold. Keep the regulations.",
                 "bazaar": "Let the markets breathe! We're sitting on a mountain of untapped wealth.",
-                "isolation": "Our minerals are for our factories, not for foreign export markets."
+                "isolation": "Our minerals are for our factories, not for foreign export markets.",
+                "piety": "Gold is a hollow pursuit if the spirit of the people is left in poverty."
             }
         },
         "b4": {
@@ -453,7 +492,8 @@
             "advisorQuotes": {
                 "sepah": "A free-trade zone is a spy-zone. I want my men at every corner.",
                 "bazaar": "This will put us on the global map! The capital will be a beacon of wealth.",
-                "isolation": "A zone without borders is a zone without sovereignty. Reject it."
+                "isolation": "A zone without borders is a zone without sovereignty. Reject it.",
+                "piety": "Gold is a hollow pursuit if the spirit of the people is left in poverty."
             }
         },
         "b5": {
@@ -461,7 +501,8 @@
             "advisorQuotes": {
                 "sepah": "You want to take from the defense of the nation to pay for merchant mistakes?",
                 "bazaar": "The merchants are the engine of this country. If we stall, everything else falls.",
-                "isolation": "Funding internal trade is good, but raiding the armory is risky."
+                "isolation": "Funding internal trade is good, but raiding the armory is risky.",
+                "piety": "Gold is a hollow pursuit if the spirit of the people is left in poverty."
             }
         },
         "b6": {
@@ -469,7 +510,8 @@
             "advisorQuotes": {
                 "sepah": "An 'Expo' is just a cover for foreign intelligence agents. Reject it.",
                 "bazaar": "The world's eyes will be on us! The prestige alone will be worth millions.",
-                "isolation": "Inviting the world in is inviting their spying and their corruption."
+                "isolation": "Inviting the world in is inviting their spying and their corruption.",
+                "piety": "Gold is a hollow pursuit if the spirit of the people is left in poverty."
             }
         },
         "b7": {
@@ -477,7 +519,8 @@
             "advisorQuotes": {
                 "sepah": "I don't care about the days, as long as the factories produce gear.",
                 "bazaar": "Keeping shops closed for half the week is economic insanity! Open them.",
-                "isolation": "Internal customs are what define us. Efficiency is secondary."
+                "isolation": "Internal customs are what define us. Efficiency is secondary.",
+                "piety": "Gold is a hollow pursuit if the spirit of the people is left in poverty."
             }
         },
         "b8": {
@@ -485,7 +528,8 @@
             "advisorQuotes": {
                 "sepah": "Everything should be standardized. In the army and in the shop. I agree.",
                 "bazaar": "Efficient trade is honest trade. No more confusion at the docks!",
-                "isolation": "Metric or imperial, it must be OUR system, not a global one."
+                "isolation": "Metric or imperial, it must be OUR system, not a global one.",
+                "piety": "Gold is a hollow pursuit if the spirit of the people is left in poverty."
             }
         },
         "b9": {
@@ -493,7 +537,8 @@
             "advisorQuotes": {
                 "sepah": "We need that tax revenue for the border wall. Don't cut the military.",
                 "bazaar": "Silk and spice are luxury essentials. Lowering taxes will spur growth.",
-                "isolation": "Tax foreign goods until they are too expensive to be worth the trouble."
+                "isolation": "Tax foreign goods until they are too expensive to be worth the trouble.",
+                "piety": "Gold is a hollow pursuit if the spirit of the people is left in poverty."
             }
         },
         "b10": {
@@ -501,7 +546,8 @@
             "advisorQuotes": {
                 "sepah": "Buy local, build local. It's better for security and independence.",
                 "bazaar": "It protects our artisans, but it will trigger trade wars with our neighbors.",
-                "isolation": "A true nation buys only from itself. Reject the foreign junk."
+                "isolation": "A true nation buys only from itself. Reject the foreign junk.",
+                "piety": "Gold is a hollow pursuit if the spirit of the people is left in poverty."
             }
         },
         "b11": {
@@ -509,7 +555,8 @@
             "advisorQuotes": {
                 "sepah": "A railway as a vulnerability. An enemy could use it to reach our heart.",
                 "bazaar": "This is the superhighway of the future! We must build the tracks.",
-                "isolation": "A railway is a bridge. Bridges let the world's problems walk right in."
+                "isolation": "A railway is a bridge. Bridges let the world's problems walk right in.",
+                "piety": "Gold is a hollow pursuit if the spirit of the people is left in poverty."
             }
         },
         "b12": {
@@ -517,7 +564,8 @@
             "advisorQuotes": {
                 "sepah": "If you lose control of the gold, you lose control of the nation.",
                 "bazaar": "Trust us. We know how to manage the markets better than any bureaucrat.",
-                "isolation": "National markets should serve national interests, not merchant whims."
+                "isolation": "National markets should serve national interests, not merchant whims.",
+                "piety": "Gold is a hollow pursuit if the spirit of the people is left in poverty."
             }
         },
         "b13": {
@@ -525,7 +573,8 @@
             "advisorQuotes": {
                 "sepah": "A hungry citizen is a riotous citizen. Be careful with the food supply.",
                 "bazaar": "Silver will buy us the tech we need. It's a strategic export.",
-                "isolation": "Food is a weapon. Keep it here. We don't need their silver."
+                "isolation": "Food is a weapon. Keep it here. We don't need their silver.",
+                "piety": "Gold is a hollow pursuit if the spirit of the people is left in poverty."
             }
         },
         "b14": {
@@ -533,7 +582,8 @@
             "advisorQuotes": {
                 "sepah": "Gold is solid. Paper is weak. I support the move to the standard.",
                 "bazaar": "It gives our currency international respect. Essential for growth.",
-                "isolation": "Tie the currency to the earth itself. Self-reliance in every coin."
+                "isolation": "Tie the currency to the earth itself. Self-reliance in every coin.",
+                "piety": "Gold is a hollow pursuit if the spirit of the people is left in poverty."
             }
         },
         "b15": {
@@ -541,7 +591,8 @@
             "advisorQuotes": {
                 "sepah": "Adding a merchant to the council will only complicate our security plans.",
                 "bazaar": "We deserve a voice in the leadership of the nation we fund.",
-                "isolation": "Private interests have no place in a unified national council."
+                "isolation": "Private interests have no place in a unified national council.",
+                "piety": "Gold is a hollow pursuit if the spirit of the people is left in poverty."
             }
         },
         "b16": {
@@ -549,7 +600,8 @@
             "advisorQuotes": {
                 "sepah": "Finally! No more riots, no more chaos. Let me clear the asphalt.",
                 "bazaar": "Protests disrupt trade and damage property. We need physical stability.",
-                "isolation": "Public order is the prerequisite for a strong and unified state."
+                "isolation": "Public order is the prerequisite for a strong and unified state.",
+                "piety": "Gold is a hollow pursuit if the spirit of the people is left in poverty."
             }
         },
         "b17": {
@@ -557,7 +609,8 @@
             "advisorQuotes": {
                 "sepah": "If they aren't warships, I don't see why the army budget should pay.",
                 "bazaar": "Maritime power is the key to global commerce. We must build better ships.",
-                "isolation": "Control the waves with our own hulls. No more foreign shipping."
+                "isolation": "Control the waves with our own hulls. No more foreign shipping.",
+                "piety": "Gold is a hollow pursuit if the spirit of the people is left in poverty."
             }
         },
         "b18": {
@@ -565,7 +618,8 @@
             "advisorQuotes": {
                 "sepah": "A bank with its own rules is a threat to the state's sovereignty.",
                 "bazaar": "Give us the keys to the treasury, and we will make the nation rich.",
-                "isolation": "One central vault for one central nation. Keep the world's money out."
+                "isolation": "One central vault for one central nation. Keep the world's money out.",
+                "piety": "Gold is a hollow pursuit if the spirit of the people is left in poverty."
             }
         },
         "i1": {
@@ -573,7 +627,8 @@
             "advisorQuotes": {
                 "sepah": "Unrestricted trade is just another word for unrestricted spying.",
                 "bazaar": "The world is waiting for our goods! Open the gates and let the coin flow.",
-                "isolation": "Opening the gates is the beginning of the end for our sovereignty."
+                "isolation": "Opening the gates is the beginning of the end for our sovereignty.",
+                "piety": "The world's distractions must be kept at bay to preserve our sacred traditions."
             }
         },
         "i2": {
@@ -581,7 +636,8 @@
             "advisorQuotes": {
                 "sepah": "Aid with strings attached is just a bribe from our enemies. Reject it.",
                 "bazaar": "We need that capital to rebuild our markets. It's a survival necessity.",
-                "isolation": "Begging for foreign crumbs makes our nation look weak and desperate."
+                "isolation": "Begging for foreign crumbs makes our nation look weak and desperate.",
+                "piety": "The world's distractions must be kept at bay to preserve our sacred traditions."
             }
         },
         "i3": {
@@ -589,7 +645,8 @@
             "advisorQuotes": {
                 "sepah": "Letting foreign 'observers' in? You might as well give them the keys.",
                 "bazaar": "The global prestige would be enormous. Think of the future investment.",
-                "isolation": "Foreign 'observers' are just spies in suits. Keep the doors locked."
+                "isolation": "Foreign 'observers' are just spies in suits. Keep the doors locked.",
+                "piety": "The world's distractions must be kept at bay to preserve our sacred traditions."
             }
         },
         "i4": {
@@ -597,7 +654,8 @@
             "advisorQuotes": {
                 "sepah": "Connecting to their grid lets their viruses directly into our systems.",
                 "bazaar": "Information speed is the new currency. We cannot be left in the dark.",
-                "isolation": "The global network is a pipeline for cultural rot. Stay disconnected."
+                "isolation": "The global network is a pipeline for cultural rot. Stay disconnected.",
+                "piety": "The world's distractions must be kept at bay to preserve our sacred traditions."
             }
         },
         "i5": {
@@ -605,7 +663,8 @@
             "advisorQuotes": {
                 "sepah": "No more treaties, no more compromises. We stand alone and strong.",
                 "bazaar": "This is isolationist suicide. The Bazaar will starve in total solitude.",
-                "isolation": "Tear up the papers. We answer to no one but ourselves."
+                "isolation": "Tear up the papers. We answer to no one but ourselves.",
+                "piety": "The world's distractions must be kept at bay to preserve our sacred traditions."
             }
         },
         "i6": {
@@ -613,7 +672,8 @@
             "advisorQuotes": {
                 "sepah": "Peace is just the period between wars. Don't let your guard down.",
                 "bazaar": "Trade flourishes in peace. Sign the accord and let the markets bloom.",
-                "isolation": "Peace is a trap used by the inclusive to disarm the vigilant."
+                "isolation": "Peace is a trap used by the inclusive to disarm the vigilant.",
+                "piety": "The world's distractions must be kept at bay to preserve our sacred traditions."
             }
         },
         "i7": {
@@ -621,7 +681,8 @@
             "advisorQuotes": {
                 "sepah": "Diplomats are just spies in fancy suits. Get them out of our hair.",
                 "bazaar": "Who will negotiate our trade deals? You're burning every bridge.",
-                "isolation": "Sweep them out. They are guests who have overstayed their welcome."
+                "isolation": "Sweep them out. They are guests who have overstayed their welcome.",
+                "piety": "The world's distractions must be kept at bay to preserve our sacred traditions."
             }
         },
         "i8": {
@@ -629,7 +690,8 @@
             "advisorQuotes": {
                 "sepah": "Missionaries today, subversives tomorrow. Do not let them educate.",
                 "bazaar": "Modern education attracts foreign talent and investment. I approve.",
-                "isolation": "Indoctrination by foreigners is the first step to cultural submission."
+                "isolation": "Indoctrination by foreigners is the first step to cultural submission.",
+                "piety": "The world's distractions must be kept at bay to preserve our sacred traditions."
             }
         },
         "i9": {
@@ -637,7 +699,8 @@
             "advisorQuotes": {
                 "sepah": "An alliance means fighting their wars too. We should defend ourselves.",
                 "bazaar": "The regional market access will be worth the loss of autonomy.",
-                "isolation": "We do not need 'allies' who only wish to use our soldiers for their ends."
+                "isolation": "We do not need 'allies' who only wish to use our soldiers for their ends.",
+                "piety": "The world's distractions must be kept at bay to preserve our sacred traditions."
             }
         },
         "i10": {
@@ -645,7 +708,8 @@
             "advisorQuotes": {
                 "sepah": "If it's on our soil, it's ours. Seize it and fund the army.",
                 "bazaar": "They will retaliate by seizing OUR assets abroad. This will be ruinous.",
-                "isolation": "Everything within our borders belongs to the state. No exceptions."
+                "isolation": "Everything within our borders belongs to the state. No exceptions.",
+                "piety": "The world's distractions must be kept at bay to preserve our sacred traditions."
             }
         },
         "i11": {
@@ -653,7 +717,8 @@
             "advisorQuotes": {
                 "sepah": "A common market means common borders. I cannot ensure security.",
                 "bazaar": "This is the path to prosperity! A unified market is a stable market.",
-                "isolation": "Common markets lead to common problems. We prefer our own issues."
+                "isolation": "Common markets lead to common problems. We prefer our own issues.",
+                "piety": "The world's distractions must be kept at bay to preserve our sacred traditions."
             }
         },
         "i12": {
@@ -661,7 +726,8 @@
             "advisorQuotes": {
                 "sepah": "Millions of visitors? It's a security nightmare on a global scale.",
                 "bazaar": "The tourism revenue alone will fund the national debt. Host the games!",
-                "isolation": "The world's circus has no place in our silent and serious nation."
+                "isolation": "The world's circus has no place in our silent and serious nation.",
+                "piety": "The world's distractions must be kept at bay to preserve our sacred traditions."
             }
         },
         "i13": {
@@ -669,7 +735,8 @@
             "advisorQuotes": {
                 "sepah": "Foreign banks are just channels for foreign money to influence our politics.",
                 "bazaar": "We need their capital and expertise. Our local banks are antiquated.",
-                "isolation": "Finance is the chain the world uses to bind independent nations."
+                "isolation": "Finance is the chain the world uses to bind independent nations.",
+                "piety": "The world's distractions must be kept at bay to preserve our sacred traditions."
             }
         },
         "i14": {
@@ -677,7 +744,8 @@
             "advisorQuotes": {
                 "sepah": "Tourists wander into secure areas. I want them restricted to hotels.",
                 "bazaar": "Tourism is pure profit with no overhead! Open every scenic route.",
-                "isolation": "Tourists are just amateur spies Gawking at our heritage. Keep them out."
+                "isolation": "Tourists are just amateur spies Gawking at our heritage. Keep them out.",
+                "piety": "The world's distractions must be kept at bay to preserve our sacred traditions."
             }
         },
         "i15": {
@@ -685,7 +753,8 @@
             "advisorQuotes": {
                 "sepah": "The sky is our first line of defense. Losing control is catastrophic.",
                 "bazaar": "A global hub brings global gold. Open the skies and let them land.",
-                "isolation": "Our air should only carry our planes. The sky is a national boundary."
+                "isolation": "Our air should only carry our planes. The sky is a national boundary.",
+                "piety": "The world's distractions must be kept at bay to preserve our sacred traditions."
             }
         },
         "i16": {
@@ -693,7 +762,8 @@
             "advisorQuotes": {
                 "sepah": "Foreigners digging in our earth? They will find more than just ore.",
                 "bazaar": "They bring the tech and the labor. We just collect the checks. Smart.",
-                "isolation": "Every ounce of our soil is our birthright. We do not sell the deep earth."
+                "isolation": "Every ounce of our soil is our birthright. We do not sell the deep earth.",
+                "piety": "The world's distractions must be kept at bay to preserve our sacred traditions."
             }
         },
         "i17": {
@@ -701,7 +771,8 @@
             "advisorQuotes": {
                 "sepah": "Foreign teachers will only preach their 'human rights' nonsense to the kids.",
                 "bazaar": "A healthy workforce is a productive workforce. Bring in the doctors.",
-                "isolation": "We prefer our own sickness to the cure of a foreign master."
+                "isolation": "We prefer our own sickness to the cure of a foreign master.",
+                "piety": "The world's distractions must be kept at bay to preserve our sacred traditions."
             }
         },
         "i18": {
@@ -709,7 +780,8 @@
             "advisorQuotes": {
                 "sepah": "Dissolving the borders? That is the day the army ceases to exist. I refuse.",
                 "bazaar": "A world without borders is a world with perfect trade. It is the future.",
-                "isolation": "I would rather see the world burn than see our borders erased."
+                "isolation": "I would rather see the world burn than see our borders erased.",
+                "piety": "The world's distractions must be kept at bay to preserve our sacred traditions."
             }
         }
     }

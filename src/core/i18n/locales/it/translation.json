@@ -142,7 +142,8 @@
             "advisorQuotes": {
                 "sepah": "Un monumento alla nostra forza. Si ergerà sopra ogni pensiero di ribellione.",
                 "bazaar": "Quest'oro dovrebbe essere nelle navi, non nelle colonne di marmo. Stiamo sanguinando.",
-                "isolation": "Che il mondo veda la nostra devozione. La nostra fede è il nostro baluardo."
+                "isolation": "Che il mondo veda la nostra devozione. La nostra fede è il nostro baluardo.",
+                "piety": "Questo decreto è la volontà dei cieli. Esitare significa dubitare della nostra stessa anima."
             }
         },
         "p2": {
@@ -150,7 +151,8 @@
             "advisorQuotes": {
                 "sepah": "Sapere chi è leale è la base della sicurezza nazionale.",
                 "bazaar": "La registrazione spaventa i clienti. Il capitale fuggirà rapidamente dal paese.",
-                "isolation": "Non abbiamo bisogno di chi nasconde la propria lealtà nell'ombra."
+                "isolation": "Non abbiamo bisogno di chi nasconde la propria lealtà nell'ombra.",
+                "piety": "Questo decreto è la volontà dei cieli. Esitare significa dubitare della nostra stessa anima."
             }
         },
         "p3": {
@@ -158,7 +160,8 @@
             "advisorQuotes": {
                 "sepah": "Le ronde mantengono le strade pulite dalla corruzione ideologica.",
                 "bazaar": "La paura costante dei compratori per il loro abbigliamento uccide il commercio al dettaglio.",
-                "isolation": "La moralità è lo scudo che protegge la nazione contro la dissoluzione straniera."
+                "isolation": "La moralità è lo scudo che protegge la nazione contro la dissoluzione straniera.",
+                "piety": "Questo decreto è la volontà dei cieli. Esitare significa dubitare della nostra stessa anima."
             }
         },
         "p4": {
@@ -166,7 +169,8 @@
             "advisorQuotes": {
                 "sepah": "Le proteste studentesche sono i semi delle future ribellioni. Schiacciale ora.",
                 "bazaar": "La politicizzazione nelle università distoglie dalla formazione dei futuri specialisti.",
-                "isolation": "La mente dei giovani deve concentrarsi sulla propria nazione, non sulle idee straniere."
+                "isolation": "La mente dei giovani deve concentrarsi sulla propria nazione, non sulle idee straniere.",
+                "piety": "Questo decreto è la volontà dei cieli. Esitare significa dubitare della nostra stessa anima."
             }
         },
         "p5": {
@@ -174,7 +178,8 @@
             "advisorQuotes": {
                 "sepah": "Monitorare gli stranieri è un incubo. Porte chiuse semplificano la sicurezza.",
                 "bazaar": "I pellegrini portano valuta. Tagliarli fuori è un suicidio economico.",
-                "isolation": "Il nostro suolo appartiene al nostro popolo. Che gli stranieri preghino a casa loro."
+                "isolation": "Il nostro suolo appartiene al nostro popolo. Che gli stranieri preghino a casa loro.",
+                "piety": "Questo decreto è la volontà dei cieli. Esitare significa dubitare della nostra stessa anima."
             }
         },
         "p6": {
@@ -182,7 +187,8 @@
             "advisorQuotes": {
                 "sepah": "I tribunali militari sono più efficienti, ma posso lavorare con i chierici.",
                 "bazaar": "Questo porterà a giudizi arbitrari che minacciano i contratti commerciali.",
-                "isolation": "La giustizia interna deve essere assoluta e libera da influenze esterne."
+                "isolation": "La giustizia interna deve essere assoluta e libera da influenze esterne.",
+                "piety": "Questo decreto è la volontà dei cieli. Esitare significa dubitare della nostra stessa anima."
             }
         },
         "p7": {
@@ -190,7 +196,8 @@
             "advisorQuotes": {
                 "sepah": "Uno stomaco pieno allontana l'agitazione. Strategicamente saggio.",
                 "bazaar": "Questo è un furto! State sequestrando la proprietà privata e uccidendo il commercio.",
-                "isolation": "Dobbiamo prenderci cura della nostra gente. L'autosufficienza inizia con magazzini pieni."
+                "isolation": "Dobbiamo prenderci cura della nostra gente. L'autosufficienza inizia con magazzini pieni.",
+                "piety": "Questo decreto è la volontà dei cieli. Esitare significa dubitare della nostra stessa anima."
             }
         },
         "p8": {
@@ -198,7 +205,8 @@
             "advisorQuotes": {
                 "sepah": "Assegnare i miei uomini migliori a compiti di guardia cerimoniale? Accettabile, per ora.",
                 "bazaar": "Quando l'esercito e il clero si uniscono, il mercante non ha più voce.",
-                "isolation": "Un fronte interno unito è l'unico modo per resistere al mondo che preme."
+                "isolation": "Un fronte interno unito è l'unico modo per resistere al mondo che preme.",
+                "piety": "Questo decreto è la volontà dei cieli. Esitare significa dubitare della nostra stessa anima."
             }
         },
         "p9": {
@@ -206,7 +214,8 @@
             "advisorQuotes": {
                 "sepah": "Le strade vuote sono facili da pattugliare, ma la mente oziosa è pericolosa.",
                 "bazaar": "Un giorno senza commercio? In tutto il paese? È follia!",
-                "isolation": "Taglia il rumore del mondo così la nazione può riconcentrarsi sulla sua essenza."
+                "isolation": "Taglia il rumore del mondo così la nazione può riconcentrarsi sulla sua essenza.",
+                "piety": "Questo decreto è la volontà dei cieli. Esitare significa dubitare della nostra stessa anima."
             }
         },
         "p10": {
@@ -214,7 +223,8 @@
             "advisorQuotes": {
                 "sepah": "Gli uomini devono essere duri, non rammolliti dal lusso. Sono d'accordo.",
                 "bazaar": "I beni di lusso sono le nostre esportazioni più redditizie! Questo ucciderà il Bazaar.",
-                "isolation": "La decadenza straniera non ha posto qui. Valorizziamo l'autosufficienza robusta."
+                "isolation": "La decadenza straniera non ha posto qui. Valorizziamo l'autosufficienza robusta.",
+                "piety": "Questo decreto è la volontà dei cieli. Esitare significa dubitare della nostra stessa anima."
             }
         },
         "p11": {
@@ -222,7 +232,8 @@
             "advisorQuotes": {
                 "sepah": "La polizia morale è fanatica, ma efficace per mantenere l'ordine.",
                 "bazaar": "Molestare i mercanti per la loro 'pietà' blocca ogni vendita.",
-                "isolation": "Dobbiamo custodire l'anima della nazione con la stessa vigoria dei confini."
+                "isolation": "Dobbiamo custodire l'anima della nazione con la stessa vigoria dei confini.",
+                "piety": "Questo decreto è la volontà dei cieli. Esitare significa dubitare della nostra stessa anima."
             }
         },
         "p12": {
@@ -230,7 +241,8 @@
             "advisorQuotes": {
                 "sepah": "Se forniscono soldati, non mi importa in cosa credono.",
                 "bazaar": "Seguiranno sanzioni. Il mondo non ama i radicali.",
-                "isolation": "A chi importa cosa pensa il mondo? Se sono fedeli alla bandiera, sono dei nostri."
+                "isolation": "A chi importa cosa pensa il mondo? Se sono fedeli alla bandiera, sono dei nostri.",
+                "piety": "Questo decreto è la volontà dei cieli. Esitare significa dubitare della nostra stessa anima."
             }
         },
         "p13": {
@@ -238,7 +250,8 @@
             "advisorQuotes": {
                 "sepah": "Le statue non vincono le guerre, ma sono monumenti imponenti.",
                 "bazaar": "Quest'oro dovrebbe circolare, non essere fuso in bronzo per la 'spiritualità'.",
-                "isolation": "Che il mondo guardi ai nostri confini e veda solo la nostra forza e convinzione."
+                "isolation": "Che il mondo guardi ai nostri confini e veda solo la nostra forza e convinzione.",
+                "piety": "Questo decreto è la volontà dei cieli. Esitare significa dubitare della nostra stessa anima."
             }
         },
         "p14": {
@@ -246,7 +259,8 @@
             "advisorQuotes": {
                 "sepah": "Finché i segreti militari restano con me, possono avere i vecchi libri polverosi.",
                 "bazaar": "L'informazione è una merce. Lasciare che i chierici la custodiscano è un collo di bottiglia.",
-                "isolation": "Controlla la storia, controlla il futuro. Custodisci i nostri segreti con accanimento."
+                "isolation": "Controlla la storia, controlla il futuro. Custodisci i nostri segreti con accanimento.",
+                "piety": "Questo decreto è la volontà dei cieli. Esitare significa dubitare della nostra stessa anima."
             }
         },
         "p15": {
@@ -254,7 +268,8 @@
             "advisorQuotes": {
                 "sepah": "Nuove reclute e attrezzature fresche. Non rifiuterò alcun finanziamento extra.",
                 "bazaar": "Ancora una tassa? Trattate il Bazaar come un pozzo senza fondo.",
-                "isolation": "Ogni moneta spesa all'interno è una moneta non inviata a una banca straniera."
+                "isolation": "Ogni moneta spesa all'interno è una moneta non inviata a una banca straniera.",
+                "piety": "Questo decreto è la volontà dei cieli. Esitare significa dubitare della nostra stessa anima."
             }
         },
         "p16": {
@@ -262,7 +277,8 @@
             "advisorQuotes": {
                 "sepah": "Preferisco comunque la tecnologia locale affidabile. I circuiti stranieri possono essere truccati.",
                 "bazaar": "La manutenzione moderna è un servizio globale. Questo divieto porterà a guasti.",
-                "isolation": "La nostra dipendenza dalle macchine straniere è una debolezza. Strappale via."
+                "isolation": "La nostra dipendenza dalle macchine straniere è una debolezza. Strappale via.",
+                "piety": "Questo decreto è la volontà dei cieli. Esitare significa dubitare della nostra stessa anima."
             }
         },
         "p17": {
@@ -270,7 +286,8 @@
             "advisorQuotes": {
                 "sepah": "La terra è terra. Meglio un santuario che un potenziale nascondiglio per ribelli.",
                 "bazaar": "Inutilizzate? Questa terra è riservata per un'espansione futura! È un furto.",
-                "isolation": "Terra nazionale per scopi nazionali. I mercanti dovrebbero smettere di lamentarsi."
+                "isolation": "Terra nazionale per scopi nazionali. I mercanti dovrebbero smettere di lamentarsi.",
+                "piety": "Questo decreto è la volontà dei cieli. Esitare significa dubitare della nostra stessa anima."
             }
         },
         "p18": {
@@ -278,7 +295,8 @@
             "advisorQuotes": {
                 "sepah": "Meglio degli inni che le grida ritmate dei manifestanti.",
                 "bazaar": "L'intrattenimento è un settore massiccio. State uccidendo caffè e teatri.",
-                "isolation": "I nostri canti ci appartengono. Il rumore della pop culture mondiale deve cessare."
+                "isolation": "I nostri canti ci appartengono. Il rumore della pop culture mondiale deve cessare.",
+                "piety": "Questo decreto è la volontà dei cieli. Esitare significa dubitare della nostra stessa anima."
             }
         },
         "s1": {
@@ -286,7 +304,8 @@
             "advisorQuotes": {
                 "sepah": "Un muro non è solo pietra; è la dichiarazione definitiva della nostra sovranità.",
                 "bazaar": "Isolarci porterà solo alla stagnazione e ad alti costi di importazione.",
-                "isolation": "Costruiscilo spesso il doppio. Nessuno entra, nessuno esce."
+                "isolation": "Costruiscilo spesso il doppio. Nessuno entra, nessuno esce.",
+                "piety": "La forza è necessaria, ma deve essere guidata dalla fede, non solo dall'acciaio."
             }
         },
         "s2": {
@@ -294,7 +313,8 @@
             "advisorQuotes": {
                 "sepah": "I soldati sono il vero fondamento di una nazione, non gli operai delle fabbriche.",
                 "bazaar": "Stiamo perdendo la nostra forza lavoro! La produttività crollerà dall'oggi al domani.",
-                "isolation": "Una nazione in armi è una nazione che non può essere bullizzata dagli stranieri."
+                "isolation": "Una nazione in armi è una nazione che non può essere bullizzata dagli stranieri.",
+                "piety": "La forza è necessaria, ma deve essere guidata dalla fede, non solo dall'acciaio."
             }
         },
         "s3": {
@@ -302,7 +322,8 @@
             "advisorQuotes": {
                 "sepah": "Le strade devono essere libere per i nostri carri armati. L'ordine è la priorità assoluta.",
                 "bazaar": "Il mercato notturno è il nostro fluido vitale! Questo rovinerà i venditori.",
-                "isolation": "Chiudete le porte a chiave. La pace interna vale mille vendite perse."
+                "isolation": "Chiudete le porte a chiave. La pace interna vale mille vendite perse.",
+                "piety": "La forza è necessaria, ma deve essere guidata dalla fede, non solo dall'acciaio."
             }
         },
         "s4": {
@@ -310,7 +331,8 @@
             "advisorQuotes": {
                 "sepah": "L'acciaio e l'armatura composita salveranno i nostri ragazzi. Il costo non conta.",
                 "bazaar": "Quei prodotti chimici sono per i fertilizzanti e le esportazioni! State uccidendo il nostro commercio.",
-                "isolation": "Dobbiamo essere autosufficienti. Se il mondo ci evita per la nostra difesa, così sia."
+                "isolation": "Dobbiamo essere autosufficienti. Se il mondo ci evita per la nostra difesa, così sia.",
+                "piety": "La forza è necessaria, ma deve essere guidata dalla fede, non solo dall'acciaio."
             }
         },
         "s5": {
@@ -318,7 +340,8 @@
             "advisorQuotes": {
                 "sepah": "Anche un prete può essere una spia. Nessuno è al di sopra della sicurezza dello Stato.",
                 "bazaar": "L'agitazione religiosa è dannosa per gli affari. State fuori dai templi.",
-                "isolation": "Una voce, una nazione. Il dissenso, anche dal pulpito, è una minaccia."
+                "isolation": "Una voce, una nazione. Il dissenso, anche dal pulpito, è una minaccia.",
+                "piety": "La forza è necessaria, ma deve essere guidata dalla fede, non solo dall'acciaio."
             }
         },
         "s6": {
@@ -326,7 +349,8 @@
             "advisorQuotes": {
                 "sepah": "I nostri confini non finiscono sulla riva. Abbiamo bisogno di una flotta di ferro.",
                 "bazaar": "Il porto esistente gestisce tutto il nostro commercio mondiale. Non bloccate i moli!",
-                "isolation": "Il mare è solo un altro confine che deve essere chiuso agli indesiderabili."
+                "isolation": "Il mare è solo un altro confine che deve essere chiuso agli indesiderabili.",
+                "piety": "La forza è necessaria, ma deve essere guidata dalla fede, non solo dall'acciaio."
             }
         },
         "s7": {
@@ -334,7 +358,8 @@
             "advisorQuotes": {
                 "sepah": "I metalli preziosi sono più adatti alle armature che ai ninnoli.",
                 "bazaar": "Gioielli e argenteria sono le nostre esportazioni più famose! È follia.",
-                "isolation": "Il lusso è una distrazione. L'argento serve meglio allo Stato come scudo."
+                "isolation": "Il lusso è una distrazione. L'argento serve meglio allo Stato come scudo.",
+                "piety": "La forza è necessaria, ma deve essere guidata dalla fede, non solo dall'acciaio."
             }
         },
         "s8": {
@@ -342,7 +367,8 @@
             "advisorQuotes": {
                 "sepah": "La mobilità è la chiave della vittoria. Lo Stato ha bisogno di un controllo totale dei binari.",
                 "bazaar": "Come sposteremo i grani e i tessili? È un collo di bottiglia.",
-                "isolation": "Controlla i binari, controlla il flusso della nazione. Tieni gli stranieri lontani."
+                "isolation": "Controlla i binari, controlla il flusso della nazione. Tieni gli stranieri lontani.",
+                "piety": "La forza è necessaria, ma deve essere guidata dalla fede, non solo dall'acciaio."
             }
         },
         "s9": {
@@ -350,7 +376,8 @@
             "advisorQuotes": {
                 "sepah": "I miei ufficiali devono essere pagati bene per resistere alla tentazione delle tangenti.",
                 "bazaar": "Chiamiamolo col suo nome: pizzo. I mercanti non saranno felici.",
-                "isolation": "La stabilità interna ha un prezzo. Pagalo, o il mondo entrerà semplicemente."
+                "isolation": "La stabilità interna ha un prezzo. Pagalo, o il mondo entrerà semplicemente.",
+                "piety": "La forza è necessaria, ma deve essere guidata dalla fede, non solo dall'acciaio."
             }
         },
         "s10": {
@@ -358,7 +385,8 @@
             "advisorQuotes": {
                 "sepah": "Il popolo deve essere pronto per l'inevitabile. È un'esercitazione per la sopravvivenza.",
                 "bazaar": "Un mese senza importazioni? Mangeremo corteccia d'albero alla terza settimana!",
-                "isolation": "Eccellente. Chiudete le porte, tagliate i cavi. Vediamo chi siamo veramente."
+                "isolation": "Eccellente. Chiudete le porte, tagliate i cavi. Vediamo chi siamo veramente.",
+                "piety": "La forza è necessaria, ma deve essere guidata dalla fede, non solo dall'acciaio."
             }
         },
         "s11": {
@@ -366,7 +394,8 @@
             "advisorQuotes": {
                 "sepah": "La legge è semplice: OBBEDIRE. Non abbiamo bisogno di avvocati, abbiamo bisogno di disciplina.",
                 "bazaar": "Il diritto contrattuale è troppo complesso per i soldati. Questo creerà caos.",
-                "isolation": "I valori esterni non hanno posto nei nostri tribunali. Il diritto militare è puro."
+                "isolation": "I valori esterni non hanno posto nei nostri tribunali. Il diritto militare è puro.",
+                "piety": "La forza è necessaria, ma deve essere guidata dalla fede, non solo dall'acciaio."
             }
         },
         "s12": {
@@ -374,7 +403,8 @@
             "advisorQuotes": {
                 "sepah": "Una nave mercantile è solo un bersaglio. Una nave da guerra è un deterrente.",
                 "bazaar": "Ci state tagliando le gambe! Come commerciare senza flotta?",
-                "isolation": "Le nostre navi dovrebbero portare cannoni, non beni di consumo stranieri."
+                "isolation": "Le nostre navi dovrebbero portare cannoni, non beni di consumo stranieri.",
+                "piety": "La forza è necessaria, ma deve essere guidata dalla fede, non solo dall'acciaio."
             }
         },
         "s13": {
@@ -382,7 +412,8 @@
             "advisorQuotes": {
                 "sepah": "Se è sulla strada, è sotto i nostri occhi. Niente più traffico illegale.",
                 "bazaar": "I posti di blocco costano ore su ogni viaggio. Questo uccide la logistica.",
-                "isolation": "La conoscenza totale dei movimenti interni è la chiave della sovranità totale."
+                "isolation": "La conoscenza totale dei movimenti interni è la chiave della sovranità totale.",
+                "piety": "La forza è necessaria, ma deve essere guidata dalla fede, non solo dall'acciaio."
             }
         },
         "s14": {
@@ -390,7 +421,8 @@
             "advisorQuotes": {
                 "sepah": "Spazio e risorse sono necessari per la difesa di tutti. Nessuna eccezione.",
                 "bazaar": "Sequestrare nei templi è rischioso, ma gestito efficacemente.",
-                "isolation": "Lo Stato è l'essere sacro supremo. Nessuna istituzione è esente."
+                "isolation": "Lo Stato è l'essere sacro supremo. Nessuna istituzione è esente.",
+                "piety": "La forza è necessaria, ma deve essere guidata dalla fede, non solo dall'acciaio."
             }
         },
         "s15": {
@@ -398,7 +430,8 @@
             "advisorQuotes": {
                 "sepah": "Se un soldato teme un processo, non premerà il grilletto. Date loro l'immunità.",
                 "bazaar": "Un soldato sopra la legge è un bandito in uniforme. Male per la stabilità.",
-                "isolation": "I difensori della nazione devono essere liberati dai capricci civili."
+                "isolation": "I difensori della nazione devono essere liberati dai capricci civili.",
+                "piety": "La forza è necessaria, ma deve essere guidata dalla fede, non solo dall'acciaio."
             }
         },
         "s16": {
@@ -406,7 +439,8 @@
             "advisorQuotes": {
                 "sepah": "Dobbiamo essere pronti per il peggio. La sopravvivenza dello Stato è prioritaria.",
                 "bazaar": "I costi sono astronomici. Dovremmo investire nell'infrastruttura portuale.",
-                "isolation": "Lasciate che il mondo spii; troveranno solo una fortezza nella roccia."
+                "isolation": "Lasciate che il mondo spii; troveranno solo una fortezza nella roccia.",
+                "piety": "La forza è necessaria, ma deve essere guidata dalla fede, non solo dall'acciaio."
             }
         },
         "s17": {
@@ -414,7 +448,8 @@
             "advisorQuotes": {
                 "sepah": "Senza carburante, l'esercito è solo una collezione di statue pesanti.",
                 "bazaar": "L'industria ha bisogno anche di carburante! State fermando le fabbriche.",
-                "isolation": "Nemmeno una goccia della nostra energia dovrebbe essere ceduta a concorrenti stranieri."
+                "isolation": "Nemmeno una goccia della nostra energia dovrebbe essere ceduta a concorrenti stranieri.",
+                "piety": "La forza è necessaria, ma deve essere guidata dalla fede, non solo dall'acciaio."
             }
         },
         "s18": {
@@ -422,7 +457,8 @@
             "advisorQuotes": {
                 "sepah": "La stampa è un'arma. Dobbiamo controllare il narrato della nazione.",
                 "bazaar": "La fiducia del mercato si basa sulla trasparenza. Censurate le notizie, e falliremo.",
-                "isolation": "La propaganda straniera deve essere contrastata con una verità unica e nazionale."
+                "isolation": "La propaganda straniera deve essere contrastata con una verità unica e nazionale.",
+                "piety": "La forza è necessaria, ma deve essere guidata dalla fede, non solo dall'acciaio."
             }
         },
         "b1": {
@@ -430,7 +466,8 @@
             "advisorQuotes": {
                 "sepah": "Dare i nostri porti agli stranieri? State lasciando entrare il nemico dalla porta di dietro.",
                 "bazaar": "Il capitale è il fluido vitale del nostro futuro. Dobbiamo modernizzare o morire.",
-                "isolation": "Vendere i nostri porti significa vendere la nostra anima. Respingete gli avvoltoi stranieri."
+                "isolation": "Vendere i nostri porti significa vendere la nostra anima. Respingete gli avvoltoi stranieri.",
+                "piety": "L'oro è una ricerca vana se lo spirito del popolo è lasciato nella povertà."
             }
         },
         "b2": {
@@ -438,7 +475,8 @@
             "advisorQuotes": {
                 "sepah": "Il lusso genera debolezza. Quei soldi dovrebbero andare nelle armerie.",
                 "bazaar": "La gente vuole scelta! La felicità e il commercio vanno di pari passo.",
-                "isolation": "La decadenza importata avvelena il carattere nazionale. Tenetela fuori."
+                "isolation": "La decadenza importata avvelena il carattere nazionale. Tenetela fuori.",
+                "piety": "L'oro è una ricerca vana se lo spirito del popolo è lasciato nella povertà."
             }
         },
         "b3": {
@@ -446,7 +484,8 @@
             "advisorQuotes": {
                 "sepah": "Il contrabbando dalle miniere è il modo in cui i ribelli ottengono oro. Mantenete i regolamenti.",
                 "bazaar": "Lasciate respirare i mercati! Siamo seduti su una montagna di ricchezza inutilizzata.",
-                "isolation": "I nostri minerali sono per le nostre fabbriche, non per i mercati di esportazione stranieri."
+                "isolation": "I nostri minerali sono per le nostre fabbriche, non per i mercati di esportazione stranieri.",
+                "piety": "L'oro è una ricerca vana se lo spirito del popolo è lasciato nella povertà."
             }
         },
         "b4": {
@@ -454,7 +493,8 @@
             "advisorQuotes": {
                 "sepah": "Una zona di libero scambio è una zona di spionaggio. Voglio i miei uomini ad ogni angolo.",
                 "bazaar": "Questo ci metterà sulla mappa del mondo! La capitale sarà un faro di prosperità.",
-                "isolation": "Una zona senza confini è una zona senza sovranità. Rifiutalo."
+                "isolation": "Una zona senza confini è una zona senza sovranità. Rifiutalo.",
+                "piety": "L'oro è una ricerca vana se lo spirito del popolo è lasciato nella povertà."
             }
         },
         "b5": {
@@ -462,7 +502,8 @@
             "advisorQuotes": {
                 "sepah": "Volete togliere alla difesa della nazione per pagare gli errori dei mercanti?",
                 "bazaar": "I mercanti sono il motore di questo paese. Se ristagniamo, tutto il resto cade.",
-                "isolation": "Sostenere il commercio interno è bene, ma saccheggiare l'armeria è rischioso."
+                "isolation": "Sostenere il commercio interno è bene, ma saccheggiare l'armeria è rischioso.",
+                "piety": "L'oro è una ricerca vana se lo spirito del popolo è lasciato nella povertà."
             }
         },
         "b6": {
@@ -470,7 +511,8 @@
             "advisorQuotes": {
                 "sepah": "Una 'fiera' è solo una copertura per gli agenti di intelligence stranieri. Rifiuta.",
                 "bazaar": "Gli occhi del mondo saranno su di noi! Il prestigio da solo varrà milioni.",
-                "isolation": "Invitare il mondo significa invitare il loro spionaggio e la loro corruzione."
+                "isolation": "Invitare il mondo significa invitare il loro spionaggio e la loro corruzione.",
+                "piety": "L'oro è una ricerca vana se lo spirito del popolo è lasciato nella povertà."
             }
         },
         "b7": {
@@ -478,7 +520,8 @@
             "advisorQuotes": {
                 "sepah": "Poco mi importano i giorni, finché le fabbriche producono attrezzature.",
                 "bazaar": "Tenere i negozi chiusi metà settimana è una follia economica! Apriteli.",
-                "isolation": "Le usanze interne sono ciò che ci definisce. L'efficienza è secondaria."
+                "isolation": "Le usanze interne sono ciò che ci definisce. L'efficienza è secondaria.",
+                "piety": "L'oro è una ricerca vana se lo spirito del popolo è lasciato nella povertà."
             }
         },
         "b8": {
@@ -486,7 +529,8 @@
             "advisorQuotes": {
                 "sepah": "Tutto dovrebbe essere standardizzato. Nell'esercito e nel negozio. Sono d'accordo.",
                 "bazaar": "Un commercio efficiente è un commercio onesto. Niente più confusione sui moli!",
-                "isolation": "Metrico o imperiale, deve essere il NOSTRO sistema, non un sistema globale."
+                "isolation": "Metrico o imperiale, deve essere il NOSTRO sistema, non un sistema globale.",
+                "piety": "L'oro è una ricerca vana se lo spirito del popolo è lasciato nella povertà."
             }
         },
         "b9": {
@@ -494,7 +538,8 @@
             "advisorQuotes": {
                 "sepah": "Abbiamo bisogno di quelle entrate fiscali per il muro di confine. Non tagliate al militare.",
                 "bazaar": "Seta e spezie sono essenziali di lusso. Ridurre le tasse stimolerà la crescita.",
-                "isolation": "Tassate i beni stranieri finché non sono troppo cari per valerne la pena."
+                "isolation": "Tassate i beni stranieri finché non sono troppo cari per valerne la pena.",
+                "piety": "L'oro è una ricerca vana se lo spirito del popolo è lasciato nella povertà."
             }
         },
         "b10": {
@@ -502,7 +547,8 @@
             "advisorQuotes": {
                 "sepah": "Compra locale, costruisci locale. È meglio per la sicurezza e l'indipendenza.",
                 "bazaar": "Questo protegge i nostri artigiani, ma scatenerà guerre commerciali con i vicini.",
-                "isolation": "Una vera nazione compra solo da se stessa. Respingete i rifiuti stranieri."
+                "isolation": "Una vera nazione compra solo da se stessa. Respingete i rifiuti stranieri.",
+                "piety": "L'oro è una ricerca vana se lo spirito del popolo è lasciato nella povertà."
             }
         },
         "b11": {
@@ -510,7 +556,8 @@
             "advisorQuotes": {
                 "sepah": "Una ferrovia è una vulnerabilità. Un avversario potrebbe usarla per raggiungere il nostro cuore.",
                 "bazaar": "Questa è l'autostrada del futuro! Dobbiamo costruire i binari.",
-                "isolation": "Una ferrovia è un ponte. I ponti lasciano entrare i problemi del mondo direttamente."
+                "isolation": "Una ferrovia è un ponte. I ponti lasciano entrare i problemi del mondo direttamente.",
+                "piety": "L'oro è una ricerca vana se lo spirito del popolo è lasciato nella povertà."
             }
         },
         "b12": {
@@ -518,7 +565,8 @@
             "advisorQuotes": {
                 "sepah": "Se perdi il controllo sull'oro, perdi il controllo sulla nazione.",
                 "bazaar": "Fidatevi di noi. Sappiamo gestire i mercati meglio di qualsiasi burocrate.",
-                "isolation": "I mercati nazionali dovrebbero servire gli interessi nazionali, non i capricci dei mercanti."
+                "isolation": "I mercati nazionali dovrebbero servire gli interessi nazionali, non i capricci dei mercanti.",
+                "piety": "L'oro è una ricerca vana se lo spirito del popolo è lasciato nella povertà."
             }
         },
         "b13": {
@@ -526,7 +574,8 @@
             "advisorQuotes": {
                 "sepah": "Un cittadino affamato è un cittadino agitato. Prudenza con l'approvvigionamento alimentare.",
                 "bazaar": "L'argento ci compra la tecnologia di cui abbiamo bisogno. È un'esportazione strategica.",
-                "isolation": "Il cibo è un'arma. Tenetelo qui. Non abbiamo bisogno del loro argento."
+                "isolation": "Il cibo è un'arma. Tenetelo qui. Non abbiamo bisogno del loro argento.",
+                "piety": "L'oro è una ricerca vana se lo spirito del popolo è lasciato nella povertà."
             }
         },
         "b14": {
@@ -534,7 +583,8 @@
             "advisorQuotes": {
                 "sepah": "L'oro è solido. La carta è debole. Supporto la transizione allo standard.",
                 "bazaar": "Dà alla nostra moneta validità internazionale. Essenziale per la crescita.",
-                "isolation": "Lega la valuta alla terra stessa. Autosufficienza in ogni moneta."
+                "isolation": "Lega la valuta alla terra stessa. Autosufficienza in ogni moneta.",
+                "piety": "L'oro è una ricerca vana se lo spirito del popolo è lasciato nella povertà."
             }
         },
         "b15": {
@@ -542,7 +592,8 @@
             "advisorQuotes": {
                 "sepah": "Aggiungere un mercante al consiglio non farà che complicare i nostri piani di sicurezza.",
                 "bazaar": "Meritiamo una voce nella direzione della nazione che finanziamo.",
-                "isolation": "Gli interessi privati non hanno posto in un consiglio nazionale unito."
+                "isolation": "Gli interessi privati non hanno posto in un consiglio nazionale unito.",
+                "piety": "L'oro è una ricerca vana se lo spirito del popolo è lasciato nella povertà."
             }
         },
         "b16": {
@@ -550,7 +601,8 @@
             "advisorQuotes": {
                 "sepah": "Finalmente! Niente più agitazione, basta caos. Lasciatemi pulire l'asfalto.",
                 "bazaar": "Le protesthe disturbano il commercio e danneggiano la proprietà. Abbiamo bisogno di stabilità fisica.",
-                "isolation": "L'ordine pubblico è la precondizione per uno stato forte e unito."
+                "isolation": "L'ordine pubblico è la precondizione per uno stato forte e unito.",
+                "piety": "L'oro è una ricerca vana se lo spirito del popolo è lasciato nella povertà."
             }
         },
         "b17": {
@@ -558,7 +610,8 @@
             "advisorQuotes": {
                 "sepah": "Se non sono navi da guerra, non vedo perché il budget dell'esercito dovrebbe pagare.",
                 "bazaar": "La potenza marittima è la chiave del commercio mondiale. Dobbiamo costruire navi migliori.",
-                "isolation": "Controlla le onde con i nostri scafi. Niente più navigazione straniera."
+                "isolation": "Controlla le onde con i nostri scafi. Niente più navigazione straniera.",
+                "piety": "L'oro è una ricerca vana se lo spirito del popolo è lasciato nella povertà."
             }
         },
         "b18": {
@@ -566,7 +619,8 @@
             "advisorQuotes": {
                 "sepah": "Una banca con le sue regole è una minaccia per la sovranità dello Stato.",
                 "bazaar": "Dateci le chiavi del tesoro, e renderemo la nazione ricca.",
-                "isolation": "Un forziere centrale per una nazione centrale. Tenete i soldi del mondo lontano."
+                "isolation": "Un forziere centrale per una nazione centrale. Tenete i soldi del mondo lontano.",
+                "piety": "L'oro è una ricerca vana se lo spirito del popolo è lasciato nella povertà."
             }
         },
         "i1": {
@@ -574,7 +628,8 @@
             "advisorQuotes": {
                 "sepah": "Commercio senza intralci è solo un'altra parola per spionaggio senza intralci.",
                 "bazaar": "Il mondo aspetta i nostri beni! Aprite le porte e lasciate scorrere i soldi.",
-                "isolation": "Aprire le porte è l'inizio della fine della nostra sovranità."
+                "isolation": "Aprire le porte è l'inizio della fine della nostra sovranità.",
+                "piety": "Le distrazioni del mondo devono essere tenute a bada per preservare le nostre sacre tradizioni."
             }
         },
         "i2": {
@@ -582,7 +637,8 @@
             "advisorQuotes": {
                 "sepah": "L'aiuto con condizioni è solo una tangente dai nostri nemici. Rifiuta.",
                 "bazaar": "Abbiamo bisogno del capitale per ricostruire i nostri mercati. Una necessità di sopravvivenza.",
-                "isolation": "Mendicare per bricioli stranieri fa apparire la nostra nazione debole e disperata."
+                "isolation": "Mendicare per bricioli stranieri fa apparire la nostra nazione debole e disperata.",
+                "piety": "Le distrazioni del mondo devono essere tenute a bada per preservare le nostre sacre tradizioni."
             }
         },
         "i3": {
@@ -590,7 +646,8 @@
             "advisorQuotes": {
                 "sepah": "Lasciare entrare gli 'osservatori' stranieri? Tanto vale dargli le chiavi subito.",
                 "bazaar": "Il prestigio globale sarebbe enorme. Pensate ai futuri investimenti.",
-                "isolation": "Gli 'osservatori' stranieri sono solo spie in giacca e cravatta. Tenete le porte serrate."
+                "isolation": "Gli 'osservatori' stranieri sono solo spie in giacca e cravatta. Tenete le porte serrate.",
+                "piety": "Le distrazioni del mondo devono essere tenute a bada per preservare le nostre sacre tradizioni."
             }
         },
         "i4": {
@@ -598,7 +655,8 @@
             "advisorQuotes": {
                 "sepah": "Connettersi alla loro rete lascia entrare i loro virus direttamente nei nostri sistemi.",
                 "bazaar": "La velocità delle informazioni è la nuova valuta. Non dobbiamo restare al buio.",
-                "isolation": "La rete globale è un condotto per la putredine culturale. Restate disconnessi."
+                "isolation": "La rete globale è un condotto per la putredine culturale. Restate disconnessi.",
+                "piety": "Le distrazioni del mondo devono essere tenute a bada per preservare le nostre sacre tradizioni."
             }
         },
         "i5": {
@@ -606,7 +664,8 @@
             "advisorQuotes": {
                 "sepah": "Niente più trattati, basta compromessi. Stiamo soli e forti.",
                 "bazaar": "Questo è un suicidio isolazionista. Il Bazaar morirà in totale solitudine.",
-                "isolation": "Strappate i documenti. Non rispondiamo a nessun altro se non a noi stessi."
+                "isolation": "Strappate i documenti. Non rispondiamo a nessun altro se non a noi stessi.",
+                "piety": "Le distrazioni del mondo devono essere tenute a bada per preservare le nostre sacre tradizioni."
             }
         },
         "i6": {
@@ -614,7 +673,8 @@
             "advisorQuotes": {
                 "sepah": "La pace è solo il tempo tra le guerre. Non abbassate la guardia.",
                 "bazaar": "Il commercio fiorisce nella pace. Firmate l'accordo e lasciate fiorire i mercati.",
-                "isolation": "La pace è una trappola usata per disarmare chi è all'erta."
+                "isolation": "La pace è una trappola usata per disarmare chi è all'erta.",
+                "piety": "Le distrazioni del mondo devono essere tenute a bada per preservare le nostre sacre tradizioni."
             }
         },
         "i7": {
@@ -622,7 +682,8 @@
             "advisorQuotes": {
                 "sepah": "I diplomati sono solo spie in abiti eleganti. Toglieteceli di torno.",
                 "bazaar": "Chi negozierà i nostri accordi commerciali? State bruciando ogni ponte.",
-                "isolation": "Spazzateli via. Sono ospiti che hanno ampiamente superato il loro tempo di permanenza."
+                "isolation": "Spazzateli via. Sono ospiti che hanno ampiamente superato il loro tempo di permanenza.",
+                "piety": "Le distrazioni del mondo devono essere tenute a bada per preservare le nostre sacre tradizioni."
             }
         },
         "i8": {
@@ -630,7 +691,8 @@
             "advisorQuotes": {
                 "sepah": "Missionari oggi, sovversivi domani. Non lasciateli insegnare.",
                 "bazaar": "L'educazione moderna attira talenti e investimenti stranieri. Sono d'accordo.",
-                "isolation": "L'indottrinamento da parte di stranieri è il primo passo verso l'asservimento culturale."
+                "isolation": "L'indottrinamento da parte di stranieri è il primo passo verso l'asservimento culturale.",
+                "piety": "Le distrazioni del mondo devono essere tenute a bada per preservare le nostre sacre tradizioni."
             }
         },
         "i9": {
@@ -638,7 +700,8 @@
             "advisorQuotes": {
                 "sepah": "Un'alleanza significa anche combattere le loro guerre. Dovremmo difenderci da soli.",
                 "bazaar": "L'accesso al mercato regionale varrà la perdita di autonomia.",
-                "isolation": "Non abbiamo bisogno di 'veri' alleati che vogliono solo usare i nostri soldati per i propri scopi."
+                "isolation": "Non abbiamo bisogno di 'veri' alleati che vogliono solo usare i nostri soldati per i propri scopi.",
+                "piety": "Le distrazioni del mondo devono essere tenute a bada per preservare le nostre sacre tradizioni."
             }
         },
         "i10": {
@@ -646,7 +709,8 @@
             "advisorQuotes": {
                 "sepah": "Se è sul nostro suolo, ci appartiene. Sequestratelo e finanziate l'esercito.",
                 "bazaar": "Reagiranno sequestrando i NOSTRI asset all'estero. Sarà devastante.",
-                "isolation": "Tutto all'interno dei nostri confini appartiene allo Stato. Nessuna eccezione."
+                "isolation": "Tutto all'interno dei nostri confini appartiene allo Stato. Nessuna eccezione.",
+                "piety": "Le distrazioni del mondo devono essere tenute a bada per preservare le nostre sacre tradizioni."
             }
         },
         "i11": {
@@ -654,7 +718,8 @@
             "advisorQuotes": {
                 "sepah": "Un mercato comune significa confini comuni. Non posso garantire la sicurezza.",
                 "bazaar": "Questa è la via per la prosperità! Un mercato unito è un mercato stabile.",
-                "isolation": "I mercati comuni portano a problemi comuni. Preferiamo i nostri problemi."
+                "isolation": "I mercati comuni portano a problemi comuni. Preferiamo i nostri problemi.",
+                "piety": "Le distrazioni del mondo devono essere tenute a bada per preservare le nostre sacre tradizioni."
             }
         },
         "i12": {
@@ -662,7 +727,8 @@
             "advisorQuotes": {
                 "sepah": "Milioni di visitatori? È un incubo di sicurezza su scala globale.",
                 "bazaar": "Le entrate del turismo da sole copriranno il debito nazionale. Organizzate i giochi!",
-                "isolation": "Il circo del mondo non ha posto nella nostra nazione silenziosa e seria."
+                "isolation": "Il circo del mondo non ha posto nella nostra nazione silenziosa e seria.",
+                "piety": "Le distrazioni del mondo devono essere tenute a bada per preservare le nostre sacre tradizioni."
             }
         },
         "i13": {
@@ -670,7 +736,8 @@
             "advisorQuotes": {
                 "sepah": "Le banche straniere sono solo condotti per i soldi stranieri per influenzare la nostra politica.",
                 "bazaar": "Abbiamo bisogno del loro capitale e della loro competenza. Le nostre banche locali sono antiquate.",
-                "isolation": "La finanza è la catena che il mondo usa per legare le nazioni indipendenti."
+                "isolation": "La finanza è la catena che il mondo usa per legare le nazioni indipendenti.",
+                "piety": "Le distrazioni del mondo devono essere tenute a bada per preservare le nostre sacre tradizioni."
             }
         },
         "i14": {
@@ -678,7 +745,8 @@
             "advisorQuotes": {
                 "sepah": "I turisti si avventurano in zone di sicurezza. Voglio vederli limitati agli hotel.",
                 "bazaar": "Il turismo è un profitto puro senza costi fissi! Aprite ogni rotta magnifica.",
-                "isolation": "I turisti sono solo spie dilettanti che sbavano sulla nostra eredità. Teneteli fuori."
+                "isolation": "I turisti sono solo spie dilettanti che sbavano sulla nostra eredità. Teneteli fuori.",
+                "piety": "Le distrazioni del mondo devono essere tenute a bada per preservare le nostre sacre tradizioni."
             }
         },
         "i15": {
@@ -686,7 +754,8 @@
             "advisorQuotes": {
                 "sepah": "Il cielo è la nostra prima linea di difesa. La perdita di controllo è catastrofica.",
                 "bazaar": "Un hub mondiale porta oro mondiale. Aprite il cielo.",
-                "isolation": "Il nostro cielo dovrebbe portare solo i nostri aerei. Il cielo è un confine nazionale."
+                "isolation": "Il nostro cielo dovrebbe portare solo i nostri aerei. Il cielo è un confine nazionale.",
+                "piety": "Le distrazioni del mondo devono essere tenute a bada per preservare le nostre sacre tradizioni."
             }
         },
         "i16": {
@@ -694,7 +763,8 @@
             "advisorQuotes": {
                 "sepah": "Stranieri che scavano nella nostra terra? Troveranno più che minerale.",
                 "bazaar": "Portano tecnologia e manodopera. Noi incassiamo solo gli assegni. Intelligente.",
-                "isolation": "Ogni oncia del nostro suolo è il nostro diritto di nascita. Non vendiamo la terra profonda."
+                "isolation": "Ogni oncia del nostro suolo è il nostro diritto di nascita. Non vendiamo la terra profonda.",
+                "piety": "Le distrazioni del mondo devono essere tenute a bada per preservare le nostre sacre tradizioni."
             }
         },
         "i17": {
@@ -702,7 +772,8 @@
             "advisorQuotes": {
                 "sepah": "Gli insegnanti stranieri non faranno che predicare la loro sciocchezza sui 'diritti umani' ai bambini.",
                 "bazaar": "Una forza lavoro in salute è una forza lavoro produttiva. Portate i dottori.",
-                "isolation": "Preferiamo la nostra malattia piuttosto che la guarigione da un maestro straniero."
+                "isolation": "Preferiamo la nostra malattia piuttosto che la guarigione da un maestro straniero.",
+                "piety": "Le distrazioni del mondo devono essere tenute a bada per preservare le nostre sacre tradizioni."
             }
         },
         "i18": {
@@ -710,7 +781,8 @@
             "advisorQuotes": {
                 "sepah": "Dissolvere i confini? Quel giorno l'esercito cessa di esistere. Mi rifiuto.",
                 "bazaar": "Un mondo senza confini è un mondo con un commercio perfetto. È il futuro.",
-                "isolation": "Preferirei vedere il mondo bruciare piuttosto che vedere i nostri confini cancellati."
+                "isolation": "Preferirei vedere il mondo bruciare piuttosto che vedere i nostri confini cancellati.",
+                "piety": "Le distrazioni del mondo devono essere tenute a bada per preservare le nostre sacre tradizioni."
             }
         }
     }

@@ -31,6 +31,7 @@ export interface DilemmaCard {
         sepah: string;
         bazaar: string;
         isolation: string;
+        piety: string;
     };
     yesText?: string;
     noText?: string;

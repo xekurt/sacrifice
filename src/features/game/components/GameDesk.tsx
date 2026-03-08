@@ -21,7 +21,7 @@ const GameDesk: React.FC<GameDeskProps> = ({ onExit, difficulty }) => {
     const { state, processChoice, restartGame, getCurrentCardData, clearYearEndReport } = useGameEngine(difficulty);
     const [isExitModalOpen, setIsExitModalOpen] = useState(false);
     const [hoveredOption, setHoveredOption] = useState<'yes' | 'no' | null>(null);
-    const [activePerspective, setActivePerspective] = useState<'sepah' | 'bazaar' | 'isolation'>('sepah');
+    const [activePerspective, setActivePerspective] = useState<'sepah' | 'bazaar' | 'isolation' | 'piety'>('sepah');
 
     const [transitionState, setTransitionState] = useState<'idle' | 'stamping' | 'sliding'>('idle');
     const [decision, setDecision] = useState<'yes' | 'no' | null>(null);
@@ -77,10 +77,11 @@ const GameDesk: React.FC<GameDeskProps> = ({ onExit, difficulty }) => {
     const ministryColor = MINISTRY_COLORS[typeChar] || '#8b5cf6';
 
     // Bias Filter Configuration: Each faction only sees metrics they care about
-    const FACTION_VISIBILITY: Record<'sepah' | 'bazaar' | 'isolation', string[]> = {
+    const FACTION_VISIBILITY: Record<'sepah' | 'bazaar' | 'isolation' | 'piety', string[]> = {
         sepah: ['sepah', 'isolation', 'legitimacy'],      // Military: Security & Control
         bazaar: ['bazaar', 'isolation'],                   // Economy: Trade & Markets
-        isolation: ['isolation', 'legitimacy', 'piety']    // Sovereignty: Independence & Authority
+        isolation: ['isolation', 'legitimacy', 'piety'],   // Sovereignty: Independence & Authority
+        piety: ['piety', 'legitimacy']                    // Ideology: Faith & Tradition
     };
 
     const renderForecast = () => {
@@ -251,7 +252,7 @@ const GameDesk: React.FC<GameDeskProps> = ({ onExit, difficulty }) => {
 
                             {/* Perspective Nav (Relocated to Top Right) */}
                             <div className="absolute top-4 right-4 flex flex-col gap-3 z-30 items-end">
-                                {(['sepah', 'bazaar', 'isolation'] as const).map(faction => (
+                                {(['piety', 'sepah', 'bazaar', 'isolation'] as const).map(faction => (
                                     <button
                                         key={faction}
                                         onClick={() => setActivePerspective(faction)}
